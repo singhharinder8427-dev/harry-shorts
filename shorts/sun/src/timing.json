@@ -1,0 +1,781 @@
+{
+ "short": "sun",
+ "title": "What if the Sun vanished right now?",
+ "duration": 35.55,
+ "voiceOffset": 0.0,
+ "estimated": true,
+ "words": [
+  {
+   "w": "If",
+   "start": 0.4,
+   "end": 0.613
+  },
+  {
+   "w": "the",
+   "start": 0.613,
+   "end": 0.826
+  },
+  {
+   "w": "Sun",
+   "start": 0.826,
+   "end": 1.038
+  },
+  {
+   "w": "vanished",
+   "start": 1.038,
+   "end": 1.464
+  },
+  {
+   "w": "right",
+   "start": 1.464,
+   "end": 1.677
+  },
+  {
+   "w": "now,",
+   "start": 1.677,
+   "end": 1.889
+  },
+  {
+   "w": "you",
+   "start": 2.089,
+   "end": 2.302
+  },
+  {
+   "w": "wouldn't",
+   "start": 2.302,
+   "end": 2.728
+  },
+  {
+   "w": "notice.",
+   "start": 2.728,
+   "end": 3.153
+  },
+  {
+   "w": "Its",
+   "start": 3.653,
+   "end": 3.866
+  },
+  {
+   "w": "light",
+   "start": 3.866,
+   "end": 4.079
+  },
+  {
+   "w": "takes",
+   "start": 4.079,
+   "end": 4.291
+  },
+  {
+   "w": "eight",
+   "start": 4.291,
+   "end": 4.504
+  },
+  {
+   "w": "minutes",
+   "start": 4.504,
+   "end": 4.93
+  },
+  {
+   "w": "and",
+   "start": 4.93,
+   "end": 5.143
+  },
+  {
+   "w": "twenty",
+   "start": 5.143,
+   "end": 5.568
+  },
+  {
+   "w": "seconds",
+   "start": 5.568,
+   "end": 5.994
+  },
+  {
+   "w": "to",
+   "start": 5.994,
+   "end": 6.206
+  },
+  {
+   "w": "reach",
+   "start": 6.206,
+   "end": 6.419
+  },
+  {
+   "w": "us,",
+   "start": 6.419,
+   "end": 6.632
+  },
+  {
+   "w": "so",
+   "start": 6.832,
+   "end": 7.045
+  },
+  {
+   "w": "the",
+   "start": 7.045,
+   "end": 7.257
+  },
+  {
+   "w": "Sun",
+   "start": 7.257,
+   "end": 7.47
+  },
+  {
+   "w": "would",
+   "start": 7.47,
+   "end": 7.683
+  },
+  {
+   "w": "keep",
+   "start": 7.683,
+   "end": 7.896
+  },
+  {
+   "w": "shining",
+   "start": 7.896,
+   "end": 8.321
+  },
+  {
+   "w": "in",
+   "start": 8.321,
+   "end": 8.534
+  },
+  {
+   "w": "your",
+   "start": 8.534,
+   "end": 8.747
+  },
+  {
+   "w": "sky.",
+   "start": 8.747,
+   "end": 8.96
+  },
+  {
+   "w": "Earth",
+   "start": 9.46,
+   "end": 9.672
+  },
+  {
+   "w": "would",
+   "start": 9.672,
+   "end": 9.885
+  },
+  {
+   "w": "even",
+   "start": 9.885,
+   "end": 10.311
+  },
+  {
+   "w": "keep",
+   "start": 10.311,
+   "end": 10.523
+  },
+  {
+   "w": "circling",
+   "start": 10.523,
+   "end": 10.949
+  },
+  {
+   "w": "the",
+   "start": 10.949,
+   "end": 11.162
+  },
+  {
+   "w": "empty",
+   "start": 11.162,
+   "end": 11.587
+  },
+  {
+   "w": "spot,",
+   "start": 11.587,
+   "end": 11.8
+  },
+  {
+   "w": "because",
+   "start": 12.0,
+   "end": 12.426
+  },
+  {
+   "w": "gravity",
+   "start": 12.426,
+   "end": 13.064
+  },
+  {
+   "w": "travels",
+   "start": 13.064,
+   "end": 13.489
+  },
+  {
+   "w": "at",
+   "start": 13.489,
+   "end": 13.702
+  },
+  {
+   "w": "the",
+   "start": 13.702,
+   "end": 13.915
+  },
+  {
+   "w": "speed",
+   "start": 13.915,
+   "end": 14.128
+  },
+  {
+   "w": "of",
+   "start": 14.128,
+   "end": 14.34
+  },
+  {
+   "w": "light",
+   "start": 14.34,
+   "end": 14.553
+  },
+  {
+   "w": "too.",
+   "start": 14.553,
+   "end": 14.766
+  },
+  {
+   "w": "Then",
+   "start": 15.266,
+   "end": 15.479
+  },
+  {
+   "w": "the",
+   "start": 15.479,
+   "end": 15.691
+  },
+  {
+   "w": "sky",
+   "start": 15.691,
+   "end": 15.904
+  },
+  {
+   "w": "goes",
+   "start": 15.904,
+   "end": 16.117
+  },
+  {
+   "w": "dark,",
+   "start": 16.117,
+   "end": 16.33
+  },
+  {
+   "w": "and",
+   "start": 16.53,
+   "end": 16.743
+  },
+  {
+   "w": "Earth",
+   "start": 16.743,
+   "end": 16.955
+  },
+  {
+   "w": "flies",
+   "start": 16.955,
+   "end": 17.168
+  },
+  {
+   "w": "off",
+   "start": 17.168,
+   "end": 17.381
+  },
+  {
+   "w": "in",
+   "start": 17.381,
+   "end": 17.594
+  },
+  {
+   "w": "a",
+   "start": 17.594,
+   "end": 17.806
+  },
+  {
+   "w": "straight",
+   "start": 17.806,
+   "end": 18.019
+  },
+  {
+   "w": "line",
+   "start": 18.019,
+   "end": 18.232
+  },
+  {
+   "w": "at",
+   "start": 18.232,
+   "end": 18.445
+  },
+  {
+   "w": "about",
+   "start": 18.445,
+   "end": 18.87
+  },
+  {
+   "w": "thirty",
+   "start": 18.87,
+   "end": 19.296
+  },
+  {
+   "w": "kilometers",
+   "start": 19.296,
+   "end": 20.147
+  },
+  {
+   "w": "a",
+   "start": 20.147,
+   "end": 20.36
+  },
+  {
+   "w": "second.",
+   "start": 20.36,
+   "end": 20.785
+  },
+  {
+   "w": "Within",
+   "start": 21.285,
+   "end": 21.711
+  },
+  {
+   "w": "a",
+   "start": 21.711,
+   "end": 21.923
+  },
+  {
+   "w": "week,",
+   "start": 21.923,
+   "end": 22.136
+  },
+  {
+   "w": "the",
+   "start": 22.336,
+   "end": 22.549
+  },
+  {
+   "w": "average",
+   "start": 22.549,
+   "end": 23.187
+  },
+  {
+   "w": "temperature",
+   "start": 23.187,
+   "end": 24.038
+  },
+  {
+   "w": "would",
+   "start": 24.038,
+   "end": 24.251
+  },
+  {
+   "w": "drop",
+   "start": 24.251,
+   "end": 24.464
+  },
+  {
+   "w": "below",
+   "start": 24.464,
+   "end": 24.889
+  },
+  {
+   "w": "freezing.",
+   "start": 24.889,
+   "end": 25.315
+  },
+  {
+   "w": "The",
+   "start": 25.815,
+   "end": 26.028
+  },
+  {
+   "w": "oceans",
+   "start": 26.028,
+   "end": 26.453
+  },
+  {
+   "w": "would",
+   "start": 26.453,
+   "end": 26.666
+  },
+  {
+   "w": "freeze",
+   "start": 26.666,
+   "end": 26.879
+  },
+  {
+   "w": "over",
+   "start": 26.879,
+   "end": 27.304
+  },
+  {
+   "w": "on",
+   "start": 27.304,
+   "end": 27.517
+  },
+  {
+   "w": "top,",
+   "start": 27.517,
+   "end": 27.73
+  },
+  {
+   "w": "but",
+   "start": 27.93,
+   "end": 28.143
+  },
+  {
+   "w": "stay",
+   "start": 28.143,
+   "end": 28.355
+  },
+  {
+   "w": "liquid",
+   "start": 28.355,
+   "end": 28.781
+  },
+  {
+   "w": "underneath",
+   "start": 28.781,
+   "end": 29.419
+  },
+  {
+   "w": "for",
+   "start": 29.419,
+   "end": 29.632
+  },
+  {
+   "w": "thousands",
+   "start": 29.632,
+   "end": 30.057
+  },
+  {
+   "w": "of",
+   "start": 30.057,
+   "end": 30.27
+  },
+  {
+   "w": "years,",
+   "start": 30.27,
+   "end": 30.483
+  },
+  {
+   "w": "warmed",
+   "start": 30.683,
+   "end": 30.896
+  },
+  {
+   "w": "by",
+   "start": 30.896,
+   "end": 31.109
+  },
+  {
+   "w": "Earth's",
+   "start": 31.109,
+   "end": 31.321
+  },
+  {
+   "w": "own",
+   "start": 31.321,
+   "end": 31.534
+  },
+  {
+   "w": "heat.",
+   "start": 31.534,
+   "end": 31.747
+  },
+  {
+   "w": "Subscribe",
+   "start": 32.247,
+   "end": 32.672
+  },
+  {
+   "w": "for",
+   "start": 32.672,
+   "end": 32.885
+  },
+  {
+   "w": "more",
+   "start": 32.885,
+   "end": 33.098
+  },
+  {
+   "w": "what-ifs",
+   "start": 33.098,
+   "end": 33.523
+  },
+  {
+   "w": "like",
+   "start": 33.523,
+   "end": 33.736
+  },
+  {
+   "w": "this.",
+   "start": 33.736,
+   "end": 33.949
+  }
+ ],
+ "chunks": [
+  {
+   "text": "If the Sun vanished right now,",
+   "w0": 0,
+   "w1": 5,
+   "start": 0.4,
+   "end": 1.889
+  },
+  {
+   "text": "you wouldn't notice.",
+   "w0": 6,
+   "w1": 8,
+   "start": 2.089,
+   "end": 3.153
+  },
+  {
+   "text": "Its light takes eight minutes",
+   "w0": 9,
+   "w1": 13,
+   "start": 3.653,
+   "end": 4.93
+  },
+  {
+   "text": "and twenty seconds to reach us,",
+   "w0": 14,
+   "w1": 19,
+   "start": 4.93,
+   "end": 6.632
+  },
+  {
+   "text": "so the Sun would keep shining",
+   "w0": 20,
+   "w1": 25,
+   "start": 6.832,
+   "end": 8.321
+  },
+  {
+   "text": "in your sky.",
+   "w0": 26,
+   "w1": 28,
+   "start": 8.321,
+   "end": 8.96
+  },
+  {
+   "text": "Earth would even keep circling",
+   "w0": 29,
+   "w1": 33,
+   "start": 9.46,
+   "end": 10.949
+  },
+  {
+   "text": "the empty spot,",
+   "w0": 34,
+   "w1": 36,
+   "start": 10.949,
+   "end": 11.8
+  },
+  {
+   "text": "because gravity travels",
+   "w0": 37,
+   "w1": 39,
+   "start": 12.0,
+   "end": 13.489
+  },
+  {
+   "text": "at the speed of light too.",
+   "w0": 40,
+   "w1": 45,
+   "start": 13.489,
+   "end": 14.766
+  },
+  {
+   "text": "Then the sky goes dark,",
+   "w0": 46,
+   "w1": 50,
+   "start": 15.266,
+   "end": 16.33
+  },
+  {
+   "text": "and Earth flies off",
+   "w0": 51,
+   "w1": 54,
+   "start": 16.53,
+   "end": 17.381
+  },
+  {
+   "text": "in a straight line",
+   "w0": 55,
+   "w1": 58,
+   "start": 17.381,
+   "end": 18.232
+  },
+  {
+   "text": "at about thirty kilometers a second.",
+   "w0": 59,
+   "w1": 64,
+   "start": 18.232,
+   "end": 20.785
+  },
+  {
+   "text": "Within a week,",
+   "w0": 65,
+   "w1": 67,
+   "start": 21.285,
+   "end": 22.136
+  },
+  {
+   "text": "the average temperature",
+   "w0": 68,
+   "w1": 70,
+   "start": 22.336,
+   "end": 24.038
+  },
+  {
+   "text": "would drop below freezing.",
+   "w0": 71,
+   "w1": 74,
+   "start": 24.038,
+   "end": 25.315
+  },
+  {
+   "text": "The oceans would freeze over",
+   "w0": 75,
+   "w1": 79,
+   "start": 25.815,
+   "end": 27.304
+  },
+  {
+   "text": "on top,",
+   "w0": 80,
+   "w1": 81,
+   "start": 27.304,
+   "end": 27.73
+  },
+  {
+   "text": "but stay liquid underneath",
+   "w0": 82,
+   "w1": 85,
+   "start": 27.93,
+   "end": 29.419
+  },
+  {
+   "text": "for thousands of years,",
+   "w0": 86,
+   "w1": 89,
+   "start": 29.419,
+   "end": 30.483
+  },
+  {
+   "text": "warmed by Earth's own heat.",
+   "w0": 90,
+   "w1": 94,
+   "start": 30.683,
+   "end": 31.747
+  },
+  {
+   "text": "Subscribe for more",
+   "w0": 95,
+   "w1": 97,
+   "start": 32.247,
+   "end": 33.098
+  },
+  {
+   "text": "what-ifs like this.",
+   "w0": 98,
+   "w1": 100,
+   "start": 33.098,
+   "end": 33.949
+  }
+ ],
+ "sentences": [
+  {
+   "start": 0.4,
+   "end": 3.153,
+   "text": "If the Sun vanished right now, you wouldn't notice."
+  },
+  {
+   "start": 3.653,
+   "end": 8.96,
+   "text": "Its light takes eight minutes and twenty seconds to reach us, so the Sun would keep shining in your sky."
+  },
+  {
+   "start": 9.46,
+   "end": 14.766,
+   "text": "Earth would even keep circling the empty spot, because gravity travels at the speed of light too."
+  },
+  {
+   "start": 15.266,
+   "end": 20.785,
+   "text": "Then the sky goes dark, and Earth flies off in a straight line at about thirty kilometers a second."
+  },
+  {
+   "start": 21.285,
+   "end": 25.315,
+   "text": "Within a week, the average temperature would drop below freezing."
+  },
+  {
+   "start": 25.815,
+   "end": 31.747,
+   "text": "The oceans would freeze over on top, but stay liquid underneath for thousands of years, warmed by Earth's own heat."
+  },
+  {
+   "start": 32.247,
+   "end": 33.949,
+   "text": "Subscribe for more what-ifs like this."
+  }
+ ],
+ "keys": {
+  "vanished": 1.038,
+  "notice": 2.728,
+  "light": 3.866,
+  "eight": 4.291,
+  "reach": 6.206,
+  "so": 6.832,
+  "keep": 7.683,
+  "sky": 8.747,
+  "circling": 10.523,
+  "empty": 11.162,
+  "gravity": 12.426,
+  "speed": 13.915,
+  "dark": 16.117,
+  "flies": 16.955,
+  "straight": 17.806,
+  "thirty": 18.87,
+  "week": 21.923,
+  "temperature": 23.187,
+  "freezing": 24.889,
+  "oceans": 26.028,
+  "freeze": 26.666,
+  "liquid": 28.355,
+  "thousands": 29.632,
+  "warmed": 30.683,
+  "heat": 31.534,
+  "subscribe": 32.247,
+  "more": 32.885,
+  "whatifs": 33.098
+ },
+ "keyEnd": {
+  "vanished": 1.464,
+  "notice": 3.153,
+  "light": 4.079,
+  "eight": 4.504,
+  "reach": 6.419,
+  "so": 7.045,
+  "keep": 7.896,
+  "sky": 8.96,
+  "circling": 10.949,
+  "empty": 11.587,
+  "gravity": 13.064,
+  "speed": 14.128,
+  "dark": 16.33,
+  "flies": 17.168,
+  "straight": 18.019,
+  "thirty": 19.296,
+  "week": 22.136,
+  "temperature": 24.038,
+  "freezing": 25.315,
+  "oceans": 26.453,
+  "freeze": 26.879,
+  "liquid": 28.781,
+  "thousands": 30.057,
+  "warmed": 30.896,
+  "heat": 31.747,
+  "subscribe": 32.672,
+  "more": 33.098,
+  "whatifs": 33.523
+ }
+}

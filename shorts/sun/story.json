@@ -1,0 +1,219 @@
+{
+ "short": "sun",
+ "title": "What if the Sun vanished right now?",
+ "spoken": {
+  "what-ifs": "what ifs"
+ },
+ "chunks": [
+  "If the Sun vanished right now,",
+  "you wouldn't notice.",
+  "Its light takes eight minutes",
+  "and twenty seconds to reach us,",
+  "so the Sun would keep shining",
+  "in your sky.",
+  "Earth would even keep circling",
+  "the empty spot,",
+  "because gravity travels",
+  "at the speed of light too.",
+  "Then the sky goes dark,",
+  "and Earth flies off",
+  "in a straight line",
+  "at about thirty kilometers a second.",
+  "Within a week,",
+  "the average temperature",
+  "would drop below freezing.",
+  "The oceans would freeze over",
+  "on top,",
+  "but stay liquid underneath",
+  "for thousands of years,",
+  "warmed by Earth's own heat.",
+  "Subscribe for more",
+  "what-ifs like this."
+ ],
+ "syllables": {
+  "vanished": 2,
+  "wouldn't": 2,
+  "notice": 2,
+  "takes": 1,
+  "eight": 1,
+  "minutes": 2,
+  "twenty": 2,
+  "seconds": 2,
+  "reach": 1,
+  "shining": 2,
+  "earth": 1,
+  "even": 2,
+  "circling": 2,
+  "empty": 2,
+  "because": 2,
+  "gravity": 3,
+  "travels": 2,
+  "speed": 1,
+  "light": 1,
+  "goes": 1,
+  "flies": 1,
+  "straight": 1,
+  "line": 1,
+  "about": 2,
+  "thirty": 2,
+  "kilometers": 4,
+  "second": 2,
+  "within": 2,
+  "week": 1,
+  "average": 3,
+  "temperature": 4,
+  "below": 2,
+  "freezing": 2,
+  "oceans": 2,
+  "freeze": 1,
+  "over": 2,
+  "liquid": 2,
+  "underneath": 3,
+  "thousands": 2,
+  "years": 1,
+  "warmed": 1,
+  "earth's": 1,
+  "own": 1,
+  "heat": 1,
+  "subscribe": 2,
+  "more": 1,
+  "whatifs": 2,
+  "like": 1,
+  "sky": 1
+ },
+ "keys": {
+  "vanished": [
+   0,
+   "vanished"
+  ],
+  "notice": [
+   0,
+   "notice"
+  ],
+  "light": [
+   1,
+   "light"
+  ],
+  "eight": [
+   1,
+   "eight"
+  ],
+  "reach": [
+   1,
+   "reach"
+  ],
+  "so": [
+   1,
+   "so"
+  ],
+  "keep": [
+   1,
+   "keep"
+  ],
+  "sky": [
+   1,
+   "sky"
+  ],
+  "circling": [
+   2,
+   "circling"
+  ],
+  "empty": [
+   2,
+   "empty"
+  ],
+  "gravity": [
+   2,
+   "gravity"
+  ],
+  "speed": [
+   2,
+   "speed"
+  ],
+  "dark": [
+   3,
+   "dark"
+  ],
+  "flies": [
+   3,
+   "flies"
+  ],
+  "straight": [
+   3,
+   "straight"
+  ],
+  "thirty": [
+   3,
+   "thirty"
+  ],
+  "week": [
+   4,
+   "week"
+  ],
+  "temperature": [
+   4,
+   "temperature"
+  ],
+  "freezing": [
+   4,
+   "freezing"
+  ],
+  "oceans": [
+   5,
+   "oceans"
+  ],
+  "freeze": [
+   5,
+   "freeze"
+  ],
+  "liquid": [
+   5,
+   "liquid"
+  ],
+  "thousands": [
+   5,
+   "thousands"
+  ],
+  "warmed": [
+   5,
+   "warmed"
+  ],
+  "heat": [
+   5,
+   "heat"
+  ],
+  "subscribe": [
+   6,
+   "subscribe"
+  ],
+  "more": [
+   6,
+   "more"
+  ],
+  "whatifs": [
+   6,
+   "whatifs"
+  ]
+ },
+ "beats": {
+  "vanished": "the Sun gasps and pops; a dashed outline is left; a dark hole starts spreading through its light",
+  "notice": "Earth keeps smiling, eyes closed, no idea",
+  "eight": "timer pill pops in and counts toward 8:20; the 'last sunlight' ring keeps travelling out",
+  "keep": "thought bubble: the Sun still shining in a blue sky, the guy waves at it",
+  "circling": "wide view: Earth keeps moving along its dashed orbit",
+  "empty": "'empty spot' label on the dashed outline",
+  "gravity": "a purple 'last gravity' ring appears riding with the light ring",
+  "dark": "both rings reach Earth, timer hits 8:20, Earth goes dark and gasps",
+  "flies": "Earth leaves the orbit on a straight dashed line; camera follows",
+  "thirty": "'≈ 30 km/s' label and a motion arrow",
+  "week": "'1 week later' pill; thermometer pops in next to Earth",
+  "freezing": "thermometer drops below 0 °C; Earth shivers, teeth chatter, frost sparkles",
+  "freeze": "Earth's oceans turn to ice",
+  "liquid": "cut-away bubble: ice on top, liquid water and a fish underneath",
+  "thousands": "'thousands of years' pill",
+  "warmed": "heat squiggles rise from the seafloor; Earth relaxes a little",
+  "subscribe": "the Sun pops back, light floods out, Earth thaws and glides home; SUBSCRIBE button pops in",
+  "more": "click: 'SUBSCRIBED ✓', sparkles",
+  "whatifs": "bell rings; button leaves; last frame = frame 0"
+ }
+}

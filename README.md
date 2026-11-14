@@ -5,3 +5,4 @@
 - `shorts/<name>/`: one folder per finished Short (source, script, timing, captions, thumbnails, YouTube text, final video).
 
 Finished: `shorts/water/`, "What if all the water on Earth vanished?" (2K, 45.8 s).
+In progress: `shorts/sun/`, "What if the Sun vanished right now?" (preview on estimated timing; waiting for the voice take).
