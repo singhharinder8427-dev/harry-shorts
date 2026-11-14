@@ -56,6 +56,9 @@ researched, and never write facts from memory as if checked.
 - Choose the one that: can be explained clearly in 30-45 s; has a surprising answer or consequence; is easy to show with
   simple 2D animation (objects can get faces, things can grow/shrink/drain/pop, a size comparison, a before/after);
   makes sense with zero background knowledge.
+- Prefer a premise whose consequences reach **living things**, not only objects and physics: what happens to people, to
+  land animals and plants, to life in the sea. A topic where you can only show a planet or a number is weaker than one
+  where the viewer can picture a fish, a tree, an animal and themselves in it.
 - Vary the subject category from earlier videos. Check the ideas visible in this conversation and in `topics_log.md`
   (in the working folder, if it exists) and avoid repeats or slight variations. If you cannot see previous ideas, don't
   claim you checked them. After a video is done, append its topic + category + date to `topics_log.md`.
@@ -96,12 +99,37 @@ researched, and never write facts from memory as if checked.
   hype words (incredible, shocking, insane, amazing), AI-sounding phrases, narrator filler ("here's the thing", "but here's
   the part"), "!" lines (they make voices over-act), calls to action other than the final subscribe line.
 - Original wording; never copy another creator's script.
+- **Make it a full experience, not one fact.** After the hook and the core explanation, walk the consequences through
+  the living world in a clear chain, one short sentence each, each with its own fact-checked detail:
+  1. **you / people** (what you would see or feel first),
+  2. **life on land** (plants, animals: e.g. photosynthesis stops, plants die, the animals that eat them follow),
+  3. **life in the sea** (e.g. plankton at the surface goes first; life around deep-sea vents carries on),
+  4. **what survives or what is left** (the last holdout, the place that barely changes).
+  Use only the links the sources support; skip a link rather than invent one, and say "would likely" where it is an
+  estimate. If the 45 s budget is tight, cut a number or a mechanism sentence before you cut the living-world chain.
+  Lesson from the Sun Short: it explained light, gravity and temperature well but never showed what happens to plants,
+  animals or sea life, so it felt like a physics note instead of a story.
+- **The ending must feel like an ending.** The last explanation sentence is a **closing line**, not just the last fact:
+  it answers the opening question in one breath and lands on a strong final image. Ways that work: call back to the
+  first line ("So the Sun could be gone already, and you'd find out in eight minutes."); name the last survivor ("The
+  last life on Earth would be huddled around vents on the dark seafloor."); flip the hook ("The sky would look normal.
+  That's the scary part."); or zoom out to the one thing the whole chain depended on. Short (6-14 words), falling
+  rhythm, no new number, no "so that's why", no question, no moral. Never end the explanation on a side detail or a
+  mid-list fact (the Sun Short ended on "warmed by Earth's own heat", a detail, and it felt unfinished).
+  Test: read only the first line and the closing line together; they should make sense as a pair.
+- Then a beat of silence (the comma/period pause), then the subscribe line. The subscribe line never doubles as the
+  ending.
+- **Rewatch value**: plant one small detail early that pays off at the end (the fish that waves at frame 2 is the one
+  still swimming under the ice; the guy's sunglasses), and make the closing image flow into frame 0 so the loop reads
+  as "watch it again", not as a restart.
 - **End with one subscribe line** that gives a reason, warm and direct, no hype - e.g. "Subscribe so you never miss the
   next what-if." / "Subscribe for more strange facts like this." Vary it per video; keep it one short sentence.
 
 ### 1.3 Script deliverable (show this, then continue)
 - a one-sentence description of the idea;
 - the complete voiceover, ready to record, no scene directions;
+- the closing line called out on its own, with one sentence on why it resolves the hook, and the living-world chain
+  listed (people / land life / sea life / what survives) with the source for each link;
 - the narration word count and estimated length;
 - links to the sources that support the explanation (and a short note of what is an estimate / single study / unverified).
 Then also write the YouTube metadata now or at hand-off (section 13). Done = the user has the script; proceed unless they
@@ -132,10 +160,19 @@ forced alignment with pocketsphinx (its wheel ships the English model), installe
 3. Frame 0 states the premise like a thumbnail (the main object with a face, centred, big, readable). No intro, no rewind.
 4. Shots: as few hard cuts as possible (2-3 shots for 45 s; a continuous camera move inside each). Cut only for a new
    place/scale (space -> ground -> space). Cuts sit on a sentence start.
+4b. **Show the living world.** Every link of the consequence chain gets its own picture with a character in it: the guy
+   (people), a tree / flower / a land animal with a face (land life), a fish / whale / plankton dots / a vent with tube
+   worms (sea life), the survivor. Use cut-away bubbles or a short ground / underwater shot so the viewer goes *into*
+   the world instead of watching a diagram from space the whole time. Aim for at least three different "places" in 45 s
+   (space, ground, under water) even if they are bubbles, and let the same small cast reappear so it feels like one
+   story. Wilting, shivering, huddling and hiding are fine; nothing graphic.
 5. One gag per beat a kid would laugh at: an object comes alive and opens its eyes, gasps "o", squeezes "> <", shivers
    with chattering teeth, a sweat drop, the character deflates into a wrinkly raisin, a fish flops, clouds squeeze their eyes
    and pop, a smug smirk, the thing comes back at the end.
-6. The ending: the payoff lands on the last word of the explanation, then the subscribe CTA (section 8.9), then the last
+6. The ending: the **closing line** gets the strongest picture of the video, a held final image (about 1 s of stillness
+   or a slow push-in, one focal thing, the planted detail paying off), with a soft musical "landing" sound rather than
+   another pop. It must not be cut short by the reset: start the return to frame 0 only when the subscribe line
+   starts. Then the subscribe CTA (section 8.9), then the last
    frame equals frame 0 (loop): whatever changed returns (oceans refill, clouds come back, colours reset, camera back to
    its first key).
 7. Write `story.json`:
@@ -263,6 +300,9 @@ is already off-screen.
 - Levels in the cue list: impacts -6 to -10 dB, pops/dings -10 to -18 dB, whooshes -12 to -20 dB, beds -20 to -24 dB;
   the effects mix is peak-normalised to 0.7 and plays at volume 0.42 under the voice (volume 1, loudness-normalised to
   -16 LUFS). Big sounds go into pauses, not on top of words.
+- Places need their own quiet bed so the trip feels immersive: a muffled low bed under water, a breeze on the ground,
+  near-silence in space. The closing line gets a resolving chime (a low then a high `ding`, or `shimmer`) and nothing
+  busy on top of it.
 - You cannot hear the result: verify by measurement (section 10) and say so.
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -273,6 +313,9 @@ is already off-screen.
   `python3 tools/sheet.py qa/sheet.png qa/still_*.png`. Look at frame 0, every beat (key + 0.3-0.8 s), every cut, every
   label, the CTA, the last frame. Fix framing (labels cut by the frame edge, things in the caption band, crowding) and
   re-check.
+- **Story check** (before rendering): the first line and the closing line make sense as a pair; the closing image is
+  held and not interrupted by the reset; people, land life and sea life each appear on screen at least once (or the
+  script says why a link was dropped); the planted detail pays off.
 - **Preview**: render 0.5x (`npx remotion render src/index.ts Short out/preview.mp4 --scale=0.5 --crf=20`), then
   `python3 tools/qa_video.py out/preview.mp4`:
   - pop scan (caption + tag bands masked): every flag must be an intended cut, pop-in or fast action - list them against
@@ -348,10 +391,13 @@ Append the topic to `topics_log.md`.
 - Same outline weight family everywhere; flat colours; no gradients on characters.
 - Every visual sits on its word; the payoff lands on the last explanation word; the CTA follows; the last frame loops to
   the first.
+- The story goes through the living world (people, land life, sea life, what survives), not only the physics; the
+  explanation ends on a closing line with a held final image; the subscribe line comes after it, never instead of it.
 - Real facts only in the voice and labels; cartoon exaggeration only in what characters do, and labelled.
 
 Pitfalls already met: TypeScript 6 breaks the Remotion 4.0.250 bundler (keep 5.6); `--scale=1.333` gives an odd width
 (use `Short2K`); pocketsphinx fails to align 40 s in one pass (align per sentence); words like "adult's" aren't in its
 dictionary (fallbacks/`spoken`); a 0.10 s silence threshold mistakes plosives for gaps (use 0.12 s); drifting clouds and
 non-integer breathing break the loop; labels near the right edge get cut at wide zooms (check sheets); a thumbnail line
-that wraps to three lines crowds the face (nowrap, smaller size for long lines).
+that wraps to three lines crowds the face (nowrap, smaller size for long lines); an explanation that ends on a side
+detail feels unfinished, and a what-if that never shows plants, animals or sea life feels like a diagram (sections 1.2, 3).
