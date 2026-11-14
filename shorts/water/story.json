@@ -1,0 +1,233 @@
+{
+ "chunks": [
+  "If every drop of water",
+  "on Earth vanished,",
+  "you wouldn't survive it.",
+  "Up to sixty percent",
+  "of an adult's body is water,",
+  "so every person, animal and plant",
+  "would instantly shrivel.",
+  "The oceans would leave basins",
+  "averaging about",
+  "three point seven kilometers deep.",
+  "Clouds would disappear.",
+  "And water vapor is",
+  "Earth's biggest heat trapper,",
+  "about half the greenhouse effect.",
+  "Without it, far more heat",
+  "would escape into space every night,",
+  "like a desert everywhere.",
+  "Here's the strange part.",
+  "Rolled into one ball,",
+  "all that water would be",
+  "under 1,400 kilometers wide.",
+  "A planet nine times wider",
+  "depends on it.",
+  "Subscribe so you",
+  "never miss the next what-if."
+ ],
+ "syllables": {
+  "every": 2,
+  "water": 2,
+  "vanished": 2,
+  "wouldn't": 2,
+  "survive": 2,
+  "sixty": 2,
+  "percent": 2,
+  "adult's": 2,
+  "person": 2,
+  "animal": 3,
+  "instantly": 3,
+  "shrivel": 2,
+  "oceans": 2,
+  "basins": 2,
+  "averaging": 3,
+  "about": 2,
+  "seven": 2,
+  "kilometers": 4,
+  "clouds": 1,
+  "disappear": 3,
+  "vapor": 2,
+  "earth's": 1,
+  "biggest": 2,
+  "trapper": 2,
+  "greenhouse": 2,
+  "effect": 2,
+  "without": 2,
+  "escape": 2,
+  "into": 2,
+  "desert": 2,
+  "everywhere": 3,
+  "here's": 1,
+  "strange": 1,
+  "rolled": 1,
+  "under": 2,
+  "1,400": 4,
+  "planet": 2,
+  "times": 1,
+  "wider": 2,
+  "depends": 2,
+  "space": 1,
+  "night": 1,
+  "heat": 1,
+  "subscribe": 2,
+  "never": 2,
+  "whatif": 2,
+  "next": 1,
+  "miss": 1
+ },
+ "keys": {
+  "drop": [
+   0,
+   "drop"
+  ],
+  "vanished": [
+   0,
+   "vanished"
+  ],
+  "you": [
+   0,
+   "you"
+  ],
+  "survive": [
+   0,
+   "survive"
+  ],
+  "sixty": [
+   1,
+   "sixty"
+  ],
+  "body": [
+   1,
+   "body"
+  ],
+  "person": [
+   1,
+   "person"
+  ],
+  "plant": [
+   1,
+   "plant"
+  ],
+  "shrivel": [
+   1,
+   "shrivel"
+  ],
+  "oceans": [
+   2,
+   "oceans"
+  ],
+  "basins": [
+   2,
+   "basins"
+  ],
+  "three": [
+   2,
+   "three"
+  ],
+  "deep": [
+   2,
+   "deep"
+  ],
+  "clouds": [
+   3,
+   "clouds"
+  ],
+  "disappear": [
+   3,
+   "disappear"
+  ],
+  "vapor": [
+   4,
+   "vapor"
+  ],
+  "trapper": [
+   4,
+   "trapper"
+  ],
+  "half": [
+   4,
+   "half"
+  ],
+  "without": [
+   5,
+   "without"
+  ],
+  "heat2": [
+   5,
+   "heat"
+  ],
+  "escape": [
+   5,
+   "escape"
+  ],
+  "night": [
+   5,
+   "night"
+  ],
+  "desert": [
+   5,
+   "desert"
+  ],
+  "strange": [
+   6,
+   "strange"
+  ],
+  "part": [
+   6,
+   "part"
+  ],
+  "rolled": [
+   7,
+   "rolled"
+  ],
+  "ball": [
+   7,
+   "ball"
+  ],
+  "under": [
+   7,
+   "under"
+  ],
+  "wide": [
+   7,
+   "wide"
+  ],
+  "planet": [
+   8,
+   "planet"
+  ],
+  "nine": [
+   8,
+   "nine"
+  ],
+  "wider": [
+   8,
+   "wider"
+  ],
+  "depends": [
+   8,
+   "depends"
+  ],
+  "it_end": [
+   8,
+   "it"
+  ],
+  "subscribe": [
+   9,
+   "subscribe"
+  ],
+  "never": [
+   9,
+   "never"
+  ],
+  "next": [
+   9,
+   "next"
+  ],
+  "whatif": [
+   9,
+   "whatif"
+  ]
+ }
+}

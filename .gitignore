@@ -1,0 +1,6 @@
+node_modules/
+.bundle/
+qa/
+out/preview*.mp4
+*.pyc
+__pycache__/

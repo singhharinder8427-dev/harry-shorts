@@ -1,0 +1,537 @@
+[
+ {
+  "w": "If",
+  "start": 0.09,
+  "end": 0.35
+ },
+ {
+  "w": "every",
+  "start": 0.35,
+  "end": 0.79
+ },
+ {
+  "w": "drop",
+  "start": 0.79,
+  "end": 1.07
+ },
+ {
+  "w": "of",
+  "start": 1.07,
+  "end": 1.22
+ },
+ {
+  "w": "water",
+  "start": 1.22,
+  "end": 1.66
+ },
+ {
+  "w": "on",
+  "start": 1.66,
+  "end": 1.79
+ },
+ {
+  "w": "Earth",
+  "start": 1.79,
+  "end": 2.03
+ },
+ {
+  "w": "vanished,",
+  "start": 2.03,
+  "end": 2.83
+ },
+ {
+  "w": "you",
+  "start": 3.21,
+  "end": 3.4
+ },
+ {
+  "w": "wouldn't",
+  "start": 3.4,
+  "end": 3.73
+ },
+ {
+  "w": "survive",
+  "start": 3.73,
+  "end": 4.22
+ },
+ {
+  "w": "it.",
+  "start": 4.22,
+  "end": 4.5
+ },
+ {
+  "w": "Up",
+  "start": 5.0,
+  "end": 4.5
+ },
+ {
+  "w": "to",
+  "start": 5.0,
+  "end": 5.24
+ },
+ {
+  "w": "sixty",
+  "start": 5.24,
+  "end": 5.77
+ },
+ {
+  "w": "percent",
+  "start": 5.77,
+  "end": 6.29
+ },
+ {
+  "w": "of",
+  "start": 6.29,
+  "end": 6.36
+ },
+ {
+  "w": "an",
+  "start": 6.36,
+  "end": 6.45
+ },
+ {
+  "w": "adult's",
+  "start": 6.45,
+  "end": 6.83
+ },
+ {
+  "w": "body",
+  "start": 6.83,
+  "end": 7.18
+ },
+ {
+  "w": "is",
+  "start": 7.18,
+  "end": 7.35
+ },
+ {
+  "w": "water,",
+  "start": 7.35,
+  "end": 7.85
+ },
+ {
+  "w": "so",
+  "start": 8.06,
+  "end": 8.24
+ },
+ {
+  "w": "every",
+  "start": 8.24,
+  "end": 8.58
+ },
+ {
+  "w": "person,",
+  "start": 8.58,
+  "end": 9.25
+ },
+ {
+  "w": "animal",
+  "start": 9.25,
+  "end": 9.73
+ },
+ {
+  "w": "and",
+  "start": 9.73,
+  "end": 9.87
+ },
+ {
+  "w": "plant",
+  "start": 9.87,
+  "end": 10.58
+ },
+ {
+  "w": "would",
+  "start": 10.75,
+  "end": 10.58
+ },
+ {
+  "w": "instantly",
+  "start": 10.75,
+  "end": 11.31
+ },
+ {
+  "w": "shrivel.",
+  "start": 11.31,
+  "end": 11.93
+ },
+ {
+  "w": "The",
+  "start": 13.24,
+  "end": 13.05
+ },
+ {
+  "w": "oceans",
+  "start": 13.26,
+  "end": 13.85
+ },
+ {
+  "w": "would",
+  "start": 13.85,
+  "end": 13.98
+ },
+ {
+  "w": "leave",
+  "start": 13.98,
+  "end": 14.22
+ },
+ {
+  "w": "basins",
+  "start": 14.22,
+  "end": 14.84
+ },
+ {
+  "w": "averaging",
+  "start": 14.84,
+  "end": 15.24
+ },
+ {
+  "w": "about",
+  "start": 15.24,
+  "end": 15.5
+ },
+ {
+  "w": "three",
+  "start": 15.5,
+  "end": 15.87
+ },
+ {
+  "w": "point",
+  "start": 15.87,
+  "end": 16.16
+ },
+ {
+  "w": "seven",
+  "start": 16.16,
+  "end": 16.6
+ },
+ {
+  "w": "kilometers",
+  "start": 16.6,
+  "end": 17.27
+ },
+ {
+  "w": "deep.",
+  "start": 17.27,
+  "end": 17.63
+ },
+ {
+  "w": "Clouds",
+  "start": 18.01,
+  "end": 18.53
+ },
+ {
+  "w": "would",
+  "start": 18.53,
+  "end": 18.66
+ },
+ {
+  "w": "disappear.",
+  "start": 18.66,
+  "end": 19.31
+ },
+ {
+  "w": "And",
+  "start": 19.68,
+  "end": 19.31
+ },
+ {
+  "w": "water",
+  "start": 19.68,
+  "end": 20.195
+ },
+ {
+  "w": "vapor",
+  "start": 20.195,
+  "end": 20.615
+ },
+ {
+  "w": "is",
+  "start": 20.615,
+  "end": 20.865
+ },
+ {
+  "w": "Earth's",
+  "start": 20.865,
+  "end": 21.165
+ },
+ {
+  "w": "biggest",
+  "start": 21.165,
+  "end": 21.735
+ },
+ {
+  "w": "heat",
+  "start": 21.735,
+  "end": 21.985
+ },
+ {
+  "w": "trapper,",
+  "start": 21.985,
+  "end": 22.41
+ },
+ {
+  "w": "about",
+  "start": 22.65,
+  "end": 22.895
+ },
+ {
+  "w": "half",
+  "start": 22.895,
+  "end": 23.345
+ },
+ {
+  "w": "the",
+  "start": 23.345,
+  "end": 23.425
+ },
+ {
+  "w": "greenhouse",
+  "start": 23.425,
+  "end": 23.965
+ },
+ {
+  "w": "effect.",
+  "start": 23.965,
+  "end": 24.39
+ },
+ {
+  "w": "Without",
+  "start": 24.74,
+  "end": 25.115
+ },
+ {
+  "w": "it,",
+  "start": 25.115,
+  "end": 25.305
+ },
+ {
+  "w": "far",
+  "start": 25.305,
+  "end": 25.725
+ },
+ {
+  "w": "more",
+  "start": 25.725,
+  "end": 25.985
+ },
+ {
+  "w": "heat",
+  "start": 25.985,
+  "end": 26.265
+ },
+ {
+  "w": "would",
+  "start": 26.265,
+  "end": 26.395
+ },
+ {
+  "w": "escape",
+  "start": 26.395,
+  "end": 26.815
+ },
+ {
+  "w": "into",
+  "start": 26.815,
+  "end": 27.005
+ },
+ {
+  "w": "space",
+  "start": 27.005,
+  "end": 27.535
+ },
+ {
+  "w": "every",
+  "start": 27.535,
+  "end": 27.755
+ },
+ {
+  "w": "night,",
+  "start": 27.755,
+  "end": 28.18
+ },
+ {
+  "w": "like",
+  "start": 28.41,
+  "end": 28.565
+ },
+ {
+  "w": "a",
+  "start": 28.565,
+  "end": 28.605
+ },
+ {
+  "w": "desert",
+  "start": 28.605,
+  "end": 29.195
+ },
+ {
+  "w": "everywhere.",
+  "start": 29.195,
+  "end": 29.82
+ },
+ {
+  "w": "Here's",
+  "start": 30.28,
+  "end": 30.51
+ },
+ {
+  "w": "the",
+  "start": 30.51,
+  "end": 30.6
+ },
+ {
+  "w": "strange",
+  "start": 30.6,
+  "end": 31.11
+ },
+ {
+  "w": "part.",
+  "start": 31.11,
+  "end": 31.54
+ },
+ {
+  "w": "Rolled",
+  "start": 31.88,
+  "end": 32.19
+ },
+ {
+  "w": "into",
+  "start": 32.19,
+  "end": 32.38
+ },
+ {
+  "w": "one",
+  "start": 32.38,
+  "end": 32.79
+ },
+ {
+  "w": "ball,",
+  "start": 32.79,
+  "end": 33.2
+ },
+ {
+  "w": "all",
+  "start": 33.43,
+  "end": 33.62
+ },
+ {
+  "w": "that",
+  "start": 33.62,
+  "end": 33.81
+ },
+ {
+  "w": "water",
+  "start": 33.81,
+  "end": 34.19
+ },
+ {
+  "w": "would",
+  "start": 34.19,
+  "end": 34.35
+ },
+ {
+  "w": "be",
+  "start": 34.35,
+  "end": 34.5
+ },
+ {
+  "w": "under",
+  "start": 34.5,
+  "end": 34.68
+ },
+ {
+  "w": "1,400",
+  "start": 34.82,
+  "end": 35.7
+ },
+ {
+  "w": "kilometers",
+  "start": 35.7,
+  "end": 36.54
+ },
+ {
+  "w": "wide.",
+  "start": 36.54,
+  "end": 37.49
+ },
+ {
+  "w": "A",
+  "start": 37.82,
+  "end": 37.49
+ },
+ {
+  "w": "planet",
+  "start": 37.82,
+  "end": 38.345
+ },
+ {
+  "w": "nine",
+  "start": 38.345,
+  "end": 38.755
+ },
+ {
+  "w": "times",
+  "start": 38.755,
+  "end": 39.175
+ },
+ {
+  "w": "wider",
+  "start": 39.175,
+  "end": 39.645
+ },
+ {
+  "w": "depends",
+  "start": 39.645,
+  "end": 40.305
+ },
+ {
+  "w": "on",
+  "start": 40.305,
+  "end": 40.395
+ },
+ {
+  "w": "it.",
+  "start": 40.395,
+  "end": 40.63
+ },
+ {
+  "w": "Subscribe",
+  "start": 40.91,
+  "end": 41.57
+ },
+ {
+  "w": "so",
+  "start": 41.57,
+  "end": 41.73
+ },
+ {
+  "w": "you",
+  "start": 41.73,
+  "end": 41.93
+ },
+ {
+  "w": "never",
+  "start": 41.93,
+  "end": 42.29
+ },
+ {
+  "w": "miss",
+  "start": 42.29,
+  "end": 42.6
+ },
+ {
+  "w": "the",
+  "start": 42.6,
+  "end": 42.73
+ },
+ {
+  "w": "next",
+  "start": 42.73,
+  "end": 43.15
+ },
+ {
+  "w": "what-if.",
+  "start": 43.15,
+  "end": 43.86
+ }
+]

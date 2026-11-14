@@ -1,0 +1,853 @@
+{
+ "short": "water",
+ "title": "What if all the water on Earth vanished?",
+ "duration": 45.77,
+ "voiceOffset": 0.31,
+ "estimated": false,
+ "words": [
+  {
+   "w": "If",
+   "start": 0.4,
+   "end": 0.66
+  },
+  {
+   "w": "every",
+   "start": 0.66,
+   "end": 1.1
+  },
+  {
+   "w": "drop",
+   "start": 1.1,
+   "end": 1.38
+  },
+  {
+   "w": "of",
+   "start": 1.38,
+   "end": 1.53
+  },
+  {
+   "w": "water",
+   "start": 1.53,
+   "end": 1.97
+  },
+  {
+   "w": "on",
+   "start": 1.97,
+   "end": 2.1
+  },
+  {
+   "w": "Earth",
+   "start": 2.1,
+   "end": 2.34
+  },
+  {
+   "w": "vanished,",
+   "start": 2.34,
+   "end": 3.14
+  },
+  {
+   "w": "you",
+   "start": 3.52,
+   "end": 3.71
+  },
+  {
+   "w": "wouldn't",
+   "start": 3.71,
+   "end": 4.04
+  },
+  {
+   "w": "survive",
+   "start": 4.04,
+   "end": 4.53
+  },
+  {
+   "w": "it.",
+   "start": 4.53,
+   "end": 4.81
+  },
+  {
+   "w": "Up",
+   "start": 5.31,
+   "end": 4.81
+  },
+  {
+   "w": "to",
+   "start": 5.31,
+   "end": 5.55
+  },
+  {
+   "w": "sixty",
+   "start": 5.55,
+   "end": 6.08
+  },
+  {
+   "w": "percent",
+   "start": 6.08,
+   "end": 6.6
+  },
+  {
+   "w": "of",
+   "start": 6.6,
+   "end": 6.67
+  },
+  {
+   "w": "an",
+   "start": 6.67,
+   "end": 6.76
+  },
+  {
+   "w": "adult's",
+   "start": 6.76,
+   "end": 7.14
+  },
+  {
+   "w": "body",
+   "start": 7.14,
+   "end": 7.49
+  },
+  {
+   "w": "is",
+   "start": 7.49,
+   "end": 7.66
+  },
+  {
+   "w": "water,",
+   "start": 7.66,
+   "end": 8.16
+  },
+  {
+   "w": "so",
+   "start": 8.37,
+   "end": 8.55
+  },
+  {
+   "w": "every",
+   "start": 8.55,
+   "end": 8.89
+  },
+  {
+   "w": "person,",
+   "start": 8.89,
+   "end": 9.56
+  },
+  {
+   "w": "animal",
+   "start": 9.56,
+   "end": 10.04
+  },
+  {
+   "w": "and",
+   "start": 10.04,
+   "end": 10.18
+  },
+  {
+   "w": "plant",
+   "start": 10.18,
+   "end": 10.89
+  },
+  {
+   "w": "would",
+   "start": 11.06,
+   "end": 10.89
+  },
+  {
+   "w": "instantly",
+   "start": 11.06,
+   "end": 11.62
+  },
+  {
+   "w": "shrivel.",
+   "start": 11.62,
+   "end": 12.24
+  },
+  {
+   "w": "The",
+   "start": 13.55,
+   "end": 13.36
+  },
+  {
+   "w": "oceans",
+   "start": 13.57,
+   "end": 14.16
+  },
+  {
+   "w": "would",
+   "start": 14.16,
+   "end": 14.29
+  },
+  {
+   "w": "leave",
+   "start": 14.29,
+   "end": 14.53
+  },
+  {
+   "w": "basins",
+   "start": 14.53,
+   "end": 15.15
+  },
+  {
+   "w": "averaging",
+   "start": 15.15,
+   "end": 15.55
+  },
+  {
+   "w": "about",
+   "start": 15.55,
+   "end": 15.81
+  },
+  {
+   "w": "three",
+   "start": 15.81,
+   "end": 16.18
+  },
+  {
+   "w": "point",
+   "start": 16.18,
+   "end": 16.47
+  },
+  {
+   "w": "seven",
+   "start": 16.47,
+   "end": 16.91
+  },
+  {
+   "w": "kilometers",
+   "start": 16.91,
+   "end": 17.58
+  },
+  {
+   "w": "deep.",
+   "start": 17.58,
+   "end": 17.94
+  },
+  {
+   "w": "Clouds",
+   "start": 18.32,
+   "end": 18.84
+  },
+  {
+   "w": "would",
+   "start": 18.84,
+   "end": 18.97
+  },
+  {
+   "w": "disappear.",
+   "start": 18.97,
+   "end": 19.62
+  },
+  {
+   "w": "And",
+   "start": 19.99,
+   "end": 19.62
+  },
+  {
+   "w": "water",
+   "start": 19.99,
+   "end": 20.505
+  },
+  {
+   "w": "vapor",
+   "start": 20.505,
+   "end": 20.925
+  },
+  {
+   "w": "is",
+   "start": 20.925,
+   "end": 21.175
+  },
+  {
+   "w": "Earth's",
+   "start": 21.175,
+   "end": 21.475
+  },
+  {
+   "w": "biggest",
+   "start": 21.475,
+   "end": 22.045
+  },
+  {
+   "w": "heat",
+   "start": 22.045,
+   "end": 22.295
+  },
+  {
+   "w": "trapper,",
+   "start": 22.295,
+   "end": 22.72
+  },
+  {
+   "w": "about",
+   "start": 22.96,
+   "end": 23.205
+  },
+  {
+   "w": "half",
+   "start": 23.205,
+   "end": 23.655
+  },
+  {
+   "w": "the",
+   "start": 23.655,
+   "end": 23.735
+  },
+  {
+   "w": "greenhouse",
+   "start": 23.735,
+   "end": 24.275
+  },
+  {
+   "w": "effect.",
+   "start": 24.275,
+   "end": 24.7
+  },
+  {
+   "w": "Without",
+   "start": 25.05,
+   "end": 25.425
+  },
+  {
+   "w": "it,",
+   "start": 25.425,
+   "end": 25.615
+  },
+  {
+   "w": "far",
+   "start": 25.615,
+   "end": 26.035
+  },
+  {
+   "w": "more",
+   "start": 26.035,
+   "end": 26.295
+  },
+  {
+   "w": "heat",
+   "start": 26.295,
+   "end": 26.575
+  },
+  {
+   "w": "would",
+   "start": 26.575,
+   "end": 26.705
+  },
+  {
+   "w": "escape",
+   "start": 26.705,
+   "end": 27.125
+  },
+  {
+   "w": "into",
+   "start": 27.125,
+   "end": 27.315
+  },
+  {
+   "w": "space",
+   "start": 27.315,
+   "end": 27.845
+  },
+  {
+   "w": "every",
+   "start": 27.845,
+   "end": 28.065
+  },
+  {
+   "w": "night,",
+   "start": 28.065,
+   "end": 28.49
+  },
+  {
+   "w": "like",
+   "start": 28.72,
+   "end": 28.875
+  },
+  {
+   "w": "a",
+   "start": 28.875,
+   "end": 28.915
+  },
+  {
+   "w": "desert",
+   "start": 28.915,
+   "end": 29.505
+  },
+  {
+   "w": "everywhere.",
+   "start": 29.505,
+   "end": 30.13
+  },
+  {
+   "w": "Here's",
+   "start": 30.59,
+   "end": 30.82
+  },
+  {
+   "w": "the",
+   "start": 30.82,
+   "end": 30.91
+  },
+  {
+   "w": "strange",
+   "start": 30.91,
+   "end": 31.42
+  },
+  {
+   "w": "part.",
+   "start": 31.42,
+   "end": 31.85
+  },
+  {
+   "w": "Rolled",
+   "start": 32.19,
+   "end": 32.5
+  },
+  {
+   "w": "into",
+   "start": 32.5,
+   "end": 32.69
+  },
+  {
+   "w": "one",
+   "start": 32.69,
+   "end": 33.1
+  },
+  {
+   "w": "ball,",
+   "start": 33.1,
+   "end": 33.51
+  },
+  {
+   "w": "all",
+   "start": 33.74,
+   "end": 33.93
+  },
+  {
+   "w": "that",
+   "start": 33.93,
+   "end": 34.12
+  },
+  {
+   "w": "water",
+   "start": 34.12,
+   "end": 34.5
+  },
+  {
+   "w": "would",
+   "start": 34.5,
+   "end": 34.66
+  },
+  {
+   "w": "be",
+   "start": 34.66,
+   "end": 34.81
+  },
+  {
+   "w": "under",
+   "start": 34.81,
+   "end": 34.99
+  },
+  {
+   "w": "1,400",
+   "start": 35.13,
+   "end": 36.01
+  },
+  {
+   "w": "kilometers",
+   "start": 36.01,
+   "end": 36.85
+  },
+  {
+   "w": "wide.",
+   "start": 36.85,
+   "end": 37.8
+  },
+  {
+   "w": "A",
+   "start": 38.13,
+   "end": 37.8
+  },
+  {
+   "w": "planet",
+   "start": 38.13,
+   "end": 38.655
+  },
+  {
+   "w": "nine",
+   "start": 38.655,
+   "end": 39.065
+  },
+  {
+   "w": "times",
+   "start": 39.065,
+   "end": 39.485
+  },
+  {
+   "w": "wider",
+   "start": 39.485,
+   "end": 39.955
+  },
+  {
+   "w": "depends",
+   "start": 39.955,
+   "end": 40.615
+  },
+  {
+   "w": "on",
+   "start": 40.615,
+   "end": 40.705
+  },
+  {
+   "w": "it.",
+   "start": 40.705,
+   "end": 40.94
+  },
+  {
+   "w": "Subscribe",
+   "start": 41.22,
+   "end": 41.88
+  },
+  {
+   "w": "so",
+   "start": 41.88,
+   "end": 42.04
+  },
+  {
+   "w": "you",
+   "start": 42.04,
+   "end": 42.24
+  },
+  {
+   "w": "never",
+   "start": 42.24,
+   "end": 42.6
+  },
+  {
+   "w": "miss",
+   "start": 42.6,
+   "end": 42.91
+  },
+  {
+   "w": "the",
+   "start": 42.91,
+   "end": 43.04
+  },
+  {
+   "w": "next",
+   "start": 43.04,
+   "end": 43.46
+  },
+  {
+   "w": "what-if.",
+   "start": 43.46,
+   "end": 44.17
+  }
+ ],
+ "chunks": [
+  {
+   "text": "If every drop of water",
+   "w0": 0,
+   "w1": 4,
+   "start": 0.4,
+   "end": 1.97
+  },
+  {
+   "text": "on Earth vanished,",
+   "w0": 5,
+   "w1": 7,
+   "start": 1.97,
+   "end": 3.14
+  },
+  {
+   "text": "you wouldn't survive it.",
+   "w0": 8,
+   "w1": 11,
+   "start": 3.52,
+   "end": 4.8100000000000005
+  },
+  {
+   "text": "Up to sixty percent",
+   "w0": 12,
+   "w1": 15,
+   "start": 5.3100000000000005,
+   "end": 6.6
+  },
+  {
+   "text": "of an adult's body is water,",
+   "w0": 16,
+   "w1": 21,
+   "start": 6.6,
+   "end": 8.16
+  },
+  {
+   "text": "so every person, animal and plant",
+   "w0": 22,
+   "w1": 27,
+   "start": 8.370000000000001,
+   "end": 10.89
+  },
+  {
+   "text": "would instantly shrivel.",
+   "w0": 28,
+   "w1": 30,
+   "start": 11.06,
+   "end": 12.24
+  },
+  {
+   "text": "The oceans would leave basins",
+   "w0": 31,
+   "w1": 35,
+   "start": 13.55,
+   "end": 15.15
+  },
+  {
+   "text": "averaging about",
+   "w0": 36,
+   "w1": 37,
+   "start": 15.15,
+   "end": 15.81
+  },
+  {
+   "text": "three point seven kilometers deep.",
+   "w0": 38,
+   "w1": 42,
+   "start": 15.81,
+   "end": 17.939999999999998
+  },
+  {
+   "text": "Clouds would disappear.",
+   "w0": 43,
+   "w1": 45,
+   "start": 18.32,
+   "end": 19.619999999999997
+  },
+  {
+   "text": "And water vapor is",
+   "w0": 46,
+   "w1": 49,
+   "start": 19.99,
+   "end": 21.174999999999997
+  },
+  {
+   "text": "Earth's biggest heat trapper,",
+   "w0": 50,
+   "w1": 53,
+   "start": 21.174999999999997,
+   "end": 22.72
+  },
+  {
+   "text": "about half the greenhouse effect.",
+   "w0": 54,
+   "w1": 58,
+   "start": 22.959999999999997,
+   "end": 24.7
+  },
+  {
+   "text": "Without it, far more heat",
+   "w0": 59,
+   "w1": 63,
+   "start": 25.049999999999997,
+   "end": 26.575
+  },
+  {
+   "text": "would escape into space every night,",
+   "w0": 64,
+   "w1": 69,
+   "start": 26.575,
+   "end": 28.49
+  },
+  {
+   "text": "like a desert everywhere.",
+   "w0": 70,
+   "w1": 73,
+   "start": 28.72,
+   "end": 30.13
+  },
+  {
+   "text": "Here's the strange part.",
+   "w0": 74,
+   "w1": 77,
+   "start": 30.59,
+   "end": 31.849999999999998
+  },
+  {
+   "text": "Rolled into one ball,",
+   "w0": 78,
+   "w1": 81,
+   "start": 32.19,
+   "end": 33.510000000000005
+  },
+  {
+   "text": "all that water would be",
+   "w0": 82,
+   "w1": 86,
+   "start": 33.74,
+   "end": 34.81
+  },
+  {
+   "text": "under 1,400 kilometers wide.",
+   "w0": 87,
+   "w1": 90,
+   "start": 34.81,
+   "end": 37.800000000000004
+  },
+  {
+   "text": "A planet nine times wider",
+   "w0": 91,
+   "w1": 95,
+   "start": 38.13,
+   "end": 39.955000000000005
+  },
+  {
+   "text": "depends on it.",
+   "w0": 96,
+   "w1": 98,
+   "start": 39.955000000000005,
+   "end": 40.940000000000005
+  },
+  {
+   "text": "Subscribe so you",
+   "w0": 99,
+   "w1": 101,
+   "start": 41.22,
+   "end": 42.24
+  },
+  {
+   "text": "never miss the next what-if.",
+   "w0": 102,
+   "w1": 106,
+   "start": 42.24,
+   "end": 44.17
+  }
+ ],
+ "sentences": [
+  {
+   "start": 0.4,
+   "end": 4.8100000000000005,
+   "text": "If every drop of water on Earth vanished, you wouldn't survive it."
+  },
+  {
+   "start": 5.3100000000000005,
+   "end": 12.24,
+   "text": "Up to sixty percent of an adult's body is water, so every person, animal and plant would instantly shrivel."
+  },
+  {
+   "start": 13.55,
+   "end": 17.939999999999998,
+   "text": "The oceans would leave basins averaging about three point seven kilometers deep."
+  },
+  {
+   "start": 18.32,
+   "end": 19.619999999999997,
+   "text": "Clouds would disappear."
+  },
+  {
+   "start": 19.99,
+   "end": 24.7,
+   "text": "And water vapor is Earth's biggest heat trapper, about half the greenhouse effect."
+  },
+  {
+   "start": 25.049999999999997,
+   "end": 30.13,
+   "text": "Without it, far more heat would escape into space every night, like a desert everywhere."
+  },
+  {
+   "start": 30.59,
+   "end": 31.849999999999998,
+   "text": "Here's the strange part."
+  },
+  {
+   "start": 32.19,
+   "end": 37.800000000000004,
+   "text": "Rolled into one ball, all that water would be under 1,400 kilometers wide."
+  },
+  {
+   "start": 38.13,
+   "end": 40.940000000000005,
+   "text": "A planet nine times wider depends on it."
+  },
+  {
+   "start": 41.22,
+   "end": 44.17,
+   "text": "Subscribe so you never miss the next what-if."
+  }
+ ],
+ "keys": {
+  "drop": 1.1,
+  "vanished": 2.34,
+  "you": 3.52,
+  "survive": 4.04,
+  "sixty": 5.55,
+  "body": 7.14,
+  "person": 8.89,
+  "plant": 10.18,
+  "shrivel": 11.62,
+  "oceans": 13.57,
+  "basins": 14.53,
+  "three": 15.81,
+  "deep": 17.58,
+  "clouds": 18.32,
+  "disappear": 18.97,
+  "vapor": 20.505,
+  "trapper": 22.295,
+  "half": 23.205,
+  "without": 25.05,
+  "heat2": 26.295,
+  "escape": 26.705,
+  "night": 28.065,
+  "desert": 28.915,
+  "strange": 30.91,
+  "part": 31.42,
+  "rolled": 32.19,
+  "ball": 33.1,
+  "under": 34.81,
+  "wide": 36.85,
+  "planet": 38.13,
+  "nine": 38.655,
+  "wider": 39.485,
+  "depends": 39.955,
+  "it_end": 40.705,
+  "subscribe": 41.22,
+  "never": 42.24,
+  "next": 43.04,
+  "whatif": 43.46
+ },
+ "keyEnd": {
+  "drop": 1.38,
+  "vanished": 3.14,
+  "you": 3.71,
+  "survive": 4.53,
+  "sixty": 6.08,
+  "body": 7.49,
+  "person": 9.56,
+  "plant": 10.89,
+  "shrivel": 12.24,
+  "oceans": 14.16,
+  "basins": 15.15,
+  "three": 16.18,
+  "deep": 17.94,
+  "clouds": 18.84,
+  "disappear": 19.62,
+  "vapor": 20.925,
+  "trapper": 22.72,
+  "half": 23.655,
+  "without": 25.425,
+  "heat2": 26.575,
+  "escape": 27.125,
+  "night": 28.49,
+  "desert": 29.505,
+  "strange": 31.42,
+  "part": 31.85,
+  "rolled": 32.5,
+  "ball": 33.51,
+  "under": 34.99,
+  "wide": 37.8,
+  "planet": 38.655,
+  "nine": 39.065,
+  "wider": 39.955,
+  "depends": 40.615,
+  "it_end": 40.94,
+  "subscribe": 41.88,
+  "never": 42.6,
+  "next": 43.46,
+  "whatif": 44.17
+ }
+}
