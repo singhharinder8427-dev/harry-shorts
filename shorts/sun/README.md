@@ -1,7 +1,7 @@
 # What if the Sun vanished right now? (code-drawn cartoon Short)
 
 Vertical cartoon Short made with Remotion (designed 1080x1920, delivered 1440x2560, 60 fps). All art, motion, captions and
-sound effects are code. **Status: built on estimated timing (35.6 s); waiting for the voice take.**
+sound effects are code. Re-timed to the real voice take: 39.7 s. Final: `out/sun-2K.mp4`.
 
 ## Script (101 words incl. the subscribe line)
 See `voiceover/script.txt`. Timing sheet for the take: `voiceover/TIMING_SHEET.md`.
