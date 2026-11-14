@@ -73,7 +73,7 @@ export const Thumb: React.FC<{variant: 'A' | 'B' | 'C'}> = ({variant}) => {
   }[variant];
   return (
     <AbsoluteFill>
-      {cfg.plant ? <Plant t={cfg.t} noTag /> : <Town t={cfg.t} />}
+      {cfg.plant ? <Plant t={cfg.t} noTag /> : <AbsoluteFill style={{transform: 'scale(1.4)', transformOrigin: '250px 1330px'}}><Town t={cfg.t} /></AbsoluteFill>}
       <AbsoluteFill style={{top: 250, height: 330, bottom: 'auto', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
         {[cfg.l1, cfg.l2].map((l, i) => <div key={i} style={{fontFamily: 'Inter', fontWeight: 900, fontSize: l.length > 12 ? 92 : 118, lineHeight: 1.04, whiteSpace: 'nowrap',
           color: i ? '#FFE14D' : 'white', WebkitTextStroke: '28px #111', paintOrder: 'stroke fill', textAlign: 'center', width: 900,
