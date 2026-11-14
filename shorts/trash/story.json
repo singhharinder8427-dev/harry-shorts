@@ -1,0 +1,250 @@
+{
+ "short": "trash",
+ "title": "What happens to trash at a waste-to-energy plant?",
+ "spoken": {},
+ "chunks": [
+  "Throw something away,",
+  "and it doesn't vanish.",
+  "The town's trash",
+  "piles into",
+  "a stinking mountain.",
+  "Burn it outside,",
+  "and the sky turns black.",
+  "So a crane drops it",
+  "into a closed furnace,",
+  "where it tumbles down",
+  "a moving grate",
+  "as air from below",
+  "burns it.",
+  "The heat boils water",
+  "in pipes lining the walls.",
+  "That steam spins",
+  "a turbine for power,",
+  "and leftover heat",
+  "can warm homes.",
+  "Lime neutralizes",
+  "acid in the smoke,",
+  "carbon traps",
+  "mercury and dioxins,",
+  "and fabric bags",
+  "catch the dust.",
+  "The white plume",
+  "from the chimney",
+  "is mostly water vapor.",
+  "Magnets pull metal",
+  "from the ash,",
+  "and the rest",
+  "can become",
+  "road gravel.",
+  "Subscribe to see",
+  "how more everyday things work."
+ ],
+ "syllables": {
+  "something": 2,
+  "away": 2,
+  "doesn't": 2,
+  "vanish": 2,
+  "town's": 1,
+  "piles": 1,
+  "stinking": 2,
+  "mountain": 2,
+  "outside": 2,
+  "turns": 1,
+  "closed": 1,
+  "furnace": 2,
+  "where": 1,
+  "tumbles": 2,
+  "moving": 2,
+  "grate": 1,
+  "below": 2,
+  "burns": 1,
+  "water": 2,
+  "pipes": 1,
+  "lining": 2,
+  "walls": 1,
+  "steam": 1,
+  "spins": 1,
+  "turbine": 2,
+  "power": 2,
+  "leftover": 3,
+  "homes": 1,
+  "lime": 1,
+  "neutralizes": 4,
+  "acid": 2,
+  "smoke": 1,
+  "carbon": 2,
+  "traps": 1,
+  "mercury": 3,
+  "dioxins": 3,
+  "fabric": 2,
+  "bags": 1,
+  "catch": 1,
+  "dust": 1,
+  "white": 1,
+  "plume": 1,
+  "chimney": 2,
+  "mostly": 2,
+  "vapor": 2,
+  "magnets": 2,
+  "metal": 2,
+  "become": 2,
+  "gravel": 2,
+  "subscribe": 2,
+  "everyday": 3,
+  "things": 1,
+  "work": 1,
+  "more": 1
+ },
+ "keys": {
+  "throw": [
+   0,
+   "throw"
+  ],
+  "vanish": [
+   0,
+   "vanish"
+  ],
+  "piles": [
+   1,
+   "piles"
+  ],
+  "stinking": [
+   1,
+   "stinking"
+  ],
+  "burn": [
+   2,
+   "burn"
+  ],
+  "black": [
+   2,
+   "black"
+  ],
+  "crane": [
+   3,
+   "crane"
+  ],
+  "furnace": [
+   3,
+   "furnace"
+  ],
+  "tumbles": [
+   3,
+   "tumbles"
+  ],
+  "air": [
+   3,
+   "air"
+  ],
+  "burns": [
+   3,
+   "burns"
+  ],
+  "boils": [
+   4,
+   "boils"
+  ],
+  "walls": [
+   4,
+   "walls"
+  ],
+  "steam": [
+   5,
+   "steam"
+  ],
+  "turbine": [
+   5,
+   "turbine"
+  ],
+  "power": [
+   5,
+   "power"
+  ],
+  "leftover": [
+   5,
+   "leftover"
+  ],
+  "homes": [
+   5,
+   "homes"
+  ],
+  "lime": [
+   6,
+   "lime"
+  ],
+  "acid": [
+   6,
+   "acid"
+  ],
+  "carbon": [
+   6,
+   "carbon"
+  ],
+  "bags": [
+   6,
+   "bags"
+  ],
+  "dust": [
+   6,
+   "dust"
+  ],
+  "plume": [
+   7,
+   "plume"
+  ],
+  "vapor": [
+   7,
+   "vapor"
+  ],
+  "magnets": [
+   8,
+   "magnets"
+  ],
+  "rest": [
+   8,
+   "rest"
+  ],
+  "gravel": [
+   8,
+   "gravel"
+  ],
+  "subscribe": [
+   9,
+   "subscribe"
+  ],
+  "everyday": [
+   9,
+   "everyday"
+  ],
+  "work": [
+   9,
+   "work"
+  ]
+ },
+ "beats": {
+  "throw": "the guy tosses the trash bag (it has a face) in an arc",
+  "vanish": "the bag lands, blinks, still there - smug",
+  "piles": "bags rain down and stack into a mountain, camera pulls back",
+  "stinking": "green stink lines, flies, guy pinches nose",
+  "burn": "flames pop on the mountain",
+  "black": "black smoke puffs fill the sky, sky darkens, guy coughs",
+  "crane": "CUT inside the plant: crane claw grabs trash from the pit (the bag gasps)",
+  "furnace": "claw drops it into the closed furnace",
+  "tumbles": "trash tumbles down the stepped moving grate",
+  "air": "blue air arrows push up from under the grate, flames roar",
+  "boils": "pipes in the furnace walls fill with bubbles",
+  "steam": "steam puffs race along the pipe",
+  "turbine": "the turbine spins up (with a face)",
+  "power": "lightning down the power line, house windows light up",
+  "homes": "orange heat pipe, houses smile warmly",
+  "lime": "white lime powder sprays into the smoke duct, acid bubbles fizz away",
+  "carbon": "black carbon powder grabs mercury and dioxin specks",
+  "bags": "rows of fabric bags puff up and catch the dust",
+  "plume": "the chimney (with a face) breathes out a white puffy plume",
+  "vapor": "label: mostly water vapor",
+  "magnets": "a magnet with a face pulls cans and nails out of the ash",
+  "gravel": "the rest pours into a gravel pile, road",
+  "subscribe": "CUT back to the town: guy on the new road, SUBSCRIBE button + cursor",
+  "work": "click, bell rings; loop to frame 0"
+ }
+}
