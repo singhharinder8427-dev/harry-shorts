@@ -24,3 +24,11 @@ See `voiceover/script.txt`. 145 words, estimated 50.5 s at a natural pace.
 ```bash
 tools/retime.sh path/to/take.mp3
 ```
+
+## Final checks (2K master)
+- 1440x2560, 60 fps, 3159 frames = 52.65 s (limit 55 s); audio present, 52.70 s
+- loudness -14.0 LUFS integrated, true peak -1.0 dBFS; no silences (continuous bed)
+- loop: lossless stills diff 0.001; H.264 file 0.50 (compression)
+- re-timed to the voice take with explicit sentence bounds:
+  `BOUNDS=3.77,4.89,5.76,9.40,12.44,14.16,16.5,18.93,20.27,22.98,28.32,32.8,37.43,41.68,45.48,48.06 RENDER=0 tools/retime.sh take.mp3`
+- render in chunks (cloud time limit): `tools/render_chunk.sh 0 1052`, `... 1053 2105`, `... 2106 3158`, then `tools/join_chunks.sh`
