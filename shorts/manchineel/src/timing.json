@@ -1,0 +1,1154 @@
+{
+ "short": "manchineel",
+ "title": "The beach tree you should never sit under",
+ "duration": 50.55,
+ "voiceOffset": 0.0,
+ "estimated": true,
+ "words": [
+  {
+   "w": "Stuck",
+   "start": 0.4,
+   "end": 0.613
+  },
+  {
+   "w": "on",
+   "start": 0.613,
+   "end": 0.826
+  },
+  {
+   "w": "a",
+   "start": 0.826,
+   "end": 1.038
+  },
+  {
+   "w": "beach",
+   "start": 1.038,
+   "end": 1.251
+  },
+  {
+   "w": "with",
+   "start": 1.251,
+   "end": 1.464
+  },
+  {
+   "w": "only",
+   "start": 1.464,
+   "end": 1.889
+  },
+  {
+   "w": "one",
+   "start": 1.889,
+   "end": 2.102
+  },
+  {
+   "w": "tree,",
+   "start": 2.102,
+   "end": 2.315
+  },
+  {
+   "w": "you'd",
+   "start": 2.515,
+   "end": 2.728
+  },
+  {
+   "w": "sit",
+   "start": 2.728,
+   "end": 2.94
+  },
+  {
+   "w": "under",
+   "start": 2.94,
+   "end": 3.366
+  },
+  {
+   "w": "it.",
+   "start": 3.366,
+   "end": 3.579
+  },
+  {
+   "w": "Don't.",
+   "start": 4.079,
+   "end": 4.291
+  },
+  {
+   "w": "It's",
+   "start": 4.791,
+   "end": 5.004
+  },
+  {
+   "w": "a",
+   "start": 5.004,
+   "end": 5.217
+  },
+  {
+   "w": "manchineel.",
+   "start": 5.217,
+   "end": 5.855
+  },
+  {
+   "w": "It",
+   "start": 6.355,
+   "end": 6.568
+  },
+  {
+   "w": "has",
+   "start": 6.568,
+   "end": 6.781
+  },
+  {
+   "w": "small",
+   "start": 6.781,
+   "end": 6.994
+  },
+  {
+   "w": "green",
+   "start": 6.994,
+   "end": 7.206
+  },
+  {
+   "w": "apples,",
+   "start": 7.206,
+   "end": 7.632
+  },
+  {
+   "w": "and",
+   "start": 7.832,
+   "end": 8.045
+  },
+  {
+   "w": "a",
+   "start": 8.045,
+   "end": 8.257
+  },
+  {
+   "w": "red",
+   "start": 8.257,
+   "end": 8.47
+  },
+  {
+   "w": "band",
+   "start": 8.47,
+   "end": 8.683
+  },
+  {
+   "w": "someone",
+   "start": 8.683,
+   "end": 9.109
+  },
+  {
+   "w": "painted",
+   "start": 9.109,
+   "end": 9.534
+  },
+  {
+   "w": "on",
+   "start": 9.534,
+   "end": 9.747
+  },
+  {
+   "w": "the",
+   "start": 9.747,
+   "end": 9.96
+  },
+  {
+   "w": "trunk.",
+   "start": 9.96,
+   "end": 10.172
+  },
+  {
+   "w": "Here's",
+   "start": 10.672,
+   "end": 10.885
+  },
+  {
+   "w": "what",
+   "start": 10.885,
+   "end": 11.098
+  },
+  {
+   "w": "that",
+   "start": 11.098,
+   "end": 11.311
+  },
+  {
+   "w": "band",
+   "start": 11.311,
+   "end": 11.523
+  },
+  {
+   "w": "is",
+   "start": 11.523,
+   "end": 11.736
+  },
+  {
+   "w": "for.",
+   "start": 11.736,
+   "end": 11.949
+  },
+  {
+   "w": "A",
+   "start": 12.449,
+   "end": 12.662
+  },
+  {
+   "w": "storm",
+   "start": 12.662,
+   "end": 12.874
+  },
+  {
+   "w": "hits,",
+   "start": 12.874,
+   "end": 13.087
+  },
+  {
+   "w": "so",
+   "start": 13.287,
+   "end": 13.5
+  },
+  {
+   "w": "you",
+   "start": 13.5,
+   "end": 13.713
+  },
+  {
+   "w": "shelter",
+   "start": 13.713,
+   "end": 14.138
+  },
+  {
+   "w": "under",
+   "start": 14.138,
+   "end": 14.564
+  },
+  {
+   "w": "the",
+   "start": 14.564,
+   "end": 14.777
+  },
+  {
+   "w": "leaves.",
+   "start": 14.777,
+   "end": 14.989
+  },
+  {
+   "w": "Each",
+   "start": 15.489,
+   "end": 15.702
+  },
+  {
+   "w": "one",
+   "start": 15.702,
+   "end": 15.915
+  },
+  {
+   "w": "holds",
+   "start": 15.915,
+   "end": 16.128
+  },
+  {
+   "w": "a",
+   "start": 16.128,
+   "end": 16.34
+  },
+  {
+   "w": "milky",
+   "start": 16.34,
+   "end": 16.766
+  },
+  {
+   "w": "sap,",
+   "start": 16.766,
+   "end": 16.979
+  },
+  {
+   "w": "and",
+   "start": 17.179,
+   "end": 17.391
+  },
+  {
+   "w": "the",
+   "start": 17.391,
+   "end": 17.604
+  },
+  {
+   "w": "rain",
+   "start": 17.604,
+   "end": 17.817
+  },
+  {
+   "w": "drips",
+   "start": 17.817,
+   "end": 18.03
+  },
+  {
+   "w": "it",
+   "start": 18.03,
+   "end": 18.243
+  },
+  {
+   "w": "onto",
+   "start": 18.243,
+   "end": 18.668
+  },
+  {
+   "w": "your",
+   "start": 18.668,
+   "end": 18.881
+  },
+  {
+   "w": "skin.",
+   "start": 18.881,
+   "end": 19.094
+  },
+  {
+   "w": "Soon",
+   "start": 19.594,
+   "end": 19.806
+  },
+  {
+   "w": "you're",
+   "start": 19.806,
+   "end": 20.019
+  },
+  {
+   "w": "covered",
+   "start": 20.019,
+   "end": 20.657
+  },
+  {
+   "w": "in",
+   "start": 20.657,
+   "end": 20.87
+  },
+  {
+   "w": "blisters.",
+   "start": 20.87,
+   "end": 21.296
+  },
+  {
+   "w": "The",
+   "start": 21.796,
+   "end": 22.009
+  },
+  {
+   "w": "next",
+   "start": 22.009,
+   "end": 22.221
+  },
+  {
+   "w": "day",
+   "start": 22.221,
+   "end": 22.434
+  },
+  {
+   "w": "you're",
+   "start": 22.434,
+   "end": 22.647
+  },
+  {
+   "w": "starving,",
+   "start": 22.647,
+   "end": 23.072
+  },
+  {
+   "w": "and",
+   "start": 23.272,
+   "end": 23.485
+  },
+  {
+   "w": "the",
+   "start": 23.485,
+   "end": 23.698
+  },
+  {
+   "w": "apples",
+   "start": 23.698,
+   "end": 24.123
+  },
+  {
+   "w": "smell",
+   "start": 24.123,
+   "end": 24.336
+  },
+  {
+   "w": "good.",
+   "start": 24.336,
+   "end": 24.549
+  },
+  {
+   "w": "One",
+   "start": 25.049,
+   "end": 25.262
+  },
+  {
+   "w": "bite",
+   "start": 25.262,
+   "end": 25.474
+  },
+  {
+   "w": "is",
+   "start": 25.474,
+   "end": 25.687
+  },
+  {
+   "w": "sweet,",
+   "start": 25.687,
+   "end": 25.9
+  },
+  {
+   "w": "for",
+   "start": 26.1,
+   "end": 26.313
+  },
+  {
+   "w": "a",
+   "start": 26.313,
+   "end": 26.526
+  },
+  {
+   "w": "second.",
+   "start": 26.526,
+   "end": 26.951
+  },
+  {
+   "w": "Then",
+   "start": 27.451,
+   "end": 27.664
+  },
+  {
+   "w": "your",
+   "start": 27.664,
+   "end": 27.877
+  },
+  {
+   "w": "throat",
+   "start": 27.877,
+   "end": 28.089
+  },
+  {
+   "w": "burns",
+   "start": 28.089,
+   "end": 28.302
+  },
+  {
+   "w": "and",
+   "start": 28.302,
+   "end": 28.515
+  },
+  {
+   "w": "tightens.",
+   "start": 28.515,
+   "end": 28.94
+  },
+  {
+   "w": "In",
+   "start": 29.44,
+   "end": 29.653
+  },
+  {
+   "w": "Spanish,",
+   "start": 29.653,
+   "end": 30.079
+  },
+  {
+   "w": "that",
+   "start": 30.279,
+   "end": 30.491
+  },
+  {
+   "w": "fruit",
+   "start": 30.491,
+   "end": 30.704
+  },
+  {
+   "w": "is",
+   "start": 30.704,
+   "end": 30.917
+  },
+  {
+   "w": "the",
+   "start": 30.917,
+   "end": 31.13
+  },
+  {
+   "w": "little",
+   "start": 31.13,
+   "end": 31.555
+  },
+  {
+   "w": "apple",
+   "start": 31.555,
+   "end": 31.768
+  },
+  {
+   "w": "of",
+   "start": 31.768,
+   "end": 31.981
+  },
+  {
+   "w": "death.",
+   "start": 31.981,
+   "end": 32.194
+  },
+  {
+   "w": "Later,",
+   "start": 32.694,
+   "end": 33.119
+  },
+  {
+   "w": "nature",
+   "start": 33.319,
+   "end": 33.745
+  },
+  {
+   "w": "calls,",
+   "start": 33.745,
+   "end": 33.957
+  },
+  {
+   "w": "and",
+   "start": 34.157,
+   "end": 34.37
+  },
+  {
+   "w": "you",
+   "start": 34.37,
+   "end": 34.583
+  },
+  {
+   "w": "grab",
+   "start": 34.583,
+   "end": 34.796
+  },
+  {
+   "w": "a",
+   "start": 34.796,
+   "end": 35.009
+  },
+  {
+   "w": "handful",
+   "start": 35.009,
+   "end": 35.434
+  },
+  {
+   "w": "of",
+   "start": 35.434,
+   "end": 35.647
+  },
+  {
+   "w": "soft",
+   "start": 35.647,
+   "end": 35.86
+  },
+  {
+   "w": "leaves.",
+   "start": 35.86,
+   "end": 36.072
+  },
+  {
+   "w": "Same",
+   "start": 36.572,
+   "end": 36.785
+  },
+  {
+   "w": "sap,",
+   "start": 36.785,
+   "end": 36.998
+  },
+  {
+   "w": "same",
+   "start": 37.198,
+   "end": 37.411
+  },
+  {
+   "w": "blisters,",
+   "start": 37.411,
+   "end": 37.836
+  },
+  {
+   "w": "much",
+   "start": 38.036,
+   "end": 38.249
+  },
+  {
+   "w": "worse",
+   "start": 38.249,
+   "end": 38.462
+  },
+  {
+   "w": "place.",
+   "start": 38.462,
+   "end": 38.674
+  },
+  {
+   "w": "That",
+   "start": 39.174,
+   "end": 39.387
+  },
+  {
+   "w": "night",
+   "start": 39.387,
+   "end": 39.6
+  },
+  {
+   "w": "you're",
+   "start": 39.6,
+   "end": 39.813
+  },
+  {
+   "w": "cold,",
+   "start": 39.813,
+   "end": 40.026
+  },
+  {
+   "w": "so",
+   "start": 40.226,
+   "end": 40.438
+  },
+  {
+   "w": "you",
+   "start": 40.438,
+   "end": 40.651
+  },
+  {
+   "w": "light",
+   "start": 40.651,
+   "end": 40.864
+  },
+  {
+   "w": "its",
+   "start": 40.864,
+   "end": 41.077
+  },
+  {
+   "w": "wood.",
+   "start": 41.077,
+   "end": 41.289
+  },
+  {
+   "w": "The",
+   "start": 41.789,
+   "end": 42.002
+  },
+  {
+   "w": "smoke",
+   "start": 42.002,
+   "end": 42.215
+  },
+  {
+   "w": "stings",
+   "start": 42.215,
+   "end": 42.428
+  },
+  {
+   "w": "your",
+   "start": 42.428,
+   "end": 42.64
+  },
+  {
+   "w": "eyes",
+   "start": 42.64,
+   "end": 42.853
+  },
+  {
+   "w": "until",
+   "start": 42.853,
+   "end": 43.279
+  },
+  {
+   "w": "you",
+   "start": 43.279,
+   "end": 43.491
+  },
+  {
+   "w": "can",
+   "start": 43.491,
+   "end": 43.704
+  },
+  {
+   "w": "barely",
+   "start": 43.704,
+   "end": 44.13
+  },
+  {
+   "w": "see.",
+   "start": 44.13,
+   "end": 44.343
+  },
+  {
+   "w": "Next",
+   "start": 44.843,
+   "end": 45.055
+  },
+  {
+   "w": "time,",
+   "start": 45.055,
+   "end": 45.268
+  },
+  {
+   "w": "just",
+   "start": 45.468,
+   "end": 45.681
+  },
+  {
+   "w": "sit",
+   "start": 45.681,
+   "end": 45.894
+  },
+  {
+   "w": "in",
+   "start": 45.894,
+   "end": 46.106
+  },
+  {
+   "w": "the",
+   "start": 46.106,
+   "end": 46.319
+  },
+  {
+   "w": "sand.",
+   "start": 46.319,
+   "end": 46.532
+  },
+  {
+   "w": "Subscribe",
+   "start": 47.032,
+   "end": 47.457
+  },
+  {
+   "w": "for",
+   "start": 47.457,
+   "end": 47.67
+  },
+  {
+   "w": "more",
+   "start": 47.67,
+   "end": 47.883
+  },
+  {
+   "w": "of",
+   "start": 47.883,
+   "end": 48.096
+  },
+  {
+   "w": "nature's",
+   "start": 48.096,
+   "end": 48.521
+  },
+  {
+   "w": "warnings.",
+   "start": 48.521,
+   "end": 48.947
+  }
+ ],
+ "chunks": [
+  {
+   "text": "Stuck on a beach",
+   "w0": 0,
+   "w1": 3,
+   "start": 0.4,
+   "end": 1.251
+  },
+  {
+   "text": "with only one tree,",
+   "w0": 4,
+   "w1": 7,
+   "start": 1.251,
+   "end": 2.315
+  },
+  {
+   "text": "you'd sit under it.",
+   "w0": 8,
+   "w1": 11,
+   "start": 2.515,
+   "end": 3.579
+  },
+  {
+   "text": "Don't.",
+   "w0": 12,
+   "w1": 12,
+   "start": 4.079,
+   "end": 4.291
+  },
+  {
+   "text": "It's a manchineel.",
+   "w0": 13,
+   "w1": 15,
+   "start": 4.791,
+   "end": 5.855
+  },
+  {
+   "text": "It has small green apples,",
+   "w0": 16,
+   "w1": 20,
+   "start": 6.355,
+   "end": 7.632
+  },
+  {
+   "text": "and a red band",
+   "w0": 21,
+   "w1": 24,
+   "start": 7.832,
+   "end": 8.683
+  },
+  {
+   "text": "someone painted on the trunk.",
+   "w0": 25,
+   "w1": 29,
+   "start": 8.683,
+   "end": 10.172
+  },
+  {
+   "text": "Here's what that band is for.",
+   "w0": 30,
+   "w1": 35,
+   "start": 10.672,
+   "end": 11.949
+  },
+  {
+   "text": "A storm hits,",
+   "w0": 36,
+   "w1": 38,
+   "start": 12.449,
+   "end": 13.087
+  },
+  {
+   "text": "so you shelter under the leaves.",
+   "w0": 39,
+   "w1": 44,
+   "start": 13.287,
+   "end": 14.989
+  },
+  {
+   "text": "Each one holds a milky sap,",
+   "w0": 45,
+   "w1": 50,
+   "start": 15.489,
+   "end": 16.979
+  },
+  {
+   "text": "and the rain drips it",
+   "w0": 51,
+   "w1": 55,
+   "start": 17.179,
+   "end": 18.243
+  },
+  {
+   "text": "onto your skin.",
+   "w0": 56,
+   "w1": 58,
+   "start": 18.243,
+   "end": 19.094
+  },
+  {
+   "text": "Soon you're covered in blisters.",
+   "w0": 59,
+   "w1": 63,
+   "start": 19.594,
+   "end": 21.296
+  },
+  {
+   "text": "The next day you're starving,",
+   "w0": 64,
+   "w1": 68,
+   "start": 21.796,
+   "end": 23.072
+  },
+  {
+   "text": "and the apples smell good.",
+   "w0": 69,
+   "w1": 73,
+   "start": 23.272,
+   "end": 24.549
+  },
+  {
+   "text": "One bite is sweet,",
+   "w0": 74,
+   "w1": 77,
+   "start": 25.049,
+   "end": 25.9
+  },
+  {
+   "text": "for a second.",
+   "w0": 78,
+   "w1": 80,
+   "start": 26.1,
+   "end": 26.951
+  },
+  {
+   "text": "Then your throat burns",
+   "w0": 81,
+   "w1": 84,
+   "start": 27.451,
+   "end": 28.302
+  },
+  {
+   "text": "and tightens.",
+   "w0": 85,
+   "w1": 86,
+   "start": 28.302,
+   "end": 28.94
+  },
+  {
+   "text": "In Spanish, that fruit is",
+   "w0": 87,
+   "w1": 91,
+   "start": 29.44,
+   "end": 30.917
+  },
+  {
+   "text": "the little apple of death.",
+   "w0": 92,
+   "w1": 96,
+   "start": 30.917,
+   "end": 32.194
+  },
+  {
+   "text": "Later, nature calls,",
+   "w0": 97,
+   "w1": 99,
+   "start": 32.694,
+   "end": 33.957
+  },
+  {
+   "text": "and you grab a handful",
+   "w0": 100,
+   "w1": 104,
+   "start": 34.157,
+   "end": 35.434
+  },
+  {
+   "text": "of soft leaves.",
+   "w0": 105,
+   "w1": 107,
+   "start": 35.434,
+   "end": 36.072
+  },
+  {
+   "text": "Same sap, same blisters,",
+   "w0": 108,
+   "w1": 111,
+   "start": 36.572,
+   "end": 37.836
+  },
+  {
+   "text": "much worse place.",
+   "w0": 112,
+   "w1": 114,
+   "start": 38.036,
+   "end": 38.674
+  },
+  {
+   "text": "That night you're cold,",
+   "w0": 115,
+   "w1": 118,
+   "start": 39.174,
+   "end": 40.026
+  },
+  {
+   "text": "so you light its wood.",
+   "w0": 119,
+   "w1": 123,
+   "start": 40.226,
+   "end": 41.289
+  },
+  {
+   "text": "The smoke stings your eyes",
+   "w0": 124,
+   "w1": 128,
+   "start": 41.789,
+   "end": 42.853
+  },
+  {
+   "text": "until you can barely see.",
+   "w0": 129,
+   "w1": 133,
+   "start": 42.853,
+   "end": 44.343
+  },
+  {
+   "text": "Next time,",
+   "w0": 134,
+   "w1": 135,
+   "start": 44.843,
+   "end": 45.268
+  },
+  {
+   "text": "just sit in the sand.",
+   "w0": 136,
+   "w1": 140,
+   "start": 45.468,
+   "end": 46.532
+  },
+  {
+   "text": "Subscribe for more",
+   "w0": 141,
+   "w1": 143,
+   "start": 47.032,
+   "end": 47.883
+  },
+  {
+   "text": "of nature's warnings.",
+   "w0": 144,
+   "w1": 146,
+   "start": 47.883,
+   "end": 48.947
+  }
+ ],
+ "sentences": [
+  {
+   "start": 0.4,
+   "end": 3.579,
+   "text": "Stuck on a beach with only one tree, you'd sit under it."
+  },
+  {
+   "start": 4.079,
+   "end": 4.291,
+   "text": "Don't."
+  },
+  {
+   "start": 4.791,
+   "end": 5.855,
+   "text": "It's a manchineel."
+  },
+  {
+   "start": 6.355,
+   "end": 10.172,
+   "text": "It has small green apples, and a red band someone painted on the trunk."
+  },
+  {
+   "start": 10.672,
+   "end": 11.949,
+   "text": "Here's what that band is for."
+  },
+  {
+   "start": 12.449,
+   "end": 14.989,
+   "text": "A storm hits, so you shelter under the leaves."
+  },
+  {
+   "start": 15.489,
+   "end": 19.094,
+   "text": "Each one holds a milky sap, and the rain drips it onto your skin."
+  },
+  {
+   "start": 19.594,
+   "end": 21.296,
+   "text": "Soon you're covered in blisters."
+  },
+  {
+   "start": 21.796,
+   "end": 24.549,
+   "text": "The next day you're starving, and the apples smell good."
+  },
+  {
+   "start": 25.049,
+   "end": 26.951,
+   "text": "One bite is sweet, for a second."
+  },
+  {
+   "start": 27.451,
+   "end": 28.94,
+   "text": "Then your throat burns and tightens."
+  },
+  {
+   "start": 29.44,
+   "end": 32.194,
+   "text": "In Spanish, that fruit is the little apple of death."
+  },
+  {
+   "start": 32.694,
+   "end": 36.072,
+   "text": "Later, nature calls, and you grab a handful of soft leaves."
+  },
+  {
+   "start": 36.572,
+   "end": 38.674,
+   "text": "Same sap, same blisters, much worse place."
+  },
+  {
+   "start": 39.174,
+   "end": 41.289,
+   "text": "That night you're cold, so you light its wood."
+  },
+  {
+   "start": 41.789,
+   "end": 44.343,
+   "text": "The smoke stings your eyes until you can barely see."
+  },
+  {
+   "start": 44.843,
+   "end": 46.532,
+   "text": "Next time, just sit in the sand."
+  },
+  {
+   "start": 47.032,
+   "end": 48.947,
+   "text": "Subscribe for more of nature's warnings."
+  }
+ ],
+ "keys": {
+  "tree": 2.102,
+  "dont": 4.079,
+  "manchineel": 5.217,
+  "apples": 7.206,
+  "band": 8.47,
+  "here": 10.672,
+  "storm": 12.662,
+  "shelter": 13.713,
+  "sap": 16.766,
+  "drips": 17.817,
+  "blisters": 20.87,
+  "next": 22.009,
+  "starving": 22.647,
+  "bite": 25.262,
+  "burns": 28.089,
+  "spanish": 29.653,
+  "death": 31.981,
+  "later": 32.694,
+  "grab": 34.583,
+  "same": 36.572,
+  "worse": 38.249,
+  "night": 39.387,
+  "light": 40.651,
+  "smoke": 42.002,
+  "see": 44.13,
+  "time": 45.055,
+  "sit": 45.681,
+  "subscribe": 47.032,
+  "natures": 48.096,
+  "warnings": 48.521
+ },
+ "keyEnd": {
+  "tree": 2.315,
+  "dont": 4.291,
+  "manchineel": 5.855,
+  "apples": 7.632,
+  "band": 8.683,
+  "here": 10.885,
+  "storm": 12.874,
+  "shelter": 14.138,
+  "sap": 16.979,
+  "drips": 18.03,
+  "blisters": 21.296,
+  "next": 22.221,
+  "starving": 23.072,
+  "bite": 25.474,
+  "burns": 28.302,
+  "spanish": 30.079,
+  "death": 32.194,
+  "later": 33.119,
+  "grab": 34.796,
+  "same": 36.785,
+  "worse": 38.462,
+  "night": 39.6,
+  "light": 40.864,
+  "smoke": 42.215,
+  "see": 44.343,
+  "time": 45.268,
+  "sit": 45.894,
+  "subscribe": 47.457,
+  "natures": 48.521,
+  "warnings": 48.947
+ }
+}

@@ -20,13 +20,15 @@ export type PersonPose = {
   eyes?: 'dot' | 'wide' | 'squeeze' | 'closed'; mouth?: 'smile' | 'flat' | 'o' | 'open' | 'grin' | 'teeth' | 'wavy' | 'smirk' | 'frown';
   handL?: [number, number]; handR?: [number, number]; footL?: [number, number]; footR?: [number, number];
   sweat?: number; handsBack?: boolean;
+  spots?: number;                                                           // 0..1 flat red spots popping out on the face one by one (rash, blisters, stings)
 };
 const HY = -330, HR = 100;
+const SPOTS: [number, number, number][] = [[-64, -54, 11], [60, -60, 9], [-72, 20, 9], [68, 24, 12], [-46, 62, 8], [50, 64, 10], [2, -76, 9]];
 const TORSO = 'M -40 -118 C -52 -166 -44 -226 0 -230 C 44 -226 52 -166 40 -118 Q 0 -104 -40 -118 Z';
 export const Person: React.FC<PersonPose> = (p) => {
   const k = useK(); const ow = 9 / k;
   const {id, outfit = {}, view = 'front', lean = 0, sx = 1, sy = 1, bounce = 0, headTilt = 0, faceDx = 0, faceDy = 0, lookX = 0, lookY = 0, blink = 0, brow = 0, browUp = 0,
-    eyes = 'dot', mouth = 'smile', handL = [-78, -120], handR = [78, -120], footL = [-30, -5], footR = [30, -5], sweat = 0, handsBack = false} = p;
+    eyes = 'dot', mouth = 'smile', handL = [-78, -120], handR = [78, -120], footL = [-30, -5], footR = [30, -5], sweat = 0, handsBack = false, spots = 0} = p;
   const o = {shirt: '#3F7FD9', vest: undefined as string | undefined, hat: 'none' as Outfit['hat'], hatColor: '#3A3A3E', hair: undefined as string | undefined, hairStyle: 'short' as Outfit['hairStyle'], ...outfit};
   const dir = view === 'left' ? -1 : view === 'right' ? 1 : 0, back = view === 'back';
   const fx = faceDx + dir * 40, fy = HY + faceDy;
@@ -110,6 +112,8 @@ export const Person: React.FC<PersonPose> = (p) => {
             {o.glasses && [-1, 1].map((s) => <circle key={'g' + s} cx={fx + s * (dir ? 27 : 34)} cy={fy - 10} r={26} fill="none" stroke={INK} strokeWidth={ow * 0.7} />)}
             {o.mustache && <path d={`M ${mx} ${my - 12} C ${mx - 10} ${my - 22} ${mx - 34} ${my - 20} ${mx - 38} ${my - 6} C ${mx - 24} ${my - 10} ${mx - 10} ${my - 6} ${mx} ${my - 8} C ${mx + 10} ${my - 6} ${mx + 24} ${my - 10} ${mx + 38} ${my - 6} C ${mx + 34} ${my - 20} ${mx + 10} ${my - 22} ${mx} ${my - 12} Z`} fill={o.hair ?? INK} stroke={INK} strokeWidth={ow * 0.5} />}
             <g key={'mouth-' + mouth}>{m}</g>
+            {spots > 0.01 && SPOTS.map(([x, y, r], i) => { const u = Math.max(0, Math.min(1, spots * SPOTS.length - i)); return u <= 0 ? null :
+              <circle key={'sp' + i} cx={x + dir * 14} cy={HY + y} r={r * (u < 1 ? u * 1.25 : 1)} fill="#E5484D" stroke={INK} strokeWidth={ow * 0.45} />; })}
           </>}
           {hatEl}
           {sweat > 0.01 && !back && <g transform={`translate(${fx + 92} ${HY - 50}) scale(${sweat})`}>

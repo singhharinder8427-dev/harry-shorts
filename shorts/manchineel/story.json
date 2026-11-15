@@ -1,0 +1,283 @@
+{
+ "short": "manchineel",
+ "title": "The beach tree you should never sit under",
+ "spoken": {},
+ "chunks": [
+  "Stuck on a beach",
+  "with only one tree,",
+  "you'd sit under it.",
+  "Don't.",
+  "It's a manchineel.",
+  "It has small green apples,",
+  "and a red band",
+  "someone painted on the trunk.",
+  "Here's what that band is for.",
+  "A storm hits,",
+  "so you shelter under the leaves.",
+  "Each one holds a milky sap,",
+  "and the rain drips it",
+  "onto your skin.",
+  "Soon you're covered in blisters.",
+  "The next day you're starving,",
+  "and the apples smell good.",
+  "One bite is sweet,",
+  "for a second.",
+  "Then your throat burns",
+  "and tightens.",
+  "In Spanish, that fruit is",
+  "the little apple of death.",
+  "Later, nature calls,",
+  "and you grab a handful",
+  "of soft leaves.",
+  "Same sap, same blisters,",
+  "much worse place.",
+  "That night you're cold,",
+  "so you light its wood.",
+  "The smoke stings your eyes",
+  "until you can barely see.",
+  "Next time,",
+  "just sit in the sand.",
+  "Subscribe for more",
+  "of nature's warnings."
+ ],
+ "syllables": {
+  "manchineel": 3,
+  "someone": 2,
+  "here's": 1,
+  "apples": 2,
+  "little": 2,
+  "handful": 2,
+  "barely": 2,
+  "time": 1,
+  "same": 1,
+  "place": 1,
+  "one": 1,
+  "bite": 1,
+  "smoke": 1,
+  "nature": 2,
+  "nature's": 2,
+  "more": 1,
+  "eyes": 1,
+  "leaves": 1,
+  "its": 1
+ },
+ "keys": {
+  "tree": [
+   0,
+   "tree"
+  ],
+  "dont": [
+   1,
+   "don't"
+  ],
+  "manchineel": [
+   2,
+   "manchineel"
+  ],
+  "apples": [
+   3,
+   "apples"
+  ],
+  "band": [
+   3,
+   "band"
+  ],
+  "here": [
+   4,
+   "here's"
+  ],
+  "storm": [
+   5,
+   "storm"
+  ],
+  "shelter": [
+   5,
+   "shelter"
+  ],
+  "sap": [
+   6,
+   "sap"
+  ],
+  "drips": [
+   6,
+   "drips"
+  ],
+  "blisters": [
+   7,
+   "blisters"
+  ],
+  "next": [
+   8,
+   "next"
+  ],
+  "starving": [
+   8,
+   "starving"
+  ],
+  "bite": [
+   9,
+   "bite"
+  ],
+  "burns": [
+   10,
+   "burns"
+  ],
+  "spanish": [
+   11,
+   "spanish"
+  ],
+  "death": [
+   11,
+   "death"
+  ],
+  "later": [
+   12,
+   "later"
+  ],
+  "grab": [
+   12,
+   "grab"
+  ],
+  "same": [
+   13,
+   "same"
+  ],
+  "worse": [
+   13,
+   "worse"
+  ],
+  "night": [
+   14,
+   "night"
+  ],
+  "light": [
+   14,
+   "light"
+  ],
+  "smoke": [
+   15,
+   "smoke"
+  ],
+  "see": [
+   15,
+   "see"
+  ],
+  "time": [
+   16,
+   "time"
+  ],
+  "sit": [
+   16,
+   "sit"
+  ],
+  "subscribe": [
+   17,
+   "subscribe"
+  ],
+  "natures": [
+   17,
+   "nature's"
+  ],
+  "warnings": [
+   17,
+   "warnings"
+  ]
+ },
+ "beats": {
+  "tree": "Finn walks across the sand toward the only tree",
+  "dont": "he freezes mid-step, eyes wide",
+  "manchineel": "cut: the camera rises up the trunk into the crown",
+  "apples": "the small green apples sway",
+  "band": "push-in on the red painted band",
+  "storm": "cut: dark sky, rain; Finn runs under the tree",
+  "sap": "white drops gather on the leaves",
+  "drips": "milky drops fall onto Finn",
+  "blisters": "close-up: red spots pop out on his face, he winces",
+  "next": "cut: bright morning",
+  "starving": "Finn holds his belly, looks up at an apple",
+  "bite": "he bites the apple and smiles",
+  "burns": "his eyes go wide, hands at his throat, sweat drop",
+  "spanish": "cut: high-angle insert of the bitten apple on the sand",
+  "death": "a small crab scuttles away from the apple",
+  "later": "cut: Finn tiptoes behind a boulder",
+  "grab": "he grabs a bunch of leaves",
+  "worse": "he shoots up from behind the boulder and hops away",
+  "night": "cut: night, Finn shivers",
+  "light": "the campfire lights up",
+  "smoke": "grey smoke rolls over him",
+  "see": "he squeezes his eyes shut and gropes with both arms",
+  "sit": "cut: daylight, Finn sits in the sand far from the tree",
+  "subscribe": "subscribe button pops in, Finn looks up",
+  "natures": "the cursor clicks the button",
+  "warnings": "the bell rings; Finn stands back where he started"
+ },
+ "cast": {
+  "Finn": "castaway, flat purple shirt #8E44AD, short black hair",
+  "crab": "small flat red crab, black oval eyes, line legs"
+ },
+ "shots": [
+  {
+   "from": "start",
+   "to": "dont",
+   "size": "wide",
+   "camera": "slow dolly in at eye level",
+   "look": "FLAT 2D cel character (solid white round face, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouth, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Finn the castaway (flat purple shirt #8E44AD, short black hair) walking on a small tropical beach of warm speckled sand with grey boulders, a broken plank raft and driftwood, a turquoise sea with a pale foam line behind; the only tree is a manchineel with a bent grey-brown trunk, a red painted band around it at chest height, a round dark-green leafy crown and small green apples; midday sun from the upper left, crisp shadows on the sand, blue sky fading to cream at the horizon"
+  },
+  {
+   "from": "manchineel",
+   "to": "here",
+   "size": "medium on the tree",
+   "camera": "crane up the trunk, then a gentle push-in on the red band",
+   "look": "FLAT 2D cel character (solid white round face, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouth, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no character in this shot; a small tropical beach of warm speckled sand with grey boulders, a broken plank raft and driftwood, a turquoise sea with a pale foam line behind; the only tree is a manchineel with a bent grey-brown trunk, a red painted band around it at chest height, a round dark-green leafy crown and small green apples, seen close from below: bark texture, the red band, apples hanging under the leaves; midday sun from the upper left"
+  },
+  {
+   "from": "storm",
+   "to": "drips",
+   "size": "wide then medium",
+   "camera": "slow lateral track",
+   "look": "FLAT 2D cel character (solid white round face, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouth, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Finn the castaway (flat purple shirt #8E44AD, short black hair) sheltering under the tree on a small tropical beach of warm speckled sand with grey boulders, a broken plank raft and driftwood, a turquoise sea with a pale foam line behind; the only tree is a manchineel with a bent grey-brown trunk, a red painted band around it at chest height, a round dark-green leafy crown and small green apples; storm light: dark grey-blue sky, dim cool light from the upper right, grey fog, thin 3D rain streaks, white milky drops falling from the leaves"
+  },
+  {
+   "from": "blisters",
+   "to": "blisters",
+   "size": "reaction close-up",
+   "camera": "gentle push-in",
+   "look": "FLAT 2D cel character (solid white round face, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouth, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Finn the castaway (flat purple shirt #8E44AD, short black hair) in close-up with flat red spots on his white face, wincing, under the dark crown of the tree; storm light, rain streaks behind him"
+  },
+  {
+   "from": "next",
+   "to": "burns",
+   "size": "medium",
+   "camera": "slow dolly in",
+   "look": "FLAT 2D cel character (solid white round face, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouth, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Finn the castaway (flat purple shirt #8E44AD, short black hair) under the apples of the tree on a small tropical beach of warm speckled sand with grey boulders, a broken plank raft and driftwood, a turquoise sea with a pale foam line behind; the only tree is a manchineel with a bent grey-brown trunk, a red painted band around it at chest height, a round dark-green leafy crown and small green apples, a small green 3D apple in his flat hand; clear morning light from the right, long soft shadows, pale yellow-blue sky"
+  },
+  {
+   "from": "spanish",
+   "to": "death",
+   "size": "high-angle insert",
+   "camera": "slow push-in looking down",
+   "look": "FLAT 2D cel character (solid white round face, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouth, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): a small flat red crab (flat shell, black oval eyes, thin line legs) beside a bitten green 3D apple lying on speckled sand in the shadow of the tree; morning light from the right"
+  },
+  {
+   "from": "later",
+   "to": "worse",
+   "size": "medium wide",
+   "camera": "slow track left",
+   "look": "FLAT 2D cel character (solid white round face, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouth, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Finn the castaway (flat purple shirt #8E44AD, short black hair) behind a large grey 3D boulder on a small tropical beach of warm speckled sand with grey boulders, a broken plank raft and driftwood, a turquoise sea with a pale foam line behind; the only tree is a manchineel with a bent grey-brown trunk, a red painted band around it at chest height, a round dark-green leafy crown and small green apples, only his head showing, then hopping away; afternoon sun from the upper left"
+  },
+  {
+   "from": "night",
+   "to": "see",
+   "size": "medium",
+   "camera": "slow push-in",
+   "look": "FLAT 2D cel character (solid white round face, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouth, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Finn the castaway (flat purple shirt #8E44AD, short black hair) beside a small campfire of grey-brown logs with glowing orange 3D flames and rising grey 3D smoke balls on a small tropical beach of warm speckled sand with grey boulders, a broken plank raft and driftwood, a turquoise sea with a pale foam line behind; the only tree is a manchineel with a bent grey-brown trunk, a red painted band around it at chest height, a round dark-green leafy crown and small green apples; night: deep blue sky, dim blue moonlight from the upper left, warm orange firelight on the sand"
+  },
+  {
+   "from": "time",
+   "to": "end",
+   "size": "wide",
+   "camera": "the opening camera, slow dolly out to the first frame",
+   "look": "FLAT 2D cel character (solid white round face, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouth, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Finn the castaway (flat purple shirt #8E44AD, short black hair) sitting on the open sand well away from the tree on a small tropical beach of warm speckled sand with grey boulders, a broken plank raft and driftwood, a turquoise sea with a pale foam line behind; the only tree is a manchineel with a bent grey-brown trunk, a red painted band around it at chest height, a round dark-green leafy crown and small green apples; midday sun from the upper left, crisp shadows, blue sky fading to cream"
+  }
+ ]
+}
