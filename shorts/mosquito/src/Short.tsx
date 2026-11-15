@@ -303,6 +303,6 @@ export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: bool
 
 // ---------------------------------------------------------------- thumbnails (frames of the video + text)
 export const Thumb: React.FC<{variant: 'A' | 'B' | 'C'}> = ({variant}) => {
-  const cfg = {A: {t: 0.2, l1: 'WHY ME?', l2: 'MOSQUITOES PICK YOU', top: 250}, B: {t: K.ignore + 0.5, l1: 'THEY', l2: 'SKIP YOUR FRIEND', top: 205}, C: {t: K.hundred + 0.9, l1: '100X MORE', l2: 'BITES', top: 250}}[variant];
+  const cfg = {A: {t: 0.2, l1: 'WHY ME?', l2: 'PICKED ON', top: 285}, B: {t: K.ignore + 0.5, l1: 'THEY SKIP', l2: 'YOUR FRIEND', top: 285}, C: {t: K.hundred + 0.9, l1: '100X MORE', l2: 'ATTRACTIVE', top: 285}}[variant];
   return (<AbsoluteFill><Scenes t={cfg.t} /><ThumbText l1={cfg.l1} l2={cfg.l2} top={cfg.top} /></AbsoluteFill>);
 };
