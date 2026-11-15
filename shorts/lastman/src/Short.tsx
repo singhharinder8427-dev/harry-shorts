@@ -337,7 +337,7 @@ export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: bool
 
 export const Thumb: React.FC<{variant: 'A' | 'B' | 'C'}> = ({variant}) => {
   const cfg = {A: {t: K.finally + 0.6, l1: 'LAST PERSON', l2: 'ON EARTH?', tag: ''}, B: {t: K.cut - 0.3, l1: 'THE REAL', l2: 'DANGER?', tag: ''},
-    C: {t: K.days + 0.4, l1: 'SUBWAY FLOODS', l2: 'IN 2 DAYS?', tag: 'one estimate'}}[variant];
+    C: {t: K.days + 0.4, l1: 'SUBWAY FLOODS', l2: 'IN 2 DAYS?', tag: ''}}[variant];
   return (
     <AbsoluteFill>
       <Scene t={cfg.t} />
