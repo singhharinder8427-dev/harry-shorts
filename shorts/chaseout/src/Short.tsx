@@ -18,6 +18,8 @@ const T = timing as any; const K = T.keys as Record<string, number>; const CHS =
 export const DURATION = T.duration as number; const END = DURATION;
 const CH = (i: number) => CHS[i].start - 0.12;                 // clean cut just before caption chunk i
 const loopS = (t: number, n: number, ph = 0) => Math.sin(2 * Math.PI * (n * t / DURATION + ph));   // whole cycles (loop-safe)
+/** a sine near frequency f (rad/s) snapped to whole cycles over the video, so it loops */
+const lsin = (t: number, f: number, ph = 0) => Math.sin(2 * Math.PI * Math.round(f * DURATION / (2 * Math.PI)) * t / DURATION + ph);
 
 // ---------------------------------------------------------------- cast (fixed for the whole video)
 const KEN: Outfit = {shirt: '#1FA5A0', hair: '#1E1B1A', hairStyle: 'short'};
@@ -234,7 +236,7 @@ const OfficeOpen: React.FC<{t: number}> = ({t}) => {
   const wk = walk(go * 5 * Math.PI, walking), wb = walk(go * 5 * Math.PI + 1.2, walking);
   return (<World cam={cam} light={OFFICE} sky={SKY_OFFICE} scene={<Office t={t} />}>
     <Coworkers t={t} far />
-    <Cel at={kAt}><Ken view={walking ? 'back' : up > 0.5 ? 'front' : 'right'} {...(walking ? wk : up > 0.5 ? {} : seat(1))} handL={[-74, -128]} handR={up > 0.5 ? [74, -128] : [108, -190 + 6 * Math.sin(t * 22)]}
+    <Cel at={kAt}><Ken view={walking ? 'back' : up > 0.5 ? 'front' : 'right'} {...(walking ? wk : up > 0.5 ? {} : seat(1))} handL={[-74, -128]} handR={up > 0.5 ? [74, -128] : [108, -190 + 6 * lsin(t, 22)]}
       faceDx={up > 0.5 ? 0 : -10} lookX={up > 0.3 && !walking ? -6 : 0} eyes={up > 0.2 && !walking ? 'wide' : 'dot'} mouth={up > 0.2 ? 'flat' : 'smile'} browUp={up > 0.2 ? 0.7 : 0}
       blink={bump(t, 0.35, 0.5)} /></Cel>
     <Cel at={bAt} h={1.76}><Boss view={walking ? 'back' : 'front'} {...(walking ? wb : {})} handR={walking ? [74, -128] : [150, -230]} handL={walking ? [-74, -128] : [-74, -128]} mouth="grin" eyes={t > 0.9 && !walking ? 'closed' : 'dot'}
@@ -247,10 +249,10 @@ const Coworkers: React.FC<{t: number; stare?: number; old?: boolean; far?: boole
   if (old) P.push([[0.95, 0, 1.5], 1, 2]);
   if (far) P.splice(0, 5);
   return (<>{P.map(([at, side, o], i) => {
-    const s = stare >= 0 && t > stare + i * 0.09; const ty = Math.sin(t * 19 + i * 2) * 5;
+    const s = stare >= 0 && t > stare + i * 0.09; const ty = lsin(t, 19, i * 2) * 5;
     return (<Cel key={i} at={at} h={1.66}>
       <Person id={'co' + i} outfit={CO[o]} view={s ? 'front' : side > 0 ? 'right' : 'left'} {...seat(s ? side * 0.6 : side)} handL={s ? [-74, -128] : [side * 104, -192 + (side < 0 ? ty : -ty)]} handR={s ? [74, -128] : [side * 112, -188 + (side > 0 ? ty : -ty)]}
-        faceDx={s ? -side * 26 : 0} lookX={s ? -side * 8 : 0} eyes={s ? 'wide' : 'dot'} brow={s ? 0.6 : 0} mouth={s ? 'flat' : 'smile'} blink={bump((t + i * 0.7) % 4, 1, 1.15)} />
+        faceDx={s ? -side * 26 : 0} lookX={s ? -side * 8 : 0} eyes={s ? 'wide' : 'dot'} brow={s ? 0.6 : 0} mouth={s ? 'flat' : 'smile'} blink={bump((t + i * 0.7) % (DURATION / 12), 1, 1.15)} />
     </Cel>);
   })}</>);
 };
@@ -506,7 +508,7 @@ const Ending: React.FC<{t: number}> = ({t}) => {
   const look = t > K.subscribe && t < END - 0.85;
   return (<World cam={cam} light={OFFICE} sky={SKY_OFFICE} scene={<Office t={t} />}>
     <Coworkers t={t} far />
-    <Cel at={KEN_DESK}><Ken view={look ? 'front' : 'right'} {...seat(look ? 0.6 : 1)} handL={[-74, -128]} handR={look ? [74, -128] : [108, -190 + 6 * Math.sin(t * 22)]} faceDx={look ? 0 : -10}
+    <Cel at={KEN_DESK}><Ken view={look ? 'front' : 'right'} {...seat(look ? 0.6 : 1)} handL={[-74, -128]} handR={look ? [74, -128] : [108, -190 + 6 * lsin(t, 22)]} faceDx={look ? 0 : -10}
       faceDy={look ? -14 : 0} lookY={look ? -8 : 0} browUp={look ? 0.8 : 0} mouth="smile" eyes="dot" blink={bump(t, END - 0.6, END - 0.45)} /></Cel>
     <Cel at={BOSS_HOME} h={1.76}><Boss view="front" handR={[150, -230]} handL={[-74, -128]} mouth="grin" eyes={t > END - 0.5 || !look ? 'dot' : 'closed'} faceDy={look ? -12 : 0} lookY={look ? -6 : 0} headTilt={5} /></Cel>
   </World>);
