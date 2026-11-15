@@ -32,6 +32,8 @@ const walkFeet = (t: number, t0: number, on: number): Partial<PersonPose> => {
   return {footL: [-36, -6 - Math.max(0, Math.sin(ph)) * 30 * on], footR: [36, -6 - Math.max(0, Math.sin(ph + Math.PI)) * 30 * on]};
 };
 const loopSin = (t: number, n: number, ph = 0) => Math.sin((2 * Math.PI * n * t) / END + ph);
+/** time warped so sin(w * t) completes whole cycles over the video (seamless loop) */
+const loopT = (t: number, w: number) => t * (Math.max(1, Math.round((w * END) / (2 * Math.PI))) * 2 * Math.PI / END) / w;
 const Clouds: React.FC<{t: number; fill?: string; y?: number}> = ({t, fill = 'white', y = 0}) => (<SVG>
   {[[160, 330, 1.0], [700, 250, 1.3], [1000, 420, 0.8]].map(([x, yy, s], i) => <g key={i} transform={`translate(${x + 20 * loopSin(t, 1, i)} ${yy + y}) scale(${s})`}>
     <Puff c={[[-70, 10, 44], [-20, -20, 58], [40, -8, 50], [84, 14, 34], [10, 22, 42]]} fill={fill} ow={7} /></g>)}</SVG>);
@@ -99,8 +101,8 @@ const Street: React.FC<{t: number; mode: 'open' | 'two' | 'end'}> = ({t, mode}) 
   const props = [
     ...Array.from({length: 12}, (_, i) => { const side = i % 2 ? 1 : -1, Z = 900 + i * 650; const cols = ['#F3E3C3', '#CFE3F2', '#F6C9A8', '#E3EFC9', '#F3D6E0'], roofs = ['#D9534F', '#4F7CC2', '#8C5A3C', '#5EA35A'];
       return {Z, el: <Billboard key={'h' + i} c={c} X={side * 760} Z={Z}><HouseB c={cols[i % 5]} roof={roofs[i % 4]} flip={side > 0} /></Billboard>}; }),
-    ...Array.from({length: 12}, (_, i) => { const side = i % 2 ? -1 : 1, Z = 650 + i * 650; return {Z, el: <Billboard key={'t' + i} c={c} X={side * 470} Z={Z}><Tree c={['#5FB04E', '#4FA04A', '#6CBF55'][i % 3]} sway={Math.sin(t * 1.3 + i) * 2} /></Billboard>}; }),
-    ...PILES.map(([X, Z], i) => ({Z, el: <Billboard key={'p' + i} c={c} X={X} Z={Z}>{(() => { const s = mode === 'open' ? pop(t, K.gone + i * 0.12, 0.35) : 1;
+    ...Array.from({length: 12}, (_, i) => { const side = i % 2 ? -1 : 1, Z = 650 + i * 650; return {Z, el: <Billboard key={'t' + i} c={c} X={side * 470} Z={Z}><Tree c={['#5FB04E', '#4FA04A', '#6CBF55'][i % 3]} sway={Math.sin(loopT(t, 1.3) * 1.3 + i) * 2} /></Billboard>}; }),
+    ...PILES.map(([X, Z], i) => ({Z, el: <Billboard key={'p' + i} c={c} X={X} Z={Z}>{(() => { const s = mode === 'open' ? pop(t, K.gone + i * 0.12, 0.35) : mode === 'end' ? popOut(t, END - 1.3 + i * 0.08, 0.3) : 1;
       const u = mode === 'open' ? prog(t, K.gone + i * 0.12, K.gone + 0.5 + i * 0.12) : 1;
       return <g>{s > 0 && <g transform={`scale(${s * 1.3})`}><Empty c={['#3A3A3E', '#4F7CC2', '#8C5A3C'][i % 3]} /></g>}{u > 0 && u < 1 && <Sparkle x={0} y={-60} r={70 * Math.sin(u * Math.PI)} fill="#FFF6C4" />}</g>; })()}</Billboard>})),
   ].filter((p) => p.Z > c.z + 60).sort((a, b) => b.Z - a.Z);
@@ -109,7 +111,7 @@ const Street: React.FC<{t: number; mode: 'open' | 'two' | 'end'}> = ({t, mode}) 
     return <rect key={i} x={x} y={y} width={18} height={10} rx={2} fill={['#FFD23F', '#E5483C', '#3E8ED0', '#5FB86A'][i % 4]} transform={`rotate(${a * 400 + i * 40} ${x} ${y})`} />; }) : null;
   return (
     <AbsoluteFill style={{background: 'linear-gradient(#6CB8F0 0%, #BFE0F5 30%, #FFE7C2 43%)', transform: `rotate(${dr.rot}deg) scale(${dr.zoom})`}}>
-      <SunGlow x={800} y={520} r={62} t={t} />
+      <SunGlow x={800} y={520} r={62} t={0} />
       <Clouds t={t} />
       <SVG>
         <HazeDefs sky="#F3DCC0" />
@@ -117,7 +119,7 @@ const Street: React.FC<{t: number; mode: 'open' | 'two' | 'end'}> = ({t, mode}) 
         {(() => { const q = (X: number, Z: number) => proj(c, X, Z)!; const near = c.z + 45, far = c.z + 16000;
           return [[300, 420], [-420, -300]].map(([a, b], i) => <path key={i} d={`M ${q(a, near).x} ${q(a, near).y} L ${q(b, near).x} ${q(b, near).y} L ${q(b, far).x} ${q(b, far).y} L ${q(a, far).x} ${q(a, far).y} Z`} fill="#D9D3C7" />); })()}
         {props.map((p) => p.el)}
-        <Stand c={c} X={190} Z={560} scale={0.72}><g transform={`rotate(${catSwat * -12})`}><Cat t={t} yawn={mode === 'open' && t > K.big + 0.3 && t < K.big + 1.2 ? 1 : 0} lookX={mode === 'end' && t > K.special ? 1 : 0} blink={bump(t, 2.6, 2.75)} /></g></Stand>
+        <Stand c={c} X={190} Z={560} scale={0.72}><g transform={`rotate(${catSwat * -12})`}><Cat t={loopT(t, 3)} yawn={mode === 'open' && t > K.big + 0.3 && t < K.big + 1.2 ? 1 : 0} lookX={mode === 'end' ? kfs(t, [[K.special, 0], [K.special + 0.2, 1], [K.subscribe, 1], [K.subscribe + 0.3, 0]]) : 0} blink={bump(t, 2.6, 2.75)} /></g></Stand>
         {crownEl}
         <Stand c={c} X={0} Z={520}><LongShadow angle={200} len={330} /><Person id="ray" t={t} outfit={RAY} {...ray} />
           {crown > 0.01 && <g transform={`translate(0 -470) scale(${crown * 0.8})`}><Crown /></g>}</Stand>

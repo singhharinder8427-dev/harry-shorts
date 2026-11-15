@@ -77,6 +77,10 @@ export const drift = (t: number, dur: number, amp = 1) => {
     rot: amp * 0.35 * w(cyc(11), 1.1), zoom: 1 + amp * 0.008 * w(cyc(13), 0.9)};
 };
 
+/** time warped so sin(w * t) completes whole cycles over `dur`: use it for EVERY idle wobble that can be on screen at the
+ *  loop point (tree sway, tails, flags, flicker, rotating rays): Math.sin(loopT(t, w, END) * w + ph) */
+export const loopT = (t: number, w: number, dur: number) => t * (Math.max(1, Math.round((w * dur) / (2 * Math.PI))) * 2 * Math.PI / dur) / w;
+
 // ---------------------------------------------------------------- whip / fly-through transition between two scenes
 const WhipDefs: React.FC = () => (
   <svg width={0} height={0} style={{position: 'absolute'}}><defs>

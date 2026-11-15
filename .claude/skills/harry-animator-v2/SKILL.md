@@ -502,7 +502,9 @@ style its own React `key` (`'dot' + side`, `'mouth-' + mouth`) - with `--concurr
 non-contiguous frames and React's in-place patching across styles left stale SVG attributes (tall "ghost" eyes on the
 last frames only in the multi-tab render; stills looked fine); a JPEG-intermediate H.264 frame differs from the PNG still
 by ~1-1.5 mean, so judge the loop on lossless stills (`stills.mjs 0 <last frame time>`), the video diff only for gross
-errors.
+errors; anything visible in the first/last shot must return exactly: idle wobbles (tree sway, tails, flags, sun-ray
+rotation) need `loopT(t, w, END)` (whole cycles), and story leftovers (props that appeared, a character who walked in,
+a crown that fell) must leave or pop away before the end - check `stills.mjs 0 <last>` (target < 0.2).
 Pitfalls already met: TypeScript 6 breaks the Remotion 4.0.250 bundler (keep 5.6); `--scale=1.333` gives an odd width
 (use `Short2K`); pocketsphinx fails to align 40 s in one pass (align per sentence); words like "adult's" aren't in its
 dictionary (fallbacks/`spoken`); a 0.10 s silence threshold mistakes plosives for gaps (use 0.12 s); drifting clouds and
