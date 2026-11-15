@@ -497,7 +497,12 @@ floor plane polygon must use the wall X at the near depth (`proj(c, ±WX, near).
 wedge; a character lifted high (standing on a pile) leaves the frame - tilt the perspective camera (raise `horizon`)
 with the lift; a big sign at Z near the camera grows during a dolly and drifts into the buttons zone - check its last
 frame, not its first; a blurred foreground pillar that crosses the middle of the frame reads as a glitch - keep it
-at the edges.
+at the edges; when a component switches between differently shaped drawings (eye styles, mouth shapes), give each
+style its own React `key` (`'dot' + side`, `'mouth-' + mouth`) - with `--concurrency` > 1 each browser tab renders
+non-contiguous frames and React's in-place patching across styles left stale SVG attributes (tall "ghost" eyes on the
+last frames only in the multi-tab render; stills looked fine); a JPEG-intermediate H.264 frame differs from the PNG still
+by ~1-1.5 mean, so judge the loop on lossless stills (`stills.mjs 0 <last frame time>`), the video diff only for gross
+errors.
 Pitfalls already met: TypeScript 6 breaks the Remotion 4.0.250 bundler (keep 5.6); `--scale=1.333` gives an odd width
 (use `Short2K`); pocketsphinx fails to align 40 s in one pass (align per sentence); words like "adult's" aren't in its
 dictionary (fallbacks/`spoken`); a 0.10 s silence threshold mistakes plosives for gaps (use 0.12 s); drifting clouds and

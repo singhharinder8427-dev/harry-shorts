@@ -32,12 +32,12 @@ export const Person: React.FC<PersonPose> = (p) => {
   const arm = (s: [number, number], h: [number, number], side: number) => `M ${s[0]} ${s[1]} Q ${(s[0] + h[0]) / 2 + side * 22} ${(s[1] + h[1]) / 2 + 12} ${h[0]} ${h[1]}`;
   const eye = (sgn: number) => {
     const ex = fx + sgn * 34 + lookX, ey = fy - 10 + lookY;
-    if (eyes === 'squeeze') return <path key={sgn} d={`M ${ex - sgn * 13} ${ey - 12} L ${ex + sgn * 9} ${ey} L ${ex - sgn * 13} ${ey + 12}`} stroke={INK} strokeWidth={ow * 0.9} fill="none" strokeLinecap="round" strokeLinejoin="round" />;
-    if (eyes === 'ring') return (<g key={sgn}><ellipse cx={ex} cy={ey} rx={20} ry={23 * (1 - 0.85 * blink)} fill="white" stroke={INK} strokeWidth={ow * 0.8} />
+    if (eyes === 'squeeze') return <path key={'sq' + sgn} d={`M ${ex - sgn * 13} ${ey - 12} L ${ex + sgn * 9} ${ey} L ${ex - sgn * 13} ${ey + 12}`} stroke={INK} strokeWidth={ow * 0.9} fill="none" strokeLinecap="round" strokeLinejoin="round" />;
+    if (eyes === 'ring') return (<g key={'ring' + sgn}><ellipse cx={ex} cy={ey} rx={20} ry={23 * (1 - 0.85 * blink)} fill="white" stroke={INK} strokeWidth={ow * 0.8} />
       <circle cx={ex + lookX * 0.4} cy={ey + lookY * 0.4} r={7} fill={INK} /></g>);
-    if (eyes === 'wide') return <g key={sgn}><ellipse cx={ex} cy={ey} rx={14} ry={19 * (1 - 0.85 * blink)} fill={INK} /><circle cx={ex + 4} cy={ey - 7} r={4} fill="white" /></g>;
-    if (eyes === 'smug') return <path key={sgn} d={`M ${ex - 14} ${ey - 2} Q ${ex} ${ey + 8} ${ex + 14} ${ey - 2}`} stroke={INK} strokeWidth={ow * 1.1} fill="none" strokeLinecap="round" />;
-    return <ellipse key={sgn} cx={ex} cy={ey} rx={10.5} ry={15 * (1 - 0.85 * blink)} fill={INK} />;
+    if (eyes === 'wide') return <g key={'wide' + sgn}><ellipse cx={ex} cy={ey} rx={14} ry={19 * (1 - 0.85 * blink)} fill={INK} /><circle cx={ex + 4} cy={ey - 7} r={4} fill="white" /></g>;
+    if (eyes === 'smug') return <path key={'smug' + sgn} d={`M ${ex - 14} ${ey - 2} Q ${ex} ${ey + 8} ${ex + 14} ${ey - 2}`} stroke={INK} strokeWidth={ow * 1.1} fill="none" strokeLinecap="round" />;
+    return <ellipse key={'dot' + sgn} cx={ex} cy={ey} rx={10.5} ry={15 * (1 - 0.85 * blink)} fill={INK} />;
   };
   const browD = (sgn: number) => {
     const bx = fx + sgn * 36, by = fy - 50 - browUp * 14, a = brow * 0.38 * sgn, dx = Math.cos(a) * 20, dy = Math.sin(a) * 20;
@@ -99,7 +99,7 @@ export const Person: React.FC<PersonPose> = (p) => {
       {eye(-1)}{eye(1)}{browD(-1)}{browD(1)}
       {o.glasses && [-1, 1].map((s) => <circle key={'g' + s} cx={fx + s * 34} cy={fy - 10} r={27} fill="none" stroke={INK} strokeWidth={ow * 0.7} />)}
       {o.mustache && <path d={`M ${fx} ${my - 12} C ${fx - 10} ${my - 22} ${fx - 34} ${my - 20} ${fx - 38} ${my - 6} C ${fx - 24} ${my - 10} ${fx - 10} ${my - 6} ${fx} ${my - 8} C ${fx + 10} ${my - 6} ${fx + 24} ${my - 10} ${fx + 38} ${my - 6} C ${fx + 34} ${my - 20} ${fx + 10} ${my - 22} ${fx} ${my - 12} Z`} fill={o.hair ?? INK} stroke={INK} strokeWidth={ow * 0.5} />}
-      {m}
+      <g key={'mouth-' + mouth}>{m}</g>
       {hatEl}
       {!handsBack && [handL, handR].map((h, i) => <circle key={i} cx={h[0]} cy={h[1]} r={12} fill={INK} />)}
       {sweat > 0.01 && <g transform={`translate(${fx + 92} ${HY - 50}) scale(${sweat})`}>
