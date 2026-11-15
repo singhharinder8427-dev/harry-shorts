@@ -46,6 +46,7 @@ export const PerspGround: React.FC<{c: PCam; ground: string; far: string; kind?:
       const wa = 9 * a.s, wb = 9 * b.s;
       marks.push(<path key={i} d={`M ${a.x - wa} ${a.y} L ${a.x + wa} ${a.y} L ${b.x + wb} ${b.y} L ${b.x - wb} ${b.y} Z`} fill={line} opacity={1 - hazeAt(a.d) * 0.8} />);
     } else if (kind === 'rails') {
+      if (Z < c.z + NEAR + 1) continue;
       const l = proj(c, -w * 1.35, Z)!, r = proj(c, w * 1.35, Z)!, th = Math.max(1, 26 * a.s);
       marks.push(<rect key={i} x={l.x} y={a.y - th / 2} width={r.x - l.x} height={th} fill={mix('#7A5634', far, hazeAt(a.d))} stroke={INK} strokeWidth={Math.min(4, 2 + a.s * 2)} />);
     }
