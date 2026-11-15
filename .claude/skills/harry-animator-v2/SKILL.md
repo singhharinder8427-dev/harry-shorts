@@ -19,7 +19,9 @@ Shorts; we copy techniques, never another channel's characters, settings or look
    floating labels where possible (section 8.10, `Story.tsx`).
 5. **One-word captions inside a strict safe area** (x 140-900, y 1150-1330 of 1080x1920) so nothing hides under the
    Shorts title or buttons (section 8.7, `Captions.tsx`, `SafeGuides`).
-6. **Continuous audio bed**: a code-made music bed runs the whole video (never silent), ducked under the voice; the final
+6. **Five script variants** (section 1.4): from a topic or a pasted script, write 5 complete scripts at different
+   angles (curious, emotional, story with characters, myth-buster, stakes/scale), recommend one, and the user picks.
+7. **Continuous audio bed**: a code-made music bed runs the whole video (never silent), ducked under the voice; the final
    mix is mastered to -14 LUFS (section 9, `sfxlib.bed`, `master_audio.py`).
 Still: at most 45 s, 2K 60 fps, flat colours on characters, real facts only, seamless loop.
 
@@ -65,7 +67,8 @@ Ask with a multiple-choice question (AskUserQuestion when available), these thre
 3. **My script** - "I'll paste a full script." Then ask for it. Fact-check it, fix it, make it original and spoken
    (section 1B), show the final version.
 
-Whatever is chosen, the rest of the pipeline is identical. The user may be making the video for someone else; it changes
+Whatever is chosen, research and fact-check first, then write **five script variants** (section 1.4) and let the user
+pick before any animation. The rest of the pipeline is identical. The user may be making the video for someone else; it changes
 nothing except the topic/script source.
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -125,13 +128,36 @@ researched, and never write facts from memory as if checked.
 - **End with one subscribe line** that gives a reason, warm and direct, no hype - e.g. "Subscribe so you never miss the
   next what-if." / "Subscribe for more strange facts like this." Vary it per video; keep it one short sentence.
 
+### 1.4 Five script variants (v2, every route)
+After the research and fact-check (one shared fact sheet), write **5 complete, recordable scripts** for the same topic,
+each from a clearly different angle. Route 3 (the user's script): keep the user's idea and verified facts, and make 5
+engaging rewrites of it at these angles (plus the "what changed" list from 1B, once). Route 2: after picking the topic,
+same 5 angles. The five angles (one script each):
+1. **Curious / what-if**: opens on a question or a "what would happen if", builds by consequences, clean answer.
+2. **Emotional / human**: told through a person's feeling or stakes (a worker, a kid, a family, someone in history);
+   warm, makes you care, still factual - no melodrama, no invented people presented as real (a "picture a..." person
+   is fine; real historical people only with checked facts).
+3. **Story with characters** (made for the v2 cast): two characters with a small conflict or goal (the worker and
+   the boss, the kid and the skeptic), at most 1-2 short in-story lines in quotes, the fact is the turn of the story.
+4. **Myth-buster / counter-intuitive**: starts from what most people believe, shows why it's wrong or incomplete,
+   lands the real answer.
+5. **Stakes / scale**: leads with the most striking number, size comparison or "what could go wrong", keeps raising
+   the stakes, pays off with the reason.
+Every variant follows 1.2 (45 s max incl. its own subscribe line, ~95-115 words, no hype words, no "!", verified facts
+only - the same fact sheet for all five, no new claims) and has a different first line. Show for each: the angle,
+its hook line, the full script, word count + estimated length, and one line on how it would look (cast, shots, the
+payoff visual). Then a short comparison (score 1-5 on hook, clarity, emotion, visual potential, fit for the v2 cast)
+and **your recommendation with the reason**. Ask the user to choose: they reply with a number, a mix ("hook of 4 with
+the body of 2"), or changes; if AskUserQuestion is available use it with your top pick first marked "(Recommended)"
+and the user can type any other number under Other. Only the chosen (or merged) script goes on to 1.3 and section 3.
+
 ### 1.3 Script deliverable (show this, then continue)
 - a one-sentence description of the idea;
 - the complete voiceover, ready to record, no scene directions;
 - the narration word count and estimated length;
 - links to the sources that support the explanation (and a short note of what is an estimate / single study / unverified).
-Then also write the YouTube metadata now or at hand-off (section 13). Done = the user has the script; proceed unless they
-want changes.
+Then also write the YouTube metadata now or at hand-off (section 13). Done = the user picked one of the five variants
+(1.4) and has the final script; proceed unless they want changes.
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 2. Project setup
