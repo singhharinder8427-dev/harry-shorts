@@ -1,7 +1,7 @@
 """Forced alignment of a voice take to the script, one sentence at a time, snapped to real pauses.
 usage (aligner venv python): align_take.py take.mp3 script.txt out_word_times.json
 Output: one {w, start, end} per script word (seconds in the take)."""
-import sys, re, json, subprocess, numpy as np
+import os, sys, re, json, subprocess, numpy as np
 from pocketsphinx import Decoder
 SPOKEN = {'what-if': 'what if'}
 try:   # per-short pronunciations live in story.json -> "spoken": {"1,400": "fourteen hundred"}
@@ -51,6 +51,9 @@ for k in range(len(sents) - 1):
     opts = [s for s in cands if s[0] > last + 0.3]
     best = min(opts, key=lambda s: abs((s[0] + s[1]) / 2 - exp) - 0.8 * (s[1] - s[0]))
     bounds.append(best); last = best[1]
+if os.environ.get('BOUNDS'):   # explicit sentence boundaries (seconds, comma-separated) when a take's comma pauses fool the estimate
+    bt = [float(v) for v in os.environ['BOUNDS'].split(',')]; assert len(bt) == len(sents) - 1, (len(bt), len(sents) - 1)
+    bounds = [(v - 0.02, v + 0.02) for v in bt]
 edges = [0.0] + [(a + b) / 2 for a, b in bounds] + [n / 100]
 res = [None] * len(toks); fallback = []
 for si, s in enumerate(sents):

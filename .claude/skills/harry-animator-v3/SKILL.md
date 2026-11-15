@@ -442,6 +442,11 @@ and reported; (2) writes `src/timing.json` with the voice placed so the first wo
 word_times.csv; (5) renders `out/<short>-2K.mp4` from the `Short2K` composition (1440x2560: the 1080x1920 design
 drawn at 4/3 - a fractional `--scale` gives an odd width and fails; the cast is vector and the 3D canvases
 render at 4/3 resolution through `ResCtx`, so both stay sharp).
+If the printed sentence pauses are wrong (a take with long comma pauses, or a very short sentence such as "Don't."
+fools the estimate - symptoms: a one-word sentence lasting seconds, "aligner failed" on several sentences), list the
+real pauses (`ffmpeg -af silencedetect=noise=-35dB:d=0.1`), pick the one after each sentence and pass them:
+`BOUNDS=3.44,4.15,... tools/retime.sh take.wav` (one time per sentence gap, in seconds). If the take is a few seconds
+over the length limit, shorten only its sentence pauses to about 0.4 s (keep the original take, tell the user).
 Before rendering: read the aligned words (sentence pauses should match `ffmpeg silencedetect`), check the duration is
 <= 45 s (if not: ask for a faster take or cut a sentence), re-render contact sheets on the real timing.
 Render in the background (about 30 min for 45 s on 4 cores without a GPU, `CONC=4`) and wait for it. If a tab

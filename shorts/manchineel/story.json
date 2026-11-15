@@ -1,7 +1,9 @@
 {
  "short": "manchineel",
  "title": "The beach tree you should never sit under",
- "spoken": {},
+ "spoken": {
+  "manchineel": "man chin eel"
+ },
  "chunks": [
   "Stuck on a beach",
   "with only one tree,",

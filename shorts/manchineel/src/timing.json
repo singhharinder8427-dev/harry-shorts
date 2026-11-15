@@ -1,744 +1,744 @@
 {
  "short": "manchineel",
  "title": "The beach tree you should never sit under",
- "duration": 50.55,
- "voiceOffset": 0.0,
- "estimated": true,
+ "duration": 52.84,
+ "voiceOffset": 0.32,
+ "estimated": false,
  "words": [
   {
    "w": "Stuck",
    "start": 0.4,
-   "end": 0.613
+   "end": 0.76
   },
   {
    "w": "on",
-   "start": 0.613,
-   "end": 0.826
+   "start": 0.76,
+   "end": 0.88
   },
   {
    "w": "a",
-   "start": 0.826,
-   "end": 1.038
+   "start": 0.88,
+   "end": 0.93
   },
   {
    "w": "beach",
-   "start": 1.038,
-   "end": 1.251
+   "start": 0.93,
+   "end": 1.28
   },
   {
    "w": "with",
-   "start": 1.251,
-   "end": 1.464
+   "start": 1.28,
+   "end": 1.49
   },
   {
    "w": "only",
-   "start": 1.464,
-   "end": 1.889
+   "start": 1.49,
+   "end": 1.76
   },
   {
    "w": "one",
-   "start": 1.889,
-   "end": 2.102
+   "start": 1.76,
+   "end": 2.06
   },
   {
    "w": "tree,",
-   "start": 2.102,
-   "end": 2.315
+   "start": 2.06,
+   "end": 2.5
   },
   {
    "w": "you'd",
-   "start": 2.515,
-   "end": 2.728
+   "start": 2.79,
+   "end": 2.5
   },
   {
    "w": "sit",
-   "start": 2.728,
-   "end": 2.94
+   "start": 2.79,
+   "end": 3.17
   },
   {
    "w": "under",
-   "start": 2.94,
-   "end": 3.366
+   "start": 3.17,
+   "end": 3.62
   },
   {
    "w": "it.",
-   "start": 3.366,
-   "end": 3.579
+   "start": 3.94,
+   "end": 3.62
   },
   {
    "w": "Don't.",
-   "start": 4.079,
-   "end": 4.291
+   "start": 3.94,
+   "end": 4.4
   },
   {
    "w": "It's",
-   "start": 4.791,
-   "end": 5.004
+   "start": 4.56,
+   "end": 4.4
   },
   {
    "w": "a",
-   "start": 5.004,
-   "end": 5.217
+   "start": 4.56,
+   "end": 4.74
   },
   {
    "w": "manchineel.",
-   "start": 5.217,
-   "end": 5.855
+   "start": 4.74,
+   "end": 5.56
   },
   {
    "w": "It",
-   "start": 6.355,
-   "end": 6.568
+   "start": 5.93,
+   "end": 5.56
   },
   {
    "w": "has",
-   "start": 6.568,
-   "end": 6.781
+   "start": 5.93,
+   "end": 6.27
   },
   {
    "w": "small",
-   "start": 6.781,
-   "end": 6.994
+   "start": 6.27,
+   "end": 6.74
   },
   {
    "w": "green",
-   "start": 6.994,
-   "end": 7.206
+   "start": 6.74,
+   "end": 7.07
   },
   {
    "w": "apples,",
-   "start": 7.206,
-   "end": 7.632
+   "start": 7.07,
+   "end": 7.55
   },
   {
    "w": "and",
-   "start": 7.832,
-   "end": 8.045
+   "start": 7.55,
+   "end": 7.73
   },
   {
    "w": "a",
-   "start": 8.045,
-   "end": 8.257
+   "start": 7.73,
+   "end": 7.76
   },
   {
    "w": "red",
-   "start": 8.257,
-   "end": 8.47
+   "start": 7.76,
+   "end": 8.1
   },
   {
    "w": "band",
-   "start": 8.47,
-   "end": 8.683
+   "start": 8.1,
+   "end": 8.51
   },
   {
    "w": "someone",
-   "start": 8.683,
-   "end": 9.109
+   "start": 8.51,
+   "end": 8.91
   },
   {
    "w": "painted",
-   "start": 9.109,
-   "end": 9.534
+   "start": 8.91,
+   "end": 9.35
   },
   {
    "w": "on",
-   "start": 9.534,
-   "end": 9.747
+   "start": 9.35,
+   "end": 9.48
   },
   {
    "w": "the",
-   "start": 9.747,
-   "end": 9.96
+   "start": 9.48,
+   "end": 9.55
   },
   {
    "w": "trunk.",
-   "start": 9.96,
-   "end": 10.172
+   "start": 9.55,
+   "end": 9.99
   },
   {
    "w": "Here's",
-   "start": 10.672,
-   "end": 10.885
+   "start": 10.34,
+   "end": 10.58
   },
   {
    "w": "what",
-   "start": 10.885,
-   "end": 11.098
+   "start": 10.58,
+   "end": 10.74
   },
   {
    "w": "that",
-   "start": 11.098,
-   "end": 11.311
+   "start": 10.74,
+   "end": 10.97
   },
   {
    "w": "band",
-   "start": 11.311,
-   "end": 11.523
+   "start": 10.97,
+   "end": 11.28
   },
   {
    "w": "is",
-   "start": 11.523,
-   "end": 11.736
+   "start": 11.28,
+   "end": 11.44
   },
   {
    "w": "for.",
-   "start": 11.736,
-   "end": 11.949
+   "start": 11.44,
+   "end": 11.84
   },
   {
    "w": "A",
-   "start": 12.449,
-   "end": 12.662
+   "start": 12.18,
+   "end": 11.84
   },
   {
    "w": "storm",
-   "start": 12.662,
-   "end": 12.874
+   "start": 12.18,
+   "end": 12.69
   },
   {
    "w": "hits,",
-   "start": 12.874,
-   "end": 13.087
+   "start": 12.69,
+   "end": 13.03
   },
   {
    "w": "so",
-   "start": 13.287,
-   "end": 13.5
+   "start": 13.12,
+   "end": 13.26
   },
   {
    "w": "you",
-   "start": 13.5,
-   "end": 13.713
+   "start": 13.26,
+   "end": 13.4
   },
   {
    "w": "shelter",
-   "start": 13.713,
-   "end": 14.138
+   "start": 13.4,
+   "end": 13.96
   },
   {
    "w": "under",
-   "start": 14.138,
-   "end": 14.564
+   "start": 13.96,
+   "end": 14.15
   },
   {
    "w": "the",
-   "start": 14.564,
-   "end": 14.777
+   "start": 14.15,
+   "end": 14.28
   },
   {
    "w": "leaves.",
-   "start": 14.777,
-   "end": 14.989
+   "start": 14.28,
+   "end": 14.84
   },
   {
    "w": "Each",
-   "start": 15.489,
-   "end": 15.702
+   "start": 15.11,
+   "end": 15.33
   },
   {
    "w": "one",
-   "start": 15.702,
-   "end": 15.915
+   "start": 15.33,
+   "end": 15.69
   },
   {
    "w": "holds",
-   "start": 15.915,
-   "end": 16.128
+   "start": 15.69,
+   "end": 15.97
   },
   {
    "w": "a",
-   "start": 16.128,
-   "end": 16.34
+   "start": 15.97,
+   "end": 16.03
   },
   {
    "w": "milky",
-   "start": 16.34,
-   "end": 16.766
+   "start": 16.03,
+   "end": 16.51
   },
   {
    "w": "sap,",
-   "start": 16.766,
-   "end": 16.979
+   "start": 16.51,
+   "end": 16.92
   },
   {
    "w": "and",
-   "start": 17.179,
-   "end": 17.391
+   "start": 16.92,
+   "end": 17.17
   },
   {
    "w": "the",
-   "start": 17.391,
-   "end": 17.604
+   "start": 17.17,
+   "end": 17.24
   },
   {
    "w": "rain",
-   "start": 17.604,
-   "end": 17.817
+   "start": 17.24,
+   "end": 17.63
   },
   {
    "w": "drips",
-   "start": 17.817,
-   "end": 18.03
+   "start": 17.63,
+   "end": 17.96
   },
   {
    "w": "it",
-   "start": 18.03,
-   "end": 18.243
+   "start": 17.96,
+   "end": 18.07
   },
   {
    "w": "onto",
-   "start": 18.243,
-   "end": 18.668
+   "start": 18.07,
+   "end": 18.32
   },
   {
    "w": "your",
-   "start": 18.668,
-   "end": 18.881
+   "start": 18.32,
+   "end": 18.44
   },
   {
    "w": "skin.",
-   "start": 18.881,
-   "end": 19.094
+   "start": 18.44,
+   "end": 18.91
   },
   {
    "w": "Soon",
-   "start": 19.594,
-   "end": 19.806
+   "start": 19.26,
+   "end": 19.64
   },
   {
    "w": "you're",
-   "start": 19.806,
-   "end": 20.019
+   "start": 19.64,
+   "end": 19.82
   },
   {
    "w": "covered",
-   "start": 20.019,
-   "end": 20.657
+   "start": 19.82,
+   "end": 20.3
   },
   {
    "w": "in",
-   "start": 20.657,
-   "end": 20.87
+   "start": 20.3,
+   "end": 20.44
   },
   {
    "w": "blisters.",
-   "start": 20.87,
-   "end": 21.296
+   "start": 20.44,
+   "end": 21.08
   },
   {
    "w": "The",
-   "start": 21.796,
-   "end": 22.009
+   "start": 21.44,
+   "end": 21.08
   },
   {
    "w": "next",
-   "start": 22.009,
-   "end": 22.221
+   "start": 21.44,
+   "end": 21.82
   },
   {
    "w": "day",
-   "start": 22.221,
-   "end": 22.434
+   "start": 21.82,
+   "end": 21.99
   },
   {
    "w": "you're",
-   "start": 22.434,
-   "end": 22.647
+   "start": 21.99,
+   "end": 22.19
   },
   {
    "w": "starving,",
-   "start": 22.647,
-   "end": 23.072
+   "start": 22.19,
+   "end": 22.75
   },
   {
    "w": "and",
-   "start": 23.272,
-   "end": 23.485
+   "start": 22.75,
+   "end": 22.96
   },
   {
    "w": "the",
-   "start": 23.485,
-   "end": 23.698
+   "start": 22.96,
+   "end": 23.08
   },
   {
    "w": "apples",
-   "start": 23.698,
-   "end": 24.123
+   "start": 23.08,
+   "end": 23.39
   },
   {
    "w": "smell",
-   "start": 24.123,
-   "end": 24.336
+   "start": 23.39,
+   "end": 23.74
   },
   {
    "w": "good.",
-   "start": 24.336,
-   "end": 24.549
+   "start": 23.74,
+   "end": 24.14
   },
   {
    "w": "One",
-   "start": 25.049,
-   "end": 25.262
+   "start": 24.48,
+   "end": 24.74
   },
   {
    "w": "bite",
-   "start": 25.262,
-   "end": 25.474
+   "start": 24.74,
+   "end": 24.99
   },
   {
    "w": "is",
-   "start": 25.474,
-   "end": 25.687
+   "start": 24.99,
+   "end": 25.11
   },
   {
    "w": "sweet,",
-   "start": 25.687,
-   "end": 25.9
+   "start": 25.11,
+   "end": 25.62
   },
   {
    "w": "for",
-   "start": 26.1,
-   "end": 26.313
+   "start": 25.99,
+   "end": 25.62
   },
   {
    "w": "a",
-   "start": 26.313,
-   "end": 26.526
+   "start": 25.99,
+   "end": 26.16
   },
   {
    "w": "second.",
-   "start": 26.526,
-   "end": 26.951
+   "start": 26.16,
+   "end": 26.7
   },
   {
    "w": "Then",
-   "start": 27.451,
-   "end": 27.664
+   "start": 27.04,
+   "end": 27.28
   },
   {
    "w": "your",
-   "start": 27.664,
-   "end": 27.877
+   "start": 27.28,
+   "end": 27.45
   },
   {
    "w": "throat",
-   "start": 27.877,
-   "end": 28.089
+   "start": 27.45,
+   "end": 27.94
   },
   {
    "w": "burns",
-   "start": 28.089,
-   "end": 28.302
+   "start": 27.94,
+   "end": 28.42
   },
   {
    "w": "and",
-   "start": 28.302,
-   "end": 28.515
+   "start": 28.42,
+   "end": 28.55
   },
   {
    "w": "tightens.",
-   "start": 28.515,
-   "end": 28.94
+   "start": 28.55,
+   "end": 29.19
   },
   {
    "w": "In",
-   "start": 29.44,
-   "end": 29.653
+   "start": 29.52,
+   "end": 29.19
   },
   {
    "w": "Spanish,",
-   "start": 29.653,
-   "end": 30.079
+   "start": 29.52,
+   "end": 30.2
   },
   {
    "w": "that",
-   "start": 30.279,
-   "end": 30.491
+   "start": 30.2,
+   "end": 30.5
   },
   {
    "w": "fruit",
-   "start": 30.491,
-   "end": 30.704
+   "start": 30.5,
+   "end": 30.84
   },
   {
    "w": "is",
-   "start": 30.704,
-   "end": 30.917
+   "start": 30.84,
+   "end": 31.15
   },
   {
    "w": "the",
-   "start": 30.917,
-   "end": 31.13
+   "start": 31.27,
+   "end": 31.43
   },
   {
    "w": "little",
-   "start": 31.13,
-   "end": 31.555
+   "start": 31.43,
+   "end": 31.84
   },
   {
    "w": "apple",
-   "start": 31.555,
-   "end": 31.768
+   "start": 31.84,
+   "end": 32.22
   },
   {
    "w": "of",
-   "start": 31.768,
-   "end": 31.981
+   "start": 32.22,
+   "end": 32.35
   },
   {
    "w": "death.",
-   "start": 31.981,
-   "end": 32.194
+   "start": 32.35,
+   "end": 32.81
   },
   {
    "w": "Later,",
-   "start": 32.694,
-   "end": 33.119
+   "start": 33.15,
+   "end": 33.61
   },
   {
    "w": "nature",
-   "start": 33.319,
-   "end": 33.745
+   "start": 33.66,
+   "end": 34.05
   },
   {
    "w": "calls,",
-   "start": 33.745,
-   "end": 33.957
+   "start": 34.05,
+   "end": 34.46
   },
   {
    "w": "and",
-   "start": 34.157,
-   "end": 34.37
+   "start": 34.46,
+   "end": 34.67
   },
   {
    "w": "you",
-   "start": 34.37,
-   "end": 34.583
+   "start": 34.67,
+   "end": 34.78
   },
   {
    "w": "grab",
-   "start": 34.583,
-   "end": 34.796
+   "start": 34.78,
+   "end": 35.04
   },
   {
    "w": "a",
-   "start": 34.796,
-   "end": 35.009
+   "start": 35.04,
+   "end": 35.1
   },
   {
    "w": "handful",
-   "start": 35.009,
-   "end": 35.434
+   "start": 35.1,
+   "end": 35.67
   },
   {
    "w": "of",
-   "start": 35.434,
-   "end": 35.647
+   "start": 35.67,
+   "end": 35.76
   },
   {
    "w": "soft",
-   "start": 35.647,
-   "end": 35.86
+   "start": 35.76,
+   "end": 36.14
   },
   {
    "w": "leaves.",
-   "start": 35.86,
-   "end": 36.072
+   "start": 36.14,
+   "end": 36.61
   },
   {
    "w": "Same",
-   "start": 36.572,
-   "end": 36.785
+   "start": 36.97,
+   "end": 37.28
   },
   {
    "w": "sap,",
-   "start": 36.785,
-   "end": 36.998
+   "start": 37.28,
+   "end": 37.77
   },
   {
    "w": "same",
-   "start": 37.198,
-   "end": 37.411
+   "start": 37.91,
+   "end": 38.25
   },
   {
    "w": "blisters,",
-   "start": 37.411,
-   "end": 37.836
+   "start": 38.25,
+   "end": 38.84
   },
   {
    "w": "much",
-   "start": 38.036,
-   "end": 38.249
+   "start": 39.08,
+   "end": 39.47
   },
   {
    "w": "worse",
-   "start": 38.249,
-   "end": 38.462
+   "start": 39.47,
+   "end": 39.79
   },
   {
    "w": "place.",
-   "start": 38.462,
-   "end": 38.674
+   "start": 39.79,
+   "end": 40.32
   },
   {
    "w": "That",
-   "start": 39.174,
-   "end": 39.387
+   "start": 40.68,
+   "end": 40.94
   },
   {
    "w": "night",
-   "start": 39.387,
-   "end": 39.6
+   "start": 40.94,
+   "end": 41.22
   },
   {
    "w": "you're",
-   "start": 39.6,
-   "end": 39.813
+   "start": 41.22,
+   "end": 41.39
   },
   {
    "w": "cold,",
-   "start": 39.813,
-   "end": 40.026
+   "start": 41.39,
+   "end": 41.9
   },
   {
    "w": "so",
-   "start": 40.226,
-   "end": 40.438
+   "start": 41.99,
+   "end": 42.11
   },
   {
    "w": "you",
-   "start": 40.438,
-   "end": 40.651
+   "start": 42.11,
+   "end": 42.27
   },
   {
    "w": "light",
-   "start": 40.651,
-   "end": 40.864
+   "start": 42.27,
+   "end": 42.54
   },
   {
    "w": "its",
-   "start": 40.864,
-   "end": 41.077
+   "start": 42.54,
+   "end": 42.69
   },
   {
    "w": "wood.",
-   "start": 41.077,
-   "end": 41.289
+   "start": 42.69,
+   "end": 43.17
   },
   {
    "w": "The",
-   "start": 41.789,
-   "end": 42.002
+   "start": 43.48,
+   "end": 43.17
   },
   {
    "w": "smoke",
-   "start": 42.002,
-   "end": 42.215
+   "start": 43.48,
+   "end": 44.01
   },
   {
    "w": "stings",
-   "start": 42.215,
-   "end": 42.428
+   "start": 44.01,
+   "end": 44.44
   },
   {
    "w": "your",
-   "start": 42.428,
-   "end": 42.64
+   "start": 44.44,
+   "end": 44.66
   },
   {
    "w": "eyes",
-   "start": 42.64,
-   "end": 42.853
+   "start": 44.66,
+   "end": 44.94
   },
   {
    "w": "until",
-   "start": 42.853,
-   "end": 43.279
+   "start": 44.94,
+   "end": 45.2
   },
   {
    "w": "you",
-   "start": 43.279,
-   "end": 43.491
+   "start": 45.2,
+   "end": 45.33
   },
   {
    "w": "can",
-   "start": 43.491,
-   "end": 43.704
+   "start": 45.33,
+   "end": 45.51
   },
   {
    "w": "barely",
-   "start": 43.704,
-   "end": 44.13
+   "start": 45.51,
+   "end": 45.93
   },
   {
    "w": "see.",
-   "start": 44.13,
-   "end": 44.343
+   "start": 45.93,
+   "end": 46.4
   },
   {
    "w": "Next",
-   "start": 44.843,
-   "end": 45.055
+   "start": 46.75,
+   "end": 47.02
   },
   {
    "w": "time,",
-   "start": 45.055,
-   "end": 45.268
+   "start": 47.02,
+   "end": 47.4
   },
   {
    "w": "just",
-   "start": 45.468,
-   "end": 45.681
+   "start": 47.54,
+   "end": 47.76
   },
   {
    "w": "sit",
-   "start": 45.681,
-   "end": 45.894
+   "start": 47.76,
+   "end": 47.92
   },
   {
    "w": "in",
-   "start": 45.894,
-   "end": 46.106
+   "start": 47.92,
+   "end": 48.03
   },
   {
    "w": "the",
-   "start": 46.106,
-   "end": 46.319
+   "start": 48.03,
+   "end": 48.1
   },
   {
    "w": "sand.",
-   "start": 46.319,
-   "end": 46.532
+   "start": 48.1,
+   "end": 48.66
   },
   {
    "w": "Subscribe",
-   "start": 47.032,
-   "end": 47.457
+   "start": 48.98,
+   "end": 49.51
   },
   {
    "w": "for",
-   "start": 47.457,
-   "end": 47.67
+   "start": 49.51,
+   "end": 49.67
   },
   {
    "w": "more",
-   "start": 47.67,
-   "end": 47.883
+   "start": 49.67,
+   "end": 50.08
   },
   {
    "w": "of",
-   "start": 47.883,
-   "end": 48.096
+   "start": 50.08,
+   "end": 50.18
   },
   {
    "w": "nature's",
-   "start": 48.096,
-   "end": 48.521
+   "start": 50.18,
+   "end": 50.61
   },
   {
    "w": "warnings.",
-   "start": 48.521,
-   "end": 48.947
+   "start": 50.61,
+   "end": 51.24
   }
  ],
  "chunks": [
@@ -747,408 +747,408 @@
    "w0": 0,
    "w1": 3,
    "start": 0.4,
-   "end": 1.251
+   "end": 1.28
   },
   {
    "text": "with only one tree,",
    "w0": 4,
    "w1": 7,
-   "start": 1.251,
-   "end": 2.315
+   "start": 1.28,
+   "end": 2.5
   },
   {
    "text": "you'd sit under it.",
    "w0": 8,
    "w1": 11,
-   "start": 2.515,
-   "end": 3.579
+   "start": 2.79,
+   "end": 3.6199999999999997
   },
   {
    "text": "Don't.",
    "w0": 12,
    "w1": 12,
-   "start": 4.079,
-   "end": 4.291
+   "start": 3.94,
+   "end": 4.4
   },
   {
    "text": "It's a manchineel.",
    "w0": 13,
    "w1": 15,
-   "start": 4.791,
-   "end": 5.855
+   "start": 4.5600000000000005,
+   "end": 5.5600000000000005
   },
   {
    "text": "It has small green apples,",
    "w0": 16,
    "w1": 20,
-   "start": 6.355,
-   "end": 7.632
+   "start": 5.930000000000001,
+   "end": 7.550000000000001
   },
   {
    "text": "and a red band",
    "w0": 21,
    "w1": 24,
-   "start": 7.832,
-   "end": 8.683
+   "start": 7.550000000000001,
+   "end": 8.51
   },
   {
    "text": "someone painted on the trunk.",
    "w0": 25,
    "w1": 29,
-   "start": 8.683,
-   "end": 10.172
+   "start": 8.51,
+   "end": 9.99
   },
   {
    "text": "Here's what that band is for.",
    "w0": 30,
    "w1": 35,
-   "start": 10.672,
-   "end": 11.949
+   "start": 10.34,
+   "end": 11.84
   },
   {
    "text": "A storm hits,",
    "w0": 36,
    "w1": 38,
-   "start": 12.449,
-   "end": 13.087
+   "start": 12.18,
+   "end": 13.030000000000001
   },
   {
    "text": "so you shelter under the leaves.",
    "w0": 39,
    "w1": 44,
-   "start": 13.287,
-   "end": 14.989
+   "start": 13.120000000000001,
+   "end": 14.84
   },
   {
    "text": "Each one holds a milky sap,",
    "w0": 45,
    "w1": 50,
-   "start": 15.489,
-   "end": 16.979
+   "start": 15.11,
+   "end": 16.92
   },
   {
    "text": "and the rain drips it",
    "w0": 51,
    "w1": 55,
-   "start": 17.179,
-   "end": 18.243
+   "start": 16.92,
+   "end": 18.07
   },
   {
    "text": "onto your skin.",
    "w0": 56,
    "w1": 58,
-   "start": 18.243,
-   "end": 19.094
+   "start": 18.07,
+   "end": 18.91
   },
   {
    "text": "Soon you're covered in blisters.",
    "w0": 59,
    "w1": 63,
-   "start": 19.594,
-   "end": 21.296
+   "start": 19.26,
+   "end": 21.080000000000002
   },
   {
    "text": "The next day you're starving,",
    "w0": 64,
    "w1": 68,
-   "start": 21.796,
-   "end": 23.072
+   "start": 21.44,
+   "end": 22.75
   },
   {
    "text": "and the apples smell good.",
    "w0": 69,
    "w1": 73,
-   "start": 23.272,
-   "end": 24.549
+   "start": 22.75,
+   "end": 24.14
   },
   {
    "text": "One bite is sweet,",
    "w0": 74,
    "w1": 77,
-   "start": 25.049,
-   "end": 25.9
+   "start": 24.48,
+   "end": 25.62
   },
   {
    "text": "for a second.",
    "w0": 78,
    "w1": 80,
-   "start": 26.1,
-   "end": 26.951
+   "start": 25.990000000000002,
+   "end": 26.7
   },
   {
    "text": "Then your throat burns",
    "w0": 81,
    "w1": 84,
-   "start": 27.451,
-   "end": 28.302
+   "start": 27.04,
+   "end": 28.42
   },
   {
    "text": "and tightens.",
    "w0": 85,
    "w1": 86,
-   "start": 28.302,
-   "end": 28.94
+   "start": 28.42,
+   "end": 29.19
   },
   {
    "text": "In Spanish, that fruit is",
    "w0": 87,
    "w1": 91,
-   "start": 29.44,
-   "end": 30.917
+   "start": 29.52,
+   "end": 31.15
   },
   {
    "text": "the little apple of death.",
    "w0": 92,
    "w1": 96,
-   "start": 30.917,
-   "end": 32.194
+   "start": 31.27,
+   "end": 32.81
   },
   {
    "text": "Later, nature calls,",
    "w0": 97,
    "w1": 99,
-   "start": 32.694,
-   "end": 33.957
+   "start": 33.15,
+   "end": 34.46
   },
   {
    "text": "and you grab a handful",
    "w0": 100,
    "w1": 104,
-   "start": 34.157,
-   "end": 35.434
+   "start": 34.46,
+   "end": 35.67
   },
   {
    "text": "of soft leaves.",
    "w0": 105,
    "w1": 107,
-   "start": 35.434,
-   "end": 36.072
+   "start": 35.67,
+   "end": 36.61
   },
   {
    "text": "Same sap, same blisters,",
    "w0": 108,
    "w1": 111,
-   "start": 36.572,
-   "end": 37.836
+   "start": 36.97,
+   "end": 38.84
   },
   {
    "text": "much worse place.",
    "w0": 112,
    "w1": 114,
-   "start": 38.036,
-   "end": 38.674
+   "start": 39.08,
+   "end": 40.32
   },
   {
    "text": "That night you're cold,",
    "w0": 115,
    "w1": 118,
-   "start": 39.174,
-   "end": 40.026
+   "start": 40.68,
+   "end": 41.9
   },
   {
    "text": "so you light its wood.",
    "w0": 119,
    "w1": 123,
-   "start": 40.226,
-   "end": 41.289
+   "start": 41.99,
+   "end": 43.17
   },
   {
    "text": "The smoke stings your eyes",
    "w0": 124,
    "w1": 128,
-   "start": 41.789,
-   "end": 42.853
+   "start": 43.48,
+   "end": 44.94
   },
   {
    "text": "until you can barely see.",
    "w0": 129,
    "w1": 133,
-   "start": 42.853,
-   "end": 44.343
+   "start": 44.94,
+   "end": 46.4
   },
   {
    "text": "Next time,",
    "w0": 134,
    "w1": 135,
-   "start": 44.843,
-   "end": 45.268
+   "start": 46.75,
+   "end": 47.4
   },
   {
    "text": "just sit in the sand.",
    "w0": 136,
    "w1": 140,
-   "start": 45.468,
-   "end": 46.532
+   "start": 47.54,
+   "end": 48.660000000000004
   },
   {
    "text": "Subscribe for more",
    "w0": 141,
    "w1": 143,
-   "start": 47.032,
-   "end": 47.883
+   "start": 48.98,
+   "end": 50.08
   },
   {
    "text": "of nature's warnings.",
    "w0": 144,
    "w1": 146,
-   "start": 47.883,
-   "end": 48.947
+   "start": 50.08,
+   "end": 51.24
   }
  ],
  "sentences": [
   {
    "start": 0.4,
-   "end": 3.579,
+   "end": 3.6199999999999997,
    "text": "Stuck on a beach with only one tree, you'd sit under it."
   },
   {
-   "start": 4.079,
-   "end": 4.291,
+   "start": 3.94,
+   "end": 4.4,
    "text": "Don't."
   },
   {
-   "start": 4.791,
-   "end": 5.855,
+   "start": 4.5600000000000005,
+   "end": 5.5600000000000005,
    "text": "It's a manchineel."
   },
   {
-   "start": 6.355,
-   "end": 10.172,
+   "start": 5.930000000000001,
+   "end": 9.99,
    "text": "It has small green apples, and a red band someone painted on the trunk."
   },
   {
-   "start": 10.672,
-   "end": 11.949,
+   "start": 10.34,
+   "end": 11.84,
    "text": "Here's what that band is for."
   },
   {
-   "start": 12.449,
-   "end": 14.989,
+   "start": 12.18,
+   "end": 14.84,
    "text": "A storm hits, so you shelter under the leaves."
   },
   {
-   "start": 15.489,
-   "end": 19.094,
+   "start": 15.11,
+   "end": 18.91,
    "text": "Each one holds a milky sap, and the rain drips it onto your skin."
   },
   {
-   "start": 19.594,
-   "end": 21.296,
+   "start": 19.26,
+   "end": 21.080000000000002,
    "text": "Soon you're covered in blisters."
   },
   {
-   "start": 21.796,
-   "end": 24.549,
+   "start": 21.44,
+   "end": 24.14,
    "text": "The next day you're starving, and the apples smell good."
   },
   {
-   "start": 25.049,
-   "end": 26.951,
+   "start": 24.48,
+   "end": 26.7,
    "text": "One bite is sweet, for a second."
   },
   {
-   "start": 27.451,
-   "end": 28.94,
+   "start": 27.04,
+   "end": 29.19,
    "text": "Then your throat burns and tightens."
   },
   {
-   "start": 29.44,
-   "end": 32.194,
+   "start": 29.52,
+   "end": 32.81,
    "text": "In Spanish, that fruit is the little apple of death."
   },
   {
-   "start": 32.694,
-   "end": 36.072,
+   "start": 33.15,
+   "end": 36.61,
    "text": "Later, nature calls, and you grab a handful of soft leaves."
   },
   {
-   "start": 36.572,
-   "end": 38.674,
+   "start": 36.97,
+   "end": 40.32,
    "text": "Same sap, same blisters, much worse place."
   },
   {
-   "start": 39.174,
-   "end": 41.289,
+   "start": 40.68,
+   "end": 43.17,
    "text": "That night you're cold, so you light its wood."
   },
   {
-   "start": 41.789,
-   "end": 44.343,
+   "start": 43.48,
+   "end": 46.4,
    "text": "The smoke stings your eyes until you can barely see."
   },
   {
-   "start": 44.843,
-   "end": 46.532,
+   "start": 46.75,
+   "end": 48.660000000000004,
    "text": "Next time, just sit in the sand."
   },
   {
-   "start": 47.032,
-   "end": 48.947,
+   "start": 48.98,
+   "end": 51.24,
    "text": "Subscribe for more of nature's warnings."
   }
  ],
  "keys": {
-  "tree": 2.102,
-  "dont": 4.079,
-  "manchineel": 5.217,
-  "apples": 7.206,
-  "band": 8.47,
-  "here": 10.672,
-  "storm": 12.662,
-  "shelter": 13.713,
-  "sap": 16.766,
-  "drips": 17.817,
-  "blisters": 20.87,
-  "next": 22.009,
-  "starving": 22.647,
-  "bite": 25.262,
-  "burns": 28.089,
-  "spanish": 29.653,
-  "death": 31.981,
-  "later": 32.694,
-  "grab": 34.583,
-  "same": 36.572,
-  "worse": 38.249,
-  "night": 39.387,
-  "light": 40.651,
-  "smoke": 42.002,
-  "see": 44.13,
-  "time": 45.055,
-  "sit": 45.681,
-  "subscribe": 47.032,
-  "natures": 48.096,
-  "warnings": 48.521
+  "tree": 2.06,
+  "dont": 3.94,
+  "manchineel": 4.74,
+  "apples": 7.07,
+  "band": 8.1,
+  "here": 10.34,
+  "storm": 12.18,
+  "shelter": 13.4,
+  "sap": 16.51,
+  "drips": 17.63,
+  "blisters": 20.44,
+  "next": 21.44,
+  "starving": 22.19,
+  "bite": 24.74,
+  "burns": 27.94,
+  "spanish": 29.52,
+  "death": 32.35,
+  "later": 33.15,
+  "grab": 34.78,
+  "same": 36.97,
+  "worse": 39.47,
+  "night": 40.94,
+  "light": 42.27,
+  "smoke": 43.48,
+  "see": 45.93,
+  "time": 47.02,
+  "sit": 47.76,
+  "subscribe": 48.98,
+  "natures": 50.18,
+  "warnings": 50.61
  },
  "keyEnd": {
-  "tree": 2.315,
-  "dont": 4.291,
-  "manchineel": 5.855,
-  "apples": 7.632,
-  "band": 8.683,
-  "here": 10.885,
-  "storm": 12.874,
-  "shelter": 14.138,
-  "sap": 16.979,
-  "drips": 18.03,
-  "blisters": 21.296,
-  "next": 22.221,
-  "starving": 23.072,
-  "bite": 25.474,
-  "burns": 28.302,
-  "spanish": 30.079,
-  "death": 32.194,
-  "later": 33.119,
-  "grab": 34.796,
-  "same": 36.785,
-  "worse": 38.462,
-  "night": 39.6,
-  "light": 40.864,
-  "smoke": 42.215,
-  "see": 44.343,
-  "time": 45.268,
-  "sit": 45.894,
-  "subscribe": 47.457,
-  "natures": 48.521,
-  "warnings": 48.947
+  "tree": 2.5,
+  "dont": 4.4,
+  "manchineel": 5.56,
+  "apples": 7.55,
+  "band": 8.51,
+  "here": 10.58,
+  "storm": 12.69,
+  "shelter": 13.96,
+  "sap": 16.92,
+  "drips": 17.96,
+  "blisters": 21.08,
+  "next": 21.82,
+  "starving": 22.75,
+  "bite": 24.99,
+  "burns": 28.42,
+  "spanish": 30.2,
+  "death": 32.81,
+  "later": 33.61,
+  "grab": 35.04,
+  "same": 37.28,
+  "worse": 39.79,
+  "night": 41.22,
+  "light": 42.54,
+  "smoke": 44.01,
+  "see": 46.4,
+  "time": 47.4,
+  "sit": 47.92,
+  "subscribe": 49.51,
+  "natures": 50.61,
+  "warnings": 51.24
  }
 }
