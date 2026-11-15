@@ -69,13 +69,15 @@ add(ding(196, 1.4), K['empty'] - 0.05, -14)
 add(sweep(700, 180, 0.9) * env(int(SR * 0.9), 0.02, 0.4), K['cleared'] - 0.05, -15)   # face drains
 # ---- in japan: city air; firing: slip at the locks
 murmur(CH(29), CH(30), -24); add(whoosh(0.8, 200, 1500, 0.5), CH(29), -20)
-add(whoosh(0.35, 800, 4000, 0.6), K['firing'] - 0.05, -17)
-add(thud(260, 0.12), K['firing'] + 0.4, -10); add(click() * 2, K['firing'] + 0.42, -10)
-for i in range(3): add(click() * 1.5, K['hard'] - 0.45 + i * 0.07, -13)            # locks rattle
-add(pop_(700, 0.12), K['hard'] - 0.4, -12); add(thud(320, 0.06), K['hard'] + 0.15, -18)
-add(ding(247, 0.9), K['hard'] + 0.2, -18)
+steps(CH(29), K['firing'] - 0.1, 0.32, -21)
+add(whoosh(0.3, 800, 4000, 0.6), K['firing'] - 0.05, -18)
+lk = CHS[31]['start'] - 0.12
+add(click() * 2, lk + 0.05, -9); add(thud(300, 0.08), lk + 0.06, -12); add(click() * 2, lk + 0.4, -9); add(thud(280, 0.08), lk + 0.41, -12)   # two padlocks snap on
+add(ding(247, 0.9), lk + 0.5, -18)
+add(thud(320, 0.08), K['hard'] + 0.2, -16)                                          # the slip drops
+add(sizzle(0.9), K['hard'] - 0.05, -18)                                             # steam
 # ---- take away the work / wait / leave / the door closes
-for i in range(4): add(whoosh(0.22, 700, 3500, 0.5), K['takeaway'] - 0.12 + i * 0.2, -16)
+add(thud(200, 0.1), K['takeaway'] - 0.1, -14); add(whoosh(0.4, 400, 2500, 0.5), K['takeaway'] + 0.1, -17); steps(K['takeaway'] + 0.3, CHS[35]['start'], 0.3, -21)
 add(sweep(1200, 200, 1.1) * env(int(SR * 1.1), 0.02, 0.3), K['wait'] - 0.15, -20)  # clock spins
 tick_(K['wait'] - 0.1, K['leave'] - 0.2, -19)
 steps(K['leave'] - 0.3, CH(36), 0.33, -20)
