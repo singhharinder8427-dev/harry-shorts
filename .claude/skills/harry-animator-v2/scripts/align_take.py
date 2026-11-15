@@ -28,7 +28,7 @@ def syl(w): return max(1, len(re.findall(r'[aeiouy]+', w)))
 sents, cur = [], []
 for i, tk in enumerate(toks):
     cur.append(i)
-    if tk[-1] in '.?': sents.append(cur); cur = []
+    if tk.rstrip('"\'\u201d')[-1] in '.?': sents.append(cur); cur = []
 if cur: sents.append(cur)
 # loudness and pauses (10 ms hops)
 hop = 160; n = len(x) // hop

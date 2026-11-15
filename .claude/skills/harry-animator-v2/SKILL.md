@@ -489,6 +489,15 @@ Append the topic to `topics_log.md`.
   the first.
 - Real facts only in the voice and labels; cartoon exaggeration only in what characters do, and labelled.
 
+v2 pitfalls already met: a closing quote after the full stop (`traffic."`) used to hide the sentence end (fixed in
+`gen_timing.py` / `align_take.py`; keep quotes in the script, they are handled); people and props drawn in a
+screen-space perspective scene need `KScale` (or `Billboard` / a `Stand` helper) so outlines keep their weight; a `Pill`
+(or any SVG element) must sit inside an `<svg>` - inside a bare `AbsoluteFill` it silently doesn't render; a water /
+floor plane polygon must use the wall X at the near depth (`proj(c, ±WX, near).x`), not screen edges, or it shows as a
+wedge; a character lifted high (standing on a pile) leaves the frame - tilt the perspective camera (raise `horizon`)
+with the lift; a big sign at Z near the camera grows during a dolly and drifts into the buttons zone - check its last
+frame, not its first; a blurred foreground pillar that crosses the middle of the frame reads as a glitch - keep it
+at the edges.
 Pitfalls already met: TypeScript 6 breaks the Remotion 4.0.250 bundler (keep 5.6); `--scale=1.333` gives an odd width
 (use `Short2K`); pocketsphinx fails to align 40 s in one pass (align per sentence); words like "adult's" aren't in its
 dictionary (fallbacks/`spoken`); a 0.10 s silence threshold mistakes plosives for gaps (use 0.12 s); drifting clouds and

@@ -1,0 +1,835 @@
+{
+ "short": "lastman",
+ "title": "What if you were the last person on Earth?",
+ "duration": 38.59,
+ "voiceOffset": 0.0,
+ "estimated": true,
+ "words": [
+  {
+   "w": "Meet",
+   "start": 0.4,
+   "end": 0.613
+  },
+  {
+   "w": "Ray.",
+   "start": 0.613,
+   "end": 0.826
+  },
+  {
+   "w": "He",
+   "start": 1.326,
+   "end": 1.538
+  },
+  {
+   "w": "wakes",
+   "start": 1.538,
+   "end": 1.751
+  },
+  {
+   "w": "up,",
+   "start": 1.751,
+   "end": 1.964
+  },
+  {
+   "w": "and",
+   "start": 2.164,
+   "end": 2.377
+  },
+  {
+   "w": "every",
+   "start": 2.377,
+   "end": 2.802
+  },
+  {
+   "w": "other",
+   "start": 2.802,
+   "end": 3.228
+  },
+  {
+   "w": "person",
+   "start": 3.228,
+   "end": 3.653
+  },
+  {
+   "w": "on",
+   "start": 3.653,
+   "end": 3.866
+  },
+  {
+   "w": "Earth",
+   "start": 3.866,
+   "end": 4.079
+  },
+  {
+   "w": "is",
+   "start": 4.079,
+   "end": 4.291
+  },
+  {
+   "w": "gone.",
+   "start": 4.291,
+   "end": 4.504
+  },
+  {
+   "w": "\"Finally,",
+   "start": 5.004,
+   "end": 5.643
+  },
+  {
+   "w": "no",
+   "start": 5.843,
+   "end": 6.055
+  },
+  {
+   "w": "traffic,\"",
+   "start": 6.055,
+   "end": 6.481
+  },
+  {
+   "w": "he",
+   "start": 6.681,
+   "end": 6.894
+  },
+  {
+   "w": "says.",
+   "start": 6.894,
+   "end": 7.106
+  },
+  {
+   "w": "Soon",
+   "start": 7.606,
+   "end": 7.819
+  },
+  {
+   "w": "the",
+   "start": 7.819,
+   "end": 8.032
+  },
+  {
+   "w": "lights",
+   "start": 8.032,
+   "end": 8.245
+  },
+  {
+   "w": "go",
+   "start": 8.245,
+   "end": 8.457
+  },
+  {
+   "w": "out,",
+   "start": 8.457,
+   "end": 8.67
+  },
+  {
+   "w": "because",
+   "start": 8.87,
+   "end": 9.296
+  },
+  {
+   "w": "power",
+   "start": 9.296,
+   "end": 9.721
+  },
+  {
+   "w": "plants",
+   "start": 9.721,
+   "end": 9.934
+  },
+  {
+   "w": "shut",
+   "start": 9.934,
+   "end": 10.147
+  },
+  {
+   "w": "themselves",
+   "start": 10.147,
+   "end": 10.572
+  },
+  {
+   "w": "down",
+   "start": 10.572,
+   "end": 10.785
+  },
+  {
+   "w": "when",
+   "start": 10.785,
+   "end": 10.998
+  },
+  {
+   "w": "nobody",
+   "start": 10.998,
+   "end": 11.636
+  },
+  {
+   "w": "runs",
+   "start": 11.636,
+   "end": 11.849
+  },
+  {
+   "w": "them.",
+   "start": 11.849,
+   "end": 12.062
+  },
+  {
+   "w": "Under",
+   "start": 12.562,
+   "end": 12.987
+  },
+  {
+   "w": "New",
+   "start": 12.987,
+   "end": 13.2
+  },
+  {
+   "w": "York,",
+   "start": 13.2,
+   "end": 13.413
+  },
+  {
+   "w": "the",
+   "start": 13.613,
+   "end": 13.826
+  },
+  {
+   "w": "subway",
+   "start": 13.826,
+   "end": 14.251
+  },
+  {
+   "w": "pumps",
+   "start": 14.251,
+   "end": 14.464
+  },
+  {
+   "w": "stop,",
+   "start": 14.464,
+   "end": 14.677
+  },
+  {
+   "w": "and",
+   "start": 14.877,
+   "end": 15.089
+  },
+  {
+   "w": "one",
+   "start": 15.089,
+   "end": 15.302
+  },
+  {
+   "w": "estimate",
+   "start": 15.302,
+   "end": 15.94
+  },
+  {
+   "w": "says",
+   "start": 15.94,
+   "end": 16.153
+  },
+  {
+   "w": "the",
+   "start": 16.153,
+   "end": 16.366
+  },
+  {
+   "w": "tunnels",
+   "start": 16.366,
+   "end": 16.791
+  },
+  {
+   "w": "flood",
+   "start": 16.791,
+   "end": 17.004
+  },
+  {
+   "w": "in",
+   "start": 17.004,
+   "end": 17.217
+  },
+  {
+   "w": "about",
+   "start": 17.217,
+   "end": 17.643
+  },
+  {
+   "w": "two",
+   "start": 17.643,
+   "end": 17.855
+  },
+  {
+   "w": "days.",
+   "start": 17.855,
+   "end": 18.068
+  },
+  {
+   "w": "Ray",
+   "start": 18.568,
+   "end": 18.781
+  },
+  {
+   "w": "stocks",
+   "start": 18.781,
+   "end": 18.994
+  },
+  {
+   "w": "up",
+   "start": 18.994,
+   "end": 19.206
+  },
+  {
+   "w": "on",
+   "start": 19.206,
+   "end": 19.419
+  },
+  {
+   "w": "cans,",
+   "start": 19.419,
+   "end": 19.632
+  },
+  {
+   "w": "which",
+   "start": 19.832,
+   "end": 20.045
+  },
+  {
+   "w": "keep",
+   "start": 20.045,
+   "end": 20.257
+  },
+  {
+   "w": "their",
+   "start": 20.257,
+   "end": 20.47
+  },
+  {
+   "w": "best",
+   "start": 20.47,
+   "end": 20.683
+  },
+  {
+   "w": "quality",
+   "start": 20.683,
+   "end": 21.321
+  },
+  {
+   "w": "for",
+   "start": 21.321,
+   "end": 21.534
+  },
+  {
+   "w": "two",
+   "start": 21.534,
+   "end": 21.747
+  },
+  {
+   "w": "to",
+   "start": 21.747,
+   "end": 21.96
+  },
+  {
+   "w": "five",
+   "start": 21.96,
+   "end": 22.172
+  },
+  {
+   "w": "years.",
+   "start": 22.172,
+   "end": 22.385
+  },
+  {
+   "w": "Food",
+   "start": 22.885,
+   "end": 23.098
+  },
+  {
+   "w": "isn't",
+   "start": 23.098,
+   "end": 23.523
+  },
+  {
+   "w": "his",
+   "start": 23.523,
+   "end": 23.736
+  },
+  {
+   "w": "problem.",
+   "start": 23.736,
+   "end": 24.162
+  },
+  {
+   "w": "Loneliness",
+   "start": 24.662,
+   "end": 25.3
+  },
+  {
+   "w": "is.",
+   "start": 25.3,
+   "end": 25.513
+  },
+  {
+   "w": "Being",
+   "start": 26.013,
+   "end": 26.438
+  },
+  {
+   "w": "cut",
+   "start": 26.438,
+   "end": 26.651
+  },
+  {
+   "w": "off",
+   "start": 26.651,
+   "end": 26.864
+  },
+  {
+   "w": "from",
+   "start": 26.864,
+   "end": 27.077
+  },
+  {
+   "w": "people",
+   "start": 27.077,
+   "end": 27.502
+  },
+  {
+   "w": "raises",
+   "start": 27.502,
+   "end": 27.928
+  },
+  {
+   "w": "the",
+   "start": 27.928,
+   "end": 28.14
+  },
+  {
+   "w": "risk",
+   "start": 28.14,
+   "end": 28.353
+  },
+  {
+   "w": "of",
+   "start": 28.353,
+   "end": 28.566
+  },
+  {
+   "w": "early",
+   "start": 28.566,
+   "end": 28.991
+  },
+  {
+   "w": "death",
+   "start": 28.991,
+   "end": 29.204
+  },
+  {
+   "w": "about",
+   "start": 29.204,
+   "end": 29.63
+  },
+  {
+   "w": "as",
+   "start": 29.63,
+   "end": 29.843
+  },
+  {
+   "w": "much",
+   "start": 29.843,
+   "end": 30.055
+  },
+  {
+   "w": "as",
+   "start": 30.055,
+   "end": 30.268
+  },
+  {
+   "w": "smoking",
+   "start": 30.268,
+   "end": 30.694
+  },
+  {
+   "w": "up",
+   "start": 30.694,
+   "end": 30.906
+  },
+  {
+   "w": "to",
+   "start": 30.906,
+   "end": 31.119
+  },
+  {
+   "w": "fifteen",
+   "start": 31.119,
+   "end": 31.545
+  },
+  {
+   "w": "cigarettes",
+   "start": 31.545,
+   "end": 32.183
+  },
+  {
+   "w": "a",
+   "start": 32.183,
+   "end": 32.396
+  },
+  {
+   "w": "day.",
+   "start": 32.396,
+   "end": 32.609
+  },
+  {
+   "w": "\"Okay,\"",
+   "start": 33.109,
+   "end": 33.534
+  },
+  {
+   "w": "Ray",
+   "start": 33.734,
+   "end": 33.947
+  },
+  {
+   "w": "says,",
+   "start": 33.947,
+   "end": 34.16
+  },
+  {
+   "w": "\"I",
+   "start": 34.36,
+   "end": 34.572
+  },
+  {
+   "w": "miss",
+   "start": 34.572,
+   "end": 34.785
+  },
+  {
+   "w": "traffic.\"",
+   "start": 34.785,
+   "end": 35.211
+  },
+  {
+   "w": "Subscribe",
+   "start": 35.711,
+   "end": 36.136
+  },
+  {
+   "w": "for",
+   "start": 36.136,
+   "end": 36.349
+  },
+  {
+   "w": "more",
+   "start": 36.349,
+   "end": 36.562
+  },
+  {
+   "w": "what-ifs.",
+   "start": 36.562,
+   "end": 36.987
+  }
+ ],
+ "chunks": [
+  {
+   "text": "Meet Ray.",
+   "w0": 0,
+   "w1": 1,
+   "start": 0.4,
+   "end": 0.826
+  },
+  {
+   "text": "He wakes up,",
+   "w0": 2,
+   "w1": 4,
+   "start": 1.326,
+   "end": 1.964
+  },
+  {
+   "text": "and every other person",
+   "w0": 5,
+   "w1": 8,
+   "start": 2.164,
+   "end": 3.653
+  },
+  {
+   "text": "on Earth is gone.",
+   "w0": 9,
+   "w1": 12,
+   "start": 3.653,
+   "end": 4.504
+  },
+  {
+   "text": "\"Finally, no traffic,\"",
+   "w0": 13,
+   "w1": 15,
+   "start": 5.004,
+   "end": 6.481
+  },
+  {
+   "text": "he says.",
+   "w0": 16,
+   "w1": 17,
+   "start": 6.681,
+   "end": 7.106
+  },
+  {
+   "text": "Soon the lights go out,",
+   "w0": 18,
+   "w1": 22,
+   "start": 7.606,
+   "end": 8.67
+  },
+  {
+   "text": "because power plants",
+   "w0": 23,
+   "w1": 25,
+   "start": 8.87,
+   "end": 9.934
+  },
+  {
+   "text": "shut themselves down",
+   "w0": 26,
+   "w1": 28,
+   "start": 9.934,
+   "end": 10.785
+  },
+  {
+   "text": "when nobody runs them.",
+   "w0": 29,
+   "w1": 32,
+   "start": 10.785,
+   "end": 12.062
+  },
+  {
+   "text": "Under New York,",
+   "w0": 33,
+   "w1": 35,
+   "start": 12.562,
+   "end": 13.413
+  },
+  {
+   "text": "the subway pumps stop,",
+   "w0": 36,
+   "w1": 39,
+   "start": 13.613,
+   "end": 14.677
+  },
+  {
+   "text": "and one estimate says",
+   "w0": 40,
+   "w1": 43,
+   "start": 14.877,
+   "end": 16.153
+  },
+  {
+   "text": "the tunnels flood",
+   "w0": 44,
+   "w1": 46,
+   "start": 16.153,
+   "end": 17.004
+  },
+  {
+   "text": "in about two days.",
+   "w0": 47,
+   "w1": 50,
+   "start": 17.004,
+   "end": 18.068
+  },
+  {
+   "text": "Ray stocks up on cans,",
+   "w0": 51,
+   "w1": 55,
+   "start": 18.568,
+   "end": 19.632
+  },
+  {
+   "text": "which keep their best quality",
+   "w0": 56,
+   "w1": 60,
+   "start": 19.832,
+   "end": 21.321
+  },
+  {
+   "text": "for two to five years.",
+   "w0": 61,
+   "w1": 65,
+   "start": 21.321,
+   "end": 22.385
+  },
+  {
+   "text": "Food isn't his problem.",
+   "w0": 66,
+   "w1": 69,
+   "start": 22.885,
+   "end": 24.162
+  },
+  {
+   "text": "Loneliness is.",
+   "w0": 70,
+   "w1": 71,
+   "start": 24.662,
+   "end": 25.513
+  },
+  {
+   "text": "Being cut off from people",
+   "w0": 72,
+   "w1": 76,
+   "start": 26.013,
+   "end": 27.502
+  },
+  {
+   "text": "raises the risk of early death",
+   "w0": 77,
+   "w1": 82,
+   "start": 27.502,
+   "end": 29.204
+  },
+  {
+   "text": "about as much as smoking",
+   "w0": 83,
+   "w1": 87,
+   "start": 29.204,
+   "end": 30.694
+  },
+  {
+   "text": "up to fifteen cigarettes a day.",
+   "w0": 88,
+   "w1": 93,
+   "start": 30.694,
+   "end": 32.609
+  },
+  {
+   "text": "\"Okay,\" Ray says,",
+   "w0": 94,
+   "w1": 96,
+   "start": 33.109,
+   "end": 34.16
+  },
+  {
+   "text": "\"I miss traffic.\"",
+   "w0": 97,
+   "w1": 99,
+   "start": 34.36,
+   "end": 35.211
+  },
+  {
+   "text": "Subscribe for more what-ifs.",
+   "w0": 100,
+   "w1": 103,
+   "start": 35.711,
+   "end": 36.987
+  }
+ ],
+ "sentences": [
+  {
+   "start": 0.4,
+   "end": 0.826,
+   "text": "Meet Ray."
+  },
+  {
+   "start": 1.326,
+   "end": 4.504,
+   "text": "He wakes up, and every other person on Earth is gone."
+  },
+  {
+   "start": 5.004,
+   "end": 7.106,
+   "text": "\"Finally, no traffic,\" he says."
+  },
+  {
+   "start": 7.606,
+   "end": 12.062,
+   "text": "Soon the lights go out, because power plants shut themselves down when nobody runs them."
+  },
+  {
+   "start": 12.562,
+   "end": 18.068,
+   "text": "Under New York, the subway pumps stop, and one estimate says the tunnels flood in about two days."
+  },
+  {
+   "start": 18.568,
+   "end": 22.385,
+   "text": "Ray stocks up on cans, which keep their best quality for two to five years."
+  },
+  {
+   "start": 22.885,
+   "end": 24.162,
+   "text": "Food isn't his problem."
+  },
+  {
+   "start": 24.662,
+   "end": 25.513,
+   "text": "Loneliness is."
+  },
+  {
+   "start": 26.013,
+   "end": 32.609,
+   "text": "Being cut off from people raises the risk of early death about as much as smoking up to fifteen cigarettes a day."
+  },
+  {
+   "start": 33.109,
+   "end": 35.211,
+   "text": "\"Okay,\" Ray says, \"I miss traffic.\""
+  },
+  {
+   "start": 35.711,
+   "end": 36.987,
+   "text": "Subscribe for more what-ifs."
+  }
+ ],
+ "keys": {
+  "ray": 0.613,
+  "wakes": 1.538,
+  "gone": 4.291,
+  "finally": 5.004,
+  "traffic": 6.055,
+  "lights": 8.032,
+  "plants": 9.721,
+  "down": 10.572,
+  "nobody": 10.998,
+  "subway": 13.826,
+  "stop": 14.464,
+  "flood": 16.791,
+  "days": 17.855,
+  "cans": 19.419,
+  "quality": 20.683,
+  "five": 21.96,
+  "food": 22.885,
+  "problem": 23.736,
+  "loneliness": 24.662,
+  "cut": 26.438,
+  "risk": 28.14,
+  "smoking": 30.268,
+  "fifteen": 31.119,
+  "okay": 33.109,
+  "miss": 34.572,
+  "subscribe": 35.711,
+  "whatifs": 36.562
+ },
+ "keyEnd": {
+  "ray": 0.826,
+  "wakes": 1.751,
+  "gone": 4.504,
+  "finally": 5.643,
+  "traffic": 6.481,
+  "lights": 8.245,
+  "plants": 9.934,
+  "down": 10.785,
+  "nobody": 11.636,
+  "subway": 14.251,
+  "stop": 14.677,
+  "flood": 17.004,
+  "days": 18.068,
+  "cans": 19.632,
+  "quality": 21.321,
+  "five": 22.172,
+  "food": 23.098,
+  "problem": 24.162,
+  "loneliness": 25.3,
+  "cut": 26.651,
+  "risk": 28.353,
+  "smoking": 30.694,
+  "fifteen": 31.545,
+  "okay": 33.534,
+  "miss": 34.785,
+  "subscribe": 36.136,
+  "whatifs": 36.987
+ }
+}

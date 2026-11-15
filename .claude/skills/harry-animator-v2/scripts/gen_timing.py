@@ -11,7 +11,7 @@ sent = 0
 for ci, ch in enumerate(st['chunks']):
     for w in ch.split():
         words.append({'w': w, 'chunk': ci, 'sent': sent})
-        if w[-1] in '.?': sent += 1
+        if w.rstrip('"\'”')[-1] in '.?': sent += 1
 def norm(w): return re.sub(r"[^a-z0-9',]", '', w.lower()).strip(',')
 def syl(w):
     n = norm(w)
@@ -28,8 +28,9 @@ else:
     voffset = 0.0; t = 0.4
     for w in words:
         d = syl(w['w']) / a.rate; w['start'] = round(t, 3); w['end'] = round(t + d, 3); t += d
-        if w['w'][-1] in '.?': t += 0.5
-        elif w['w'][-1] == ',': t += 0.2
+        e = w['w'].rstrip('"\'”')[-1]
+        if e in '.?': t += 0.5
+        elif e == ',': t += 0.2
 keys, keyEnd = {}, {}
 for name, (si, word) in st['keys'].items():
     m = [w for w in words if w['sent'] == si and norm(w['w']) == word]

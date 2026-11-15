@@ -1,6 +1,7 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {INK, mix} from './color';
+import {KScale} from './Layer';
 import {clamp, eio, rnd} from './math';
 
 /* ======================================================================================================
@@ -63,7 +64,7 @@ export const PerspGround: React.FC<{c: PCam; ground: string; far: string; kind?:
 /** place a flat cut-out standing on the ground at (X, Z): children are drawn in world units with feet at (0,0) */
 export const Billboard: React.FC<{c: PCam; X: number; Z: number; children?: React.ReactNode; haze?: boolean}> = ({c, X, Z, children, haze = true}) => {
   const p = proj(c, X, Z); if (!p) return null;
-  return <g transform={`translate(${p.x} ${p.y}) scale(${p.s})`} filter={haze ? hazeFilter(hazeAt(p.d)) : undefined}>{children}</g>;
+  return <g transform={`translate(${p.x} ${p.y}) scale(${p.s})`} filter={haze ? hazeFilter(hazeAt(p.d)) : undefined}><KScale k={p.s}>{children}</KScale></g>;
 };
 
 // ---------------------------------------------------------------- always-moving camera

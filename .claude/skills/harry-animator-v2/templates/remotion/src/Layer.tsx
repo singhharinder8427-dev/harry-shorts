@@ -3,6 +3,8 @@ import {AbsoluteFill} from 'remotion';
 import type {Cam} from './math';
 const KCtx = createContext(1);
 export const useK = () => useContext(KCtx);
+/** set the outline scale for children drawn inside a scale(k) transform outside a Layer (billboards, screen-space scenes) */
+export const KScale: React.FC<{k: number; children?: React.ReactNode}> = ({k, children}) => <KCtx.Provider value={k}>{children}</KCtx.Provider>;
 /** One flat layer at depth z, seen by the multiplane camera. Stroke widths: write px / useK() for constant screen weight. */
 export const Layer: React.FC<{cam: Cam; z: number; blur?: number; minDepth?: number; children?: React.ReactNode}> = ({cam, z, blur = 0, minDepth = 300, children}) => {
   const d = z - cam.z;
