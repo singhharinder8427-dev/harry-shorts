@@ -1,459 +1,459 @@
 {
  "short": "mosquito",
  "title": "Why mosquitoes pick you and ignore your friend",
- "duration": 36.91,
- "voiceOffset": 0.0,
- "estimated": true,
+ "duration": 35.91,
+ "voiceOffset": 0.4,
+ "estimated": false,
  "words": [
   {
    "w": "Why",
    "start": 0.4,
-   "end": 0.613
+   "end": 0.68
   },
   {
    "w": "does",
-   "start": 0.613,
-   "end": 0.826
+   "start": 0.68,
+   "end": 0.86
   },
   {
    "w": "a",
-   "start": 0.826,
-   "end": 1.038
+   "start": 0.86,
+   "end": 0.9
   },
   {
    "w": "mosquito",
-   "start": 1.038,
-   "end": 1.677
+   "start": 0.9,
+   "end": 1.4
   },
   {
    "w": "pick",
-   "start": 1.677,
-   "end": 1.889
+   "start": 1.4,
+   "end": 1.69
   },
   {
    "w": "you",
-   "start": 1.889,
-   "end": 2.102
+   "start": 1.69,
+   "end": 2.26
   },
   {
    "w": "and",
-   "start": 2.102,
-   "end": 2.315
+   "start": 2.26,
+   "end": 2.38
   },
   {
    "w": "ignore",
-   "start": 2.315,
-   "end": 2.74
+   "start": 2.38,
+   "end": 2.68
   },
   {
    "w": "your",
-   "start": 2.74,
-   "end": 2.953
+   "start": 2.68,
+   "end": 2.78
   },
   {
    "w": "friend?",
-   "start": 2.953,
-   "end": 3.166
+   "start": 2.78,
+   "end": 3.31
   },
   {
    "w": "It",
-   "start": 3.666,
-   "end": 3.879
+   "start": 3.73,
+   "end": 3.31
   },
   {
    "w": "isn't",
-   "start": 3.879,
-   "end": 4.304
+   "start": 3.73,
+   "end": 4.11
   },
   {
    "w": "luck.",
-   "start": 4.304,
-   "end": 4.517
+   "start": 4.11,
+   "end": 4.56
   },
   {
    "w": "In",
-   "start": 5.017,
-   "end": 5.23
+   "start": 4.96,
+   "end": 4.56
   },
   {
    "w": "one",
-   "start": 5.23,
-   "end": 5.443
+   "start": 4.96,
+   "end": 5.3
   },
   {
    "w": "lab",
-   "start": 5.443,
-   "end": 5.655
+   "start": 5.3,
+   "end": 5.57
   },
   {
    "w": "test,",
-   "start": 5.655,
-   "end": 5.868
+   "start": 5.57,
+   "end": 6.01
   },
   {
    "w": "a",
-   "start": 6.068,
-   "end": 6.281
+   "start": 6.19,
+   "end": 6.01
   },
   {
    "w": "single",
-   "start": 6.281,
-   "end": 6.706
+   "start": 6.19,
+   "end": 6.69
   },
   {
    "w": "volunteer",
-   "start": 6.706,
-   "end": 7.345
+   "start": 6.69,
+   "end": 7.31
   },
   {
    "w": "was",
-   "start": 7.345,
-   "end": 7.557
+   "start": 7.31,
+   "end": 7.48
   },
   {
    "w": "about",
-   "start": 7.557,
-   "end": 7.983
+   "start": 7.48,
+   "end": 7.7
   },
   {
    "w": "a",
-   "start": 7.983,
-   "end": 8.196
+   "start": 7.7,
+   "end": 7.74
   },
   {
    "w": "hundred",
-   "start": 8.196,
-   "end": 8.621
+   "start": 7.74,
+   "end": 8.3
   },
   {
    "w": "times",
-   "start": 8.621,
-   "end": 9.047
+   "start": 8.3,
+   "end": 8.69
   },
   {
    "w": "more",
-   "start": 9.047,
-   "end": 9.26
+   "start": 8.69,
+   "end": 9.02
   },
   {
    "w": "attractive",
-   "start": 9.26,
-   "end": 9.898
+   "start": 9.02,
+   "end": 9.59
   },
   {
    "w": "than",
-   "start": 9.898,
-   "end": 10.111
+   "start": 9.59,
+   "end": 9.77
   },
   {
    "w": "the",
-   "start": 10.111,
-   "end": 10.323
+   "start": 9.77,
+   "end": 9.85
   },
   {
    "w": "least",
-   "start": 10.323,
-   "end": 10.536
+   "start": 9.85,
+   "end": 10.29
   },
   {
    "w": "attractive",
-   "start": 10.536,
-   "end": 11.174
+   "start": 10.29,
+   "end": 10.72
   },
   {
    "w": "person.",
-   "start": 11.174,
-   "end": 11.6
+   "start": 10.72,
+   "end": 11.18
   },
   {
    "w": "Researchers",
-   "start": 12.1,
-   "end": 12.738
+   "start": 11.71,
+   "end": 12.245
   },
   {
    "w": "linked",
-   "start": 12.738,
-   "end": 12.951
+   "start": 12.245,
+   "end": 12.515
   },
   {
    "w": "it",
-   "start": 12.951,
-   "end": 13.164
+   "start": 12.515,
+   "end": 12.615
   },
   {
    "w": "to",
-   "start": 13.164,
-   "end": 13.377
+   "start": 12.615,
+   "end": 12.715
   },
   {
    "w": "fatty",
-   "start": 13.377,
-   "end": 13.802
+   "start": 12.715,
+   "end": 13.185
   },
   {
    "w": "acids",
-   "start": 13.802,
-   "end": 14.228
+   "start": 13.185,
+   "end": 13.645
   },
   {
    "w": "on",
-   "start": 14.228,
-   "end": 14.44
+   "start": 13.645,
+   "end": 13.745
   },
   {
    "w": "the",
-   "start": 14.44,
-   "end": 14.653
+   "start": 13.745,
+   "end": 13.805
   },
   {
    "w": "skin.",
-   "start": 14.653,
-   "end": 14.866
+   "start": 13.805,
+   "end": 14.29
   },
   {
    "w": "Bacteria",
-   "start": 15.366,
-   "end": 16.217
+   "start": 14.75,
+   "end": 15.33
   },
   {
    "w": "help",
-   "start": 16.217,
-   "end": 16.43
+   "start": 15.33,
+   "end": 15.55
   },
   {
    "w": "turn",
-   "start": 16.43,
-   "end": 16.643
+   "start": 15.55,
+   "end": 15.78
   },
   {
    "w": "them",
-   "start": 16.643,
-   "end": 16.855
+   "start": 15.78,
+   "end": 15.92
   },
   {
    "w": "into",
-   "start": 16.855,
-   "end": 17.281
+   "start": 15.92,
+   "end": 16.08
   },
   {
    "w": "your",
-   "start": 17.281,
-   "end": 17.494
+   "start": 16.08,
+   "end": 16.24
   },
   {
    "w": "personal",
-   "start": 17.494,
-   "end": 18.132
+   "start": 16.24,
+   "end": 16.7
   },
   {
    "w": "smell.",
-   "start": 18.132,
-   "end": 18.345
+   "start": 16.7,
+   "end": 17.24
   },
   {
    "w": "Then",
-   "start": 18.845,
-   "end": 19.057
+   "start": 17.75,
+   "end": 18.025
   },
   {
    "w": "a",
-   "start": 19.057,
-   "end": 19.27
+   "start": 18.025,
+   "end": 18.155
   },
   {
    "w": "2026",
-   "start": 19.27,
-   "end": 20.334
+   "start": 18.155,
+   "end": 19.045
   },
   {
    "w": "study",
-   "start": 20.334,
-   "end": 20.76
+   "start": 19.045,
+   "end": 19.375
   },
   {
    "w": "tested",
-   "start": 20.76,
-   "end": 21.185
+   "start": 19.375,
+   "end": 19.765
   },
   {
    "w": "three",
-   "start": 21.185,
-   "end": 21.398
+   "start": 19.765,
+   "end": 20.105
   },
   {
    "w": "mosquito",
-   "start": 21.398,
-   "end": 22.036
+   "start": 20.105,
+   "end": 20.635
   },
   {
    "w": "species",
-   "start": 22.036,
-   "end": 22.462
+   "start": 20.635,
+   "end": 21.165
   },
   {
    "w": "on",
-   "start": 22.462,
-   "end": 22.674
+   "start": 21.165,
+   "end": 21.315
   },
   {
    "w": "one",
-   "start": 22.674,
-   "end": 22.887
+   "start": 21.315,
+   "end": 21.605
   },
   {
    "w": "hundred",
-   "start": 22.887,
-   "end": 23.313
+   "start": 21.605,
+   "end": 21.965
   },
   {
    "w": "nineteen",
-   "start": 23.313,
-   "end": 23.738
+   "start": 21.965,
+   "end": 22.515
   },
   {
    "w": "people.",
-   "start": 23.738,
-   "end": 23.951
+   "start": 22.515,
+   "end": 22.93
   },
   {
    "w": "Nobody",
-   "start": 24.451,
-   "end": 25.089
+   "start": 23.32,
+   "end": 23.925
   },
   {
    "w": "attracted",
-   "start": 25.089,
-   "end": 25.728
+   "start": 23.925,
+   "end": 24.395
   },
   {
    "w": "all",
-   "start": 25.728,
-   "end": 25.94
+   "start": 24.395,
+   "end": 24.585
   },
   {
    "w": "three.",
-   "start": 25.94,
-   "end": 26.153
+   "start": 24.585,
+   "end": 25.03
   },
   {
    "w": "Each",
-   "start": 26.653,
-   "end": 26.866
+   "start": 25.45,
+   "end": 25.68
   },
   {
    "w": "species",
-   "start": 26.866,
-   "end": 27.291
+   "start": 25.68,
+   "end": 26.18
   },
   {
    "w": "wanted",
-   "start": 27.291,
-   "end": 27.717
+   "start": 26.18,
+   "end": 26.55
   },
   {
    "w": "a",
-   "start": 27.717,
-   "end": 27.93
+   "start": 26.55,
+   "end": 26.61
   },
   {
    "w": "different",
-   "start": 27.93,
-   "end": 28.568
+   "start": 26.61,
+   "end": 27.1
   },
   {
    "w": "scent.",
-   "start": 28.568,
-   "end": 28.781
+   "start": 27.1,
+   "end": 27.49
   },
   {
    "w": "So",
-   "start": 29.281,
-   "end": 29.494
+   "start": 27.94,
+   "end": 28.245
   },
   {
    "w": "being",
-   "start": 29.494,
-   "end": 29.919
+   "start": 28.245,
+   "end": 28.625
   },
   {
    "w": "a",
-   "start": 29.919,
-   "end": 30.132
+   "start": 28.625,
+   "end": 28.655
   },
   {
    "w": "magnet",
-   "start": 30.132,
-   "end": 30.557
+   "start": 28.655,
+   "end": 29.195
   },
   {
    "w": "depends",
-   "start": 30.557,
-   "end": 30.983
+   "start": 29.195,
+   "end": 29.595
   },
   {
    "w": "on",
-   "start": 30.983,
-   "end": 31.196
+   "start": 29.595,
+   "end": 29.735
   },
   {
    "w": "which",
-   "start": 31.196,
-   "end": 31.409
+   "start": 29.735,
+   "end": 29.975
   },
   {
    "w": "mosquito",
-   "start": 31.409,
-   "end": 32.047
+   "start": 29.975,
+   "end": 30.575
   },
   {
    "w": "is",
-   "start": 32.047,
-   "end": 32.26
+   "start": 30.575,
+   "end": 30.705
   },
   {
    "w": "flying",
-   "start": 32.26,
-   "end": 32.685
+   "start": 30.705,
+   "end": 31.035
   },
   {
    "w": "tonight.",
-   "start": 32.685,
-   "end": 33.111
+   "start": 31.035,
+   "end": 31.45
   },
   {
    "w": "Subscribe",
-   "start": 33.611,
-   "end": 34.036
+   "start": 31.99,
+   "end": 32.54
   },
   {
    "w": "for",
-   "start": 34.036,
-   "end": 34.249
+   "start": 32.54,
+   "end": 32.64
   },
   {
    "w": "more",
-   "start": 34.249,
-   "end": 34.462
+   "start": 32.64,
+   "end": 32.98
   },
   {
    "w": "strange",
-   "start": 34.462,
-   "end": 34.674
+   "start": 32.98,
+   "end": 33.39
   },
   {
    "w": "facts",
-   "start": 34.674,
-   "end": 34.887
+   "start": 33.39,
+   "end": 33.7
   },
   {
    "w": "like",
-   "start": 34.887,
-   "end": 35.1
+   "start": 33.7,
+   "end": 33.91
   },
   {
    "w": "this.",
-   "start": 35.1,
-   "end": 35.313
+   "start": 33.91,
+   "end": 34.31
   }
  ],
  "chunks": [
@@ -462,278 +462,278 @@
    "w0": 0,
    "w1": 3,
    "start": 0.4,
-   "end": 1.677
+   "end": 1.4
   },
   {
    "text": "pick you",
    "w0": 4,
    "w1": 5,
-   "start": 1.677,
-   "end": 2.102
+   "start": 1.4,
+   "end": 2.2600000000000002
   },
   {
    "text": "and ignore your friend?",
    "w0": 6,
    "w1": 9,
-   "start": 2.102,
-   "end": 3.166
+   "start": 2.2600000000000002,
+   "end": 3.31
   },
   {
    "text": "It isn't luck.",
    "w0": 10,
    "w1": 12,
-   "start": 3.666,
-   "end": 4.517
+   "start": 3.73,
+   "end": 4.5600000000000005
   },
   {
    "text": "In one lab test,",
    "w0": 13,
    "w1": 16,
-   "start": 5.017,
-   "end": 5.868
+   "start": 4.96,
+   "end": 6.010000000000001
   },
   {
    "text": "a single volunteer was",
    "w0": 17,
    "w1": 20,
-   "start": 6.068,
-   "end": 7.557
+   "start": 6.19,
+   "end": 7.48
   },
   {
    "text": "about a hundred times",
    "w0": 21,
    "w1": 24,
-   "start": 7.557,
-   "end": 9.047
+   "start": 7.48,
+   "end": 8.69
   },
   {
    "text": "more attractive",
    "w0": 25,
    "w1": 26,
-   "start": 9.047,
-   "end": 9.898
+   "start": 8.69,
+   "end": 9.59
   },
   {
    "text": "than the least attractive person.",
    "w0": 27,
    "w1": 31,
-   "start": 9.898,
-   "end": 11.6
+   "start": 9.59,
+   "end": 11.18
   },
   {
    "text": "Researchers linked it",
    "w0": 32,
    "w1": 34,
-   "start": 12.1,
-   "end": 13.164
+   "start": 11.71,
+   "end": 12.615
   },
   {
    "text": "to fatty acids on the skin.",
    "w0": 35,
    "w1": 40,
-   "start": 13.164,
-   "end": 14.866
+   "start": 12.615,
+   "end": 14.290000000000001
   },
   {
    "text": "Bacteria help turn them",
    "w0": 41,
    "w1": 44,
-   "start": 15.366,
-   "end": 16.855
+   "start": 14.75,
+   "end": 15.92
   },
   {
    "text": "into your personal smell.",
    "w0": 45,
    "w1": 48,
-   "start": 16.855,
-   "end": 18.345
+   "start": 15.92,
+   "end": 17.24
   },
   {
    "text": "Then a 2026 study tested",
    "w0": 49,
    "w1": 53,
-   "start": 18.845,
-   "end": 21.185
+   "start": 17.75,
+   "end": 19.764999999999997
   },
   {
    "text": "three mosquito species",
    "w0": 54,
    "w1": 56,
-   "start": 21.185,
-   "end": 22.462
+   "start": 19.764999999999997,
+   "end": 21.165
   },
   {
    "text": "on one hundred nineteen people.",
    "w0": 57,
    "w1": 61,
-   "start": 22.462,
-   "end": 23.951
+   "start": 21.165,
+   "end": 22.93
   },
   {
    "text": "Nobody attracted all three.",
    "w0": 62,
    "w1": 65,
-   "start": 24.451,
-   "end": 26.153
+   "start": 23.32,
+   "end": 25.029999999999998
   },
   {
    "text": "Each species wanted",
    "w0": 66,
    "w1": 68,
-   "start": 26.653,
-   "end": 27.717
+   "start": 25.45,
+   "end": 26.549999999999997
   },
   {
    "text": "a different scent.",
    "w0": 69,
    "w1": 71,
-   "start": 27.717,
-   "end": 28.781
+   "start": 26.549999999999997,
+   "end": 27.49
   },
   {
    "text": "So being a magnet",
    "w0": 72,
    "w1": 75,
-   "start": 29.281,
-   "end": 30.557
+   "start": 27.939999999999998,
+   "end": 29.195
   },
   {
    "text": "depends on which mosquito",
    "w0": 76,
    "w1": 79,
-   "start": 30.557,
-   "end": 32.047
+   "start": 29.195,
+   "end": 30.575
   },
   {
    "text": "is flying tonight.",
    "w0": 80,
    "w1": 82,
-   "start": 32.047,
-   "end": 33.111
+   "start": 30.575,
+   "end": 31.45
   },
   {
    "text": "Subscribe for more",
    "w0": 83,
    "w1": 85,
-   "start": 33.611,
-   "end": 34.462
+   "start": 31.99,
+   "end": 32.98
   },
   {
    "text": "strange facts like this.",
    "w0": 86,
    "w1": 89,
-   "start": 34.462,
-   "end": 35.313
+   "start": 32.98,
+   "end": 34.309999999999995
   }
  ],
  "sentences": [
   {
    "start": 0.4,
-   "end": 3.166,
+   "end": 3.31,
    "text": "Why does a mosquito pick you and ignore your friend?"
   },
   {
-   "start": 3.666,
-   "end": 4.517,
+   "start": 3.73,
+   "end": 4.5600000000000005,
    "text": "It isn't luck."
   },
   {
-   "start": 5.017,
-   "end": 11.6,
+   "start": 4.96,
+   "end": 11.18,
    "text": "In one lab test, a single volunteer was about a hundred times more attractive than the least attractive person."
   },
   {
-   "start": 12.1,
-   "end": 14.866,
+   "start": 11.71,
+   "end": 14.290000000000001,
    "text": "Researchers linked it to fatty acids on the skin."
   },
   {
-   "start": 15.366,
-   "end": 18.345,
+   "start": 14.75,
+   "end": 17.24,
    "text": "Bacteria help turn them into your personal smell."
   },
   {
-   "start": 18.845,
-   "end": 23.951,
+   "start": 17.75,
+   "end": 22.93,
    "text": "Then a 2026 study tested three mosquito species on one hundred nineteen people."
   },
   {
-   "start": 24.451,
-   "end": 26.153,
+   "start": 23.32,
+   "end": 25.029999999999998,
    "text": "Nobody attracted all three."
   },
   {
-   "start": 26.653,
-   "end": 28.781,
+   "start": 25.45,
+   "end": 27.49,
    "text": "Each species wanted a different scent."
   },
   {
-   "start": 29.281,
-   "end": 33.111,
+   "start": 27.939999999999998,
+   "end": 31.45,
    "text": "So being a magnet depends on which mosquito is flying tonight."
   },
   {
-   "start": 33.611,
-   "end": 35.313,
+   "start": 31.99,
+   "end": 34.309999999999995,
    "text": "Subscribe for more strange facts like this."
   }
  ],
  "keys": {
-  "mosquito": 1.038,
-  "pick": 1.677,
-  "ignore": 2.315,
-  "luck": 4.304,
-  "lab": 5.443,
-  "single": 6.281,
-  "hundred": 8.196,
-  "least": 10.323,
-  "linked": 12.738,
-  "fatty": 13.377,
-  "skin": 14.653,
-  "bacteria": 15.366,
-  "personal": 17.494,
-  "smell": 18.132,
-  "study": 20.334,
-  "three": 21.185,
-  "nineteen": 23.313,
-  "nobody": 24.451,
-  "each": 26.653,
-  "different": 27.93,
-  "scent": 28.568,
-  "magnet": 30.132,
-  "which": 31.196,
-  "tonight": 32.685,
-  "subscribe": 33.611,
-  "facts": 34.674,
-  "this": 35.1
+  "mosquito": 0.9,
+  "pick": 1.4,
+  "ignore": 2.38,
+  "luck": 4.11,
+  "lab": 5.3,
+  "single": 6.19,
+  "hundred": 7.74,
+  "least": 9.85,
+  "linked": 12.245,
+  "fatty": 12.715,
+  "skin": 13.805,
+  "bacteria": 14.75,
+  "personal": 16.24,
+  "smell": 16.7,
+  "study": 19.045,
+  "three": 19.765,
+  "nineteen": 21.965,
+  "nobody": 23.32,
+  "each": 25.45,
+  "different": 26.61,
+  "scent": 27.1,
+  "magnet": 28.655,
+  "which": 29.735,
+  "tonight": 31.035,
+  "subscribe": 31.99,
+  "facts": 33.39,
+  "this": 33.91
  },
  "keyEnd": {
-  "mosquito": 1.677,
-  "pick": 1.889,
-  "ignore": 2.74,
-  "luck": 4.517,
-  "lab": 5.655,
-  "single": 6.706,
-  "hundred": 8.621,
-  "least": 10.536,
-  "linked": 12.951,
-  "fatty": 13.802,
-  "skin": 14.866,
-  "bacteria": 16.217,
-  "personal": 18.132,
-  "smell": 18.345,
-  "study": 20.76,
-  "three": 21.398,
-  "nineteen": 23.738,
-  "nobody": 25.089,
-  "each": 26.866,
-  "different": 28.568,
-  "scent": 28.781,
-  "magnet": 30.557,
-  "which": 31.409,
-  "tonight": 33.111,
-  "subscribe": 34.036,
-  "facts": 34.887,
-  "this": 35.313
+  "mosquito": 1.4,
+  "pick": 1.69,
+  "ignore": 2.68,
+  "luck": 4.56,
+  "lab": 5.57,
+  "single": 6.69,
+  "hundred": 8.3,
+  "least": 10.29,
+  "linked": 12.515,
+  "fatty": 13.185,
+  "skin": 14.29,
+  "bacteria": 15.33,
+  "personal": 16.7,
+  "smell": 17.24,
+  "study": 19.375,
+  "three": 20.105,
+  "nineteen": 22.515,
+  "nobody": 23.925,
+  "each": 25.68,
+  "different": 27.1,
+  "scent": 27.49,
+  "magnet": 29.195,
+  "which": 29.975,
+  "tonight": 31.45,
+  "subscribe": 32.54,
+  "facts": 33.7,
+  "this": 34.31
  }
 }
