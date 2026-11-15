@@ -1,0 +1,270 @@
+{
+ "short": "mosquito",
+ "title": "Why mosquitoes pick you and ignore your friend",
+ "spoken": {
+  "2026": "twenty twenty six"
+ },
+ "chunks": [
+  "Why does a mosquito",
+  "pick you",
+  "and ignore your friend?",
+  "It isn't luck.",
+  "In one lab test,",
+  "a single volunteer was",
+  "about a hundred times",
+  "more attractive",
+  "than the least attractive person.",
+  "Researchers linked it",
+  "to fatty acids on the skin.",
+  "Bacteria help turn them",
+  "into your personal smell.",
+  "Then a 2026 study tested",
+  "three mosquito species",
+  "on one hundred nineteen people.",
+  "Nobody attracted all three.",
+  "Each species wanted",
+  "a different scent.",
+  "So being a magnet",
+  "depends on which mosquito",
+  "is flying tonight.",
+  "Subscribe for more",
+  "strange facts like this."
+ ],
+ "syllables": {
+  "mosquito": 3,
+  "attractive": 3,
+  "fatty": 2,
+  "bacteria": 4,
+  "nineteen": 2,
+  "2026": 5,
+  "volunteer": 3,
+  "species": 2,
+  "personal": 3,
+  "nobody": 3,
+  "different": 3,
+  "tonight": 2,
+  "researchers": 3,
+  "single": 2,
+  "isn't": 2,
+  "luck": 1,
+  "friend": 1,
+  "least": 1,
+  "linked": 1,
+  "scent": 1,
+  "magnet": 2,
+  "being": 2,
+  "flying": 2,
+  "facts": 1,
+  "strange": 1,
+  "turn": 1,
+  "help": 1,
+  "hundred": 2,
+  "acids": 2
+ },
+ "keys": {
+  "mosquito": [
+   0,
+   "mosquito"
+  ],
+  "pick": [
+   0,
+   "pick"
+  ],
+  "ignore": [
+   0,
+   "ignore"
+  ],
+  "luck": [
+   1,
+   "luck"
+  ],
+  "lab": [
+   2,
+   "lab"
+  ],
+  "single": [
+   2,
+   "single"
+  ],
+  "hundred": [
+   2,
+   "hundred"
+  ],
+  "least": [
+   2,
+   "least"
+  ],
+  "linked": [
+   3,
+   "linked"
+  ],
+  "fatty": [
+   3,
+   "fatty"
+  ],
+  "skin": [
+   3,
+   "skin"
+  ],
+  "bacteria": [
+   4,
+   "bacteria"
+  ],
+  "personal": [
+   4,
+   "personal"
+  ],
+  "smell": [
+   4,
+   "smell"
+  ],
+  "study": [
+   5,
+   "study"
+  ],
+  "three": [
+   5,
+   "three"
+  ],
+  "nineteen": [
+   5,
+   "nineteen"
+  ],
+  "nobody": [
+   6,
+   "nobody"
+  ],
+  "each": [
+   7,
+   "each"
+  ],
+  "different": [
+   7,
+   "different"
+  ],
+  "scent": [
+   7,
+   "scent"
+  ],
+  "magnet": [
+   8,
+   "magnet"
+  ],
+  "which": [
+   8,
+   "which"
+  ],
+  "tonight": [
+   8,
+   "tonight"
+  ],
+  "subscribe": [
+   9,
+   "subscribe"
+  ],
+  "facts": [
+   9,
+   "facts"
+  ],
+  "this": [
+   9,
+   "this"
+  ]
+ },
+ "beats": {
+  "pick": "the mosquito dives at Mia, who is already covered in bites and steaming red",
+  "ignore": "it flies past Otto, who sips lemonade, smug",
+  "hundred": "a swarm of dots around the volunteer grows against one dot at the other",
+  "fatty": "skin cross-section: orange droplets of acid appear on the skin layer",
+  "bacteria": "green bacteria eat the droplets and puff purple smell upward",
+  "personal": "the purple smell drifts to a flat mosquito that sniffs it",
+  "three": "three differently coloured mosquitoes arrive in the lab",
+  "nineteen": "a crowd of volunteers pops into rows",
+  "nobody": "a volunteer sits calm while two mosquitoes land and a third turns away, red X pops",
+  "different": "three people, three scent clouds, three mosquitoes each flying to their own",
+  "tonight": "a new yellow mosquito flies past Mia and lands on Otto's lemonade; Otto freezes"
+ },
+ "cast": {
+  "Mia": "orange shirt #E4572E, dark brown ponytail, covered in bites (red spots)",
+  "Otto": "blue shirt #2F6FD6, yellow vest, navy beanie, round glasses"
+ },
+ "shots": [
+  {
+   "from": "start",
+   "to": "ignore",
+   "size": "wide",
+   "camera": "slow dolly in, eye level",
+   "look": "FLAT 2D cel characters (solid round faces with thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: Mia (orange shirt, brown ponytail, red bite spots, face red with steam) swatting at a flat grey mosquito, Otto (blue shirt, yellow vest, navy beanie, glasses) relaxed with lemonade, at a wooden picnic table on a stone patio, green speckled lawn, plank fence, two leafy trees, string lights, golden low sun from the left casting long soft shadows, peach-to-pale-blue sky"
+  },
+  {
+   "from": "ignore",
+   "to": "luck",
+   "size": "close-up",
+   "camera": "gentle push-in",
+   "look": "FLAT 2D cel characters (solid round faces with thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: Otto in close-up, smug closed-eye smile, same patio and golden light, lemonade glass in front"
+  },
+  {
+   "from": "luck",
+   "to": "lab",
+   "size": "medium",
+   "camera": "slow track",
+   "look": "FLAT 2D cel characters (solid round faces with thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: Mia shrugging with a puzzled face, same patio, golden light, table edge in front"
+  },
+  {
+   "from": "lab",
+   "to": "single",
+   "size": "wide",
+   "camera": "dolly in",
+   "look": "FLAT 2D cel characters (solid round faces with thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: a bright research lab: white tile floor, teal panelled back wall, steel bench, shelf with coloured jars, window glow, cool daylight from the right"
+  },
+  {
+   "from": "single",
+   "to": "least",
+   "size": "medium",
+   "camera": "push-in",
+   "look": "FLAT 2D cel characters (solid round faces with thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: two volunteers side by side on the lab floor, left one swarmed by many black dots, right one with a single dot, same lab"
+  },
+  {
+   "from": "fatty",
+   "to": "bacteria",
+   "size": "macro",
+   "camera": "high-angle crane down",
+   "look": "3D skin cross-section: cream and pink layered boxes with speckle texture, orange acid droplets on the top layer, soft warm light from upper left"
+  },
+  {
+   "from": "bacteria",
+   "to": "study",
+   "size": "macro",
+   "camera": "slow track",
+   "look": "same skin section, round green bacteria balls wobbling on the droplets, purple smell puffs rising, a flat grey mosquito entering from the right to sniff"
+  },
+  {
+   "from": "study",
+   "to": "nobody",
+   "size": "wide",
+   "camera": "dolly back",
+   "look": "FLAT 2D cel characters (solid round faces with thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: the same lab; three flat mosquitoes in red, green and yellow arriving; rows of small volunteers in assorted shirt colours"
+  },
+  {
+   "from": "nobody",
+   "to": "each",
+   "size": "medium",
+   "camera": "push-in",
+   "look": "FLAT 2D cel characters (solid round faces with thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: Otto calm in the lab, two mosquitoes landing near him, a third turning away with a red X mark of shapes"
+  },
+  {
+   "from": "each",
+   "to": "magnet",
+   "size": "medium",
+   "camera": "lateral track",
+   "look": "FLAT 2D cel characters (solid round faces with thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: three volunteers in a row, each with a different coloured 3D smell cloud, each mosquito heading to the matching cloud, lab light"
+  },
+  {
+   "from": "magnet",
+   "to": "subscribe",
+   "size": "wide",
+   "camera": "dolly out to frame 0",
+   "look": "FLAT 2D cel characters (solid round faces with thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: back on the patio at dusk-gold light, Mia and Otto at the picnic table, a new yellow mosquito flies past Mia to Otto's lemonade, same set as shot 1"
+  }
+ ]
+}
