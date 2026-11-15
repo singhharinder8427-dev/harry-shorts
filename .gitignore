@@ -4,3 +4,4 @@ qa/
 out/preview*.mp4
 *.pyc
 __pycache__/
+out/*.log
