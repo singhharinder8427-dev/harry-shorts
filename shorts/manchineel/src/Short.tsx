@@ -278,6 +278,6 @@ export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: bool
 
 // ---------------------------------------------------------------- thumbnails (frames of the video + text)
 export const Thumb: React.FC<{variant: 'A' | 'B' | 'C'}> = ({variant}) => {
-  const cfg = {A: {t: K.dont + 0.25, l1: 'NEVER SIT', l2: 'UNDER THIS TREE'}, B: {t: K.blisters + 0.9, l1: 'EVEN ITS RAIN', l2: 'BURNS'}, C: {t: K.burns + 0.3, l1: "DON'T EAT", l2: 'THIS APPLE'}}[variant];
-  return (<AbsoluteFill><Scenes t={cfg.t} /><ThumbText l1={cfg.l1} l2={cfg.l2} top={variant === 'B' ? 1380 : 250} /></AbsoluteFill>);
+  const cfg = {A: {t: K.dont + 0.25, l1: 'NEVER SIT', l2: 'UNDER THIS TREE'}, B: {t: K.blisters + 0.55, l1: 'EVEN ITS RAIN', l2: 'BURNS'}, C: {t: K.burns + 0.3, l1: "DON'T EAT", l2: 'THIS APPLE'}}[variant];
+  return (<AbsoluteFill><Scenes t={cfg.t} /><ThumbText l1={cfg.l1} l2={cfg.l2} top={variant === 'A' ? 250 : 205} /></AbsoluteFill>);
 };
