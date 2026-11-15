@@ -1,6 +1,6 @@
 ---
 name: harry-animator
-description: Make a complete faceless YouTube Short (max 45 s, 2K vertical 1440x2560, 60 fps) about a surprising fact or "what if" question, end to end - topic (the user's own, a viral-potential topic researched online, or a pasted script to fact-check and make original), a researched and source-checked voiceover script with a subscribe line, then a flat 2D cut-out cartoon animation drawn entirely in code with Remotion (2.5D multiplane camera, characters and objects with faces, code effects, captions, code-made sound effects, animated subscribe ending, seamless loop), re-timed to the user's own voice take, plus thumbnails, captions file, YouTube title, description and tags. Use whenever the user calls harry-animator or asks for a what-if / surprising-fact Short, script plus animation, in this cartoon style.
+description: OLD VERSION (v1), kept for reference - use ONLY when the user explicitly asks for "harry-animator v1", "/harry-animator" by that exact name, or the old v1 flat cut-out look. For any other what-if / surprising-fact Short request use harry-animator-v3 (the default). v1 makes a faceless YouTube Short (max 45 s, 2K vertical, 60 fps): researched script, flat 2D cut-out cartoon drawn in code with Remotion on a 2.5D multiplane camera, captions, code-made sound, subscribe ending, re-timed to the user's voice take, thumbnails and YouTube metadata.
 ---
 
 # harry-animator: researched script -> code-drawn cartoon Short
