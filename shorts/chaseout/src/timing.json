@@ -1,734 +1,734 @@
 {
  "short": "chaseout",
  "title": "The room Japanese companies send you to instead of firing you",
- "duration": 50.52,
- "voiceOffset": 0.0,
- "estimated": true,
+ "duration": 52.65,
+ "voiceOffset": 0.4,
+ "estimated": false,
  "words": [
   {
    "w": "Picture",
    "start": 0.4,
-   "end": 0.826
+   "end": 0.77
   },
   {
    "w": "your",
-   "start": 0.826,
-   "end": 1.038
+   "start": 0.77,
+   "end": 0.92
   },
   {
    "w": "boss",
-   "start": 1.038,
-   "end": 1.251
+   "start": 0.92,
+   "end": 1.41
   },
   {
    "w": "walking",
-   "start": 1.251,
-   "end": 1.677
+   "start": 1.41,
+   "end": 1.81
   },
   {
    "w": "you",
-   "start": 1.677,
-   "end": 1.889
+   "start": 1.81,
+   "end": 1.91
   },
   {
    "w": "past",
-   "start": 1.889,
-   "end": 2.102
+   "start": 1.91,
+   "end": 2.28
   },
   {
    "w": "your",
-   "start": 2.102,
-   "end": 2.315
+   "start": 2.28,
+   "end": 2.38
   },
   {
    "w": "desk",
-   "start": 2.315,
-   "end": 2.528
+   "start": 2.38,
+   "end": 2.86
   },
   {
    "w": "to",
-   "start": 2.528,
-   "end": 2.74
+   "start": 2.86,
+   "end": 3.02
   },
   {
    "w": "a",
-   "start": 2.74,
-   "end": 2.953
+   "start": 3.02,
+   "end": 3.06
   },
   {
    "w": "tiny",
-   "start": 2.953,
-   "end": 3.379
+   "start": 3.06,
+   "end": 3.56
   },
   {
    "w": "room.",
-   "start": 3.379,
-   "end": 3.591
+   "start": 3.56,
+   "end": 3.96
   },
   {
    "w": "No",
-   "start": 4.091,
-   "end": 4.304
+   "start": 4.4,
+   "end": 4.57
   },
   {
    "w": "computer.",
-   "start": 4.304,
-   "end": 4.943
+   "start": 4.57,
+   "end": 5.17
   },
   {
    "w": "No",
-   "start": 5.443,
-   "end": 5.655
+   "start": 5.43,
+   "end": 5.64
   },
   {
    "w": "work.",
-   "start": 5.655,
-   "end": 5.868
+   "start": 5.64,
+   "end": 6.01
   },
   {
    "w": "Just",
-   "start": 6.368,
-   "end": 6.581
+   "start": 6.41,
+   "end": 6.61
   },
   {
    "w": "a",
-   "start": 6.581,
-   "end": 6.794
+   "start": 6.61,
+   "end": 6.67
   },
   {
    "w": "ticking",
-   "start": 6.794,
-   "end": 7.219
+   "start": 6.67,
+   "end": 7.11
   },
   {
    "w": "clock,",
-   "start": 7.219,
-   "end": 7.432
+   "start": 7.11,
+   "end": 7.61
   },
   {
    "w": "and",
-   "start": 7.632,
-   "end": 7.845
+   "start": 7.76,
+   "end": 7.61
   },
   {
    "w": "a",
-   "start": 7.845,
-   "end": 8.057
+   "start": 7.76,
+   "end": 7.61
   },
   {
    "w": "man",
-   "start": 8.057,
-   "end": 8.27
+   "start": 7.76,
+   "end": 8.16
   },
   {
    "w": "in",
-   "start": 8.27,
-   "end": 8.483
+   "start": 8.16,
+   "end": 8.23
   },
   {
    "w": "the",
-   "start": 8.483,
-   "end": 8.696
+   "start": 8.23,
+   "end": 8.32
   },
   {
    "w": "corner",
-   "start": 8.696,
-   "end": 9.121
+   "start": 8.32,
+   "end": 8.73
   },
   {
    "w": "with",
-   "start": 9.121,
-   "end": 9.334
+   "start": 8.73,
+   "end": 8.85
   },
   {
    "w": "his",
-   "start": 9.334,
-   "end": 9.547
+   "start": 8.85,
+   "end": 9.04
   },
   {
    "w": "feet",
-   "start": 9.547,
-   "end": 9.76
+   "start": 9.04,
+   "end": 9.3
   },
   {
    "w": "up.",
-   "start": 9.76,
-   "end": 9.972
+   "start": 9.3,
+   "end": 9.53
   },
   {
    "w": "Your",
-   "start": 10.472,
-   "end": 10.685
+   "start": 10.12,
+   "end": 9.53
   },
   {
    "w": "new",
-   "start": 10.685,
-   "end": 10.898
+   "start": 10.12,
+   "end": 10.42
   },
   {
    "w": "job,",
-   "start": 10.898,
-   "end": 11.111
+   "start": 10.42,
+   "end": 10.94
   },
   {
    "w": "your",
-   "start": 11.311,
-   "end": 11.523
+   "start": 10.94,
+   "end": 11.06
   },
   {
    "w": "boss",
-   "start": 11.523,
-   "end": 11.736
+   "start": 11.06,
+   "end": 11.34
   },
   {
    "w": "says,",
-   "start": 11.736,
-   "end": 11.949
+   "start": 11.34,
+   "end": 11.83
   },
   {
    "w": "is",
-   "start": 12.149,
-   "end": 12.362
+   "start": 12.0,
+   "end": 11.83
   },
   {
    "w": "nothing.",
-   "start": 12.362,
-   "end": 12.787
+   "start": 12.0,
+   "end": 12.67
   },
   {
    "w": "Sit",
-   "start": 13.287,
-   "end": 13.5
+   "start": 13.03,
+   "end": 13.25
   },
   {
    "w": "here",
-   "start": 13.5,
-   "end": 13.713
+   "start": 13.25,
+   "end": 13.42
   },
   {
    "w": "until",
-   "start": 13.713,
-   "end": 14.138
+   "start": 13.42,
+   "end": 13.67
   },
   {
    "w": "six.",
-   "start": 14.138,
-   "end": 14.351
+   "start": 13.67,
+   "end": 14.19
   },
   {
    "w": "At",
-   "start": 14.851,
-   "end": 15.064
+   "start": 14.95,
+   "end": 14.19
   },
   {
    "w": "first",
-   "start": 15.064,
-   "end": 15.277
+   "start": 14.95,
+   "end": 15.5
   },
   {
    "w": "it",
-   "start": 15.277,
-   "end": 15.489
+   "start": 15.5,
+   "end": 15.63
   },
   {
    "w": "feels",
-   "start": 15.489,
-   "end": 15.702
+   "start": 15.63,
+   "end": 15.88
   },
   {
    "w": "like",
-   "start": 15.702,
-   "end": 15.915
+   "start": 15.88,
+   "end": 16.0
   },
   {
    "w": "a",
-   "start": 15.915,
-   "end": 16.128
+   "start": 16.0,
+   "end": 16.07
   },
   {
    "w": "holiday.",
-   "start": 16.128,
-   "end": 16.766
+   "start": 16.07,
+   "end": 16.66
   },
   {
    "w": "Then",
-   "start": 17.266,
-   "end": 17.479
+   "start": 17.15,
+   "end": 17.53
   },
   {
    "w": "co-workers",
-   "start": 17.479,
-   "end": 18.117
+   "start": 17.53,
+   "end": 18.27
   },
   {
    "w": "start",
-   "start": 18.117,
-   "end": 18.33
+   "start": 18.27,
+   "end": 18.55
   },
   {
    "w": "staring.",
-   "start": 18.33,
-   "end": 18.755
+   "start": 18.55,
+   "end": 19.14
   },
   {
    "w": "The",
-   "start": 19.255,
-   "end": 19.468
+   "start": 19.54,
+   "end": 19.14
   },
   {
    "w": "emails",
-   "start": 19.468,
-   "end": 19.894
+   "start": 19.54,
+   "end": 20.08
   },
   {
    "w": "stop.",
-   "start": 19.894,
-   "end": 20.106
+   "start": 20.08,
+   "end": 20.54
   },
   {
    "w": "Your",
-   "start": 20.606,
-   "end": 20.819
+   "start": 20.9,
+   "end": 20.54
   },
   {
    "w": "old",
-   "start": 20.819,
-   "end": 21.032
+   "start": 20.9,
+   "end": 21.23
   },
   {
    "w": "desk",
-   "start": 21.032,
-   "end": 21.245
+   "start": 21.23,
+   "end": 21.58
   },
   {
    "w": "has",
-   "start": 21.245,
-   "end": 21.457
+   "start": 21.58,
+   "end": 21.73
   },
   {
    "w": "someone",
-   "start": 21.457,
-   "end": 21.883
+   "start": 21.73,
+   "end": 22.01
   },
   {
    "w": "else's",
-   "start": 21.883,
-   "end": 22.309
+   "start": 22.01,
+   "end": 22.38
   },
   {
    "w": "photos",
-   "start": 22.309,
-   "end": 22.734
+   "start": 22.38,
+   "end": 22.85
   },
   {
    "w": "on",
-   "start": 22.734,
-   "end": 22.947
+   "start": 22.85,
+   "end": 23.14
   },
   {
    "w": "it.",
-   "start": 22.947,
-   "end": 23.16
+   "start": 23.68,
+   "end": 23.14
   },
   {
    "w": "Every",
-   "start": 23.66,
-   "end": 24.085
+   "start": 23.68,
+   "end": 23.95
   },
   {
    "w": "Friday",
-   "start": 24.085,
-   "end": 24.511
+   "start": 23.95,
+   "end": 24.47
   },
   {
    "w": "your",
-   "start": 24.511,
-   "end": 24.723
+   "start": 24.47,
+   "end": 24.61
   },
   {
    "w": "boss",
-   "start": 24.723,
-   "end": 24.936
+   "start": 24.61,
+   "end": 24.99
   },
   {
    "w": "leans",
-   "start": 24.936,
-   "end": 25.149
+   "start": 24.99,
+   "end": 25.42
   },
   {
    "w": "in,",
-   "start": 25.149,
-   "end": 25.362
+   "start": 25.42,
+   "end": 25.71
   },
   {
    "w": "smiling,",
-   "start": 25.562,
-   "end": 25.987
+   "start": 25.85,
+   "end": 26.46
   },
   {
    "w": "to",
-   "start": 26.187,
-   "end": 26.4
+   "start": 26.65,
+   "end": 26.46
   },
   {
    "w": "ask",
-   "start": 26.4,
-   "end": 26.613
+   "start": 26.65,
+   "end": 27.01
   },
   {
    "w": "how",
-   "start": 26.613,
-   "end": 26.826
+   "start": 27.01,
+   "end": 27.13
   },
   {
    "w": "you're",
-   "start": 26.826,
-   "end": 27.038
+   "start": 27.13,
+   "end": 27.33
   },
   {
    "w": "enjoying",
-   "start": 27.038,
-   "end": 27.464
+   "start": 27.33,
+   "end": 27.72
   },
   {
    "w": "your",
-   "start": 27.464,
-   "end": 27.677
+   "start": 27.72,
+   "end": 27.81
   },
   {
    "w": "new",
-   "start": 27.677,
-   "end": 27.889
+   "start": 27.81,
+   "end": 27.99
   },
   {
    "w": "role.",
-   "start": 27.889,
-   "end": 28.102
+   "start": 27.99,
+   "end": 28.41
   },
   {
    "w": "The",
-   "start": 28.602,
-   "end": 28.815
+   "start": 29.05,
+   "end": 28.41
   },
   {
    "w": "man",
-   "start": 28.815,
-   "end": 29.028
+   "start": 29.05,
+   "end": 29.31
   },
   {
    "w": "in",
-   "start": 29.028,
-   "end": 29.24
+   "start": 29.31,
+   "end": 29.37
   },
   {
    "w": "the",
-   "start": 29.24,
-   "end": 29.453
+   "start": 29.37,
+   "end": 29.45
   },
   {
    "w": "corner",
-   "start": 29.453,
-   "end": 29.879
+   "start": 29.45,
+   "end": 29.9
   },
   {
    "w": "has",
-   "start": 29.879,
-   "end": 30.091
+   "start": 29.9,
+   "end": 30.02
   },
   {
    "w": "been",
-   "start": 30.091,
-   "end": 30.304
+   "start": 30.02,
+   "end": 30.21
   },
   {
    "w": "here",
-   "start": 30.304,
-   "end": 30.517
+   "start": 30.21,
+   "end": 30.35
   },
   {
    "w": "for",
-   "start": 30.517,
-   "end": 30.73
+   "start": 30.35,
+   "end": 30.52
   },
   {
    "w": "years,",
-   "start": 30.73,
-   "end": 30.943
+   "start": 30.52,
+   "end": 31.16
   },
   {
    "w": "so",
-   "start": 31.143,
-   "end": 31.355
+   "start": 31.34,
+   "end": 31.65
   },
   {
    "w": "you",
-   "start": 31.355,
-   "end": 31.568
+   "start": 31.74,
+   "end": 31.86
   },
   {
    "w": "put",
-   "start": 31.568,
-   "end": 31.781
+   "start": 31.86,
+   "end": 32.06
   },
   {
    "w": "your",
-   "start": 31.781,
-   "end": 31.994
+   "start": 32.06,
+   "end": 32.2
   },
   {
    "w": "feet",
-   "start": 31.994,
-   "end": 32.206
+   "start": 32.2,
+   "end": 32.45
   },
   {
    "w": "up",
-   "start": 32.206,
-   "end": 32.419
+   "start": 32.45,
+   "end": 32.58
   },
   {
    "w": "too.",
-   "start": 32.419,
-   "end": 32.632
+   "start": 32.58,
+   "end": 32.94
   },
   {
    "w": "Then",
-   "start": 33.132,
-   "end": 33.345
+   "start": 33.5,
+   "end": 33.94
   },
   {
    "w": "one",
-   "start": 33.345,
-   "end": 33.557
+   "start": 33.94,
+   "end": 34.19
   },
   {
    "w": "Monday,",
-   "start": 33.557,
-   "end": 33.983
+   "start": 34.19,
+   "end": 34.73
   },
   {
    "w": "his",
-   "start": 34.183,
-   "end": 34.396
+   "start": 34.96,
+   "end": 34.73
   },
   {
    "w": "chair",
-   "start": 34.396,
-   "end": 34.609
+   "start": 34.96,
+   "end": 35.44
   },
   {
    "w": "is",
-   "start": 34.609,
-   "end": 34.821
+   "start": 35.44,
+   "end": 35.6
   },
   {
    "w": "empty",
-   "start": 34.821,
-   "end": 35.247
+   "start": 35.6,
+   "end": 36.03
   },
   {
    "w": "and",
-   "start": 35.247,
-   "end": 35.46
+   "start": 36.24,
+   "end": 36.03
   },
   {
    "w": "his",
-   "start": 35.46,
-   "end": 35.672
+   "start": 36.24,
+   "end": 36.45
   },
   {
    "w": "desk",
-   "start": 35.672,
-   "end": 35.885
+   "start": 36.45,
+   "end": 36.83
   },
   {
    "w": "is",
-   "start": 35.885,
-   "end": 36.098
+   "start": 36.83,
+   "end": 36.96
   },
   {
    "w": "cleared.",
-   "start": 36.098,
-   "end": 36.311
+   "start": 36.96,
+   "end": 37.49
   },
   {
    "w": "In",
-   "start": 36.811,
-   "end": 37.023
+   "start": 38.22,
+   "end": 37.49
   },
   {
    "w": "Japan,",
-   "start": 37.023,
-   "end": 37.449
+   "start": 38.22,
+   "end": 38.89
   },
   {
    "w": "firing",
-   "start": 37.649,
-   "end": 38.074
+   "start": 38.89,
+   "end": 39.36
   },
   {
    "w": "someone",
-   "start": 38.074,
-   "end": 38.5
+   "start": 39.36,
+   "end": 39.73
   },
   {
    "w": "without",
-   "start": 38.5,
-   "end": 38.926
+   "start": 39.73,
+   "end": 39.99
   },
   {
    "w": "a",
-   "start": 38.926,
-   "end": 39.138
+   "start": 39.99,
+   "end": 40.03
   },
   {
    "w": "strong",
-   "start": 39.138,
-   "end": 39.351
+   "start": 40.03,
+   "end": 40.5
   },
   {
    "w": "reason",
-   "start": 39.351,
-   "end": 39.777
+   "start": 40.5,
+   "end": 40.89
   },
   {
    "w": "is",
-   "start": 39.777,
-   "end": 39.989
+   "start": 40.89,
+   "end": 41.1
   },
   {
    "w": "very",
-   "start": 39.989,
-   "end": 40.415
+   "start": 41.1,
+   "end": 41.54
   },
   {
    "w": "hard.",
-   "start": 40.415,
-   "end": 40.628
+   "start": 41.54,
+   "end": 41.94
   },
   {
    "w": "So",
-   "start": 41.128,
-   "end": 41.34
+   "start": 42.25,
+   "end": 42.56
   },
   {
    "w": "some",
-   "start": 41.34,
-   "end": 41.553
-  },
-  {
-   "w": "companies",
-   "start": 41.553,
-   "end": 42.191
-  },
-  {
-   "w": "take",
-   "start": 42.191,
-   "end": 42.404
-  },
-  {
-   "w": "away",
-   "start": 42.404,
+   "start": 42.56,
    "end": 42.83
   },
   {
-   "w": "the",
+   "w": "companies",
    "start": 42.83,
-   "end": 43.043
+   "end": 43.31
+  },
+  {
+   "w": "take",
+   "start": 43.31,
+   "end": 43.53
+  },
+  {
+   "w": "away",
+   "start": 43.53,
+   "end": 43.73
+  },
+  {
+   "w": "the",
+   "start": 43.73,
+   "end": 43.82
   },
   {
    "w": "work,",
-   "start": 43.043,
-   "end": 43.255
+   "start": 43.82,
+   "end": 44.29
   },
   {
    "w": "and",
-   "start": 43.455,
-   "end": 43.668
+   "start": 44.48,
+   "end": 44.29
   },
   {
    "w": "wait",
-   "start": 43.668,
-   "end": 43.881
+   "start": 44.48,
+   "end": 44.85
   },
   {
    "w": "for",
-   "start": 43.881,
-   "end": 44.094
+   "start": 44.85,
+   "end": 45.0
   },
   {
    "w": "you",
-   "start": 44.094,
-   "end": 44.306
+   "start": 45.0,
+   "end": 45.11
   },
   {
    "w": "to",
-   "start": 44.306,
-   "end": 44.519
+   "start": 45.11,
+   "end": 45.18
   },
   {
    "w": "leave.",
-   "start": 44.519,
-   "end": 44.732
+   "start": 45.18,
+   "end": 45.65
   },
   {
    "w": "Japan",
-   "start": 45.232,
-   "end": 45.657
+   "start": 46.16,
+   "end": 46.51
   },
   {
    "w": "calls",
-   "start": 45.657,
-   "end": 45.87
+   "start": 46.51,
+   "end": 46.82
   },
   {
    "w": "them",
-   "start": 45.87,
-   "end": 46.083
+   "start": 46.82,
+   "end": 47.07
   },
   {
    "w": "chase-out",
-   "start": 46.083,
-   "end": 46.509
+   "start": 47.2,
+   "end": 47.7
   },
   {
    "w": "rooms.",
-   "start": 46.509,
-   "end": 46.721
+   "start": 47.7,
+   "end": 48.22
   },
   {
    "w": "Subscribe",
-   "start": 47.221,
-   "end": 47.647
+   "start": 48.73,
+   "end": 49.28
   },
   {
    "w": "for",
-   "start": 47.647,
-   "end": 47.86
+   "start": 49.28,
+   "end": 49.39
   },
   {
    "w": "more",
-   "start": 47.86,
-   "end": 48.072
+   "start": 49.39,
+   "end": 49.64
   },
   {
    "w": "strange",
-   "start": 48.072,
-   "end": 48.285
+   "start": 49.64,
+   "end": 50.07
   },
   {
    "w": "facts",
-   "start": 48.285,
-   "end": 48.498
+   "start": 50.07,
+   "end": 50.42
   },
   {
    "w": "like",
-   "start": 48.498,
-   "end": 48.711
+   "start": 50.42,
+   "end": 50.61
   },
   {
    "w": "this.",
-   "start": 48.711,
-   "end": 48.923
+   "start": 50.61,
+   "end": 51.05
   }
  ],
  "chunks": [
@@ -737,437 +737,437 @@
    "w0": 0,
    "w1": 2,
    "start": 0.4,
-   "end": 1.251
+   "end": 1.4100000000000001
   },
   {
    "text": "walking you past your desk",
    "w0": 3,
    "w1": 7,
-   "start": 1.251,
-   "end": 2.528
+   "start": 1.4100000000000001,
+   "end": 2.86
   },
   {
    "text": "to a tiny room.",
    "w0": 8,
    "w1": 11,
-   "start": 2.528,
-   "end": 3.591
+   "start": 2.86,
+   "end": 3.96
   },
   {
    "text": "No computer.",
    "w0": 12,
    "w1": 13,
-   "start": 4.091,
-   "end": 4.943
+   "start": 4.4,
+   "end": 5.17
   },
   {
    "text": "No work.",
    "w0": 14,
    "w1": 15,
-   "start": 5.443,
-   "end": 5.868
+   "start": 5.430000000000001,
+   "end": 6.010000000000001
   },
   {
    "text": "Just a ticking clock,",
    "w0": 16,
    "w1": 19,
-   "start": 6.368,
-   "end": 7.432
+   "start": 6.41,
+   "end": 7.61
   },
   {
    "text": "and a man in the corner",
    "w0": 20,
    "w1": 25,
-   "start": 7.632,
-   "end": 9.121
+   "start": 7.760000000000001,
+   "end": 8.73
   },
   {
    "text": "with his feet up.",
    "w0": 26,
    "w1": 29,
-   "start": 9.121,
-   "end": 9.972
+   "start": 8.73,
+   "end": 9.530000000000001
   },
   {
    "text": "Your new job,",
    "w0": 30,
    "w1": 32,
-   "start": 10.472,
-   "end": 11.111
+   "start": 10.120000000000001,
+   "end": 10.94
   },
   {
    "text": "your boss says,",
    "w0": 33,
    "w1": 35,
-   "start": 11.311,
-   "end": 11.949
+   "start": 10.94,
+   "end": 11.83
   },
   {
    "text": "is nothing.",
    "w0": 36,
    "w1": 37,
-   "start": 12.149,
-   "end": 12.787
+   "start": 12.0,
+   "end": 12.67
   },
   {
    "text": "Sit here until six.",
    "w0": 38,
    "w1": 41,
-   "start": 13.287,
-   "end": 14.351
+   "start": 13.030000000000001,
+   "end": 14.19
   },
   {
    "text": "At first",
    "w0": 42,
    "w1": 43,
-   "start": 14.851,
-   "end": 15.277
+   "start": 14.950000000000001,
+   "end": 15.5
   },
   {
    "text": "it feels like a holiday.",
    "w0": 44,
    "w1": 48,
-   "start": 15.277,
-   "end": 16.766
+   "start": 15.5,
+   "end": 16.66
   },
   {
    "text": "Then co-workers",
    "w0": 49,
    "w1": 50,
-   "start": 17.266,
-   "end": 18.117
+   "start": 17.15,
+   "end": 18.27
   },
   {
    "text": "start staring.",
    "w0": 51,
    "w1": 52,
-   "start": 18.117,
-   "end": 18.755
+   "start": 18.27,
+   "end": 19.139999999999997
   },
   {
    "text": "The emails stop.",
    "w0": 53,
    "w1": 55,
-   "start": 19.255,
-   "end": 20.106
+   "start": 19.54,
+   "end": 20.54
   },
   {
    "text": "Your old desk",
    "w0": 56,
    "w1": 58,
-   "start": 20.606,
-   "end": 21.245
+   "start": 20.9,
+   "end": 21.58
   },
   {
    "text": "has someone else's photos on it.",
    "w0": 59,
    "w1": 64,
-   "start": 21.245,
-   "end": 23.16
+   "start": 21.58,
+   "end": 23.139999999999997
   },
   {
    "text": "Every Friday",
    "w0": 65,
    "w1": 66,
-   "start": 23.66,
-   "end": 24.511
+   "start": 23.68,
+   "end": 24.47
   },
   {
    "text": "your boss leans in, smiling,",
    "w0": 67,
    "w1": 71,
-   "start": 24.511,
-   "end": 25.987
+   "start": 24.47,
+   "end": 26.459999999999997
   },
   {
    "text": "to ask how you're enjoying",
    "w0": 72,
    "w1": 76,
-   "start": 26.187,
-   "end": 27.464
+   "start": 26.65,
+   "end": 27.72
   },
   {
    "text": "your new role.",
    "w0": 77,
    "w1": 79,
-   "start": 27.464,
-   "end": 28.102
+   "start": 27.72,
+   "end": 28.41
   },
   {
    "text": "The man in the corner",
    "w0": 80,
    "w1": 84,
-   "start": 28.602,
-   "end": 29.879
+   "start": 29.049999999999997,
+   "end": 29.9
   },
   {
    "text": "has been here for years,",
    "w0": 85,
    "w1": 89,
-   "start": 29.879,
-   "end": 30.943
+   "start": 29.9,
+   "end": 31.16
   },
   {
    "text": "so you put your feet up too.",
    "w0": 90,
    "w1": 96,
-   "start": 31.143,
-   "end": 32.632
+   "start": 31.34,
+   "end": 32.94
   },
   {
    "text": "Then one Monday,",
    "w0": 97,
    "w1": 99,
-   "start": 33.132,
-   "end": 33.983
+   "start": 33.5,
+   "end": 34.73
   },
   {
    "text": "his chair is empty",
    "w0": 100,
    "w1": 103,
-   "start": 34.183,
-   "end": 35.247
+   "start": 34.96,
+   "end": 36.03
   },
   {
    "text": "and his desk is cleared.",
    "w0": 104,
    "w1": 108,
-   "start": 35.247,
-   "end": 36.311
+   "start": 36.24,
+   "end": 37.49
   },
   {
    "text": "In Japan,",
    "w0": 109,
    "w1": 110,
-   "start": 36.811,
-   "end": 37.449
+   "start": 38.22,
+   "end": 38.89
   },
   {
    "text": "firing someone",
    "w0": 111,
    "w1": 112,
-   "start": 37.649,
-   "end": 38.5
+   "start": 38.89,
+   "end": 39.73
   },
   {
    "text": "without a strong reason",
    "w0": 113,
    "w1": 116,
-   "start": 38.5,
-   "end": 39.777
+   "start": 39.73,
+   "end": 40.89
   },
   {
    "text": "is very hard.",
    "w0": 117,
    "w1": 119,
-   "start": 39.777,
-   "end": 40.628
+   "start": 40.89,
+   "end": 41.94
   },
   {
    "text": "So some companies",
    "w0": 120,
    "w1": 122,
-   "start": 41.128,
-   "end": 42.191
+   "start": 42.25,
+   "end": 43.309999999999995
   },
   {
    "text": "take away the work,",
    "w0": 123,
    "w1": 126,
-   "start": 42.191,
-   "end": 43.255
+   "start": 43.309999999999995,
+   "end": 44.29
   },
   {
    "text": "and wait for you to leave.",
    "w0": 127,
    "w1": 132,
-   "start": 43.455,
-   "end": 44.732
+   "start": 44.48,
+   "end": 45.65
   },
   {
    "text": "Japan calls them",
    "w0": 133,
    "w1": 135,
-   "start": 45.232,
-   "end": 46.083
+   "start": 46.16,
+   "end": 47.07
   },
   {
    "text": "chase-out rooms.",
    "w0": 136,
    "w1": 137,
-   "start": 46.083,
-   "end": 46.721
+   "start": 47.199999999999996,
+   "end": 48.22
   },
   {
    "text": "Subscribe for more",
    "w0": 138,
    "w1": 140,
-   "start": 47.221,
-   "end": 48.072
+   "start": 48.73,
+   "end": 49.64
   },
   {
    "text": "strange facts like this.",
    "w0": 141,
    "w1": 144,
-   "start": 48.072,
-   "end": 48.923
+   "start": 49.64,
+   "end": 51.05
   }
  ],
  "sentences": [
   {
    "start": 0.4,
-   "end": 3.591,
+   "end": 3.96,
    "text": "Picture your boss walking you past your desk to a tiny room."
   },
   {
-   "start": 4.091,
-   "end": 4.943,
+   "start": 4.4,
+   "end": 5.17,
    "text": "No computer."
   },
   {
-   "start": 5.443,
-   "end": 5.868,
+   "start": 5.430000000000001,
+   "end": 6.010000000000001,
    "text": "No work."
   },
   {
-   "start": 6.368,
-   "end": 9.972,
+   "start": 6.41,
+   "end": 9.530000000000001,
    "text": "Just a ticking clock, and a man in the corner with his feet up."
   },
   {
-   "start": 10.472,
-   "end": 12.787,
+   "start": 10.120000000000001,
+   "end": 12.67,
    "text": "Your new job, your boss says, is nothing."
   },
   {
-   "start": 13.287,
-   "end": 14.351,
+   "start": 13.030000000000001,
+   "end": 14.19,
    "text": "Sit here until six."
   },
   {
-   "start": 14.851,
-   "end": 16.766,
+   "start": 14.950000000000001,
+   "end": 16.66,
    "text": "At first it feels like a holiday."
   },
   {
-   "start": 17.266,
-   "end": 18.755,
+   "start": 17.15,
+   "end": 19.139999999999997,
    "text": "Then co-workers start staring."
   },
   {
-   "start": 19.255,
-   "end": 20.106,
+   "start": 19.54,
+   "end": 20.54,
    "text": "The emails stop."
   },
   {
-   "start": 20.606,
-   "end": 23.16,
+   "start": 20.9,
+   "end": 23.139999999999997,
    "text": "Your old desk has someone else's photos on it."
   },
   {
-   "start": 23.66,
-   "end": 28.102,
+   "start": 23.68,
+   "end": 28.41,
    "text": "Every Friday your boss leans in, smiling, to ask how you're enjoying your new role."
   },
   {
-   "start": 28.602,
-   "end": 32.632,
+   "start": 29.049999999999997,
+   "end": 32.94,
    "text": "The man in the corner has been here for years, so you put your feet up too."
   },
   {
-   "start": 33.132,
-   "end": 36.311,
+   "start": 33.5,
+   "end": 37.49,
    "text": "Then one Monday, his chair is empty and his desk is cleared."
   },
   {
-   "start": 36.811,
-   "end": 40.628,
+   "start": 38.22,
+   "end": 41.94,
    "text": "In Japan, firing someone without a strong reason is very hard."
   },
   {
-   "start": 41.128,
-   "end": 44.732,
+   "start": 42.25,
+   "end": 45.65,
    "text": "So some companies take away the work, and wait for you to leave."
   },
   {
-   "start": 45.232,
-   "end": 46.721,
+   "start": 46.16,
+   "end": 48.22,
    "text": "Japan calls them chase-out rooms."
   },
   {
-   "start": 47.221,
-   "end": 48.923,
+   "start": 48.73,
+   "end": 51.05,
    "text": "Subscribe for more strange facts like this."
   }
  ],
  "keys": {
   "picture": 0.4,
-  "walking": 1.251,
-  "room": 3.379,
-  "computer": 4.304,
-  "work": 5.655,
-  "clock": 7.219,
-  "corner": 8.696,
-  "feet": 9.547,
-  "nothing": 12.362,
-  "six": 14.138,
-  "holiday": 16.128,
-  "staring": 18.33,
-  "emails": 19.468,
-  "desk": 21.032,
-  "photos": 22.309,
-  "friday": 24.085,
-  "smiling": 25.562,
-  "enjoying": 27.038,
-  "years": 30.73,
-  "feet2": 31.994,
-  "monday": 33.557,
-  "empty": 34.821,
-  "cleared": 36.098,
-  "japan": 37.023,
-  "firing": 37.649,
-  "hard": 40.415,
-  "takeaway": 42.191,
-  "wait": 43.668,
-  "leave": 44.519,
-  "chaseout": 46.083,
-  "subscribe": 47.221,
-  "strange": 48.072,
-  "this": 48.711
+  "walking": 1.41,
+  "room": 3.56,
+  "computer": 4.57,
+  "work": 5.64,
+  "clock": 7.11,
+  "corner": 8.32,
+  "feet": 9.04,
+  "nothing": 12.0,
+  "six": 13.67,
+  "holiday": 16.07,
+  "staring": 18.55,
+  "emails": 19.54,
+  "desk": 21.23,
+  "photos": 22.38,
+  "friday": 23.95,
+  "smiling": 25.85,
+  "enjoying": 27.33,
+  "years": 30.52,
+  "feet2": 32.2,
+  "monday": 34.19,
+  "empty": 35.6,
+  "cleared": 36.96,
+  "japan": 38.22,
+  "firing": 38.89,
+  "hard": 41.54,
+  "takeaway": 43.31,
+  "wait": 44.48,
+  "leave": 45.18,
+  "chaseout": 47.2,
+  "subscribe": 48.73,
+  "strange": 49.64,
+  "this": 50.61
  },
  "keyEnd": {
-  "picture": 0.826,
-  "walking": 1.677,
-  "room": 3.591,
-  "computer": 4.943,
-  "work": 5.868,
-  "clock": 7.432,
-  "corner": 9.121,
-  "feet": 9.76,
-  "nothing": 12.787,
-  "six": 14.351,
-  "holiday": 16.766,
-  "staring": 18.755,
-  "emails": 19.894,
-  "desk": 21.245,
-  "photos": 22.734,
-  "friday": 24.511,
-  "smiling": 25.987,
-  "enjoying": 27.464,
-  "years": 30.943,
-  "feet2": 32.206,
-  "monday": 33.983,
-  "empty": 35.247,
-  "cleared": 36.311,
-  "japan": 37.449,
-  "firing": 38.074,
-  "hard": 40.628,
-  "takeaway": 42.404,
-  "wait": 43.881,
-  "leave": 44.732,
-  "chaseout": 46.509,
-  "subscribe": 47.647,
-  "strange": 48.285,
-  "this": 48.923
+  "picture": 0.77,
+  "walking": 1.81,
+  "room": 3.96,
+  "computer": 5.17,
+  "work": 6.01,
+  "clock": 7.61,
+  "corner": 8.73,
+  "feet": 9.3,
+  "nothing": 12.67,
+  "six": 14.19,
+  "holiday": 16.66,
+  "staring": 19.14,
+  "emails": 20.08,
+  "desk": 21.58,
+  "photos": 22.85,
+  "friday": 24.47,
+  "smiling": 26.46,
+  "enjoying": 27.72,
+  "years": 31.16,
+  "feet2": 32.45,
+  "monday": 34.73,
+  "empty": 36.03,
+  "cleared": 37.49,
+  "japan": 38.89,
+  "firing": 39.36,
+  "hard": 41.94,
+  "takeaway": 43.53,
+  "wait": 44.85,
+  "leave": 45.65,
+  "chaseout": 47.7,
+  "subscribe": 49.28,
+  "strange": 50.07,
+  "this": 51.05
  }
 }
