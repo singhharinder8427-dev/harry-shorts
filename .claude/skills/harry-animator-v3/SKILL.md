@@ -82,9 +82,11 @@ Folder map (`<SKILL>` = this skill's base directory):
   remotion.config.ts, tsconfig, `src/`: **`World3D.tsx`** = the 3D world (`World`, `Cel`, `cam3At`, `toScreen`,
   `celPoint`, `Box` / `Cyl` / `Ball` / `Ground`, `tex`, `Light`, `Cuts`, `Dissolve`), **`Cast.tsx`** = the flat
   `Person`, `Captions.tsx` = one-word safe-area captions + `SafeGuides`, `Cta.tsx` = `Cta` subscribe button,
-  `ThumbText`, `Tag`, `Bits.tsx` = `Puff` / `Pill` / `Bracket` / `Sparkle` (flat screen-space effects), `Layer.tsx` =
+  `ThumbText`, `Tag`, **`ThumbKit.tsx`** = `ThumbFrame`, `POP`, `Ring`, `Arrow` (section 12), `Bits.tsx` = `Puff` / `Pill` / `Bracket` / `Sparkle` (flat screen-space effects), `Layer.tsx` =
   outline scale, `math.ts`, `color.ts`, `Root.tsx`
 - `examples/v3-demo/` - `Short.tsx`, `timing.json`; `examples/water/` - pipeline file formats only
+- `examples/thumbnails/` - `reference-feed.jpg` (the owner's thumbnail reference - read it before section 12) and
+  `chaseout-thumbs.jpg` (a worked example)
 - `references/youtube-metadata.md` - title / description / tags rules and template
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -501,17 +503,39 @@ times out creating its 3D canvas, lower `CONC`.
 on the final: flags all intended, loop diff < 0.2, loudness about -14 LUFS (mastered), true peak below -1 dBTP, no audio silences (continuous bed). Say sync was verified by measurement and stills, not by ear.
 
 ---------------------------------------------------------------------------------------------------------------------
-## 12. Thumbnails (three variants)
+## 12. Thumbnails (three variants) - engaging, a little click-baity, always true
 
-- `Thumb` composition (`variant` A/B/C) renders a chosen moment from the same components with no tags in the way + big
-  text; `SCALE=2 node tools/thumbs.mjs A B C`, then save 1080x1920 JPGs (quality 93) with PIL.
-- Text: at most five words, Inter 900, white line + yellow line, 26-30 px #111 stroke, drop shadow, `white-space: nowrap`,
-  inside the safe zone (x 90-990, y ~285-1635), never over the main face. Every claim must be true for the video; keep
-  "drawn to scale" / "not to scale" tags.
-- Concepts: (A) the premise moment with the main character's shocked face next to the thing; (B) the funniest
-  character reaction in close-up; (C) the key size comparison or payoff event as the hero. Text via `ThumbText`; the
-  picture is a frame of the video (flat cast in the 3D set), never a different style. Check all three at phone-feed size (216x384) on one
-  sheet. Recommend one and say it is design judgment, not click data.
+**Reference (look at it every time before making thumbnails): `examples/thumbnails/reference-feed.jpg`** - the owner's
+favourite Shorts feed (cartoon channel, crore-view videos). What makes those tiles irresistible, and what ours must copy:
+- **ONE huge expressive face** fills 40-70 % of the tile: shock ("o" mouth, wide eyes, raised brows), smugness (closed
+  eyes, smirk), panic (sweat drop, "teeth" grimace), or a face colour (pale blue, green, red with steam). Never a wide
+  shot with small figures - at feed size (216x384) small faces disappear.
+- **A mystery or a promise**, not a summary: something is wrong, missing, about to happen, or absurd, and only the video
+  answers it (an empty chair circled in red, a hand reaching for the wrong thing, a smug character doing nothing).
+- **Saturated, high-contrast colour** (`POP` filter on the scene only), a clear light/dark split between the face and the
+  background, one bright accent prop.
+- **Few words**: 2-3 words, at most 5, white line + yellow line; often a question ("WHERE DID HE GO?") or a bold claim
+  ("PAID TO DO NOTHING"). Many reference tiles work with almost no text, so the picture must read on its own.
+- **One pointer at most**: a red ring + red arrow (`Ring`, `Arrow`) on the mystery object, placed with `toScreen` so it
+  sits exactly on the 3D object.
+
+Rules that do not change: every word and picture must be true for the video (a teaser, never a lie - no events, numbers
+or outcomes the video doesn't show); same look as the video (flat cast in the 3D set, re-staged with a punchier camera,
+not a different style); keep honesty tags ("not to scale") when they apply.
+
+How to build them:
+- `Thumb` composition (`variant` A/B/C). Use `ThumbKit.tsx` (`ThumbFrame`, `POP`, `Ring`, `Arrow`). Each variant is its
+  OWN staged `World` (not just a frame of a shot): camera 2-3 m from the hero face, fov 36-42, the face big in the
+  lower-middle (y 500-1300), the mystery object visible beside it, text at top 190 (safe zone x 90-990, y ~285-1635,
+  never over the main face). `SCALE=2 node tools/thumbs.mjs A B C`, then 1080x1920 JPGs (quality 93) with PIL.
+- Three concepts every time: (A) **the mystery** - the hero's biggest reaction face + the circled thing that causes it
+  + a question; (B) **the absurd / smug character** close-up + a bold short claim; (C) **the antagonist or the stakes**
+  - the villain/boss/danger huge in the foreground with the hero small and worried behind + the topic's name.
+- Check all three on one sheet at phone-feed size (216x384) next to the reference: the face and the hook must read at
+  that size. Recommend one (usually A: big emotional face + unanswered question) and say it is design judgment, not click
+  data; suggest testing A vs B.
+- Worked example: `examples/thumbnails/chaseout-thumbs.jpg` ("WHERE DID HE GO?" / "PAID TO DO NOTHING" / "JAPAN'S
+  BANISHMENT ROOM") and its `Thumb` code in `shorts/chaseout/src/Short.tsx` of the harry-shorts repo.
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 13. YouTube title, description, tags (every video)
@@ -567,6 +591,14 @@ disc or a sliver of white shows above it; a moustache hides `grin` / `open` mout
 everything in `front` covers the characters wherever it is in depth, so only put things there that really are nearer
 the lens than every character they overlap; a `Pill` (or any SVG element) outside an `<svg>` silently doesn't render -
 put flat extras as children of `<World>` (they are drawn in its SVG layer).
+Pitfalls met on the chase-out room Short (Nov 2026): a cast head is 0.8 m across, so a camera 3-4 m away fills the
+frame with one face - stage at most two main characters per shot, at least 1.2 m apart, camera 5-9 m back for
+two-shots (remove the wall behind the camera: a front-cutaway set), and never seat background extras where their heads
+land behind a main face; a camera looking +z mirrors left/right (screen right = -x), so set `view` and `front` wall
+pieces by screen side, not by world side; every beat needs the hero in the picture (empty object inserts read as random
+furniture) and a repeated framing for before/after payoffs; when a take has a long pause inside a sentence the aligner
+can slip a sentence - pass `BOUNDS` from `silencedetect`; a cloud background job stops at its time limit, so render 2K in
+~1050-frame chunks (`--frames`, `--muted`) and join them with the mixed audio (concat + mix + `master_audio.py`).
 Pitfalls kept from v1/v2: a closing quote after the full stop used to hide the sentence end (handled in
 `gen_timing.py` / `align_take.py`); when a component switches between differently shaped drawings (eye styles, mouth
 shapes), give each style its own React `key` - with `--concurrency` > 1 each tab renders non-contiguous frames and
