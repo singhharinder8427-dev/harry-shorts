@@ -1,6 +1,6 @@
 ---
 name: harry-animator-v3
-description: (v3 - new permanent look: strictly flat 2D cel characters composited into a stylized, shaded 3D world; smooth camera, clean cuts; everything else as v2) Make a complete faceless YouTube Short (max 45 s, 2K vertical 1440x2560, 60 fps) about a surprising fact or "what if" question, end to end - topic (the user's own, a viral-potential topic researched online, or a pasted script to fact-check and make original), five researched and source-checked voiceover script variants with a subscribe line, then an animation made entirely in code with Remotion - flat white-faced line-limb characters acting in a real 3D set (three.js: perspective, material textures, directional light, cast and contact shadows), one-word captions in a strict safe area, code-made sound effects and music bed, animated subscribe ending, seamless loop - re-timed to the user's own voice take, plus thumbnails, captions file, YouTube title, description and tags. Use whenever the user calls harry-animator-v3 (or harry-animator when they ask for v3 / the flat-characters-in-a-3D-world style).
+description: (v3 - new permanent look: strictly flat 2D cel characters composited into a stylized, shaded 3D world; smooth camera, clean cuts; everything else as v2) Make a complete faceless YouTube Short (the length the user asks for, 2K vertical 1440x2560, 60 fps) about a surprising fact or "what if" question, end to end - topic (the user's own, a viral-potential topic researched online, or a pasted script to fact-check and make original), five researched and source-checked voiceover script variants with a subscribe line, then an animation made entirely in code with Remotion - flat white-faced line-limb characters acting in a real 3D set (three.js: perspective, material textures, directional light, cast and contact shadows), one-word captions in a strict safe area, code-made sound effects and music bed, animated subscribe ending, seamless loop - re-timed to the user's own voice take, plus thumbnails, captions file, YouTube title, description and tags. Use whenever the user calls harry-animator-v3 (or harry-animator when they ask for v3 / the flat-characters-in-a-3D-world style).
 ---
 
 # harry-animator v3: researched script -> flat 2D cast acting in a stylized 3D world
@@ -42,13 +42,25 @@ video's cast and setting are established, keep them identical for the whole vide
 unnecessary written labels inside the scene. Characters express themselves through gestures and faces. (The narration,
 the one-word captions, the sound and the subscribe button are separate layers added on top, exactly as in v2.)
 
+**Owner's amendments (15 Nov 2026, after the manchineel Short) - these override the lines above where they differ:**
+- **Faces change colour with the situation.** White is the resting colour, not a fixed rule: poisoned or sick = green,
+  burning / hot / furious = red (with steam puffs), freezing or terrified = pale blue, and so on. The colour is one
+  flat fill (`tint`, `tintAmt` on `Person`) ramped over 0.3-0.4 s on the word, held, then ramped back - still no
+  gradients, shading or highlights. Use it whenever the story gives a reason, not as decoration.
+- **No unnecessary written labels** stays: cutaway explanation shots carry no text; the picture itself explains.
+- **Environments stay code-built 3D** (no generated or painted background images), made as rich as code allows: see
+  section 6 "Richness".
+- **One picture per caption phrase, one layer deep** (section 3.4-3.5): something new happens on screen every
+  1.5-2.5 s, and each fact gets a 1-2 s cutaway that shows how it works.
+- **The length is asked every time** (section 0); there is no fixed 45 s limit.
+
 **Restate the look concretely for every shot.** In `story.json` every shot gets a `look` line written out in full -
 who is in it (name, clothes colours, hair), the place, its materials and palette, the light direction, the camera move.
 Never write "same style as before". **Never drift into**: rounded 3D characters, anime faces, photoreal people,
 whiteboard animation, or flat vector environments (no flat SVG backdrops, no 2D parallax layers - the set is always
 real 3D meshes).
 
-What this makes: a vertical Short (designed at 1080x1920, delivered **1440x2560 (2K), 60 fps, at most 45 s**). **All
+What this makes: a vertical Short (designed at 1080x1920, delivered **1440x2560 (2K), 60 fps, at the length the user asked for**). **All
 of it is code**: the cast is React SVG, the world is three.js meshes with code-drawn textures, and motion, camera,
 captions, sound and timing are code too. The voice is the user's own take (recorded or made in their own voice tool)
 and the video is re-timed to it word by word.
@@ -85,6 +97,11 @@ Ask with a multiple-choice question (AskUserQuestion when available), these thre
    the strongest, write our own original version.
 3. **My script** - "I'll paste a full script." Then ask for it. Fact-check it, fix it, make it original and spoken
    (section 1B), show the final version.
+
+**Then ask the length, every time** (a second question, never assumed): "How long should this Short be?" - offer 30 s,
+45 s, 55 s and let them type any other number. That number is `LIMIT` for the whole job: the finished video including
+the subscribe line must not exceed it. Words to write = about 2.7 x the seconds of speech (LIMIT minus 0.4 s lead-in
+and 1.6 s tail): 30 s = ~75 words, 45 s = ~115, 55 s = ~145. Every "45 s" in this file means `LIMIT`.
 
 Whatever is chosen, research and fact-check first, then write **five script variants** (section 1.4) and let the user
 pick before any animation. The rest of the pipeline is identical. The user may be making the video for someone else; it changes
@@ -123,7 +140,7 @@ researched, and never write facts from memory as if checked.
 - Extract every factual claim (numbers, causes, comparisons, quotes). Verify each against reliable sources (below).
   Mark each: confirmed / needs correction / unsupported. Fix or cut what doesn't hold up; keep uncertainty where it matters.
 - Rewrite into the style rules below in original wording (so it isn't a copy of anything it was based on), keep the user's
-  idea and structure where they work, fit it to 45 s including the subscribe line. Show what changed and why (a short list).
+  idea and structure where they work, fit it to `LIMIT` including the subscribe line. Show what changed and why (a short list).
 
 ### 1.1 Fact-checking (all routes)
 - Verify the central fact with reliable sources: original research papers, universities, museums, government agencies
@@ -134,8 +151,8 @@ researched, and never write facts from memory as if checked.
 - Cartoon exaggeration is fine in what the characters *do*; the voice states only real facts.
 
 ### 1.2 Writing (all routes)
-- Length: **the finished Short is at most 45 s** including the subscribe line: about 95-115 words total (the main
-  explanation ~85-105 words + the CTA line ~8-10 words). 30-40 s of explanation is ideal.
+- Length: **the finished Short is at most `LIMIT`** (the length the user chose in section 0) including the subscribe
+  line (~8-10 words, 2-3 s); word budget as given there.
 - Start immediately with a specific question or a surprising statement. No greeting, no intro, no "In this video".
 - Build curiosity by explaining what would happen, why the obvious answer is wrong, or what makes it unusual; deliver a
   clear, satisfying answer near the end. Build toward it without filler or dragging.
@@ -164,7 +181,7 @@ same 5 angles. The five angles (one script each):
    lands the real answer.
 5. **Stakes / scale**: leads with the most striking number, size comparison or "what could go wrong", keeps raising
    the stakes, pays off with the reason.
-Every variant follows 1.2 (45 s max incl. its own subscribe line, ~95-115 words, no hype words, no "!", verified facts
+Every variant follows 1.2 (`LIMIT` max incl. its own subscribe line, the word budget from section 0, no hype words, no "!", verified facts
 only - the same fact sheet for all five, no new claims) and has a different first line. Show for each: the angle,
 its hook line, the full script, word count + estimated length, and one line on how it would look (cast, shots, the
 payoff visual). Then a short comparison (score 1-5 on hook, clarity, emotion, visual potential, fit for a silent acting cast)
@@ -209,16 +226,31 @@ forced alignment with pocketsphinx (its wheel ships the English model), installe
    of nine balls). Name each beat as a key word.
 3. Frame 0 states the premise like a thumbnail (the main character and the thing the story is about, centred, big,
    readable). No intro, no rewind.
-4. Shots: **6-10 shots** for 45 s, each 3-6 s, at varied sizes: wide establishing (the whole place, the cast small
-   in it), medium (waist-up), reaction close-up (a face fills most of the width), high-angle insert (looking down on
-   the detail that proves the fact: a gauge, a gap, a crack, hands on a prop). Every shot has one smooth camera move:
-   a track, a dolly, or a gentle push-in. **Clean cuts** on actions and reveals (cut on the word); at most 1-2 short
-   **dissolves** per video (time passing, a calm change of place). No whip pans, no speed lines, no shake as a style.
-   A video has 1-3 places; give each its own materials and palette, chosen for the story.
-5. One gag per beat a kid would laugh at, performed by the cast with body and face only: a double take, a head tilt,
-   eyebrows shooting up, eyes going wide, a jaw drop "o", squeezed "> <" eyes, a slump, a smug closed-eye smile, a
-   sweat drop, a little jump, hands thrown up, a careful tiptoe. And one physical event per beat in the 3D world: the
-   thing grows, drains, cracks, tips over, rolls away, lights up, comes back at the end.
+4. **One picture per caption phrase.** Go through the script phrase by phrase (every 2-6 words, the caption chunks)
+   and give EACH phrase its own visible event: a new shot, a new camera position, or a clear new action in the same
+   shot. Something new on screen every 1.5-2.5 s; no shot is held longer than about 4 s without a change. A 50 s
+   video therefore has roughly 20-30 pictures (not 9). Write them as a table: phrase -> what we see -> shot size.
+   Sizes, varied: wide establishing (rare, 1-3 per video), medium waist-up (the default - the character fills
+   40-60 % of the frame height), reaction close-up (a face fills most of the width), high-angle insert, and cutaways.
+   **The hook shows the consequence**: within the first 3 s the picture already shows what goes wrong (the character
+   does the thing and suffers), then the story rewinds into the explanation.
+   **Clean cuts** between pictures (cut on the word); one smooth camera move inside each; at most 1-2 short
+   dissolves; no whip pans, speed lines or shake as a style. A video has 1-3 places, each with its own palette.
+5. **One layer deep.** Every fact in the script gets one short cutaway (1-2 s) that shows HOW it works, one level
+   below what the eye sees - never a lecture, never two levels. Build them in the same style (3D objects, flat
+   characters) and **without text**:
+   - a macro of the thing (the leaf with its veins and a white drop forming at the tip);
+   - a cross-section (skin layers with the sap soaking in; the trunk with sap channels; the ground under the root);
+   - a see-through body (the character as a flat blue silhouette with the affected part glowing: throat, stomach,
+     lungs) - the cartoon "X-ray";
+   - a heat view (dark scene, the hot part ramping purple -> orange -> yellow) with a 3D gauge needle or bar that
+     rises instead of a number;
+   - a map or aerial view (the island from above with a marker pin; a storm cloud mass sliding in);
+   - a comparison prop (a row of copies, a ruler, the object next to a known thing);
+   - a mark made of shapes (red X shapes popping onto the things that are dangerous) - marks are not text.
+   One gag per beat on top, performed by the cast with body, face and face colour: a double take, a head tilt,
+   eyebrows shooting up, a jaw drop "o", squeezed "> <" eyes, a slump, a smug closed-eye smile, a sweat drop, a
+   jump, the face going green / red with steam / pale blue. And one physical event per beat in the 3D world.
 6. The ending: the payoff lands on the last word of the explanation, then the subscribe CTA (section 8.9), then the last
    frame equals frame 0 (loop): whatever changed returns (oceans refill, clouds come back, colours reset, camera back to
    its first key).
@@ -240,9 +272,9 @@ forced alignment with pocketsphinx (its wheel ships the English model), installe
    for the estimate.
 8. Estimate the timing: `python3 tools/gen_timing.py story.json --out src/timing.json` (4.7 syllables/s = natural
    conversational pace, +0.2 s after a comma, +0.5 s after a sentence, first word at 0.4 s, 1.6 s tail). If the estimate
-   is over ~44 s, shorten the script now.
-Done = beat table (time / words / on screen / sound) + story.json (with cast + a full `look` per shot) + estimated
-timing.json.
+   is over `LIMIT` - 1 s, shorten the script now.
+Done = the phrase table (phrase / what we see / size / sound), every fact with its one-layer cutaway, story.json
+(with cast + a full `look` per shot) + estimated timing.json.
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 4. Voice: timing sheet for the user's take
@@ -261,13 +293,17 @@ Done = timing sheet sent to the user.
 ## 5. The cast: flat 2D cels (`Cast.tsx` -> `Person`)
 
 Everything alive is a flat SVG drawing. Study `templates/remotion/src/Cast.tsx`; add to it, never around it.
-- **Anatomy** (fixed): solid white circular head (r 100) with one thick dark outline; flat black oval eyes; separate
+- **Anatomy** (fixed): round head (r 100; white at rest, flat situation colour when the story calls for it) with one thick dark outline; flat black oval eyes; separate
   curved eyebrow strokes; a simple drawn mouth; flat solid-colour hair (`short`, `sides`, `long`, `bun`, `ponytail`) and
   an optional flat hat / glasses / moustache / scarf; a small narrow flat-colour torso (`shirt`, optional `vest`,
   `buttons`); extremely thin black line arms and legs; small flat white rounded hands; minimal black feet. Feet at
   (0,0), about 430 units tall.
-- **Never on a character**: gradients, highlights, crescent shades, face tints, textures, blur, drop shadows, 3D
-  transforms, perspective skew, visible thickness. A character is the same flat drawing in a wide and in a close-up.
+- **Never on a character**: gradients, highlights, crescent shades, textures, blur, drop shadows, 3D
+  transforms, perspective skew, visible thickness.
+- **Face colour follows the situation** (`tint` = any flat colour, `tintAmt` 0..1, `steam` 0..1): white at rest;
+  green = poisoned / sick, red + steam = burning / hot / furious, pale blue = freezing / terrified, yellow-green =
+  queasy, purple = out of breath. Ramp over 0.3-0.4 s on the word, hold, ramp back when it passes. `spots` adds flat
+  red dots (rash, blisters, stings). Clothes may be a flat pattern (dots, flowers, stripes) - flat shapes only. A character is the same flat drawing in a wide and in a close-up.
 - **Outline**: every stroke is `px / useK()` (9 px body outline, thinner limbs); `<Cel>` sets `k`, so the outline keeps
   one consistent on-screen weight across shots and only thins when a character is small in a wide.
 - **A cast per video** (1-3 people): each has a role colour, hair and one accessory a viewer reads instantly; define
@@ -333,6 +369,15 @@ Units are metres, Y is up, the floor is y = 0. A shot is one `<World>`:
   wobble, no whip, no roll. Keys sit on word keys (`K.word - 0.4`); the last camera equals the first (loop).
 - **Editing**: `<Cuts t shots={[[0, <A/>], [K.x, <B/>], ...]}>` = clean cuts on actions and reveals;
   `<Dissolve t at a b>` = a 0.25-0.4 s dissolve, 1-2 per video at most.
+- **Richness** (the set must feel lush, not like a few primitives): a sky with 3D cloud clusters (soft white `Ball`
+  groups, slowly drifting whole cycles) and a low sun disc with a glow; sea with 2-3 animated foam lines and a
+  darker far band; ground with a second texture layer and scattered small things (fallen leaves, fruit, shells,
+  pebbles, tufts of grass - 30-80 instanced pieces); trees with a branch structure and a crown of hundreds of
+  individual leaf cards (one `InstancedMesh` of small double-sided planes in 2-3 greens around the branch tips) plus
+  fruit; a soft blur on the far background in close-ups (CSS `filter: blur` on a separate far `World` is not allowed -
+  use fog and smaller far detail instead); a distinct palette per time of day (pink-orange dawn, saturated noon,
+  deep blue night with a warm fire or lamp glow). Use `InstancedMesh` for anything repeated more than ~40 times
+  (rain, leaves, pebbles): separate meshes made the storm shots several times slower.
 - **Keeping the two looks apart**: nothing flat pretends to be scenery (no SVG backdrops, hills, buildings, clouds
   as flat shapes); nothing shaded is drawn on a character. Flat screen-space effects from `Bits.tsx` (a `Puff` of
   dust or steam, a `Sparkle`) are allowed only as brief accents on an action.
@@ -420,10 +465,11 @@ consistent within a place, the cast separates from the background.
     3D cloud, swaying foliage or breathing that doesn't complete whole cycles over the duration, a state that isn't reset;
   - loudness and audio silences (v2: no silences expected - the bed is continuous; loudness about -14 LUFS after
     mastering);
-  - v3 style checks on the sheets, shot by shot: characters flat (white faces, no shading, no tint), the set is
+  - v3 style checks on the sheets, shot by shot: characters flat (no shading or gradients; face colour only where the story calls for it), the set is
     shaded 3D with visible texture, light and cast shadows; every character has a ground shadow; the cast reads
-    against the background; a smooth camera move in every shot (pop scan's median motion > 0 on holds); 6-10
-    shots joined by clean cuts (each cut is one expected pop flag); captions inside the safe box (guides on);
+    against the background; a smooth camera move in every shot (pop scan's median motion > 0 on holds); a new
+    picture or action every 1.5-2.5 s (list the cuts: each is one expected pop flag), every fact with its one-layer
+    cutaway, the consequence visible in the first 3 s; captions inside the safe box (guides on);
     cast, clothes and set identical across the shots of one place.
 - Send the preview + timing sheet + thumbnails to the user while waiting for the take.
 
@@ -448,7 +494,7 @@ real pauses (`ffmpeg -af silencedetect=noise=-35dB:d=0.1`), pick the one after e
 `BOUNDS=3.44,4.15,... tools/retime.sh take.wav` (one time per sentence gap, in seconds). If the take is a few seconds
 over the length limit, shorten only its sentence pauses to about 0.4 s (keep the original take, tell the user).
 Before rendering: read the aligned words (sentence pauses should match `ffmpeg silencedetect`), check the duration is
-<= 45 s (if not: ask for a faster take or cut a sentence), re-render contact sheets on the real timing.
+<= `LIMIT` (if not: ask for a faster take or cut a sentence), re-render contact sheets on the real timing.
 Render in the background (about 30 min for 45 s on 4 cores without a GPU, `CONC=4`) and wait for it. If a tab
 times out creating its 3D canvas, lower `CONC`.
 **Verify the file**: 1440x2560, 60 fps, frame count = duration x 60, audio present and as long as the picture, `qa_video.py`
@@ -486,14 +532,14 @@ Deliver (send the files; put them in the user's working folder): `out/<short>-2K
 - that exaggerated visuals are labelled, and that the look follows the permanent style (flat cast, 3D world);
 - that alignment assumes the take reads the script as written (a misread word still shows the script word);
 - that you can't hear the result, and the user should watch once with sound before posting;
-- if the length is over 45 s, how to fix it (faster take, cut a sentence).
+- if the length is over `LIMIT`, how to fix it (faster take, cut a sentence).
 Append the topic to `topics_log.md`.
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 15. Rules that keep it on style
 
-- Characters: flat, white round faces, thick dark outline, black oval eyes, graphic brows, thin line limbs, flat
-  solid-colour hair and clothes. No shading, tint, gradient, highlight or thickness on them, in any shot.
+- Characters: flat, round faces (white at rest, flat situation colour when called for), thick dark outline, black oval eyes, graphic brows, thin line limbs, flat
+  solid-colour hair and clothes. No shading, gradient, highlight or thickness on them, in any shot.
 - World: real 3D meshes with texture, ambient shading, one directional light, cast and contact shadows, fog for
   distance. No flat vector scenery, no 2D parallax backdrops.
 - Never: rounded 3D characters, anime faces, photoreal people, whiteboard animation, objects with faces.
@@ -505,6 +551,8 @@ Append the topic to `topics_log.md`.
 - Feet planted, hands reach props before they move, one focal action at a time.
 - One-word captions in the safe box; the sound never drops out; every visual on its word; the payoff on the last
   explanation word; the CTA follows; the last frame loops to the first.
+- One picture per caption phrase; one layer deep on every fact; no text in cutaways; the hook shows the consequence.
+- The length is whatever the user answered in section 0.
 - Real facts only in the voice; cartoon exaggeration only in what characters do.
 - Every shot's `look` line in `story.json` restates the style in concrete words.
 

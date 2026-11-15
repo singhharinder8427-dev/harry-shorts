@@ -1,11 +1,14 @@
 import React from 'react';
 import {useK} from './Layer';
 import {INK, mix} from './color';
+import {Puff} from './Bits';
 
 /** v3 cast member: a STRICTLY FLAT 2D cel. Solid white circular face, thick consistent dark outline, flat black oval
  *  eyes, separate graphic eyebrows, a simple drawn mouth, flat solid-colour hair and clothes, a small narrow torso,
  *  extremely thin black line arms and legs, small flat rounded hands, minimal feet.
- *  NO gradients, highlights, shading, tints, textures or thickness here - ever. Shadows come from the 3D world.
+ *  NO gradients, highlights, shading, textures or thickness here - ever. Shadows come from the 3D world.
+ *  The face is white at rest and takes ONE flat colour when the situation calls for it (`tint`, `tintAmt`): green =
+ *  poisoned, red + `steam` = burning / furious, pale blue = freezing / scared. Ramp it in and out; never a gradient.
  *  Feet at (0,0); head centre (0,-330), r 100; about 430 units tall. Strokes are px / k (constant screen weight).
  *  Turns are REDRAWN poses (`view`), never a rotated solid: front, left, right, back. */
 export type Outfit = {
@@ -20,6 +23,7 @@ export type PersonPose = {
   eyes?: 'dot' | 'wide' | 'squeeze' | 'closed'; mouth?: 'smile' | 'flat' | 'o' | 'open' | 'grin' | 'teeth' | 'wavy' | 'smirk' | 'frown';
   handL?: [number, number]; handR?: [number, number]; footL?: [number, number]; footR?: [number, number];
   sweat?: number; handsBack?: boolean;
+  tint?: string; tintAmt?: number; steam?: number; t?: number;              // flat face colour for the situation (hex), 0..1; steam puffs 0..1 (pass t for their motion)
   spots?: number;                                                           // 0..1 flat red spots popping out on the face one by one (rash, blisters, stings)
 };
 const HY = -330, HR = 100;
@@ -28,7 +32,8 @@ const TORSO = 'M -40 -118 C -52 -166 -44 -226 0 -230 C 44 -226 52 -166 40 -118 Q
 export const Person: React.FC<PersonPose> = (p) => {
   const k = useK(); const ow = 9 / k;
   const {id, outfit = {}, view = 'front', lean = 0, sx = 1, sy = 1, bounce = 0, headTilt = 0, faceDx = 0, faceDy = 0, lookX = 0, lookY = 0, blink = 0, brow = 0, browUp = 0,
-    eyes = 'dot', mouth = 'smile', handL = [-78, -120], handR = [78, -120], footL = [-30, -5], footR = [30, -5], sweat = 0, handsBack = false, spots = 0} = p;
+    eyes = 'dot', mouth = 'smile', handL = [-78, -120], handR = [78, -120], footL = [-30, -5], footR = [30, -5], sweat = 0, handsBack = false, spots = 0, tint, tintAmt = 0, steam = 0, t = 0} = p;
+  const face = tint ? mix('#FFFFFF', tint, tintAmt) : '#FFFFFF';
   const o = {shirt: '#3F7FD9', vest: undefined as string | undefined, hat: 'none' as Outfit['hat'], hatColor: '#3A3A3E', hair: undefined as string | undefined, hairStyle: 'short' as Outfit['hairStyle'], ...outfit};
   const dir = view === 'left' ? -1 : view === 'right' ? 1 : 0, back = view === 'back';
   const fx = faceDx + dir * 40, fy = HY + faceDy;
@@ -103,7 +108,7 @@ export const Person: React.FC<PersonPose> = (p) => {
           {o.hair && o.hairStyle === 'long' && <path d={`M -108 ${HY - 20} C -132 ${HY + 80} -122 ${HY + 150} -84 ${HY + 160} L 84 ${HY + 160} C 122 ${HY + 150} 132 ${HY + 80} 108 ${HY - 20} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />}
           {o.hair && o.hairStyle === 'ponytail' && <path d={`M ${tailSide * 70} ${HY - 60} C ${tailSide * 170} ${HY - 40} ${tailSide * 170} ${HY + 80} ${tailSide * 130} ${HY + 140} C ${tailSide * 120} ${HY + 80} ${tailSide * 110} ${HY + 20} ${tailSide * 60} ${HY - 10} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />}
           {o.hair && o.hairStyle === 'bun' && <circle cx={0} cy={HY - 118} r={44} fill={o.hair} stroke={INK} strokeWidth={ow} />}
-          <circle cx={0} cy={HY} r={HR} fill={back && o.hair ? o.hair : '#FFFFFF'} stroke={INK} strokeWidth={ow} />
+          <circle cx={0} cy={HY} r={HR} fill={back && o.hair ? o.hair : face} stroke={INK} strokeWidth={ow} />
           <defs><clipPath id={`${id}-head`}><circle cx={0} cy={HY} r={HR} /></clipPath></defs>
           {!back && o.hair && o.hairStyle !== 'sides' && noHat && <g clipPath={`url(#${id}-head)`}><path d={`M -120 ${HY - 16} L -120 ${HY - 130} L 120 ${HY - 130} L 120 ${HY - 16} L 100 ${HY - 16} C ${70 + dir * 10} ${HY - 70} ${10 + dir * 30} ${HY - 82} ${-30 + dir * 30} ${HY - 60} C ${-60 + dir * 20} ${HY - 72} -86 ${HY - 52} -100 ${HY - 16} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" /></g>}
           {!back && o.hair && o.hairStyle !== 'sides' && noHat && <circle cx={0} cy={HY} r={HR} fill="none" stroke={INK} strokeWidth={ow} />}
@@ -116,6 +121,8 @@ export const Person: React.FC<PersonPose> = (p) => {
               <circle key={'sp' + i} cx={x + dir * 14} cy={HY + y} r={r * (u < 1 ? u * 1.25 : 1)} fill="#E5484D" stroke={INK} strokeWidth={ow * 0.45} />; })}
           </>}
           {hatEl}
+          {steam > 0.01 && [-1, 1].map((sd) => { const ph = (t * 1.6 + (sd > 0 ? 0.5 : 0)) % 1, sc = steam * Math.sin(Math.PI * ph);
+            return <g key={'st' + sd} transform={`translate(${sd * (112 + ph * 36)} ${HY - 30 - ph * 80}) scale(${sc})`}><Puff c={[[-18, 0, 20], [8, -10, 24], [20, 8, 16]]} ow={7} /></g>; })}
           {sweat > 0.01 && !back && <g transform={`translate(${fx + 92} ${HY - 50}) scale(${sweat})`}>
             <path d="M 0 -26 C 10 -10 16 0 16 8 A 16 16 0 0 1 -16 8 C -16 0 -10 -10 0 -26 Z" fill="#8FD3FF" stroke={INK} strokeWidth={ow * 0.8} strokeLinejoin="round" /></g>}
         </g>
