@@ -52,7 +52,7 @@ export const Highway: React.FC<{t: number; end?: boolean}> = ({t, end = false}) 
       home: {eyes: 'dot', mouth: 'smile', blink: bump(t, K.ray + 1.2, K.ray + 1.36)},
       yawn: {eyes: 'squeeze', mouth: 'open', sy: 1 + 0.04 * stretch},
       look: {eyes: 'ring', mouth: 'o', lookX: Math.sin((t - K.gone) * 5) * 8, faceDx: Math.sin((t - K.gone) * 5) * 16, browUp: 1},
-      smug: {eyes: 'smug', mouth: 'smirk', lean: -4, brow: 0.3},
+      smug: {eyes: 'smug', mouth: 'smirk', lean: -4, brow: 0.3, handsBack: true},
     } as any)[st];
     pose.handL = hl; pose.handR = hr;
     Object.assign(pose, walkFeet(t, t0, t > t0 ? Math.min(1, (t - t0) * 4) : 0));
@@ -209,7 +209,7 @@ const StoreScene: React.FC<{t: number}> = ({t}) => {
   const lift = 3 * 82 * clamp(pyr * 1.0);
   const st = pick<string>(t, [[0, 'look'], [K.cans - 0.05, 'happy'], [K.quality - 0.1, 'read'], [K.food - 0.1, 'yay'], [K.problem + 0.2, 'smug']]);
   const pose = ({look: {eyes: 'dot', mouth: 'smile', faceDx: -14, lookX: -6}, happy: {eyes: 'squeeze', mouth: 'grin'}, read: {eyes: 'dot', mouth: 'o', faceDy: -18, lookY: -7, browUp: 0.6},
-    yay: {eyes: 'squeeze', mouth: 'grin', handL: [-110, -470], handR: [110, -470]}, smug: {eyes: 'smug', mouth: 'smirk', handL: [-96, -370], handR: [96, -370]}} as any)[st];
+    yay: {eyes: 'squeeze', mouth: 'grin', handL: [-110, -470], handR: [110, -470]}, smug: {eyes: 'smug', mouth: 'smirk', handL: [-96, -370], handR: [96, -370], handsBack: true}} as any)[st];
   if (!pose.handL) { pose.handL = [-150, -200]; pose.handR = [150, -200]; }
   const signS = pop(t, K.quality - 0.05, 0.4);
   return (
@@ -223,11 +223,11 @@ const StoreScene: React.FC<{t: number}> = ({t}) => {
         {lines}
         {shelf(-1)}{shelf(1)}
         <Stand c={c} X={0} Z={1250} lift={700}><Sign w={520} h={140} lines={['CANNED FOOD']} post={false} board="#D9534F" ink="white" /></Stand>
-        {signS > 0 && <Stand c={c} X={-215} Z={900} lift={430} scale={signS * 0.88}><Sign w={460} h={210} lines={['BEST QUALITY', '2–5 YEARS']} post={false} board="#FFE98A" /></Stand>}
-        {pyr > 0 && <Stand c={c} X={120} Z={620}><CanPyramid rows={3} g={pyr} /></Stand>}
-        <Stand c={c} X={120} Z={600} lift={lift}><LongShadow angle={-30} len={200} opacity={0.18} /><Person id="rayE" t={t} outfit={RAY} {...pose} /></Stand>
+        {signS > 0 && <Stand c={c} X={-250} Z={900} lift={600} scale={signS * 0.8}><Sign w={460} h={210} lines={['BEST QUALITY', '2–5 YEARS']} post={false} board="#FFE98A" /></Stand>}
+        {pyr > 0 && <Stand c={c} X={40} Z={620}><CanPyramid rows={3} g={pyr} /></Stand>}
+        <Stand c={c} X={40} Z={600} lift={lift}><LongShadow angle={-30} len={200} opacity={0.18} /><Person id="rayE" t={t} outfit={RAY} {...pose} /></Stand>
         {cartOut < 1 && <Stand c={c} X={-170 - cartOut * 1100} Z={540}><Cart full={pop(t, K.cans - 0.05, 0.4)} /></Stand>}
-        {[0, 1, 2].map((i) => { const v = prog(t, K.food + 0.25 + i * 0.1, K.food + 0.7 + i * 0.1); const p = proj(c, 120 + (i - 1) * 220, 600)!;
+        {[0, 1, 2].map((i) => { const v = prog(t, K.food + 0.25 + i * 0.1, K.food + 0.7 + i * 0.1); const p = proj(c, 40 + (i - 1) * 220, 600)!;
           return v > 0 && v < 1 && <Sparkle key={i} x={p.x} y={p.y - (lift + 520) * p.s + i * 30} r={40 * Math.sin(v * Math.PI)} fill="#FFE14D" />; })}
       </SVG>
       <Foreground blur={7}><g transform="translate(60 1820)"><Can c="#E5483C" /></g></Foreground>

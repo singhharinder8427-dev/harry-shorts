@@ -16,7 +16,7 @@ export type PersonPose = {
   faceDx?: number; faceDy?: number; lookX?: number; lookY?: number; blink?: number; brow?: number; browUp?: number;
   eyes?: 'dot' | 'wide' | 'squeeze' | 'ring' | 'smug'; mouth?: 'smile' | 'flat' | 'o' | 'open' | 'grin' | 'teeth' | 'wavy' | 'smirk';
   handL?: [number, number]; handR?: [number, number]; footL?: [number, number]; footR?: [number, number];
-  tint?: Emotion; tintAmt?: number; steam?: number; sweat?: number; shadow?: boolean;
+  tint?: Emotion; tintAmt?: number; steam?: number; sweat?: number; shadow?: boolean; handsBack?: boolean;  // handsBack: hands behind the head/body (drawn before it)
 };
 const HY = -330, HR = 100;
 const TORSO = 'M -56 -118 C -72 -170 -60 -230 0 -234 C 60 -230 72 -170 56 -118 Q 0 -100 -56 -118 Z';
@@ -24,7 +24,7 @@ export const Person: React.FC<PersonPose> = (p) => {
   const k = useK(); const ow = 9 / k;
   const {t = 0, id, outfit = {}, lean = 0, sx = 1, sy = 1, faceDx = 0, faceDy = 0, lookX = 0, lookY = 0, blink = 0, brow = 0, browUp = 0,
     eyes = 'dot', mouth = 'smile', handL = [-92, -120], handR = [92, -120], footL = [-36, -6], footR = [36, -6],
-    tint, tintAmt = 0, steam = 0, sweat = 0, shadow = true} = p;
+    tint, tintAmt = 0, steam = 0, sweat = 0, shadow = true, handsBack = false} = p;
   const o = {shirt: '#F4F1EA', vest: undefined as string | undefined, hat: 'none' as Outfit['hat'], hatColor: '#3A3A3E', hair: undefined as string | undefined, ...outfit};
   const skin = tint ? mix('#FFFFFF', EMOTION[tint], tintAmt) : '#FFFFFF';
   const shade = tint ? mix('#E4E7EC', mix(EMOTION[tint], '#000000', 0.15), tintAmt) : '#E4E7EC';
@@ -83,6 +83,7 @@ export const Person: React.FC<PersonPose> = (p) => {
         <path d={`M -22 -112 Q -26 -60 ${footL[0] + 6} ${footL[1] - 6}`} /><path d={`M 22 -112 Q 26 -60 ${footR[0] - 6} ${footR[1] - 6}`} />
         <path d={arm([-48, -204], handL, -1)} /><path d={arm([48, -204], handR, 1)} />
       </g>
+      {handsBack && [handL, handR].map((h, i) => <circle key={'hb' + i} cx={h[0]} cy={h[1]} r={12} fill={INK} />)}
       <ellipse cx={footL[0]} cy={footL[1]} rx={24} ry={11} fill={INK} /><ellipse cx={footR[0]} cy={footR[1]} rx={24} ry={11} fill={INK} />
       {/* clothed torso */}
       <path d={TORSO} fill={o.shirt} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />
@@ -100,7 +101,7 @@ export const Person: React.FC<PersonPose> = (p) => {
       {o.mustache && <path d={`M ${fx} ${my - 12} C ${fx - 10} ${my - 22} ${fx - 34} ${my - 20} ${fx - 38} ${my - 6} C ${fx - 24} ${my - 10} ${fx - 10} ${my - 6} ${fx} ${my - 8} C ${fx + 10} ${my - 6} ${fx + 24} ${my - 10} ${fx + 38} ${my - 6} C ${fx + 34} ${my - 20} ${fx + 10} ${my - 22} ${fx} ${my - 12} Z`} fill={o.hair ?? INK} stroke={INK} strokeWidth={ow * 0.5} />}
       {m}
       {hatEl}
-      {[handL, handR].map((h, i) => <circle key={i} cx={h[0]} cy={h[1]} r={12} fill={INK} />)}
+      {!handsBack && [handL, handR].map((h, i) => <circle key={i} cx={h[0]} cy={h[1]} r={12} fill={INK} />)}
       {sweat > 0.01 && <g transform={`translate(${fx + 92} ${HY - 50}) scale(${sweat})`}>
         <path d="M 0 -26 C 10 -10 16 0 16 8 A 16 16 0 0 1 -16 8 C -16 0 -10 -10 0 -26 Z" fill="#8FD3FF" stroke={INK} strokeWidth={ow * 0.8} strokeLinejoin="round" />
         <ellipse cx={-5} cy={6} rx={3.5} ry={6} fill="white" /></g>}

@@ -38,11 +38,11 @@ export const PerspGround: React.FC<{c: PCam; ground: string; far: string; kind?:
   const id = 'pg' + Math.round(c.horizon);
   const n0 = proj(c, -w, c.z + NEAR + 1)!, n1 = proj(c, w, c.z + NEAR + 1)!, f0 = proj(c, -w, c.z + zMax)!, f1 = proj(c, w, c.z + zMax)!;
   const marks: React.ReactNode[] = [];
-  const first = Math.ceil((c.z + NEAR) / period);
+  const first = Math.ceil((c.z + NEAR) / period) - 1;
   for (let i = first; i < first + 60; i++) {
-    const Z = i * period, a = proj(c, 0, Z); if (!a || a.y < c.horizon + 1) continue;
+    const Z = i * period, a = proj(c, 0, Math.max(Z, c.z + NEAR + 1)); if (!a || a.y < c.horizon + 1) continue;
     if (kind === 'road') {
-      const b = proj(c, 0, Z + period * 0.45); if (!b) continue;
+      const b = proj(c, 0, Z + period * 0.45); if (!b || Z + period * 0.45 <= c.z + NEAR + 1) continue;   // near end clipped, no pop
       const wa = 9 * a.s, wb = 9 * b.s;
       marks.push(<path key={i} d={`M ${a.x - wa} ${a.y} L ${a.x + wa} ${a.y} L ${b.x + wb} ${b.y} L ${b.x - wb} ${b.y} Z`} fill={line} opacity={1 - hazeAt(a.d) * 0.8} />);
     } else if (kind === 'rails') {
