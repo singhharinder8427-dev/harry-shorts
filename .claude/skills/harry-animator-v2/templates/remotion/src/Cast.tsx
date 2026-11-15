@@ -7,7 +7,7 @@ import {INK, mix} from './color';
  *  Feet at (0,0); head centre (0,-330), r 100. All strokes are px / k (constant screen weight). */
 export type Outfit = {
   shirt?: string; vest?: string; hat?: 'cap' | 'bowler' | 'top' | 'hardhat' | 'beanie' | 'none'; hatColor?: string;
-  hair?: string; mustache?: boolean; glasses?: boolean; bandana?: string; buttons?: boolean;
+  hair?: string; hairStyle?: 'sides' | 'long' | 'bun' | 'ponytail'; mustache?: boolean; glasses?: boolean; bandana?: string; buttons?: boolean;
 };
 export type Emotion = 'red' | 'purple' | 'blue' | 'green';
 export const EMOTION: Record<Emotion, string> = {red: '#F0605A', purple: '#9B5BD6', blue: '#A9D8FF', green: '#9BD67A'};
@@ -92,10 +92,14 @@ export const Person: React.FC<PersonPose> = (p) => {
       {o.buttons && [-190, -160, -130].map((y) => <circle key={y} cx={o.vest ? 22 : 0} cy={y} r={5} fill={INK} />)}
       {o.bandana && <path d="M -30 -230 L 30 -230 L 0 -196 Z" fill={o.bandana} stroke={INK} strokeWidth={ow * 0.8} strokeLinejoin="round" />}
       {/* head */}
-      {o.hair && [-1, 1].map((s) => <ellipse key={s} cx={s * 90} cy={HY + 8} rx={24} ry={42} fill={o.hair} stroke={INK} strokeWidth={ow} />)}
+      {o.hair && (o.hairStyle ?? 'sides') === 'sides' && [-1, 1].map((s) => <ellipse key={s} cx={s * 90} cy={HY + 8} rx={24} ry={42} fill={o.hair} stroke={INK} strokeWidth={ow} />)}
+      {o.hair && o.hairStyle === 'long' && <path d={`M -108 ${HY - 20} C -132 ${HY + 80} -122 ${HY + 150} -84 ${HY + 160} L 84 ${HY + 160} C 122 ${HY + 150} 132 ${HY + 80} 108 ${HY - 20} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />}
+      {o.hair && o.hairStyle === 'ponytail' && <path d={`M 70 ${HY - 60} C 170 ${HY - 40} 170 ${HY + 80} 130 ${HY + 140} C 120 ${HY + 80} 110 ${HY + 20} 60 ${HY - 10} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />}
+      {o.hair && o.hairStyle === 'bun' && <circle cx={0} cy={HY - 118} r={44} fill={o.hair} stroke={INK} strokeWidth={ow} />}
       <circle cx={0} cy={HY} r={HR + ow} fill={INK} />
       <defs><clipPath id={`${id}-head`}><circle cx={0} cy={HY} r={HR} /></clipPath></defs>
       <g clipPath={`url(#${id}-head)`}><circle cx={0} cy={HY} r={HR} fill={shade} /><circle cx={-16} cy={HY - 16} r={HR} fill={skin} /></g>
+      {o.hair && o.hairStyle && o.hairStyle !== 'sides' && (!o.hat || o.hat === 'none') && <path d={`M -102 ${HY - 22} C -96 ${HY - 122} 96 ${HY - 122} 102 ${HY - 22} C 70 ${HY - 70} 10 ${HY - 78} -30 ${HY - 52} C -60 ${HY - 66} -86 ${HY - 50} -102 ${HY - 22} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />}
       {eye(-1)}{eye(1)}{browD(-1)}{browD(1)}
       {o.glasses && [-1, 1].map((s) => <circle key={'g' + s} cx={fx + s * 34} cy={fy - 10} r={27} fill="none" stroke={INK} strokeWidth={ow * 0.7} />)}
       {o.mustache && <path d={`M ${fx} ${my - 12} C ${fx - 10} ${my - 22} ${fx - 34} ${my - 20} ${fx - 38} ${my - 6} C ${fx - 24} ${my - 10} ${fx - 10} ${my - 6} ${fx} ${my - 8} C ${fx + 10} ${my - 6} ${fx + 24} ${my - 10} ${fx + 38} ${my - 6} C ${fx + 34} ${my - 20} ${fx + 10} ${my - 22} ${fx} ${my - 12} Z`} fill={o.hair ?? INK} stroke={INK} strokeWidth={ow * 0.5} />}

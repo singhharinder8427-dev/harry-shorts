@@ -1,0 +1,875 @@
+{
+ "short": "onlyman",
+ "title": "What if you were the only man left on Earth?",
+ "duration": 43.13,
+ "voiceOffset": 0.0,
+ "estimated": true,
+ "words": [
+  {
+   "w": "Meet",
+   "start": 0.4,
+   "end": 0.613
+  },
+  {
+   "w": "Ray.",
+   "start": 0.613,
+   "end": 0.826
+  },
+  {
+   "w": "One",
+   "start": 1.326,
+   "end": 1.538
+  },
+  {
+   "w": "morning,",
+   "start": 1.538,
+   "end": 1.964
+  },
+  {
+   "w": "every",
+   "start": 2.164,
+   "end": 2.589
+  },
+  {
+   "w": "other",
+   "start": 2.589,
+   "end": 3.015
+  },
+  {
+   "w": "man",
+   "start": 3.015,
+   "end": 3.228
+  },
+  {
+   "w": "on",
+   "start": 3.228,
+   "end": 3.44
+  },
+  {
+   "w": "Earth",
+   "start": 3.44,
+   "end": 3.653
+  },
+  {
+   "w": "is",
+   "start": 3.653,
+   "end": 3.866
+  },
+  {
+   "w": "gone.",
+   "start": 3.866,
+   "end": 4.079
+  },
+  {
+   "w": "\"So",
+   "start": 4.579,
+   "end": 4.791
+  },
+  {
+   "w": "I'm",
+   "start": 4.791,
+   "end": 5.004
+  },
+  {
+   "w": "kind",
+   "start": 5.004,
+   "end": 5.217
+  },
+  {
+   "w": "of",
+   "start": 5.217,
+   "end": 5.43
+  },
+  {
+   "w": "a",
+   "start": 5.43,
+   "end": 5.643
+  },
+  {
+   "w": "big",
+   "start": 5.643,
+   "end": 5.855
+  },
+  {
+   "w": "deal",
+   "start": 5.855,
+   "end": 6.068
+  },
+  {
+   "w": "now,\"",
+   "start": 6.068,
+   "end": 6.281
+  },
+  {
+   "w": "he",
+   "start": 6.481,
+   "end": 6.694
+  },
+  {
+   "w": "says.",
+   "start": 6.694,
+   "end": 6.906
+  },
+  {
+   "w": "His",
+   "start": 7.406,
+   "end": 7.619
+  },
+  {
+   "w": "sister",
+   "start": 7.619,
+   "end": 8.045
+  },
+  {
+   "w": "Maya",
+   "start": 8.045,
+   "end": 8.47
+  },
+  {
+   "w": "isn't",
+   "start": 8.47,
+   "end": 8.896
+  },
+  {
+   "w": "impressed.",
+   "start": 8.896,
+   "end": 9.321
+  },
+  {
+   "w": "In",
+   "start": 9.821,
+   "end": 10.034
+  },
+  {
+   "w": "New",
+   "start": 10.034,
+   "end": 10.247
+  },
+  {
+   "w": "York,",
+   "start": 10.247,
+   "end": 10.46
+  },
+  {
+   "w": "the",
+   "start": 10.66,
+   "end": 10.872
+  },
+  {
+   "w": "fire",
+   "start": 10.872,
+   "end": 11.085
+  },
+  {
+   "w": "department",
+   "start": 11.085,
+   "end": 11.723
+  },
+  {
+   "w": "just",
+   "start": 11.723,
+   "end": 11.936
+  },
+  {
+   "w": "lost",
+   "start": 11.936,
+   "end": 12.149
+  },
+  {
+   "w": "almost",
+   "start": 12.149,
+   "end": 12.574
+  },
+  {
+   "w": "everyone,",
+   "start": 12.574,
+   "end": 13.213
+  },
+  {
+   "w": "because",
+   "start": 13.413,
+   "end": 13.838
+  },
+  {
+   "w": "fewer",
+   "start": 13.838,
+   "end": 14.264
+  },
+  {
+   "w": "than",
+   "start": 14.264,
+   "end": 14.477
+  },
+  {
+   "w": "two",
+   "start": 14.477,
+   "end": 14.689
+  },
+  {
+   "w": "percent",
+   "start": 14.689,
+   "end": 15.115
+  },
+  {
+   "w": "of",
+   "start": 15.115,
+   "end": 15.328
+  },
+  {
+   "w": "its",
+   "start": 15.328,
+   "end": 15.54
+  },
+  {
+   "w": "firefighters",
+   "start": 15.54,
+   "end": 16.391
+  },
+  {
+   "w": "are",
+   "start": 16.391,
+   "end": 16.604
+  },
+  {
+   "w": "women.",
+   "start": 16.604,
+   "end": 17.03
+  },
+  {
+   "w": "Across",
+   "start": 17.53,
+   "end": 17.955
+  },
+  {
+   "w": "America,",
+   "start": 17.955,
+   "end": 18.806
+  },
+  {
+   "w": "about",
+   "start": 19.006,
+   "end": 19.432
+  },
+  {
+   "w": "ninety-seven",
+   "start": 19.432,
+   "end": 20.283
+  },
+  {
+   "w": "percent",
+   "start": 20.283,
+   "end": 20.709
+  },
+  {
+   "w": "of",
+   "start": 20.709,
+   "end": 20.921
+  },
+  {
+   "w": "electricians",
+   "start": 20.921,
+   "end": 21.772
+  },
+  {
+   "w": "are",
+   "start": 21.772,
+   "end": 21.985
+  },
+  {
+   "w": "men,",
+   "start": 21.985,
+   "end": 22.198
+  },
+  {
+   "w": "so",
+   "start": 22.398,
+   "end": 22.611
+  },
+  {
+   "w": "Maya",
+   "start": 22.611,
+   "end": 23.036
+  },
+  {
+   "w": "grabs",
+   "start": 23.036,
+   "end": 23.249
+  },
+  {
+   "w": "a",
+   "start": 23.249,
+   "end": 23.462
+  },
+  {
+   "w": "toolbox",
+   "start": 23.462,
+   "end": 23.887
+  },
+  {
+   "w": "and",
+   "start": 23.887,
+   "end": 24.1
+  },
+  {
+   "w": "learns",
+   "start": 24.1,
+   "end": 24.313
+  },
+  {
+   "w": "fast.",
+   "start": 24.313,
+   "end": 24.526
+  },
+  {
+   "w": "In",
+   "start": 25.026,
+   "end": 25.238
+  },
+  {
+   "w": "Rwanda,",
+   "start": 25.238,
+   "end": 25.877
+  },
+  {
+   "w": "a",
+   "start": 26.077,
+   "end": 26.289
+  },
+  {
+   "w": "parliament",
+   "start": 26.289,
+   "end": 26.928
+  },
+  {
+   "w": "that's",
+   "start": 26.928,
+   "end": 27.14
+  },
+  {
+   "w": "already",
+   "start": 27.14,
+   "end": 27.779
+  },
+  {
+   "w": "mostly",
+   "start": 27.779,
+   "end": 28.204
+  },
+  {
+   "w": "women",
+   "start": 28.204,
+   "end": 28.63
+  },
+  {
+   "w": "keeps",
+   "start": 28.63,
+   "end": 28.843
+  },
+  {
+   "w": "working.",
+   "start": 28.843,
+   "end": 29.268
+  },
+  {
+   "w": "And",
+   "start": 29.768,
+   "end": 29.981
+  },
+  {
+   "w": "the",
+   "start": 29.981,
+   "end": 30.194
+  },
+  {
+   "w": "future?",
+   "start": 30.194,
+   "end": 30.619
+  },
+  {
+   "w": "Frozen",
+   "start": 31.119,
+   "end": 31.545
+  },
+  {
+   "w": "sperm",
+   "start": 31.545,
+   "end": 31.757
+  },
+  {
+   "w": "can",
+   "start": 31.757,
+   "end": 31.97
+  },
+  {
+   "w": "last",
+   "start": 31.97,
+   "end": 32.183
+  },
+  {
+   "w": "for",
+   "start": 32.183,
+   "end": 32.396
+  },
+  {
+   "w": "decades,",
+   "start": 32.396,
+   "end": 32.821
+  },
+  {
+   "w": "so",
+   "start": 33.021,
+   "end": 33.234
+  },
+  {
+   "w": "new",
+   "start": 33.234,
+   "end": 33.447
+  },
+  {
+   "w": "baby",
+   "start": 33.447,
+   "end": 33.872
+  },
+  {
+   "w": "boys",
+   "start": 33.872,
+   "end": 34.085
+  },
+  {
+   "w": "could",
+   "start": 34.085,
+   "end": 34.298
+  },
+  {
+   "w": "arrive",
+   "start": 34.298,
+   "end": 34.723
+  },
+  {
+   "w": "within",
+   "start": 34.723,
+   "end": 35.149
+  },
+  {
+   "w": "about",
+   "start": 35.149,
+   "end": 35.574
+  },
+  {
+   "w": "a",
+   "start": 35.574,
+   "end": 35.787
+  },
+  {
+   "w": "year.",
+   "start": 35.787,
+   "end": 36.0
+  },
+  {
+   "w": "Ray",
+   "start": 36.5,
+   "end": 36.713
+  },
+  {
+   "w": "isn't",
+   "start": 36.713,
+   "end": 37.138
+  },
+  {
+   "w": "special",
+   "start": 37.138,
+   "end": 37.564
+  },
+  {
+   "w": "anymore.",
+   "start": 37.564,
+   "end": 38.202
+  },
+  {
+   "w": "\"Good,\"",
+   "start": 38.702,
+   "end": 38.915
+  },
+  {
+   "w": "Maya",
+   "start": 39.115,
+   "end": 39.54
+  },
+  {
+   "w": "says.",
+   "start": 39.54,
+   "end": 39.753
+  },
+  {
+   "w": "Subscribe",
+   "start": 40.253,
+   "end": 40.679
+  },
+  {
+   "w": "for",
+   "start": 40.679,
+   "end": 40.891
+  },
+  {
+   "w": "more",
+   "start": 40.891,
+   "end": 41.104
+  },
+  {
+   "w": "what-ifs.",
+   "start": 41.104,
+   "end": 41.53
+  }
+ ],
+ "chunks": [
+  {
+   "text": "Meet Ray.",
+   "w0": 0,
+   "w1": 1,
+   "start": 0.4,
+   "end": 0.826
+  },
+  {
+   "text": "One morning,",
+   "w0": 2,
+   "w1": 3,
+   "start": 1.326,
+   "end": 1.964
+  },
+  {
+   "text": "every other man on Earth",
+   "w0": 4,
+   "w1": 8,
+   "start": 2.164,
+   "end": 3.653
+  },
+  {
+   "text": "is gone.",
+   "w0": 9,
+   "w1": 10,
+   "start": 3.653,
+   "end": 4.079
+  },
+  {
+   "text": "\"So I'm kind of",
+   "w0": 11,
+   "w1": 14,
+   "start": 4.579,
+   "end": 5.43
+  },
+  {
+   "text": "a big deal now,\"",
+   "w0": 15,
+   "w1": 18,
+   "start": 5.43,
+   "end": 6.281
+  },
+  {
+   "text": "he says.",
+   "w0": 19,
+   "w1": 20,
+   "start": 6.481,
+   "end": 6.906
+  },
+  {
+   "text": "His sister Maya",
+   "w0": 21,
+   "w1": 23,
+   "start": 7.406,
+   "end": 8.47
+  },
+  {
+   "text": "isn't impressed.",
+   "w0": 24,
+   "w1": 25,
+   "start": 8.47,
+   "end": 9.321
+  },
+  {
+   "text": "In New York,",
+   "w0": 26,
+   "w1": 28,
+   "start": 9.821,
+   "end": 10.46
+  },
+  {
+   "text": "the fire department",
+   "w0": 29,
+   "w1": 31,
+   "start": 10.66,
+   "end": 11.723
+  },
+  {
+   "text": "just lost almost everyone,",
+   "w0": 32,
+   "w1": 35,
+   "start": 11.723,
+   "end": 13.213
+  },
+  {
+   "text": "because fewer than two percent",
+   "w0": 36,
+   "w1": 40,
+   "start": 13.413,
+   "end": 15.115
+  },
+  {
+   "text": "of its firefighters",
+   "w0": 41,
+   "w1": 43,
+   "start": 15.115,
+   "end": 16.391
+  },
+  {
+   "text": "are women.",
+   "w0": 44,
+   "w1": 45,
+   "start": 16.391,
+   "end": 17.03
+  },
+  {
+   "text": "Across America,",
+   "w0": 46,
+   "w1": 47,
+   "start": 17.53,
+   "end": 18.806
+  },
+  {
+   "text": "about ninety-seven percent",
+   "w0": 48,
+   "w1": 50,
+   "start": 19.006,
+   "end": 20.709
+  },
+  {
+   "text": "of electricians are men,",
+   "w0": 51,
+   "w1": 54,
+   "start": 20.709,
+   "end": 22.198
+  },
+  {
+   "text": "so Maya grabs a toolbox",
+   "w0": 55,
+   "w1": 59,
+   "start": 22.398,
+   "end": 23.887
+  },
+  {
+   "text": "and learns fast.",
+   "w0": 60,
+   "w1": 62,
+   "start": 23.887,
+   "end": 24.526
+  },
+  {
+   "text": "In Rwanda,",
+   "w0": 63,
+   "w1": 64,
+   "start": 25.026,
+   "end": 25.877
+  },
+  {
+   "text": "a parliament that's already",
+   "w0": 65,
+   "w1": 68,
+   "start": 26.077,
+   "end": 27.779
+  },
+  {
+   "text": "mostly women",
+   "w0": 69,
+   "w1": 70,
+   "start": 27.779,
+   "end": 28.63
+  },
+  {
+   "text": "keeps working.",
+   "w0": 71,
+   "w1": 72,
+   "start": 28.63,
+   "end": 29.268
+  },
+  {
+   "text": "And the future?",
+   "w0": 73,
+   "w1": 75,
+   "start": 29.768,
+   "end": 30.619
+  },
+  {
+   "text": "Frozen sperm",
+   "w0": 76,
+   "w1": 77,
+   "start": 31.119,
+   "end": 31.757
+  },
+  {
+   "text": "can last for decades,",
+   "w0": 78,
+   "w1": 81,
+   "start": 31.757,
+   "end": 32.821
+  },
+  {
+   "text": "so new baby boys",
+   "w0": 82,
+   "w1": 85,
+   "start": 33.021,
+   "end": 34.085
+  },
+  {
+   "text": "could arrive",
+   "w0": 86,
+   "w1": 87,
+   "start": 34.085,
+   "end": 34.723
+  },
+  {
+   "text": "within about a year.",
+   "w0": 88,
+   "w1": 91,
+   "start": 34.723,
+   "end": 36.0
+  },
+  {
+   "text": "Ray isn't special anymore.",
+   "w0": 92,
+   "w1": 95,
+   "start": 36.5,
+   "end": 38.202
+  },
+  {
+   "text": "\"Good,\" Maya says.",
+   "w0": 96,
+   "w1": 98,
+   "start": 38.702,
+   "end": 39.753
+  },
+  {
+   "text": "Subscribe for more what-ifs.",
+   "w0": 99,
+   "w1": 102,
+   "start": 40.253,
+   "end": 41.53
+  }
+ ],
+ "sentences": [
+  {
+   "start": 0.4,
+   "end": 0.826,
+   "text": "Meet Ray."
+  },
+  {
+   "start": 1.326,
+   "end": 4.079,
+   "text": "One morning, every other man on Earth is gone."
+  },
+  {
+   "start": 4.579,
+   "end": 6.906,
+   "text": "\"So I'm kind of a big deal now,\" he says."
+  },
+  {
+   "start": 7.406,
+   "end": 9.321,
+   "text": "His sister Maya isn't impressed."
+  },
+  {
+   "start": 9.821,
+   "end": 17.03,
+   "text": "In New York, the fire department just lost almost everyone, because fewer than two percent of its firefighters are women."
+  },
+  {
+   "start": 17.53,
+   "end": 24.526,
+   "text": "Across America, about ninety-seven percent of electricians are men, so Maya grabs a toolbox and learns fast."
+  },
+  {
+   "start": 25.026,
+   "end": 29.268,
+   "text": "In Rwanda, a parliament that's already mostly women keeps working."
+  },
+  {
+   "start": 29.768,
+   "end": 30.619,
+   "text": "And the future?"
+  },
+  {
+   "start": 31.119,
+   "end": 36.0,
+   "text": "Frozen sperm can last for decades, so new baby boys could arrive within about a year."
+  },
+  {
+   "start": 36.5,
+   "end": 38.202,
+   "text": "Ray isn't special anymore."
+  },
+  {
+   "start": 38.702,
+   "end": 39.753,
+   "text": "\"Good,\" Maya says."
+  },
+  {
+   "start": 40.253,
+   "end": 41.53,
+   "text": "Subscribe for more what-ifs."
+  }
+ ],
+ "keys": {
+  "ray": 0.613,
+  "gone": 3.866,
+  "big": 5.643,
+  "deal": 5.855,
+  "maya": 8.045,
+  "impressed": 8.896,
+  "york": 10.247,
+  "lost": 11.936,
+  "two": 14.477,
+  "women": 16.604,
+  "america": 17.955,
+  "electricians": 20.921,
+  "toolbox": 23.462,
+  "fast": 24.313,
+  "rwanda": 25.238,
+  "parliament": 26.289,
+  "working": 28.843,
+  "future": 30.194,
+  "frozen": 31.119,
+  "decades": 32.396,
+  "boys": 33.872,
+  "year": 35.787,
+  "special": 37.138,
+  "good": 38.702,
+  "subscribe": 40.253,
+  "whatifs": 41.104
+ },
+ "keyEnd": {
+  "ray": 0.826,
+  "gone": 4.079,
+  "big": 5.855,
+  "deal": 6.068,
+  "maya": 8.47,
+  "impressed": 9.321,
+  "york": 10.46,
+  "lost": 12.149,
+  "two": 14.689,
+  "women": 17.03,
+  "america": 18.806,
+  "electricians": 21.772,
+  "toolbox": 23.887,
+  "fast": 24.526,
+  "rwanda": 25.877,
+  "parliament": 26.928,
+  "working": 29.268,
+  "future": 30.619,
+  "frozen": 31.545,
+  "decades": 32.821,
+  "boys": 34.085,
+  "year": 36.0,
+  "special": 37.564,
+  "good": 38.915,
+  "subscribe": 40.679,
+  "whatifs": 41.53
+ }
+}
