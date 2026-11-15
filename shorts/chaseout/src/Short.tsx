@@ -11,7 +11,7 @@ import {Captions, SafeGuides} from './Captions';
 import {Outfit, Person, PersonPose} from './Cast';
 import {Cta, ThumbText} from './Cta';
 import {Sparkle} from './Bits';
-import {Ball, Box, Cam3, Cel, Cuts, Cyl, Ground, Light, V3, World, cam3At, celPoint, tex} from './World3D';
+import {Ball, Box, Cam3, Cel, Cuts, Cyl, Ground, Light, V3, World, cam3At, celPoint, tex, toScreen} from './World3D';
 import {bump, clamp, kfs, lerp, pick, pop, prog, rnd, smooth, spring} from './math';
 
 const T = timing as any; const K = T.keys as Record<string, number>; const CHS = T.chunks as {start: number; end: number}[];
@@ -522,8 +522,48 @@ export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: bool
   </AbsoluteFill>);
 };
 
-// ---------------------------------------------------------------- thumbnails (frames of the video + text)
+// ---------------------------------------------------------------- thumbnails: one huge face, one mystery, few words (same cast + sets, punchier framing)
+const POP = 'saturate(1.45) contrast(1.12) brightness(1.04)';
+/** flat red arrow (screen space, thumbnail only) from (x1,y1) to (x2,y2) */
+const Arrow: React.FC<{x1: number; y1: number; x2: number; y2: number}> = ({x1, y1, x2, y2}) => {
+  const a = Math.atan2(y2 - y1, x2 - x1), L = Math.hypot(x2 - x1, y2 - y1);
+  const d = `M 0 -22 L ${L - 90} -22 L ${L - 90} -62 L ${L} 0 L ${L - 90} 62 L ${L - 90} 22 L 0 22 Z`;
+  return <g transform={`translate(${x1} ${y1}) rotate(${a * 180 / Math.PI})`}><path d={d} fill="#FF2A2A" stroke="#111" strokeWidth={12} strokeLinejoin="round" /></g>;
+};
+const Ring: React.FC<{x: number; y: number; r: number}> = ({x, y, r}) => <g><circle cx={x} cy={y} r={r} fill="none" stroke="#111" strokeWidth={30} /><circle cx={x} cy={y} r={r} fill="none" stroke="#FF2A2A" strokeWidth={16} /></g>;
+const Overlay: React.FC<{children: React.ReactNode}> = ({children}) => <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{position: 'absolute', left: 0, top: 0}}>{children}</svg>;
+/** A: "WHERE DID HE GO?" - Ken's huge pale face, Taro's empty chair circled behind him */
+const ThumbA: React.FC = () => {
+  const t = K.cleared + 0.6;
+  const cam: Cam3 = {pos: [-1.0, 1.45, -8.1], look: [1.0, 1.0, -13.6], fov: 42};
+  const ch = toScreen(cam, [TCH[0] + 0.4, 0.62, TCH[2]])!;
+  return (<World cam={cam} light={{...ROOM_MON, sunI: 2.0, focus: [1, 0, -14], span: 4}} sky={SKY_ROOM} scene={<Room t={t} taro="cleared" week={4} />}>
+    <Cel at={[-0.3, 0, -10.75]} h={1.7}><Ken view="front" tint="#9FD4FF" tintAmt={1} eyes="wide" mouth="o" browUp={1.2} brow={-0.9} sweat={1} faceDx={26} lookX={9} handL={[-96, -290]} handR={[92, -290]} /></Cel>
+    <Ring x={ch.x} y={ch.y} r={150} /><Arrow x1={ch.x - 330} y1={ch.y + 330} x2={ch.x - 120} y2={ch.y + 120} />
+  </World>);
+};
+/** B: "PAID TO DO NOTHING" - Taro close, feet up, smug, phone in hand, his tower of finished puzzle books */
+const ThumbB: React.FC = () => {
+  const t = K.feet + 0.5;
+  const cam: Cam3 = {pos: [0.55, 1.35, -11.6], look: [1.75, 1.0, -14.4], fov: 36};
+  return (<World cam={cam} light={{...ROOM, sunI: 2.3, focus: [1.6, 0, -14.4], span: 3}} sky={SKY_ROOM} scene={<Room t={t} beam={1} />} front={taroPhone(cam, 1)}>
+    <Cel at={TCH} h={1.64}><Taro view="right" {...feetUp(1)} handR={PHONE_HAND} handL={[-70, -370]} handsBack eyes="closed" mouth="smirk" headTilt={-6} faceDx={6} />
+      {[[-200, -560, 46], [230, -600, 38], [-60, -660, 30]].map(([x, y, r], i) => <Sparkle key={i} x={x} y={y} r={r} fill="#FFE14D" />)}</Cel>
+  </World>);
+};
+/** C: "JAPAN'S BANISHMENT ROOM" - the boss's giant grin leaning in, Ken alone in the bare room behind */
+const ThumbC: React.FC = () => {
+  const t = K.smiling + 0.4;
+  const cam: Cam3 = {pos: [0.35, 1.5, -7.2], look: [-0.45, 1.25, -13.2], fov: 40};
+  return (<World cam={cam} light={{...ROOM, sunI: 2.2}} sky={SKY_ROOM} scene={<Room t={t} week={2} />}>
+    <Cel at={KCH}><Ken view="front" {...seat(0.6)} mouth="teeth" eyes="dot" brow={-0.8} browUp={0.5} sweat={1} faceDx={22} lookX={7} /></Cel>
+    <Cel at={[0.55, 0, -10.2]} h={1.76}><Boss view="left" lean={-12} mouth="grin" eyes="closed" browUp={1} headTilt={-10} handL={[-150, -360]} handR={[90, -150]} /></Cel>
+  </World>);
+};
 export const Thumb: React.FC<{variant: 'A' | 'B' | 'C'}> = ({variant}) => {
-  const cfg = {A: {t: K.feet + 0.5, l1: 'PAID TO DO', l2: 'NOTHING'}, B: {t: K.cleared + 0.5, l1: 'THEN ONE MONDAY', l2: 'HE WAS GONE'}, C: {t: K.nothing + 0.4, l1: "JAPAN'S", l2: 'CHASE-OUT ROOM'}}[variant];
-  return (<AbsoluteFill><Scenes t={cfg.t} /><ThumbText l1={cfg.l1} l2={cfg.l2} top={210} /></AbsoluteFill>);
+  const cfg = {A: {l1: 'WHERE DID', l2: 'HE GO?', top: 190}, B: {l1: 'PAID TO DO', l2: 'NOTHING', top: 190}, C: {l1: "JAPAN'S", l2: 'BANISHMENT ROOM', top: 190}}[variant];
+  return (<AbsoluteFill style={{background: '#000'}}>
+    <AbsoluteFill style={{filter: POP}}>{variant === 'A' ? <ThumbA /> : variant === 'B' ? <ThumbB /> : <ThumbC />}</AbsoluteFill>
+    <ThumbText l1={cfg.l1} l2={cfg.l2} top={cfg.top} />
+  </AbsoluteFill>);
 };
