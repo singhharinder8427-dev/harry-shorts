@@ -10,7 +10,7 @@ Paste the whole script below into your voice tool as **one** generation (or reco
 Stuck on a beach with only one tree, you'd sit under it. Don't. It's a manchineel. It has small green apples, and a red band someone painted on the trunk. Here's what that band is for. A storm hits, so you shelter under the leaves. Each one holds a milky sap, and the rain drips it onto your skin. Soon you're covered in blisters. The next day you're starving, and the apples smell good. One bite is sweet, for a second. Then your throat burns and tightens. In Spanish, that fruit is the little apple of death. Later, nature calls, and you grab a handful of soft leaves. Same sap, same blisters, much worse place. That night you're cold, so you light its wood. The smoke stings your eyes until you can barely see. Next time, just sit in the sand. Subscribe for more of nature's warnings.
 ```
 
-- Target length: about **49 s** of speech. The whole Short must stay at or under 45 s.
+- Target length: about **49 s** of speech. The whole Short must stay at or under 53 s.
 - Paste only the script: plain text, no tags, no notes like "speak slowly". A text-to-speech model reads notes out loud.
 - Keep the words exactly as written: the captions and the alignment assume the script is read as written. Numbers: say how the voice read them ("fourteen hundred" vs "one thousand four hundred").
 - The last line is the subscribe line: warm and direct like the rest, not salesy. If a take over-acts, regenerate.
