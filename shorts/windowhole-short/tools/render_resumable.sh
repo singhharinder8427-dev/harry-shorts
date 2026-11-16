@@ -14,7 +14,7 @@ DIR=out/chunks_${COMP}_${SCALE}; mkdir -p "$DIR"
 SIG=$(md5sum src/timing.json src/Short.tsx | md5sum | cut -c1-12)
 [ "$(cat $DIR/.sig 2>/dev/null)" = "$SIG" ] || { rm -f $DIR/*.mp4; echo "$SIG" > $DIR/.sig; }
 LOG=$DIR/render.log
-ok() { [ -s "$1" ] && [ "$(ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of csv=p=0 "$1" 2>/dev/null)" = "$2" ]; }
+ok() { [ -s "$1" ] && [ "$(ffprobe -v error -count_frames -select_streams v:0 -show_entries stream=nb_read_frames -of default=nw=1:nk=1 "$1" 2>/dev/null)" = "$2" ]; }
 done_n=0; total=$(( (N + CHUNK - 1) / CHUNK ))
 for ((s=0; s<N; s+=CHUNK)); do
   e=$((s+CHUNK-1)); [ $e -ge $N ] && e=$((N-1)); want=$((e-s+1)); f=$(printf "$DIR/c_%05d.mp4" $s)
