@@ -1,0 +1,923 @@
+{
+ "short": "tickle",
+ "title": "Why can't you tickle yourself?",
+ "duration": 41.74,
+ "voiceOffset": 0.0,
+ "estimated": true,
+ "words": [
+  {
+   "w": "Why",
+   "start": 0.4,
+   "end": 0.613
+  },
+  {
+   "w": "can't",
+   "start": 0.613,
+   "end": 0.826
+  },
+  {
+   "w": "you",
+   "start": 0.826,
+   "end": 1.038
+  },
+  {
+   "w": "tickle",
+   "start": 1.038,
+   "end": 1.464
+  },
+  {
+   "w": "yourself?",
+   "start": 1.464,
+   "end": 1.889
+  },
+  {
+   "w": "Same",
+   "start": 2.389,
+   "end": 2.602
+  },
+  {
+   "w": "fingers,",
+   "start": 2.602,
+   "end": 3.028
+  },
+  {
+   "w": "same",
+   "start": 3.228,
+   "end": 3.44
+  },
+  {
+   "w": "spot,",
+   "start": 3.44,
+   "end": 3.653
+  },
+  {
+   "w": "and",
+   "start": 3.853,
+   "end": 4.066
+  },
+  {
+   "w": "nothing",
+   "start": 4.066,
+   "end": 4.491
+  },
+  {
+   "w": "happens.",
+   "start": 4.491,
+   "end": 4.917
+  },
+  {
+   "w": "Your",
+   "start": 5.417,
+   "end": 5.63
+  },
+  {
+   "w": "brain",
+   "start": 5.63,
+   "end": 5.843
+  },
+  {
+   "w": "is",
+   "start": 5.843,
+   "end": 6.055
+  },
+  {
+   "w": "one",
+   "start": 6.055,
+   "end": 6.268
+  },
+  {
+   "w": "step",
+   "start": 6.268,
+   "end": 6.481
+  },
+  {
+   "w": "ahead",
+   "start": 6.481,
+   "end": 6.906
+  },
+  {
+   "w": "of",
+   "start": 6.906,
+   "end": 7.119
+  },
+  {
+   "w": "you.",
+   "start": 7.119,
+   "end": 7.332
+  },
+  {
+   "w": "Every",
+   "start": 7.832,
+   "end": 8.257
+  },
+  {
+   "w": "time",
+   "start": 8.257,
+   "end": 8.47
+  },
+  {
+   "w": "you",
+   "start": 8.47,
+   "end": 8.683
+  },
+  {
+   "w": "move,",
+   "start": 8.683,
+   "end": 8.896
+  },
+  {
+   "w": "it",
+   "start": 9.096,
+   "end": 9.309
+  },
+  {
+   "w": "keeps",
+   "start": 9.309,
+   "end": 9.521
+  },
+  {
+   "w": "a",
+   "start": 9.521,
+   "end": 9.734
+  },
+  {
+   "w": "copy",
+   "start": 9.734,
+   "end": 10.16
+  },
+  {
+   "w": "of",
+   "start": 10.16,
+   "end": 10.372
+  },
+  {
+   "w": "the",
+   "start": 10.372,
+   "end": 10.585
+  },
+  {
+   "w": "command",
+   "start": 10.585,
+   "end": 11.011
+  },
+  {
+   "w": "and",
+   "start": 11.011,
+   "end": 11.223
+  },
+  {
+   "w": "predicts",
+   "start": 11.223,
+   "end": 11.649
+  },
+  {
+   "w": "exactly",
+   "start": 11.649,
+   "end": 12.287
+  },
+  {
+   "w": "what",
+   "start": 12.287,
+   "end": 12.5
+  },
+  {
+   "w": "you're",
+   "start": 12.5,
+   "end": 12.713
+  },
+  {
+   "w": "about",
+   "start": 12.713,
+   "end": 13.138
+  },
+  {
+   "w": "to",
+   "start": 13.138,
+   "end": 13.351
+  },
+  {
+   "w": "feel.",
+   "start": 13.351,
+   "end": 13.564
+  },
+  {
+   "w": "Your",
+   "start": 14.064,
+   "end": 14.277
+  },
+  {
+   "w": "cerebellum",
+   "start": 14.277,
+   "end": 15.128
+  },
+  {
+   "w": "sends",
+   "start": 15.128,
+   "end": 15.34
+  },
+  {
+   "w": "that",
+   "start": 15.34,
+   "end": 15.553
+  },
+  {
+   "w": "prediction",
+   "start": 15.553,
+   "end": 16.191
+  },
+  {
+   "w": "ahead,",
+   "start": 16.191,
+   "end": 16.617
+  },
+  {
+   "w": "and",
+   "start": 16.817,
+   "end": 17.03
+  },
+  {
+   "w": "the",
+   "start": 17.03,
+   "end": 17.243
+  },
+  {
+   "w": "touch",
+   "start": 17.243,
+   "end": 17.455
+  },
+  {
+   "w": "is",
+   "start": 17.455,
+   "end": 17.668
+  },
+  {
+   "w": "turned",
+   "start": 17.668,
+   "end": 18.094
+  },
+  {
+   "w": "down",
+   "start": 18.094,
+   "end": 18.306
+  },
+  {
+   "w": "before",
+   "start": 18.306,
+   "end": 18.732
+  },
+  {
+   "w": "it",
+   "start": 18.732,
+   "end": 18.945
+  },
+  {
+   "w": "arrives.",
+   "start": 18.945,
+   "end": 19.37
+  },
+  {
+   "w": "Scientists",
+   "start": 19.87,
+   "end": 20.509
+  },
+  {
+   "w": "in",
+   "start": 20.509,
+   "end": 20.721
+  },
+  {
+   "w": "London",
+   "start": 20.721,
+   "end": 21.147
+  },
+  {
+   "w": "tested",
+   "start": 21.147,
+   "end": 21.572
+  },
+  {
+   "w": "it",
+   "start": 21.572,
+   "end": 21.785
+  },
+  {
+   "w": "with",
+   "start": 21.785,
+   "end": 21.998
+  },
+  {
+   "w": "robots.",
+   "start": 21.998,
+   "end": 22.423
+  },
+  {
+   "w": "When",
+   "start": 22.923,
+   "end": 23.136
+  },
+  {
+   "w": "people",
+   "start": 23.136,
+   "end": 23.562
+  },
+  {
+   "w": "moved",
+   "start": 23.562,
+   "end": 23.987
+  },
+  {
+   "w": "one",
+   "start": 23.987,
+   "end": 24.2
+  },
+  {
+   "w": "robot",
+   "start": 24.2,
+   "end": 24.626
+  },
+  {
+   "w": "arm",
+   "start": 24.626,
+   "end": 24.838
+  },
+  {
+   "w": "and",
+   "start": 24.838,
+   "end": 25.051
+  },
+  {
+   "w": "another",
+   "start": 25.051,
+   "end": 25.689
+  },
+  {
+   "w": "touched",
+   "start": 25.689,
+   "end": 26.115
+  },
+  {
+   "w": "their",
+   "start": 26.115,
+   "end": 26.328
+  },
+  {
+   "w": "palm",
+   "start": 26.328,
+   "end": 26.54
+  },
+  {
+   "w": "at",
+   "start": 26.54,
+   "end": 26.753
+  },
+  {
+   "w": "the",
+   "start": 26.753,
+   "end": 26.966
+  },
+  {
+   "w": "same",
+   "start": 26.966,
+   "end": 27.179
+  },
+  {
+   "w": "moment,",
+   "start": 27.179,
+   "end": 27.604
+  },
+  {
+   "w": "it",
+   "start": 27.804,
+   "end": 28.017
+  },
+  {
+   "w": "hardly",
+   "start": 28.017,
+   "end": 28.443
+  },
+  {
+   "w": "tickled.",
+   "start": 28.443,
+   "end": 28.868
+  },
+  {
+   "w": "Add",
+   "start": 29.368,
+   "end": 29.581
+  },
+  {
+   "w": "a",
+   "start": 29.581,
+   "end": 29.794
+  },
+  {
+   "w": "delay",
+   "start": 29.794,
+   "end": 30.219
+  },
+  {
+   "w": "of",
+   "start": 30.219,
+   "end": 30.432
+  },
+  {
+   "w": "a",
+   "start": 30.432,
+   "end": 30.645
+  },
+  {
+   "w": "fifth",
+   "start": 30.645,
+   "end": 30.857
+  },
+  {
+   "w": "of",
+   "start": 30.857,
+   "end": 31.07
+  },
+  {
+   "w": "a",
+   "start": 31.07,
+   "end": 31.283
+  },
+  {
+   "w": "second,",
+   "start": 31.283,
+   "end": 31.709
+  },
+  {
+   "w": "and",
+   "start": 31.909,
+   "end": 32.121
+  },
+  {
+   "w": "the",
+   "start": 32.121,
+   "end": 32.334
+  },
+  {
+   "w": "tickle",
+   "start": 32.334,
+   "end": 32.76
+  },
+  {
+   "w": "came",
+   "start": 32.76,
+   "end": 32.972
+  },
+  {
+   "w": "back.",
+   "start": 32.972,
+   "end": 33.185
+  },
+  {
+   "w": "Your",
+   "start": 33.685,
+   "end": 33.898
+  },
+  {
+   "w": "brain",
+   "start": 33.898,
+   "end": 34.111
+  },
+  {
+   "w": "only",
+   "start": 34.111,
+   "end": 34.536
+  },
+  {
+   "w": "lets",
+   "start": 34.536,
+   "end": 34.749
+  },
+  {
+   "w": "you",
+   "start": 34.749,
+   "end": 34.962
+  },
+  {
+   "w": "feel",
+   "start": 34.962,
+   "end": 35.174
+  },
+  {
+   "w": "a",
+   "start": 35.174,
+   "end": 35.387
+  },
+  {
+   "w": "tickle",
+   "start": 35.387,
+   "end": 35.813
+  },
+  {
+   "w": "when",
+   "start": 35.813,
+   "end": 36.026
+  },
+  {
+   "w": "it",
+   "start": 36.026,
+   "end": 36.238
+  },
+  {
+   "w": "can't",
+   "start": 36.238,
+   "end": 36.451
+  },
+  {
+   "w": "see",
+   "start": 36.451,
+   "end": 36.664
+  },
+  {
+   "w": "it",
+   "start": 36.664,
+   "end": 36.877
+  },
+  {
+   "w": "coming.",
+   "start": 36.877,
+   "end": 37.302
+  },
+  {
+   "w": "Subscribe",
+   "start": 37.802,
+   "end": 38.228
+  },
+  {
+   "w": "for",
+   "start": 38.228,
+   "end": 38.44
+  },
+  {
+   "w": "more",
+   "start": 38.44,
+   "end": 38.653
+  },
+  {
+   "w": "strange",
+   "start": 38.653,
+   "end": 38.866
+  },
+  {
+   "w": "facts",
+   "start": 38.866,
+   "end": 39.079
+  },
+  {
+   "w": "about",
+   "start": 39.079,
+   "end": 39.504
+  },
+  {
+   "w": "your",
+   "start": 39.504,
+   "end": 39.717
+  },
+  {
+   "w": "body.",
+   "start": 39.717,
+   "end": 40.143
+  }
+ ],
+ "chunks": [
+  {
+   "text": "Why can't you tickle yourself?",
+   "w0": 0,
+   "w1": 4,
+   "start": 0.4,
+   "end": 1.889
+  },
+  {
+   "text": "Same fingers, same spot,",
+   "w0": 5,
+   "w1": 8,
+   "start": 2.389,
+   "end": 3.653
+  },
+  {
+   "text": "and nothing happens.",
+   "w0": 9,
+   "w1": 11,
+   "start": 3.853,
+   "end": 4.917
+  },
+  {
+   "text": "Your brain is one step",
+   "w0": 12,
+   "w1": 16,
+   "start": 5.417,
+   "end": 6.481
+  },
+  {
+   "text": "ahead of you.",
+   "w0": 17,
+   "w1": 19,
+   "start": 6.481,
+   "end": 7.332
+  },
+  {
+   "text": "Every time you move,",
+   "w0": 20,
+   "w1": 23,
+   "start": 7.832,
+   "end": 8.896
+  },
+  {
+   "text": "it keeps a copy",
+   "w0": 24,
+   "w1": 27,
+   "start": 9.096,
+   "end": 10.16
+  },
+  {
+   "text": "of the command",
+   "w0": 28,
+   "w1": 30,
+   "start": 10.16,
+   "end": 11.011
+  },
+  {
+   "text": "and predicts exactly",
+   "w0": 31,
+   "w1": 33,
+   "start": 11.011,
+   "end": 12.287
+  },
+  {
+   "text": "what you're about to feel.",
+   "w0": 34,
+   "w1": 38,
+   "start": 12.287,
+   "end": 13.564
+  },
+  {
+   "text": "Your cerebellum sends",
+   "w0": 39,
+   "w1": 41,
+   "start": 14.064,
+   "end": 15.34
+  },
+  {
+   "text": "that prediction ahead,",
+   "w0": 42,
+   "w1": 44,
+   "start": 15.34,
+   "end": 16.617
+  },
+  {
+   "text": "and the touch is turned down",
+   "w0": 45,
+   "w1": 50,
+   "start": 16.817,
+   "end": 18.306
+  },
+  {
+   "text": "before it arrives.",
+   "w0": 51,
+   "w1": 53,
+   "start": 18.306,
+   "end": 19.37
+  },
+  {
+   "text": "Scientists in London",
+   "w0": 54,
+   "w1": 56,
+   "start": 19.87,
+   "end": 21.147
+  },
+  {
+   "text": "tested it with robots.",
+   "w0": 57,
+   "w1": 60,
+   "start": 21.147,
+   "end": 22.423
+  },
+  {
+   "text": "When people moved",
+   "w0": 61,
+   "w1": 63,
+   "start": 22.923,
+   "end": 23.987
+  },
+  {
+   "text": "one robot arm",
+   "w0": 64,
+   "w1": 66,
+   "start": 23.987,
+   "end": 24.838
+  },
+  {
+   "text": "and another touched their palm",
+   "w0": 67,
+   "w1": 71,
+   "start": 24.838,
+   "end": 26.54
+  },
+  {
+   "text": "at the same moment,",
+   "w0": 72,
+   "w1": 75,
+   "start": 26.54,
+   "end": 27.604
+  },
+  {
+   "text": "it hardly tickled.",
+   "w0": 76,
+   "w1": 78,
+   "start": 27.804,
+   "end": 28.868
+  },
+  {
+   "text": "Add a delay",
+   "w0": 79,
+   "w1": 81,
+   "start": 29.368,
+   "end": 30.219
+  },
+  {
+   "text": "of a fifth of a second,",
+   "w0": 82,
+   "w1": 87,
+   "start": 30.219,
+   "end": 31.709
+  },
+  {
+   "text": "and the tickle came back.",
+   "w0": 88,
+   "w1": 92,
+   "start": 31.909,
+   "end": 33.185
+  },
+  {
+   "text": "Your brain only lets you",
+   "w0": 93,
+   "w1": 97,
+   "start": 33.685,
+   "end": 34.962
+  },
+  {
+   "text": "feel a tickle",
+   "w0": 98,
+   "w1": 100,
+   "start": 34.962,
+   "end": 35.813
+  },
+  {
+   "text": "when it can't see it coming.",
+   "w0": 101,
+   "w1": 106,
+   "start": 35.813,
+   "end": 37.302
+  },
+  {
+   "text": "Subscribe for more strange facts",
+   "w0": 107,
+   "w1": 111,
+   "start": 37.802,
+   "end": 39.079
+  },
+  {
+   "text": "about your body.",
+   "w0": 112,
+   "w1": 114,
+   "start": 39.079,
+   "end": 40.143
+  }
+ ],
+ "sentences": [
+  {
+   "start": 0.4,
+   "end": 1.889,
+   "text": "Why can't you tickle yourself?"
+  },
+  {
+   "start": 2.389,
+   "end": 4.917,
+   "text": "Same fingers, same spot, and nothing happens."
+  },
+  {
+   "start": 5.417,
+   "end": 7.332,
+   "text": "Your brain is one step ahead of you."
+  },
+  {
+   "start": 7.832,
+   "end": 13.564,
+   "text": "Every time you move, it keeps a copy of the command and predicts exactly what you're about to feel."
+  },
+  {
+   "start": 14.064,
+   "end": 19.37,
+   "text": "Your cerebellum sends that prediction ahead, and the touch is turned down before it arrives."
+  },
+  {
+   "start": 19.87,
+   "end": 22.423,
+   "text": "Scientists in London tested it with robots."
+  },
+  {
+   "start": 22.923,
+   "end": 28.868,
+   "text": "When people moved one robot arm and another touched their palm at the same moment, it hardly tickled."
+  },
+  {
+   "start": 29.368,
+   "end": 33.185,
+   "text": "Add a delay of a fifth of a second, and the tickle came back."
+  },
+  {
+   "start": 33.685,
+   "end": 37.302,
+   "text": "Your brain only lets you feel a tickle when it can't see it coming."
+  },
+  {
+   "start": 37.802,
+   "end": 40.143,
+   "text": "Subscribe for more strange facts about your body."
+  }
+ ],
+ "keys": {
+  "why": 0.4,
+  "tickle0": 1.038,
+  "yourself": 1.464,
+  "fingers": 2.602,
+  "spot": 3.44,
+  "nothing": 4.066,
+  "brain": 5.63,
+  "step": 6.268,
+  "ahead": 6.481,
+  "move": 8.683,
+  "copy": 9.734,
+  "command": 10.585,
+  "predicts": 11.223,
+  "feel": 13.351,
+  "cerebellum": 14.277,
+  "sends": 15.128,
+  "touch": 17.243,
+  "down": 18.094,
+  "arrives": 18.945,
+  "scientists": 19.87,
+  "london": 20.721,
+  "robots": 21.998,
+  "moved": 23.562,
+  "arm": 24.626,
+  "touched": 25.689,
+  "palm": 26.328,
+  "same": 26.966,
+  "hardly": 28.017,
+  "delay": 29.794,
+  "fifth": 30.645,
+  "tickle7": 32.334,
+  "back": 32.972,
+  "only": 34.111,
+  "feel8": 34.962,
+  "see": 36.451,
+  "coming": 36.877,
+  "subscribe": 37.802,
+  "facts": 38.866,
+  "body": 39.717
+ },
+ "keyEnd": {
+  "why": 0.613,
+  "tickle0": 1.464,
+  "yourself": 1.889,
+  "fingers": 3.028,
+  "spot": 3.653,
+  "nothing": 4.491,
+  "brain": 5.843,
+  "step": 6.481,
+  "ahead": 6.906,
+  "move": 8.896,
+  "copy": 10.16,
+  "command": 11.011,
+  "predicts": 11.649,
+  "feel": 13.564,
+  "cerebellum": 15.128,
+  "sends": 15.34,
+  "touch": 17.455,
+  "down": 18.306,
+  "arrives": 19.37,
+  "scientists": 20.509,
+  "london": 21.147,
+  "robots": 22.423,
+  "moved": 23.987,
+  "arm": 24.838,
+  "touched": 26.115,
+  "palm": 26.54,
+  "same": 27.179,
+  "hardly": 28.443,
+  "delay": 30.219,
+  "fifth": 30.857,
+  "tickle7": 32.76,
+  "back": 33.185,
+  "only": 34.536,
+  "feel8": 35.174,
+  "see": 36.664,
+  "coming": 37.302,
+  "subscribe": 38.228,
+  "facts": 39.079,
+  "body": 40.143
+ }
+}

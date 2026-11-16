@@ -1,0 +1,302 @@
+{
+ "short": "tickle",
+ "title": "Why can't you tickle yourself?",
+ "limit": 45,
+ "spoken": {},
+ "chunks": [
+  "Why can't you tickle yourself?",
+  "Same fingers, same spot,",
+  "and nothing happens.",
+  "Your brain is one step",
+  "ahead of you.",
+  "Every time you move,",
+  "it keeps a copy",
+  "of the command",
+  "and predicts exactly",
+  "what you're about to feel.",
+  "Your cerebellum sends",
+  "that prediction ahead,",
+  "and the touch is turned down",
+  "before it arrives.",
+  "Scientists in London",
+  "tested it with robots.",
+  "When people moved",
+  "one robot arm",
+  "and another touched their palm",
+  "at the same moment,",
+  "it hardly tickled.",
+  "Add a delay",
+  "of a fifth of a second,",
+  "and the tickle came back.",
+  "Your brain only lets you",
+  "feel a tickle",
+  "when it can't see it coming.",
+  "Subscribe for more strange facts",
+  "about your body."
+ ],
+ "syllables": {
+  "can't": 1,
+  "you're": 1,
+  "cerebellum": 4,
+  "every": 2,
+  "exactly": 3,
+  "prediction": 3,
+  "scientists": 3,
+  "another": 3,
+  "tickled": 2,
+  "tickle": 2,
+  "subscribe": 2,
+  "robots": 2,
+  "robot": 2,
+  "arrives": 2,
+  "london": 2,
+  "fingers": 2,
+  "happens": 2,
+  "predicts": 2,
+  "command": 2,
+  "people": 2,
+  "hardly": 2,
+  "delay": 2,
+  "second": 2,
+  "coming": 2,
+  "body": 2,
+  "strange": 1,
+  "moment": 2
+ },
+ "keys": {
+  "why": [
+   0,
+   "why"
+  ],
+  "tickle0": [
+   0,
+   "tickle"
+  ],
+  "yourself": [
+   0,
+   "yourself"
+  ],
+  "fingers": [
+   1,
+   "fingers"
+  ],
+  "spot": [
+   1,
+   "spot"
+  ],
+  "nothing": [
+   1,
+   "nothing"
+  ],
+  "brain": [
+   2,
+   "brain"
+  ],
+  "step": [
+   2,
+   "step"
+  ],
+  "ahead": [
+   2,
+   "ahead"
+  ],
+  "move": [
+   3,
+   "move"
+  ],
+  "copy": [
+   3,
+   "copy"
+  ],
+  "command": [
+   3,
+   "command"
+  ],
+  "predicts": [
+   3,
+   "predicts"
+  ],
+  "feel": [
+   3,
+   "feel"
+  ],
+  "cerebellum": [
+   4,
+   "cerebellum"
+  ],
+  "sends": [
+   4,
+   "sends"
+  ],
+  "touch": [
+   4,
+   "touch"
+  ],
+  "down": [
+   4,
+   "down"
+  ],
+  "arrives": [
+   4,
+   "arrives"
+  ],
+  "scientists": [
+   5,
+   "scientists"
+  ],
+  "london": [
+   5,
+   "london"
+  ],
+  "robots": [
+   5,
+   "robots"
+  ],
+  "moved": [
+   6,
+   "moved"
+  ],
+  "arm": [
+   6,
+   "arm"
+  ],
+  "touched": [
+   6,
+   "touched"
+  ],
+  "palm": [
+   6,
+   "palm"
+  ],
+  "same": [
+   6,
+   "same"
+  ],
+  "hardly": [
+   6,
+   "hardly"
+  ],
+  "delay": [
+   7,
+   "delay"
+  ],
+  "fifth": [
+   7,
+   "fifth"
+  ],
+  "tickle7": [
+   7,
+   "tickle"
+  ],
+  "back": [
+   7,
+   "back"
+  ],
+  "only": [
+   8,
+   "only"
+  ],
+  "feel8": [
+   8,
+   "feel"
+  ],
+  "see": [
+   8,
+   "see"
+  ],
+  "coming": [
+   8,
+   "coming"
+  ],
+  "subscribe": [
+   9,
+   "subscribe"
+  ],
+  "facts": [
+   9,
+   "facts"
+  ],
+  "body": [
+   9,
+   "body"
+  ]
+ },
+ "beats": {
+  "why": "frame 0 (flash-forward): Nia sneaks up behind the sofa and tickles Blob with her fingers; Blob doubled over laughing, face red; camera pulls back to show the room",
+  "yourself": "flash rewind: Blob alone on the sofa tickling his own ribs, face completely flat",
+  "fingers": "insert on his wiggling fingers at his ribs",
+  "spot": "he switches hands and tickles harder, bouncing on the cushion",
+  "nothing": "slam zoom to his bored face; colour drains (grey); a single blink",
+  "brain": "fly-through into his head: deep blue space, a big 3D brain pops in and glows",
+  "ahead": "two pulses race along a nerve cable; the yellow one hops a step ahead of the red one",
+  "move": "tiny Blob beside the brain raises his arm; an orange pulse leaves the brain down the cable",
+  "copy": "the pulse splits in two; the copy curls back into the brain",
+  "predicts": "a glass bubble with a glowing 3D feather forms above the cerebellum (the prediction)",
+  "cerebellum": "push-in to the cerebellum at the back of the brain; it pulses yellow",
+  "sends": "the bubble shoots ahead down the cable toward the hand",
+  "down": "a spiky red touch ball comes up the cable, hits the bubble and shrinks to a small grey pebble",
+  "arrives": "the grey pebble reaches the brain; the brain stays dim, tiny Blob shrugs",
+  "scientists": "smear cut to a London lab at dusk (rain on the window, a clock tower outside); Dr Ray, the scientist, waves Blob in",
+  "robots": "two white robot arms power up, their lights turn on",
+  "moved": "Blob pushes the handle of robot arm one with his left hand",
+  "touched": "robot arm two strokes his open right palm with a foam tip",
+  "same": "both arms move in perfect sync; their lights blink together",
+  "hardly": "close-up: Blob's face flat; a 3D tickle gauge on the desk barely lifts",
+  "delay": "Dr Ray turns a big dial on the control box",
+  "fifth": "BigNumber card '1/5 second' pops up; the second arm lags behind the first",
+  "back": "punch-in: Blob bursts out laughing, face red, the gauge needle slams to the top",
+  "only": "the 'why' split stage: left half Blob tickles himself, brain icon dim, calm face",
+  "feel8": "camera whips to the right half: Nia surprises Blob, he laughs, face red",
+  "coming": "back in the living room at golden hour: Nia sneaks in behind the sofa and pounces; the hook frame returns",
+  "subscribe": "subscribe button pops over Blob while he laughs; cursor clicks; camera glides back to frame 0"
+ },
+ "cast": {
+  "Blob": "brand character: white round face, black short hair on top, teal shirt #1FA6A0, thin black line limbs, white round hands",
+  "Nia (friend)": "friend template seed 'tickle': bright casual shirt, own hair and one accessory - fixed after the contact sheet",
+  "Dr Ray (scientist)": "scientist template seed 'tickle': white lab coat, glasses, coloured shirt - fixed after the contact sheet"
+ },
+ "shots": [
+  {
+   "from": "start",
+   "to": "yourself",
+   "size": "medium wide",
+   "camera": "slow pull back from a two-shot",
+   "look": "FLAT 2D cel characters (solid white round faces turning red when laughing, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D living room: Blob (teal shirt, black hair) on a big mustard-yellow sofa with round cushions, Nia behind the sofa tickling him; peach plaster walls, a tall window with a pale blue afternoon sky, wooden floorboards, a navy round rug, a floor lamp, a green potted plant; warm sun from the upper left through the window casting soft long shadows"
+  },
+  {
+   "from": "yourself",
+   "to": "brain",
+   "size": "medium / insert / close-up",
+   "camera": "cut to medium, high-angle insert on the hands, slam zoom to the face",
+   "look": "same living room written out: mustard sofa, peach walls, navy rug, wooden floor, warm sun from the upper left; Blob alone on the sofa tickling his own ribs with a flat face; colour drains to grey on 'nothing'"
+  },
+  {
+   "from": "brain",
+   "to": "scientists",
+   "size": "cutaway wides and inserts",
+   "camera": "fly-through into the head, slow orbit around the brain, push-in to the cerebellum, track along the nerve cable",
+   "look": "a deep navy space with tiny glowing specks; a big glossy pink 3D brain made of rounded lobes, the cerebellum a smaller ribbed darker-pink lobe at the back-bottom; a thick translucent cable leads from the brain to a big flat-white cartoon hand; glowing emissive pulses (orange command, yellow prediction bubble with a gold feather inside, spiky red touch ball); a small flat Blob (teal shirt) stands on a floating disc beside the brain; cool rim light from the upper right"
+  },
+  {
+   "from": "scientists",
+   "to": "only",
+   "size": "wide / medium / close-up / insert",
+   "camera": "establishing track, push-ins, a punch-in on 'back'",
+   "look": "a cosy London research lab at dusk: dark teal-grey panelled walls, a rain-streaked window with a 3D clock tower silhouette and orange street lights, a white desk with two white robot arms with orange joints and small blue lights, a grey control box with a big red dial, a tickle gauge with a needle; Dr Ray (lab coat, glasses) and Blob (teal shirt) seated; cool overhead lamp light from above plus a warm desk lamp from the right"
+  },
+  {
+   "from": "only",
+   "to": "coming",
+   "size": "wide split stage",
+   "camera": "whip from the left half to the right half on 'feel'",
+   "look": "a split stage: one long platform divided by a white wall; left half a grey-blue copy of the living room corner (Blob alone, calm), right half the warm peach living room corner (Nia tickling Blob, red laughing face); the same mustard sofa on both sides, sun from the upper left"
+  },
+  {
+   "from": "coming",
+   "to": "end",
+   "size": "medium wide",
+   "camera": "push-in on the pounce, then glide back to the frame-0 camera",
+   "look": "the living room at golden hour: mustard sofa, peach walls glowing orange, long warm shadows from the window on the left; Nia sneaks in behind the sofa and tickles Blob, who doubles over laughing with a red face; subscribe button above"
+  }
+ ]
+}
