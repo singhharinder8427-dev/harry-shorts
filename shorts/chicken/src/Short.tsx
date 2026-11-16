@@ -385,8 +385,8 @@ const Laying: React.FC<{t: number}> = ({t}) => {
 // ---------------------------------------------------------------- shots 21-22: the yard fills up - he can't keep up
 const FLOCK: V3[] = Array.from({length: 32}, (_, i) => [PLOT.blob - 2.2 + rnd(i * 3 + 1) * 4.4, 0, -0.9 + rnd(i * 5 + 2) * 2.8]);
 const flockN = (t: number) => t < K.fills ? 4 : t < K.fills + 0.35 ? 8 : t < K.fills + 0.7 ? 16 : 32;
-const Flock: React.FC<{t: number; n: number; t0?: number; skipNear?: V3}> = ({t, n, t0 = -1, skipNear}) => <>{FLOCK.slice(0, n).map((p, i) => {
-  if (skipNear && Math.hypot(p[0] - skipNear[0], p[2] - skipNear[2]) < 0.45) return null;
+const Flock: React.FC<{t: number; n: number; t0?: number; skipNear?: V3; front?: number}> = ({t, n, t0 = -1, skipNear, front = 0}) => <>{FLOCK.slice(0, n).map((p, i) => {
+  if (skipNear && (Math.hypot(p[0] - skipNear[0], p[2] - skipNear[2]) < 0.45 || (front > 0 && Math.abs(p[0] - skipNear[0]) < 0.6 && p[2] - skipNear[2] > -1.6 && p[2] - skipNear[2] < front))) return null;
   const born = i < 4 ? -1 : i < 8 ? K.fills : i < 16 ? K.fills + 0.35 : K.fills + 0.7;
   const s = t0 >= 0 && born > 0 ? pop(t, born, 0.3) : 1; if (s <= 0) return null;
   return <Cel key={i} at={p} h={0.46 * s} unitsTall={200}><Bird kind="hen" body={i % 3 === 1 ? '#B8682F' : i % 5 === 2 ? '#2B2B30' : undefined} wing={i % 5 === 2 ? '#46464E' : undefined} dir={rnd(i) > 0.5 ? 1 : -1} peck={Math.max(0, Math.sin(t * 4 + i * 1.3))} step={0} /></Cel>; })}</>;
@@ -396,7 +396,7 @@ const Fills: React.FC<{t: number}> = ({t}) => {
   const cam = cam3At(t, KEYS);
   return (<ShotBlur t={t} cam={KEYS}><World cam={cam} light={{...DAY, focus: [PLOT.blob, 0, 0], span: 7}} sky={SKY.day} scene={<Village t={t} s={{...GONE_STATE, coop: pop(t, K.fills + 0.1, 0.45)}} />}>
     <Cel at={[PLOT.blob - 0.1, 0, 1.2]}><Blob {...act(t, [[0, 'stand'], [K.fills + 0.3, 'handsOnHead']], [[0, 'happy'], [K.fills + 0.3, 'shocked']])} /></Cel>
-    <Flock t={t} n={flockN(t)} t0={C.fills} skipNear={[PLOT.blob - 0.1, 0, 1.2]} />
+    <Flock t={t} n={flockN(t)} t0={C.fills} skipNear={[PLOT.blob - 0.1, 0, 1.2]} front={2.5} />
   </World></ShotBlur>);
 };
 const EGGS_GROUND: V3[] = Array.from({length: 14}, (_, i) => [PLOT.blob - 2 + rnd(i * 7 + 3) * 4, 0.065, -0.6 + rnd(i * 11 + 4) * 2.2]);
@@ -440,8 +440,8 @@ const Pays: React.FC<{t: number}> = ({t}) => {
 // ---------------------------------------------------------------- shot 26: poor, comfortable, rich (track across the plots)
 const NED_POOR: V3 = [PLOT.ned - 0.2, 0, 0.7], SARA_OK: V3 = [PLOT.sara - 0.55, 0, 0.7], BLOB_RICH: V3 = [PLOT.blob - 0.1, 0, 1.1];
 const Split: React.FC<{t: number}> = ({t}) => {
-  const KEYS: Cam3Key[] = [[C.poor, {pos: [PLOT.ned + 0.1, 1.35, 6.0], look: [PLOT.ned + 0.05, 0.85, 0.3], fov: 34}], [K.comfortable - 0.32, {pos: [PLOT.ned + 0.1, 1.35, 5.7], look: [PLOT.ned + 0.05, 0.85, 0.3], fov: 34}],
-    [K.comfortable + 0.08, {pos: [PLOT.sara - 0.15, 1.4, 6.2], look: [PLOT.sara - 0.2, 0.9, 0.0], fov: 34}, EASE.whip], [K.rich - 0.32, {pos: [PLOT.sara - 0.15, 1.4, 5.9], look: [PLOT.sara - 0.2, 0.9, 0.0], fov: 34}],
+  const KEYS: Cam3Key[] = [[C.poor, {pos: [PLOT.ned + 0.1, 1.35, 6.0], look: [PLOT.ned + 0.05, 0.85, 0.3], fov: 34}], [K.comfortable - 0.75, {pos: [PLOT.ned + 0.1, 1.35, 5.7], look: [PLOT.ned + 0.05, 0.85, 0.3], fov: 34}],
+    [K.comfortable + 0.25, {pos: [PLOT.sara - 0.15, 1.4, 6.2], look: [PLOT.sara - 0.2, 0.9, 0.0], fov: 34}], [K.rich - 0.32, {pos: [PLOT.sara - 0.15, 1.4, 5.9], look: [PLOT.sara - 0.2, 0.9, 0.0], fov: 34}],
     [K.rich + 0.08, {pos: [PLOT.blob + 0.2, 1.8, 7.4], look: [PLOT.blob + 0.1, 1.0, -0.2], fov: 36}, EASE.whip], [C.end, {pos: [PLOT.blob + 0.2, 1.7, 6.7], look: [PLOT.blob + 0.1, 1.0, -0.2], fov: 36}]];
   const cam = cam3At(t, KEYS);
   return (<ShotBlur t={t} cam={KEYS}><World cam={cam} light={{...DAY, span: 14}} sky={SKY.day} scene={<><Village t={t} s={{...GONE_STATE, coop: 1, coopBig: 1, hut: 1, fire: 0, firePot: false}} />
