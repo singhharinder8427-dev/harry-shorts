@@ -1,604 +1,604 @@
 {
  "short": "rain100",
  "title": "What if it rained for 100 years straight?",
- "duration": 42.02,
- "voiceOffset": 0.0,
- "estimated": true,
+ "duration": 40.43,
+ "voiceOffset": 0.4,
+ "estimated": false,
  "words": [
   {
    "w": "What",
    "start": 0.4,
-   "end": 0.613
+   "end": 0.63
   },
   {
    "w": "if",
-   "start": 0.613,
-   "end": 0.826
+   "start": 0.63,
+   "end": 0.73
   },
   {
    "w": "it",
-   "start": 0.826,
-   "end": 1.038
+   "start": 0.73,
+   "end": 0.84
   },
   {
    "w": "rained",
-   "start": 1.038,
-   "end": 1.464
+   "start": 0.84,
+   "end": 1.34
   },
   {
    "w": "for",
-   "start": 1.464,
-   "end": 1.677
+   "start": 1.34,
+   "end": 1.57
   },
   {
    "w": "a",
-   "start": 1.677,
-   "end": 1.889
+   "start": 1.57,
+   "end": 1.6
   },
   {
    "w": "hundred",
-   "start": 1.889,
-   "end": 2.315
+   "start": 1.6,
+   "end": 2.15
   },
   {
    "w": "years",
-   "start": 2.315,
-   "end": 2.528
+   "start": 2.15,
+   "end": 2.51
   },
   {
    "w": "straight?",
-   "start": 2.528,
-   "end": 2.74
+   "start": 2.51,
+   "end": 3.13
   },
   {
    "w": "The",
-   "start": 3.24,
-   "end": 3.453
+   "start": 3.48,
+   "end": 3.13
   },
   {
    "w": "sky",
-   "start": 3.453,
-   "end": 3.666
+   "start": 3.48,
+   "end": 3.845
   },
   {
    "w": "couldn't",
-   "start": 3.666,
-   "end": 4.091
+   "start": 3.845,
+   "end": 4.135
   },
   {
    "w": "hold",
-   "start": 4.091,
-   "end": 4.304
+   "start": 4.135,
+   "end": 4.57
   },
   {
    "w": "it.",
-   "start": 4.304,
-   "end": 4.517
+   "start": 4.95,
+   "end": 4.57
   },
   {
    "w": "At",
-   "start": 5.017,
-   "end": 5.23
+   "start": 4.95,
+   "end": 4.57
   },
   {
    "w": "any",
-   "start": 5.23,
-   "end": 5.655
+   "start": 4.95,
+   "end": 5.33
   },
   {
    "w": "moment,",
-   "start": 5.655,
-   "end": 6.081
+   "start": 5.33,
+   "end": 5.74
   },
   {
    "w": "the",
-   "start": 6.281,
-   "end": 6.494
+   "start": 5.74,
+   "end": 5.88
   },
   {
    "w": "whole",
-   "start": 6.494,
-   "end": 6.706
+   "start": 5.88,
+   "end": 6.24
   },
   {
    "w": "atmosphere",
-   "start": 6.706,
-   "end": 7.345
+   "start": 6.24,
+   "end": 6.8
   },
   {
    "w": "carries",
-   "start": 7.345,
-   "end": 7.77
+   "start": 6.8,
+   "end": 7.17
   },
   {
    "w": "only",
-   "start": 7.77,
-   "end": 8.196
+   "start": 7.17,
+   "end": 7.48
   },
   {
    "w": "about",
-   "start": 8.196,
-   "end": 8.621
+   "start": 7.48,
+   "end": 7.74
   },
   {
    "w": "one",
-   "start": 8.621,
-   "end": 8.834
+   "start": 7.74,
+   "end": 8.11
   },
   {
    "w": "inch",
-   "start": 8.834,
-   "end": 9.047
+   "start": 8.11,
+   "end": 8.45
   },
   {
    "w": "of",
-   "start": 9.047,
-   "end": 9.26
+   "start": 8.45,
+   "end": 8.57
   },
   {
    "w": "water.",
-   "start": 9.26,
-   "end": 9.685
+   "start": 8.57,
+   "end": 8.94
   },
   {
    "w": "That",
-   "start": 10.185,
-   "end": 10.398
+   "start": 9.33,
+   "end": 8.94
   },
   {
    "w": "water",
-   "start": 10.398,
-   "end": 10.823
+   "start": 9.33,
+   "end": 9.775
   },
   {
    "w": "falls",
-   "start": 10.823,
-   "end": 11.036
+   "start": 9.775,
+   "end": 10.215
   },
   {
    "w": "out",
-   "start": 11.036,
-   "end": 11.249
+   "start": 10.215,
+   "end": 10.455
   },
   {
    "w": "in",
-   "start": 11.249,
-   "end": 11.462
+   "start": 10.455,
+   "end": 10.545
   },
   {
    "w": "about",
-   "start": 11.462,
-   "end": 11.887
+   "start": 10.545,
+   "end": 10.785
   },
   {
    "w": "nine",
-   "start": 11.887,
-   "end": 12.1
+   "start": 10.785,
+   "end": 11.235
   },
   {
    "w": "days.",
-   "start": 12.1,
-   "end": 12.313
+   "start": 11.235,
+   "end": 11.73
   },
   {
    "w": "So",
-   "start": 12.813,
-   "end": 13.026
+   "start": 12.04,
+   "end": 12.245
   },
   {
    "w": "for",
-   "start": 13.026,
-   "end": 13.238
+   "start": 12.245,
+   "end": 12.365
   },
   {
    "w": "the",
-   "start": 13.238,
-   "end": 13.451
+   "start": 12.365,
+   "end": 12.445
   },
   {
    "w": "rain",
-   "start": 13.451,
-   "end": 13.664
+   "start": 12.445,
+   "end": 12.685
   },
   {
    "w": "to",
-   "start": 13.664,
-   "end": 13.877
+   "start": 12.685,
+   "end": 12.765
   },
   {
    "w": "keep",
-   "start": 13.877,
-   "end": 14.089
+   "start": 12.765,
+   "end": 13.015
   },
   {
    "w": "going,",
-   "start": 14.089,
-   "end": 14.302
+   "start": 13.015,
+   "end": 13.5
   },
   {
    "w": "the",
-   "start": 14.502,
-   "end": 14.715
+   "start": 13.66,
+   "end": 13.5
   },
   {
    "w": "oceans",
-   "start": 14.715,
-   "end": 15.14
+   "start": 13.66,
+   "end": 14.245
   },
   {
    "w": "would",
-   "start": 15.14,
-   "end": 15.353
+   "start": 14.245,
+   "end": 14.345
   },
   {
    "w": "have",
-   "start": 15.353,
-   "end": 15.566
+   "start": 14.345,
+   "end": 14.495
   },
   {
    "w": "to",
-   "start": 15.566,
-   "end": 15.779
+   "start": 14.495,
+   "end": 14.595
   },
   {
    "w": "lift",
-   "start": 15.779,
-   "end": 15.991
+   "start": 14.595,
+   "end": 15.005
   },
   {
    "w": "it",
-   "start": 15.991,
-   "end": 16.204
+   "start": 15.005,
+   "end": 15.085
   },
   {
    "w": "back",
-   "start": 16.204,
-   "end": 16.417
+   "start": 15.085,
+   "end": 15.405
   },
   {
    "w": "up,",
-   "start": 16.417,
-   "end": 16.63
+   "start": 15.405,
+   "end": 15.75
   },
   {
    "w": "again",
-   "start": 16.83,
-   "end": 17.255
+   "start": 15.9,
+   "end": 16.425
   },
   {
    "w": "and",
-   "start": 17.255,
-   "end": 17.468
+   "start": 16.425,
+   "end": 16.605
   },
   {
    "w": "again.",
-   "start": 17.468,
-   "end": 17.894
+   "start": 16.605,
+   "end": 17.09
   },
   {
    "w": "Earth",
-   "start": 18.394,
-   "end": 18.606
+   "start": 17.49,
+   "end": 17.71
   },
   {
    "w": "already",
-   "start": 18.606,
-   "end": 19.245
+   "start": 17.71,
+   "end": 18.02
   },
   {
    "w": "does",
-   "start": 19.245,
-   "end": 19.457
+   "start": 18.02,
+   "end": 18.37
   },
   {
    "w": "that",
-   "start": 19.457,
-   "end": 19.67
+   "start": 18.37,
+   "end": 18.56
   },
   {
    "w": "about",
-   "start": 19.67,
-   "end": 20.096
+   "start": 18.56,
+   "end": 18.76
   },
   {
    "w": "forty",
-   "start": 20.096,
-   "end": 20.521
+   "start": 18.76,
+   "end": 19.15
   },
   {
    "w": "times",
-   "start": 20.521,
-   "end": 20.947
+   "start": 19.15,
+   "end": 19.5
   },
   {
    "w": "a",
-   "start": 20.947,
-   "end": 21.16
+   "start": 19.5,
+   "end": 19.55
   },
   {
    "w": "year,",
-   "start": 21.16,
-   "end": 21.372
+   "start": 19.55,
+   "end": 19.93
   },
   {
    "w": "which",
-   "start": 21.572,
-   "end": 21.785
+   "start": 20.08,
+   "end": 19.93
   },
   {
    "w": "gives",
-   "start": 21.785,
-   "end": 22.211
+   "start": 20.08,
+   "end": 20.42
   },
   {
    "w": "roughly",
-   "start": 22.211,
-   "end": 22.636
+   "start": 20.42,
+   "end": 20.81
   },
   {
    "w": "three",
-   "start": 22.636,
-   "end": 22.849
+   "start": 20.81,
+   "end": 21.14
   },
   {
    "w": "and",
-   "start": 22.849,
-   "end": 23.062
+   "start": 21.14,
+   "end": 21.23
   },
   {
    "w": "a",
-   "start": 23.062,
-   "end": 23.274
+   "start": 21.23,
+   "end": 21.26
   },
   {
    "w": "half",
-   "start": 23.274,
-   "end": 23.487
+   "start": 21.26,
+   "end": 21.56
   },
   {
    "w": "feet",
-   "start": 23.487,
-   "end": 23.7
+   "start": 21.56,
+   "end": 21.86
   },
   {
    "w": "of",
-   "start": 23.7,
-   "end": 23.913
+   "start": 21.86,
+   "end": 21.98
   },
   {
    "w": "rain.",
-   "start": 23.913,
-   "end": 24.126
+   "start": 21.98,
+   "end": 22.37
   },
   {
    "w": "Do",
-   "start": 24.626,
-   "end": 24.838
+   "start": 24.22,
+   "end": 24.34
   },
   {
    "w": "it",
-   "start": 24.838,
-   "end": 25.051
+   "start": 24.34,
+   "end": 24.45
   },
   {
    "w": "for",
-   "start": 25.051,
-   "end": 25.264
+   "start": 24.45,
+   "end": 24.77
   },
   {
    "w": "a",
-   "start": 25.264,
-   "end": 25.477
+   "start": 24.77,
+   "end": 24.8
   },
   {
    "w": "century,",
-   "start": 25.477,
-   "end": 26.115
+   "start": 24.8,
+   "end": 25.24
   },
   {
    "w": "and",
-   "start": 26.315,
-   "end": 26.528
+   "start": 25.24,
+   "end": 25.41
   },
   {
    "w": "the",
-   "start": 26.528,
-   "end": 26.74
+   "start": 25.41,
+   "end": 25.54
   },
   {
    "w": "same",
-   "start": 26.74,
-   "end": 26.953
+   "start": 25.54,
+   "end": 25.63
   },
   {
    "w": "water",
-   "start": 26.953,
-   "end": 27.379
+   "start": 25.63,
+   "end": 25.82
   },
   {
    "w": "falls",
-   "start": 27.379,
-   "end": 27.591
+   "start": 25.82,
+   "end": 26.35
   },
   {
    "w": "about",
-   "start": 27.591,
-   "end": 28.017
+   "start": 26.35,
+   "end": 26.52
   },
   {
    "w": "four",
-   "start": 28.017,
-   "end": 28.23
+   "start": 26.52,
+   "end": 26.62
   },
   {
    "w": "thousand",
-   "start": 28.23,
-   "end": 28.655
+   "start": 26.62,
+   "end": 26.77
   },
   {
    "w": "times.",
-   "start": 28.655,
-   "end": 29.081
+   "start": 26.77,
+   "end": 27.02
   },
   {
    "w": "That's",
-   "start": 29.581,
-   "end": 29.794
+   "start": 27.33,
+   "end": 27.485
   },
   {
    "w": "around",
-   "start": 29.794,
-   "end": 30.219
+   "start": 27.485,
+   "end": 27.745
   },
   {
    "w": "three",
-   "start": 30.219,
-   "end": 30.432
+   "start": 27.745,
+   "end": 28.095
   },
   {
    "w": "hundred",
-   "start": 30.432,
-   "end": 30.857
+   "start": 28.095,
+   "end": 28.385
   },
   {
    "w": "and",
-   "start": 30.857,
-   "end": 31.07
+   "start": 28.385,
+   "end": 28.475
   },
   {
    "w": "forty",
-   "start": 31.07,
-   "end": 31.496
+   "start": 28.475,
+   "end": 28.885
   },
   {
    "w": "feet",
-   "start": 31.496,
-   "end": 31.709
+   "start": 28.885,
+   "end": 29.195
   },
   {
    "w": "deep,",
-   "start": 31.709,
-   "end": 31.921
+   "start": 29.195,
+   "end": 29.745
   },
   {
    "w": "if",
-   "start": 32.121,
-   "end": 32.334
+   "start": 29.795,
+   "end": 29.945
   },
   {
    "w": "nothing",
-   "start": 32.334,
-   "end": 32.76
+   "start": 29.945,
+   "end": 30.325
   },
   {
    "w": "drained",
-   "start": 32.76,
-   "end": 32.972
+   "start": 30.325,
+   "end": 30.585
   },
   {
    "w": "away.",
-   "start": 32.972,
-   "end": 33.398
+   "start": 30.585,
+   "end": 31.025
   },
   {
    "w": "Rain",
-   "start": 33.898,
-   "end": 34.111
+   "start": 33.47,
+   "end": 33.58
   },
   {
    "w": "isn't",
-   "start": 34.111,
-   "end": 34.536
+   "start": 33.58,
+   "end": 33.71
   },
   {
    "w": "a",
-   "start": 34.536,
-   "end": 34.749
+   "start": 33.71,
+   "end": 33.83
   },
   {
    "w": "supply.",
-   "start": 34.749,
-   "end": 35.174
+   "start": 33.83,
+   "end": 34.04
   },
   {
    "w": "It's",
-   "start": 35.674,
-   "end": 35.887
+   "start": 34.33,
+   "end": 34.725
   },
   {
    "w": "a",
-   "start": 35.887,
-   "end": 36.1
+   "start": 34.725,
+   "end": 34.905
   },
   {
    "w": "loop,",
-   "start": 36.1,
-   "end": 36.313
+   "start": 34.905,
+   "end": 35.115
   },
   {
    "w": "and",
-   "start": 36.513,
-   "end": 36.726
+   "start": 35.115,
+   "end": 35.215
   },
   {
    "w": "the",
-   "start": 36.726,
-   "end": 36.938
+   "start": 35.215,
+   "end": 35.275
   },
   {
    "w": "Sun",
-   "start": 36.938,
-   "end": 37.151
+   "start": 35.275,
+   "end": 35.5
   },
   {
    "w": "runs",
-   "start": 37.151,
-   "end": 37.364
+   "start": 35.98,
+   "end": 35.5
   },
   {
    "w": "it.",
-   "start": 37.364,
-   "end": 37.577
+   "start": 35.98,
+   "end": 35.5
   },
   {
    "w": "Subscribe",
-   "start": 38.077,
-   "end": 38.502
+   "start": 35.98,
+   "end": 36.61
   },
   {
    "w": "so",
-   "start": 38.502,
-   "end": 38.715
+   "start": 36.7,
+   "end": 36.82
   },
   {
    "w": "you",
-   "start": 38.715,
-   "end": 38.928
+   "start": 36.82,
+   "end": 36.97
   },
   {
    "w": "never",
-   "start": 38.928,
-   "end": 39.353
+   "start": 36.97,
+   "end": 37.3
   },
   {
    "w": "miss",
-   "start": 39.353,
-   "end": 39.566
+   "start": 37.3,
+   "end": 37.62
   },
   {
    "w": "the",
-   "start": 39.566,
-   "end": 39.779
+   "start": 37.62,
+   "end": 37.72
   },
   {
    "w": "next",
-   "start": 39.779,
-   "end": 39.991
+   "start": 37.72,
+   "end": 38.17
   },
   {
    "w": "what-if.",
-   "start": 39.991,
-   "end": 40.417
+   "start": 38.17,
+   "end": 38.83
   }
  ],
  "chunks": [
@@ -607,290 +607,290 @@
    "w0": 0,
    "w1": 3,
    "start": 0.4,
-   "end": 1.464
+   "end": 1.3399999999999999
   },
   {
    "text": "for a hundred years straight?",
    "w0": 4,
    "w1": 8,
-   "start": 1.464,
-   "end": 2.74
+   "start": 1.3399999999999999,
+   "end": 3.13
   },
   {
    "text": "The sky couldn't hold it.",
    "w0": 9,
    "w1": 13,
-   "start": 3.24,
-   "end": 4.517
+   "start": 3.48,
+   "end": 4.57
   },
   {
    "text": "At any moment,",
    "w0": 14,
    "w1": 16,
-   "start": 5.017,
-   "end": 6.081
+   "start": 4.95,
+   "end": 5.74
   },
   {
    "text": "the whole atmosphere carries",
    "w0": 17,
    "w1": 20,
-   "start": 6.281,
-   "end": 7.77
+   "start": 5.74,
+   "end": 7.17
   },
   {
    "text": "only about one inch of water.",
    "w0": 21,
    "w1": 26,
-   "start": 7.77,
-   "end": 9.685
+   "start": 7.17,
+   "end": 8.94
   },
   {
    "text": "That water falls out",
    "w0": 27,
    "w1": 30,
-   "start": 10.185,
-   "end": 11.249
+   "start": 9.33,
+   "end": 10.455
   },
   {
    "text": "in about nine days.",
    "w0": 31,
    "w1": 34,
-   "start": 11.249,
-   "end": 12.313
+   "start": 10.455,
+   "end": 11.73
   },
   {
    "text": "So for the rain to keep going,",
    "w0": 35,
    "w1": 41,
-   "start": 12.813,
-   "end": 14.302
+   "start": 12.040000000000001,
+   "end": 13.5
   },
   {
    "text": "the oceans would have to",
    "w0": 42,
    "w1": 46,
-   "start": 14.502,
-   "end": 15.779
+   "start": 13.66,
+   "end": 14.595
   },
   {
    "text": "lift it back up,",
    "w0": 47,
    "w1": 50,
-   "start": 15.779,
-   "end": 16.63
+   "start": 14.595,
+   "end": 15.75
   },
   {
    "text": "again and again.",
    "w0": 51,
    "w1": 53,
-   "start": 16.83,
-   "end": 17.894
+   "start": 15.9,
+   "end": 17.09
   },
   {
    "text": "Earth already does that",
    "w0": 54,
    "w1": 57,
-   "start": 18.394,
-   "end": 19.67
+   "start": 17.49,
+   "end": 18.56
   },
   {
    "text": "about forty times a year,",
    "w0": 58,
    "w1": 62,
-   "start": 19.67,
-   "end": 21.372
+   "start": 18.56,
+   "end": 19.93
   },
   {
    "text": "which gives roughly",
    "w0": 63,
    "w1": 65,
-   "start": 21.572,
-   "end": 22.636
+   "start": 20.08,
+   "end": 20.81
   },
   {
    "text": "three and a half feet of rain.",
    "w0": 66,
    "w1": 72,
-   "start": 22.636,
-   "end": 24.126
+   "start": 20.81,
+   "end": 22.369999999999997
   },
   {
    "text": "Do it for a century,",
    "w0": 73,
    "w1": 77,
-   "start": 24.626,
-   "end": 26.115
+   "start": 24.22,
+   "end": 25.24
   },
   {
    "text": "and the same water falls",
    "w0": 78,
    "w1": 82,
-   "start": 26.315,
-   "end": 27.591
+   "start": 25.24,
+   "end": 26.349999999999998
   },
   {
    "text": "about four thousand times.",
    "w0": 83,
    "w1": 86,
-   "start": 27.591,
-   "end": 29.081
+   "start": 26.349999999999998,
+   "end": 27.02
   },
   {
    "text": "That's around",
    "w0": 87,
    "w1": 88,
-   "start": 29.581,
-   "end": 30.219
+   "start": 27.33,
+   "end": 27.744999999999997
   },
   {
    "text": "three hundred and forty feet deep,",
    "w0": 89,
    "w1": 94,
-   "start": 30.219,
-   "end": 31.921
+   "start": 27.744999999999997,
+   "end": 29.744999999999997
   },
   {
    "text": "if nothing drained away.",
    "w0": 95,
    "w1": 98,
-   "start": 32.121,
-   "end": 33.398
+   "start": 29.794999999999998,
+   "end": 31.025
   },
   {
    "text": "Rain isn't a supply.",
    "w0": 99,
    "w1": 102,
-   "start": 33.898,
-   "end": 35.174
+   "start": 33.47,
+   "end": 34.04
   },
   {
    "text": "It's a loop,",
    "w0": 103,
    "w1": 105,
-   "start": 35.674,
-   "end": 36.313
+   "start": 34.33,
+   "end": 35.115
   },
   {
    "text": "and the Sun runs it.",
    "w0": 106,
    "w1": 110,
-   "start": 36.513,
-   "end": 37.577
+   "start": 35.115,
+   "end": 35.5
   },
   {
    "text": "Subscribe so you never miss",
    "w0": 111,
    "w1": 115,
-   "start": 38.077,
-   "end": 39.566
+   "start": 35.98,
+   "end": 37.62
   },
   {
    "text": "the next what-if.",
    "w0": 116,
    "w1": 118,
-   "start": 39.566,
-   "end": 40.417
+   "start": 37.62,
+   "end": 38.83
   }
  ],
  "sentences": [
   {
    "start": 0.4,
-   "end": 2.74,
+   "end": 3.13,
    "text": "What if it rained for a hundred years straight?"
   },
   {
-   "start": 3.24,
-   "end": 4.517,
+   "start": 3.48,
+   "end": 4.57,
    "text": "The sky couldn't hold it."
   },
   {
-   "start": 5.017,
-   "end": 9.685,
+   "start": 4.95,
+   "end": 8.94,
    "text": "At any moment, the whole atmosphere carries only about one inch of water."
   },
   {
-   "start": 10.185,
-   "end": 12.313,
+   "start": 9.33,
+   "end": 11.73,
    "text": "That water falls out in about nine days."
   },
   {
-   "start": 12.813,
-   "end": 17.894,
+   "start": 12.040000000000001,
+   "end": 17.09,
    "text": "So for the rain to keep going, the oceans would have to lift it back up, again and again."
   },
   {
-   "start": 18.394,
-   "end": 24.126,
+   "start": 17.49,
+   "end": 22.369999999999997,
    "text": "Earth already does that about forty times a year, which gives roughly three and a half feet of rain."
   },
   {
-   "start": 24.626,
-   "end": 29.081,
+   "start": 24.22,
+   "end": 27.02,
    "text": "Do it for a century, and the same water falls about four thousand times."
   },
   {
-   "start": 29.581,
-   "end": 33.398,
+   "start": 27.33,
+   "end": 31.025,
    "text": "That's around three hundred and forty feet deep, if nothing drained away."
   },
   {
-   "start": 33.898,
-   "end": 35.174,
+   "start": 33.47,
+   "end": 34.04,
    "text": "Rain isn't a supply."
   },
   {
-   "start": 35.674,
-   "end": 37.577,
+   "start": 34.33,
+   "end": 35.5,
    "text": "It's a loop, and the Sun runs it."
   },
   {
-   "start": 38.077,
-   "end": 40.417,
+   "start": 35.98,
+   "end": 38.83,
    "text": "Subscribe so you never miss the next what-if."
   }
  ],
  "keys": {
-  "rained": 1.038,
-  "hundred": 1.889,
-  "hold": 4.091,
-  "inch": 8.834,
-  "nine": 11.887,
-  "oceans": 14.715,
-  "lift": 15.779,
-  "again": 16.83,
-  "forty": 20.096,
-  "feet": 23.487,
-  "century": 25.477,
-  "thousand": 28.23,
-  "around": 29.794,
-  "deep": 31.709,
-  "drained": 32.76,
-  "supply": 34.749,
-  "loop": 36.1,
-  "sun": 36.938,
-  "subscribe": 38.077,
-  "whatif": 39.991
+  "rained": 0.84,
+  "hundred": 1.6,
+  "hold": 4.135,
+  "inch": 8.11,
+  "nine": 10.785,
+  "oceans": 13.66,
+  "lift": 14.595,
+  "again": 15.9,
+  "forty": 18.76,
+  "feet": 21.56,
+  "century": 24.8,
+  "thousand": 26.62,
+  "around": 27.485,
+  "deep": 29.195,
+  "drained": 30.325,
+  "supply": 33.83,
+  "loop": 34.905,
+  "sun": 35.275,
+  "subscribe": 35.98,
+  "whatif": 38.17
  },
  "keyEnd": {
-  "rained": 1.464,
-  "hundred": 2.315,
-  "hold": 4.304,
-  "inch": 9.047,
-  "nine": 12.1,
-  "oceans": 15.14,
-  "lift": 15.991,
-  "again": 17.255,
-  "forty": 20.521,
-  "feet": 23.7,
-  "century": 26.115,
-  "thousand": 28.655,
-  "around": 30.219,
-  "deep": 31.921,
-  "drained": 32.972,
-  "supply": 35.174,
-  "loop": 36.313,
-  "sun": 37.151,
-  "subscribe": 38.502,
-  "whatif": 40.417
+  "rained": 1.34,
+  "hundred": 2.15,
+  "hold": 4.57,
+  "inch": 8.45,
+  "nine": 11.235,
+  "oceans": 14.245,
+  "lift": 15.005,
+  "again": 16.425,
+  "forty": 19.15,
+  "feet": 21.86,
+  "century": 25.24,
+  "thousand": 26.77,
+  "around": 27.745,
+  "deep": 29.745,
+  "drained": 30.585,
+  "supply": 34.04,
+  "loop": 35.115,
+  "sun": 35.5,
+  "subscribe": 36.61,
+  "whatif": 38.83
  }
 }

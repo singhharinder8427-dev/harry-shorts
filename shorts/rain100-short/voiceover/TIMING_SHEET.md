@@ -10,7 +10,7 @@ Paste the whole script below into your voice tool as **one** generation (or reco
 What if it rained for a hundred years straight? The sky couldn't hold it. At any moment, the whole atmosphere carries only about one inch of water. That water falls out in about nine days. So for the rain to keep going, the oceans would have to lift it back up, again and again. Earth already does that about forty times a year, which gives roughly three and a half feet of rain. Do it for a century, and the same water falls about four thousand times. That's around three hundred and forty feet deep, if nothing drained away. Rain isn't a supply. It's a loop, and the Sun runs it. Subscribe so you never miss the next what-if.
 ```
 
-- Target length: about **40 s** of speech. The whole Short must stay at or under 45 s.
+- Target length: about **38 s** of speech. The whole Short must stay at or under 45 s.
 - Paste only the script: plain text, no tags, no notes like "speak slowly". A text-to-speech model reads notes out loud.
 - Keep the words exactly as written: the captions and the alignment assume the script is read as written. Numbers: say how the voice read them ("fourteen hundred" vs "one thousand four hundred").
 - The last line is the subscribe line: warm and direct like the rest, not salesy. If a take over-acts, regenerate.
@@ -30,62 +30,62 @@ Trim the silence at the start of each clip; each clip is placed at its mark.
 
 | # | Place at (s) | Frame @60 | Target length (s) | Words | Text |
 |---|---|---|---|---|---|
-| 1 | 0.40 | 24 | 2.34 | 9 | What if it rained for a hundred years straight? |
-| 2 | 3.24 | 194 | 1.28 | 5 | The sky couldn't hold it. |
-| 3 | 5.02 | 301 | 4.67 | 13 | At any moment, the whole atmosphere carries only about one inch of water. |
-| 4 | 10.19 | 611 | 2.13 | 8 | That water falls out in about nine days. |
-| 5 | 12.81 | 769 | 5.08 | 19 | So for the rain to keep going, the oceans would have to lift it back up, again and again. |
-| 6 | 18.39 | 1104 | 5.73 | 19 | Earth already does that about forty times a year, which gives roughly three and a half feet of rain. |
-| 7 | 24.63 | 1478 | 4.45 | 14 | Do it for a century, and the same water falls about four thousand times. |
-| 8 | 29.58 | 1775 | 3.82 | 12 | That's around three hundred and forty feet deep, if nothing drained away. |
-| 9 | 33.90 | 2034 | 1.28 | 4 | Rain isn't a supply. |
-| 10 | 35.67 | 2140 | 1.90 | 8 | It's a loop, and the Sun runs it. |
-| 11 | 38.08 | 2285 | 2.34 | 8 | Subscribe so you never miss the next what-if. |
+| 1 | 0.40 | 24 | 2.73 | 9 | What if it rained for a hundred years straight? |
+| 2 | 3.48 | 209 | 1.09 | 5 | The sky couldn't hold it. |
+| 3 | 4.95 | 297 | 3.99 | 13 | At any moment, the whole atmosphere carries only about one inch of water. |
+| 4 | 9.33 | 560 | 2.40 | 8 | That water falls out in about nine days. |
+| 5 | 12.04 | 722 | 5.05 | 19 | So for the rain to keep going, the oceans would have to lift it back up, again and again. |
+| 6 | 17.49 | 1049 | 4.88 | 19 | Earth already does that about forty times a year, which gives roughly three and a half feet of rain. |
+| 7 | 24.22 | 1453 | 2.80 | 14 | Do it for a century, and the same water falls about four thousand times. |
+| 8 | 27.33 | 1640 | 3.70 | 12 | That's around three hundred and forty feet deep, if nothing drained away. |
+| 9 | 33.47 | 2008 | 0.57 | 4 | Rain isn't a supply. |
+| 10 | 34.33 | 2060 | 1.17 | 8 | It's a loop, and the Sun runs it. |
+| 11 | 35.98 | 2159 | 2.85 | 8 | Subscribe so you never miss the next what-if. |
 
 ## Key words the picture lands on (estimated times)
 
 | Word | Time (s) | What happens |
 |---|---|---|
-| rained | 1.04 | frame 0: Dana in a yellow raincoat on a US small-town main street in steady rain, looking up, the street clock reads 1925-ish calendar flips pile |
-| hold | 4.09 | a toy-sized glass dome of sky: a flat blue silhouette of the atmosphere as a thin glass jar with ONE inch of water |
-| inch | 8.83 | a ruler prop next to a 1-inch water level in a jar labelled by shape only |
-| nine | 11.89 | nine calendar pages / suns flip, jar drains as rain falls |
-| oceans | 14.71 | ocean sun heats sea, vapour balls rise back into the jar |
-| forty | 20.10 | a row of forty jar-refills as a 3D conveyor |
-| feet | 23.49 | a 3.5 ft ruler beside Dana as a year of rain stacks |
-| century | 25.48 | stack of 100 year-blocks rises |
-| deep | 31.71 | water rising up the main street to 340 ft marker (shown as a tall lighthouse/tower for scale) |
-| loop | 36.10 | camera circles a looping water ring: sea -> cloud -> rain -> sea |
-| subscribe | 38.08 | CTA |
+| rained | 0.84 | frame 0: Dana in a yellow raincoat on a US small-town main street in steady rain, looking up, the street clock reads 1925-ish calendar flips pile |
+| hold | 4.13 | a toy-sized glass dome of sky: a flat blue silhouette of the atmosphere as a thin glass jar with ONE inch of water |
+| inch | 8.11 | a ruler prop next to a 1-inch water level in a jar labelled by shape only |
+| nine | 10.79 | nine calendar pages / suns flip, jar drains as rain falls |
+| oceans | 13.66 | ocean sun heats sea, vapour balls rise back into the jar |
+| forty | 18.76 | a row of forty jar-refills as a 3D conveyor |
+| feet | 21.56 | a 3.5 ft ruler beside Dana as a year of rain stacks |
+| century | 24.80 | stack of 100 year-blocks rises |
+| deep | 29.20 | water rising up the main street to 340 ft marker (shown as a tall lighthouse/tower for scale) |
+| loop | 34.91 | camera circles a looping water ring: sea -> cloud -> rain -> sea |
+| subscribe | 35.98 | CTA |
 
 ## Captions (estimated)
 
 | # | From (s) | To (s) | Text |
 |---|---|---|---|
-| 1 | 0.40 | 1.46 | What if it rained |
-| 2 | 1.46 | 2.74 | for a hundred years straight? |
-| 3 | 3.24 | 4.52 | The sky couldn't hold it. |
-| 4 | 5.02 | 6.08 | At any moment, |
-| 5 | 6.28 | 7.77 | the whole atmosphere carries |
-| 6 | 7.77 | 9.69 | only about one inch of water. |
-| 7 | 10.19 | 11.25 | That water falls out |
-| 8 | 11.25 | 12.31 | in about nine days. |
-| 9 | 12.81 | 14.30 | So for the rain to keep going, |
-| 10 | 14.50 | 15.78 | the oceans would have to |
-| 11 | 15.78 | 16.63 | lift it back up, |
-| 12 | 16.83 | 17.89 | again and again. |
-| 13 | 18.39 | 19.67 | Earth already does that |
-| 14 | 19.67 | 21.37 | about forty times a year, |
-| 15 | 21.57 | 22.64 | which gives roughly |
-| 16 | 22.64 | 24.13 | three and a half feet of rain. |
-| 17 | 24.63 | 26.11 | Do it for a century, |
-| 18 | 26.32 | 27.59 | and the same water falls |
-| 19 | 27.59 | 29.08 | about four thousand times. |
-| 20 | 29.58 | 30.22 | That's around |
-| 21 | 30.22 | 31.92 | three hundred and forty feet deep, |
-| 22 | 32.12 | 33.40 | if nothing drained away. |
-| 23 | 33.90 | 35.17 | Rain isn't a supply. |
-| 24 | 35.67 | 36.31 | It's a loop, |
-| 25 | 36.51 | 37.58 | and the Sun runs it. |
-| 26 | 38.08 | 39.57 | Subscribe so you never miss |
-| 27 | 39.57 | 40.42 | the next what-if. |
+| 1 | 0.40 | 1.34 | What if it rained |
+| 2 | 1.34 | 3.13 | for a hundred years straight? |
+| 3 | 3.48 | 4.57 | The sky couldn't hold it. |
+| 4 | 4.95 | 5.74 | At any moment, |
+| 5 | 5.74 | 7.17 | the whole atmosphere carries |
+| 6 | 7.17 | 8.94 | only about one inch of water. |
+| 7 | 9.33 | 10.46 | That water falls out |
+| 8 | 10.46 | 11.73 | in about nine days. |
+| 9 | 12.04 | 13.50 | So for the rain to keep going, |
+| 10 | 13.66 | 14.60 | the oceans would have to |
+| 11 | 14.60 | 15.75 | lift it back up, |
+| 12 | 15.90 | 17.09 | again and again. |
+| 13 | 17.49 | 18.56 | Earth already does that |
+| 14 | 18.56 | 19.93 | about forty times a year, |
+| 15 | 20.08 | 20.81 | which gives roughly |
+| 16 | 20.81 | 22.37 | three and a half feet of rain. |
+| 17 | 24.22 | 25.24 | Do it for a century, |
+| 18 | 25.24 | 26.35 | and the same water falls |
+| 19 | 26.35 | 27.02 | about four thousand times. |
+| 20 | 27.33 | 27.74 | That's around |
+| 21 | 27.74 | 29.74 | three hundred and forty feet deep, |
+| 22 | 29.79 | 31.02 | if nothing drained away. |
+| 23 | 33.47 | 34.04 | Rain isn't a supply. |
+| 24 | 34.33 | 35.12 | It's a loop, |
+| 25 | 35.12 | 35.50 | and the Sun runs it. |
+| 26 | 35.98 | 37.62 | Subscribe so you never miss |
+| 27 | 37.62 | 38.83 | the next what-if. |

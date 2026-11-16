@@ -2,7 +2,7 @@
  * Places: rainy US main street (wet asphalt, brick shops, diner, mailbox, hydrant), a school science room (jars),
  * a sunny coast pier, a dark space shot. Every cut sits on a caption chunk start; every action on a key word. */
 import React, {useLayoutEffect, useMemo, useRef} from 'react';
-import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import * as THREE from 'three';
 import {Captions, SafeGuides} from './Captions';
 import {Person, Outfit, PersonPose} from './Cast';
@@ -206,7 +206,7 @@ const S11a: React.FC<{t: number}> = ({t}) => {                   // c16: a centu
   const u = t - cs(16), t0 = cs(16) + 0.15;
   const cam = cam3At(u, [[0, {pos: [2.6, 1.4, 9.0], look: [0, 1.7, 0], fov: 38}], [CH[17] - cs(16), {pos: [3.0, 7.5, 13], look: [0, 7.5, 0], fov: 40}]]);
   return (<World cam={cam} light={STREET} sky={STREET_SKY} scene={<><Town t={t} /><FloodSheet lvl={WET} /><group position={[0, 0, -1]}><Tower t={t} t0={t0} /></group></>} front={<FloodFront lvl={WET} />}>
-    {D([-1.0, 0, 2.2], {bounce: breathe(t), view: 'right', handR: [70, -290], handL: [-60, -140], eyes: 'wide', mouth: 'o', browUp: 0.9, faceDy: -8, lookY: -10})}
+    {D([-0.9, 0, -0.1], {bounce: breathe(t), view: 'right', handR: [70, -290], handL: [-60, -140], eyes: 'wide', mouth: 'o', browUp: 0.9, faceDy: -8, lookY: -10})}
   </World>);
 };
 const S11b: React.FC<{t: number}> = ({t}) => {                   // c17-c18: the same water, falling again and again
@@ -253,12 +253,13 @@ const S15: React.FC<{t: number}> = ({t}) => {                    // c25-c26: bac
   </World>);
 };
 
-export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: boolean}> = ({captions = true, guides = false}) => {
+export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: boolean}> = ({voice = false, captions = true, guides = false}) => {
   const frame = useCurrentFrame(); const {fps} = useVideoConfig(); const t = frame / fps;
   return (<AbsoluteFill style={{background: '#000'}}>
     <Cuts t={t} shots={[[0, <S1 t={t} />], [cs(1), <S2 t={t} />], [cs(2), <S3 t={t} />], [cs(3), <S4 t={t} />], [cs(6), <S6 t={t} />], [cs(8), <S7 t={t} />], [cs(11), <S8 t={t} />],
       [cs(12), <S9a t={t} />], [cs(13), <S9b t={t} />], [cs(14), <S10 t={t} />], [cs(16), <S11a t={t} />], [cs(17), <S11b t={t} />], [cs(19), <S12 t={t} />], [cs(22), <S13 t={t} />],
       [cs(23), <S14 t={t} />], [cs(25), <S15 t={t} />]]} />
+    {voice && <><Audio src={staticFile('rain100/vo.wav')} volume={1} /><Audio src={staticFile('rain100/sfx.wav')} volume={0.42} /><Audio src={staticFile('rain100/bed.wav')} volume={0.2} /></>}
     <Cta t={t} tIn={K.subscribe} tClick={K.whatif} tBell={K.whatif + 0.5} tOut={DURATION - 0.75} />
     {captions && <Captions t={t} />}
     {guides && <SafeGuides />}
