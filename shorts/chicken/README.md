@@ -11,7 +11,11 @@ The script is version 3 of five, "story with characters", based on the user's ow
 - Sound: `tools/gen_sfx.py` builds the effects and music bed from the word times.
 - Title, description and tags: `youtube.md`. Thumbnails: `thumbnails/thumb_A/B/C.jpg`. A is recommended.
 
-The video is currently built on **estimated** timing. When the voice take arrives, run:
+**Final:** `out/chicken-2K.mp4` is re-timed to the voice take (54.4 s). It is 1440x2560 at 60 fps with 3,263 frames, the mix is mastered to -14.0 LUFS (true peak -1.5 dBTP), and the music bed leaves no silent gaps.
+It was rendered in three silent chunks (`tools/render_chunk.sh`), because a cloud background job stops after 2 h, then joined, mixed and mastered with `tools/join_chunks.sh`.
+The video has two storytelling passes: v1 had one picture per caption phrase; v2 adds a flash-forward hook, mood colours, the explanation split and the three-way finale.
+
+For a new voice take, run:
 
 ```bash
 tools/retime.sh path/to/take.mp3
