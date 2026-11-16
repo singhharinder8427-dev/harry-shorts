@@ -1,724 +1,724 @@
 {
  "short": "chicken",
  "title": "One chicken explains why the rich get richer",
- "duration": 51.46,
- "voiceOffset": 0.0,
- "estimated": true,
+ "duration": 54.38,
+ "voiceOffset": 0.4,
+ "estimated": false,
  "words": [
   {
    "w": "Blob",
    "start": 0.4,
-   "end": 0.613
+   "end": 0.87
   },
   {
    "w": "and",
-   "start": 0.613,
-   "end": 0.826
+   "start": 0.87,
+   "end": 0.97
   },
   {
    "w": "his",
-   "start": 0.826,
-   "end": 1.038
+   "start": 0.97,
+   "end": 1.12
   },
   {
    "w": "two",
-   "start": 1.038,
-   "end": 1.251
+   "start": 1.12,
+   "end": 1.36
   },
   {
    "w": "neighbours",
-   "start": 1.251,
-   "end": 1.677
+   "start": 1.36,
+   "end": 1.81
   },
   {
    "w": "lose",
-   "start": 1.677,
-   "end": 1.889
+   "start": 1.81,
+   "end": 2.12
   },
   {
    "w": "everything",
-   "start": 1.889,
-   "end": 2.528
+   "start": 2.25,
+   "end": 2.85
   },
   {
    "w": "overnight.",
-   "start": 2.528,
-   "end": 3.166
+   "start": 2.85,
+   "end": 3.5
   },
   {
    "w": "Money,",
-   "start": 3.666,
-   "end": 4.091
+   "start": 3.81,
+   "end": 4.3
   },
   {
    "w": "houses,",
-   "start": 4.291,
-   "end": 4.717
+   "start": 4.44,
+   "end": 5.075
   },
   {
    "w": "fields.",
-   "start": 4.917,
-   "end": 5.13
+   "start": 5.075,
+   "end": 5.67
   },
   {
    "w": "All",
-   "start": 5.63,
-   "end": 5.843
+   "start": 6.03,
+   "end": 6.22
   },
   {
    "w": "gone.",
-   "start": 5.843,
-   "end": 6.055
+   "start": 6.22,
+   "end": 6.62
   },
   {
    "w": "Three",
-   "start": 6.555,
-   "end": 6.768
+   "start": 7.25,
+   "end": 7.515
   },
   {
    "w": "hungry",
-   "start": 6.768,
-   "end": 7.194
+   "start": 7.515,
+   "end": 7.965
   },
   {
    "w": "days",
-   "start": 7.194,
-   "end": 7.406
-  },
-  {
-   "w": "later,",
-   "start": 7.406,
-   "end": 7.832
-  },
-  {
-   "w": "each",
-   "start": 8.032,
+   "start": 7.965,
    "end": 8.245
   },
   {
-   "w": "of",
+   "w": "later,",
    "start": 8.245,
-   "end": 8.457
+   "end": 8.65
+  },
+  {
+   "w": "each",
+   "start": 8.91,
+   "end": 9.105
+  },
+  {
+   "w": "of",
+   "start": 9.105,
+   "end": 9.185
   },
   {
    "w": "them",
-   "start": 8.457,
-   "end": 8.67
+   "start": 9.185,
+   "end": 9.365
   },
   {
    "w": "gets",
-   "start": 8.67,
-   "end": 8.883
+   "start": 9.365,
+   "end": 9.585
   },
   {
    "w": "one",
-   "start": 8.883,
-   "end": 9.096
+   "start": 9.585,
+   "end": 9.985
   },
   {
    "w": "chicken.",
-   "start": 9.096,
-   "end": 9.521
+   "start": 9.985,
+   "end": 10.39
   },
   {
    "w": "The",
-   "start": 10.021,
-   "end": 10.234
+   "start": 10.95,
+   "end": 10.39
   },
   {
    "w": "first",
-   "start": 10.234,
-   "end": 10.447
+   "start": 10.95,
+   "end": 11.29
   },
   {
    "w": "neighbour",
-   "start": 10.447,
-   "end": 10.872
+   "start": 11.29,
+   "end": 11.56
   },
   {
    "w": "cooks",
-   "start": 10.872,
-   "end": 11.085
+   "start": 11.56,
+   "end": 11.87
   },
   {
    "w": "his",
-   "start": 11.085,
-   "end": 11.298
+   "start": 11.87,
+   "end": 12.1
   },
   {
    "w": "right",
-   "start": 11.298,
-   "end": 11.511
+   "start": 12.1,
+   "end": 12.39
   },
   {
    "w": "away.",
-   "start": 11.511,
-   "end": 11.936
+   "start": 12.39,
+   "end": 12.79
   },
   {
    "w": "Best",
-   "start": 12.436,
-   "end": 12.649
+   "start": 13.16,
+   "end": 13.435
   },
   {
    "w": "dinner",
-   "start": 12.649,
-   "end": 13.074
+   "start": 13.435,
+   "end": 13.745
   },
   {
    "w": "in",
-   "start": 13.074,
-   "end": 13.287
+   "start": 13.745,
+   "end": 13.985
   },
   {
    "w": "days.",
-   "start": 13.287,
-   "end": 13.5
+   "start": 13.985,
+   "end": 14.59
   },
   {
    "w": "Also",
-   "start": 14.0,
-   "end": 14.426
+   "start": 15.1,
+   "end": 15.435
   },
   {
    "w": "his",
-   "start": 14.426,
-   "end": 14.638
+   "start": 15.435,
+   "end": 15.565
   },
   {
    "w": "last.",
-   "start": 14.638,
-   "end": 14.851
+   "start": 15.565,
+   "end": 16.1
   },
   {
    "w": "The",
-   "start": 15.351,
-   "end": 15.564
+   "start": 16.71,
+   "end": 16.1
   },
   {
    "w": "second",
-   "start": 15.564,
-   "end": 15.989
+   "start": 16.71,
+   "end": 17.125
   },
   {
    "w": "neighbour",
-   "start": 15.989,
-   "end": 16.415
+   "start": 17.125,
+   "end": 17.425
   },
   {
    "w": "gets",
-   "start": 16.415,
-   "end": 16.628
+   "start": 17.425,
+   "end": 17.665
   },
   {
    "w": "a",
-   "start": 16.628,
-   "end": 16.84
+   "start": 17.665,
+   "end": 17.725
   },
   {
    "w": "hen",
-   "start": 16.84,
-   "end": 17.053
+   "start": 17.725,
+   "end": 18.185
   },
   {
    "w": "and",
-   "start": 17.053,
-   "end": 17.266
+   "start": 18.185,
+   "end": 18.325
   },
   {
    "w": "eats",
-   "start": 17.266,
-   "end": 17.479
+   "start": 18.325,
+   "end": 18.505
   },
   {
    "w": "one",
-   "start": 17.479,
-   "end": 17.691
+   "start": 18.505,
+   "end": 18.845
   },
   {
    "w": "egg",
-   "start": 17.691,
-   "end": 17.904
+   "start": 18.845,
+   "end": 19.125
   },
   {
    "w": "every",
-   "start": 17.904,
-   "end": 18.33
+   "start": 19.125,
+   "end": 19.485
   },
   {
    "w": "morning.",
-   "start": 18.33,
-   "end": 18.755
+   "start": 19.485,
+   "end": 19.91
   },
   {
    "w": "Blob",
-   "start": 19.255,
-   "end": 19.468
+   "start": 20.46,
+   "end": 20.785
   },
   {
    "w": "gets",
-   "start": 19.468,
-   "end": 19.681
+   "start": 20.785,
+   "end": 21.005
   },
   {
    "w": "a",
-   "start": 19.681,
-   "end": 19.894
+   "start": 21.005,
+   "end": 21.035
   },
   {
    "w": "rooster.",
-   "start": 19.894,
-   "end": 20.319
+   "start": 21.035,
+   "end": 21.52
   },
   {
    "w": "No",
-   "start": 20.819,
-   "end": 21.032
+   "start": 21.89,
+   "end": 22.135
   },
   {
    "w": "eggs",
-   "start": 21.032,
-   "end": 21.245
+   "start": 22.135,
+   "end": 22.335
   },
   {
    "w": "at",
-   "start": 21.245,
-   "end": 21.457
+   "start": 22.335,
+   "end": 22.415
   },
   {
    "w": "all.",
-   "start": 21.457,
-   "end": 21.67
+   "start": 22.415,
+   "end": 22.75
   },
   {
    "w": "So",
-   "start": 22.17,
-   "end": 22.383
+   "start": 23.24,
+   "end": 23.495
   },
   {
    "w": "he",
-   "start": 22.383,
-   "end": 22.596
+   "start": 23.495,
+   "end": 23.645
   },
   {
    "w": "knocks",
-   "start": 22.596,
-   "end": 22.809
+   "start": 23.645,
+   "end": 23.985
   },
   {
    "w": "on",
-   "start": 22.809,
-   "end": 23.021
+   "start": 23.985,
+   "end": 24.055
   },
   {
    "w": "her",
-   "start": 23.021,
-   "end": 23.234
+   "start": 24.055,
+   "end": 24.155
   },
   {
    "w": "door",
-   "start": 23.234,
-   "end": 23.447
+   "start": 24.155,
+   "end": 24.445
   },
   {
    "w": "with",
-   "start": 23.447,
-   "end": 23.66
+   "start": 24.445,
+   "end": 24.605
   },
   {
    "w": "a",
-   "start": 23.66,
-   "end": 23.872
+   "start": 24.605,
+   "end": 24.655
   },
   {
    "w": "deal.",
-   "start": 23.872,
-   "end": 24.085
+   "start": 24.655,
+   "end": 25.07
   },
   {
    "w": "Let",
-   "start": 24.585,
-   "end": 24.798
+   "start": 25.51,
+   "end": 25.67
   },
   {
    "w": "my",
-   "start": 24.798,
-   "end": 25.011
+   "start": 25.67,
+   "end": 25.86
   },
   {
    "w": "rooster",
-   "start": 25.011,
-   "end": 25.436
+   "start": 25.86,
+   "end": 26.33
   },
   {
    "w": "meet",
-   "start": 25.436,
-   "end": 25.649
+   "start": 26.33,
+   "end": 26.57
   },
   {
    "w": "your",
-   "start": 25.649,
-   "end": 25.862
+   "start": 26.57,
+   "end": 26.81
   },
   {
    "w": "hen,",
-   "start": 25.862,
-   "end": 26.074
+   "start": 26.81,
+   "end": 27.24
   },
   {
    "w": "and",
-   "start": 26.274,
-   "end": 26.487
+   "start": 27.41,
+   "end": 27.24
   },
   {
    "w": "I'll",
-   "start": 26.487,
-   "end": 26.7
+   "start": 27.41,
+   "end": 27.62
   },
   {
    "w": "share",
-   "start": 26.7,
-   "end": 26.913
+   "start": 27.62,
+   "end": 27.84
   },
   {
    "w": "the",
-   "start": 26.913,
-   "end": 27.126
+   "start": 27.84,
+   "end": 28.03
   },
   {
    "w": "eggs.",
-   "start": 27.126,
-   "end": 27.338
+   "start": 28.03,
+   "end": 28.43
   },
   {
    "w": "She",
-   "start": 27.838,
-   "end": 28.051
+   "start": 28.97,
+   "end": 29.15
   },
   {
    "w": "wanted",
-   "start": 28.051,
-   "end": 28.477
+   "start": 29.15,
+   "end": 29.47
   },
   {
    "w": "eggs.",
-   "start": 28.477,
-   "end": 28.689
+   "start": 29.47,
+   "end": 29.91
   },
   {
    "w": "Blob",
-   "start": 29.189,
-   "end": 29.402
+   "start": 30.21,
+   "end": 30.6
   },
   {
    "w": "wanted",
-   "start": 29.402,
-   "end": 29.828
+   "start": 30.6,
+   "end": 30.91
   },
   {
    "w": "chicks.",
-   "start": 29.828,
-   "end": 30.04
+   "start": 30.91,
+   "end": 31.43
   },
   {
    "w": "Three",
-   "start": 30.54,
-   "end": 30.753
-  },
-  {
-   "w": "weeks",
-   "start": 30.753,
-   "end": 30.966
-  },
-  {
-   "w": "later,",
-   "start": 30.966,
-   "end": 31.391
-  },
-  {
-   "w": "the",
-   "start": 31.591,
-   "end": 31.804
-  },
-  {
-   "w": "first",
-   "start": 31.804,
-   "end": 32.017
-  },
-  {
-   "w": "chicks",
-   "start": 32.017,
+   "start": 32.05,
    "end": 32.23
   },
   {
-   "w": "hatch.",
+   "w": "weeks",
    "start": 32.23,
-   "end": 32.443
+   "end": 32.5
   },
   {
-   "w": "About",
-   "start": 32.943,
-   "end": 33.368
-  },
-  {
-   "w": "five",
-   "start": 33.368,
-   "end": 33.581
-  },
-  {
-   "w": "months",
-   "start": 33.581,
-   "end": 33.794
-  },
-  {
-   "w": "after",
-   "start": 33.794,
-   "end": 34.219
-  },
-  {
-   "w": "that,",
-   "start": 34.219,
-   "end": 34.432
-  },
-  {
-   "w": "they're",
-   "start": 34.632,
-   "end": 34.845
-  },
-  {
-   "w": "laying",
-   "start": 34.845,
-   "end": 35.27
-  },
-  {
-   "w": "eggs",
-   "start": 35.27,
-   "end": 35.483
-  },
-  {
-   "w": "too.",
-   "start": 35.483,
-   "end": 35.696
-  },
-  {
-   "w": "Blob's",
-   "start": 36.196,
-   "end": 36.409
-  },
-  {
-   "w": "yard",
-   "start": 36.409,
-   "end": 36.621
-  },
-  {
-   "w": "fills",
-   "start": 36.621,
-   "end": 36.834
-  },
-  {
-   "w": "up",
-   "start": 36.834,
-   "end": 37.047
-  },
-  {
-   "w": "so",
-   "start": 37.047,
-   "end": 37.26
-  },
-  {
-   "w": "fast",
-   "start": 37.26,
-   "end": 37.472
-  },
-  {
-   "w": "he",
-   "start": 37.472,
-   "end": 37.685
-  },
-  {
-   "w": "can't",
-   "start": 37.685,
-   "end": 37.898
-  },
-  {
-   "w": "keep",
-   "start": 37.898,
-   "end": 38.111
-  },
-  {
-   "w": "up,",
-   "start": 38.111,
-   "end": 38.323
-  },
-  {
-   "w": "so",
-   "start": 38.523,
-   "end": 38.736
-  },
-  {
-   "w": "he",
-   "start": 38.736,
-   "end": 38.949
-  },
-  {
-   "w": "hires",
-   "start": 38.949,
-   "end": 39.374
+   "w": "later,",
+   "start": 32.5,
+   "end": 32.86
   },
   {
    "w": "the",
-   "start": 39.374,
-   "end": 39.587
+   "start": 32.86,
+   "end": 33.03
   },
   {
    "w": "first",
-   "start": 39.587,
-   "end": 39.8
+   "start": 33.03,
+   "end": 33.46
   },
   {
-   "w": "neighbour",
-   "start": 39.8,
-   "end": 40.226
+   "w": "chicks",
+   "start": 33.46,
+   "end": 33.76
   },
   {
-   "w": "and",
-   "start": 40.226,
-   "end": 40.438
+   "w": "hatch.",
+   "start": 33.76,
+   "end": 34.22
   },
   {
-   "w": "pays",
-   "start": 40.438,
-   "end": 40.651
+   "w": "About",
+   "start": 34.57,
+   "end": 34.765
   },
   {
-   "w": "him",
-   "start": 40.651,
-   "end": 40.864
+   "w": "five",
+   "start": 34.765,
+   "end": 35.085
   },
   {
-   "w": "in",
-   "start": 40.864,
-   "end": 41.077
+   "w": "months",
+   "start": 35.085,
+   "end": 35.345
   },
   {
-   "w": "eggs.",
-   "start": 41.077,
-   "end": 41.289
+   "w": "after",
+   "start": 35.345,
+   "end": 35.575
   },
   {
-   "w": "Same",
-   "start": 41.789,
-   "end": 42.002
+   "w": "that,",
+   "start": 35.575,
+   "end": 35.97
   },
   {
-   "w": "start.",
-   "start": 42.002,
-   "end": 42.215
+   "w": "they're",
+   "start": 36.15,
+   "end": 35.97
   },
   {
-   "w": "Same",
-   "start": 42.715,
-   "end": 42.928
+   "w": "laying",
+   "start": 36.15,
+   "end": 36.575
   },
   {
-   "w": "chicken.",
-   "start": 42.928,
-   "end": 43.353
+   "w": "eggs",
+   "start": 36.575,
+   "end": 36.805
   },
   {
-   "w": "Now",
-   "start": 43.853,
-   "end": 44.066
-  },
-  {
-   "w": "one",
-   "start": 44.066,
-   "end": 44.279
-  },
-  {
-   "w": "is",
-   "start": 44.279,
-   "end": 44.491
-  },
-  {
-   "w": "poor,",
-   "start": 44.491,
-   "end": 44.704
-  },
-  {
-   "w": "one",
-   "start": 44.904,
-   "end": 45.117
-  },
-  {
-   "w": "is",
-   "start": 45.117,
-   "end": 45.33
-  },
-  {
-   "w": "comfortable,",
-   "start": 45.33,
-   "end": 46.181
-  },
-  {
-   "w": "and",
-   "start": 46.381,
-   "end": 46.594
-  },
-  {
-   "w": "one",
-   "start": 46.594,
-   "end": 46.806
-  },
-  {
-   "w": "is",
-   "start": 46.806,
-   "end": 47.019
-  },
-  {
-   "w": "rich.",
-   "start": 47.019,
-   "end": 47.232
-  },
-  {
-   "w": "Subscribe",
-   "start": 47.732,
-   "end": 48.157
-  },
-  {
-   "w": "so",
-   "start": 48.157,
-   "end": 48.37
-  },
-  {
-   "w": "you",
-   "start": 48.37,
-   "end": 48.583
-  },
-  {
-   "w": "don't",
-   "start": 48.583,
-   "end": 48.796
-  },
-  {
-   "w": "miss",
-   "start": 48.796,
-   "end": 49.009
+   "w": "too.",
+   "start": 36.805,
+   "end": 37.15
   },
   {
    "w": "Blob's",
-   "start": 49.009,
-   "end": 49.221
+   "start": 37.67,
+   "end": 38.03
+  },
+  {
+   "w": "yard",
+   "start": 38.03,
+   "end": 38.32
+  },
+  {
+   "w": "fills",
+   "start": 38.32,
+   "end": 38.67
+  },
+  {
+   "w": "up",
+   "start": 38.67,
+   "end": 38.79
+  },
+  {
+   "w": "so",
+   "start": 38.79,
+   "end": 39.1
+  },
+  {
+   "w": "fast",
+   "start": 39.1,
+   "end": 39.58
+  },
+  {
+   "w": "he",
+   "start": 39.58,
+   "end": 39.69
+  },
+  {
+   "w": "can't",
+   "start": 39.69,
+   "end": 39.97
+  },
+  {
+   "w": "keep",
+   "start": 39.97,
+   "end": 40.2
+  },
+  {
+   "w": "up,",
+   "start": 40.2,
+   "end": 40.51
+  },
+  {
+   "w": "so",
+   "start": 40.85,
+   "end": 41.1
+  },
+  {
+   "w": "he",
+   "start": 41.1,
+   "end": 41.26
+  },
+  {
+   "w": "hires",
+   "start": 41.26,
+   "end": 41.64
+  },
+  {
+   "w": "the",
+   "start": 41.64,
+   "end": 41.73
+  },
+  {
+   "w": "first",
+   "start": 41.73,
+   "end": 42.07
+  },
+  {
+   "w": "neighbour",
+   "start": 42.07,
+   "end": 42.43
+  },
+  {
+   "w": "and",
+   "start": 42.43,
+   "end": 42.6
+  },
+  {
+   "w": "pays",
+   "start": 42.6,
+   "end": 42.95
+  },
+  {
+   "w": "him",
+   "start": 42.95,
+   "end": 43.1
+  },
+  {
+   "w": "in",
+   "start": 43.1,
+   "end": 43.28
+  },
+  {
+   "w": "eggs.",
+   "start": 43.28,
+   "end": 43.74
+  },
+  {
+   "w": "Same",
+   "start": 44.23,
+   "end": 44.475
+  },
+  {
+   "w": "start.",
+   "start": 44.475,
+   "end": 44.89
+  },
+  {
+   "w": "Same",
+   "start": 45.13,
+   "end": 45.42
+  },
+  {
+   "w": "chicken.",
+   "start": 45.42,
+   "end": 45.8
+  },
+  {
+   "w": "Now",
+   "start": 46.23,
+   "end": 46.515
+  },
+  {
+   "w": "one",
+   "start": 46.515,
+   "end": 46.785
+  },
+  {
+   "w": "is",
+   "start": 46.785,
+   "end": 46.915
+  },
+  {
+   "w": "poor,",
+   "start": 46.915,
+   "end": 47.37
+  },
+  {
+   "w": "one",
+   "start": 47.59,
+   "end": 47.755
+  },
+  {
+   "w": "is",
+   "start": 47.755,
+   "end": 47.875
+  },
+  {
+   "w": "comfortable,",
+   "start": 47.875,
+   "end": 48.48
+  },
+  {
+   "w": "and",
+   "start": 48.72,
+   "end": 48.48
+  },
+  {
+   "w": "one",
+   "start": 48.72,
+   "end": 49.205
+  },
+  {
+   "w": "is",
+   "start": 49.205,
+   "end": 49.415
+  },
+  {
+   "w": "rich.",
+   "start": 49.415,
+   "end": 49.86
+  },
+  {
+   "w": "Subscribe",
+   "start": 50.44,
+   "end": 51.01
+  },
+  {
+   "w": "so",
+   "start": 51.01,
+   "end": 51.13
+  },
+  {
+   "w": "you",
+   "start": 51.13,
+   "end": 51.23
+  },
+  {
+   "w": "don't",
+   "start": 51.23,
+   "end": 51.46
+  },
+  {
+   "w": "miss",
+   "start": 51.46,
+   "end": 51.65
+  },
+  {
+   "w": "Blob's",
+   "start": 51.65,
+   "end": 52.05
   },
   {
    "w": "next",
-   "start": 49.221,
-   "end": 49.434
+   "start": 52.05,
+   "end": 52.35
   },
   {
    "w": "lesson.",
-   "start": 49.434,
-   "end": 49.86
+   "start": 52.35,
+   "end": 52.78
   }
  ],
  "chunks": [
@@ -727,432 +727,432 @@
    "w0": 0,
    "w1": 4,
    "start": 0.4,
-   "end": 1.677
+   "end": 1.81
   },
   {
    "text": "lose everything overnight.",
    "w0": 5,
    "w1": 7,
-   "start": 1.677,
-   "end": 3.166
+   "start": 1.81,
+   "end": 3.5
   },
   {
    "text": "Money, houses, fields.",
    "w0": 8,
    "w1": 10,
-   "start": 3.666,
-   "end": 5.13
+   "start": 3.81,
+   "end": 5.67
   },
   {
    "text": "All gone.",
    "w0": 11,
    "w1": 12,
-   "start": 5.63,
-   "end": 6.055
+   "start": 6.03,
+   "end": 6.62
   },
   {
    "text": "Three hungry days later,",
    "w0": 13,
    "w1": 16,
-   "start": 6.555,
-   "end": 7.832
+   "start": 7.25,
+   "end": 8.65
   },
   {
    "text": "each of them gets one chicken.",
    "w0": 17,
    "w1": 22,
-   "start": 8.032,
-   "end": 9.521
+   "start": 8.91,
+   "end": 10.39
   },
   {
    "text": "The first neighbour cooks his",
    "w0": 23,
    "w1": 27,
-   "start": 10.021,
-   "end": 11.298
+   "start": 10.950000000000001,
+   "end": 12.1
   },
   {
    "text": "right away.",
    "w0": 28,
    "w1": 29,
-   "start": 11.298,
-   "end": 11.936
+   "start": 12.1,
+   "end": 12.790000000000001
   },
   {
    "text": "Best dinner in days.",
    "w0": 30,
    "w1": 33,
-   "start": 12.436,
-   "end": 13.5
+   "start": 13.16,
+   "end": 14.59
   },
   {
    "text": "Also his last.",
    "w0": 34,
    "w1": 36,
-   "start": 14.0,
-   "end": 14.851
+   "start": 15.1,
+   "end": 16.099999999999998
   },
   {
    "text": "The second neighbour gets a hen",
    "w0": 37,
    "w1": 42,
-   "start": 15.351,
-   "end": 17.053
+   "start": 16.709999999999997,
+   "end": 18.185
   },
   {
    "text": "and eats one egg every morning.",
    "w0": 43,
    "w1": 48,
-   "start": 17.053,
-   "end": 18.755
+   "start": 18.185,
+   "end": 19.91
   },
   {
    "text": "Blob gets a rooster.",
    "w0": 49,
    "w1": 52,
-   "start": 19.255,
-   "end": 20.319
+   "start": 20.459999999999997,
+   "end": 21.52
   },
   {
    "text": "No eggs at all.",
    "w0": 53,
    "w1": 56,
-   "start": 20.819,
-   "end": 21.67
+   "start": 21.889999999999997,
+   "end": 22.75
   },
   {
    "text": "So he knocks on her door",
    "w0": 57,
    "w1": 62,
-   "start": 22.17,
-   "end": 23.447
+   "start": 23.24,
+   "end": 24.445
   },
   {
    "text": "with a deal.",
    "w0": 63,
    "w1": 65,
-   "start": 23.447,
-   "end": 24.085
+   "start": 24.445,
+   "end": 25.07
   },
   {
    "text": "Let my rooster meet your hen,",
    "w0": 66,
    "w1": 71,
-   "start": 24.585,
-   "end": 26.074
+   "start": 25.509999999999998,
+   "end": 27.24
   },
   {
    "text": "and I'll share the eggs.",
    "w0": 72,
    "w1": 76,
-   "start": 26.274,
-   "end": 27.338
+   "start": 27.41,
+   "end": 28.43
   },
   {
    "text": "She wanted eggs.",
    "w0": 77,
    "w1": 79,
-   "start": 27.838,
-   "end": 28.689
+   "start": 28.97,
+   "end": 29.91
   },
   {
    "text": "Blob wanted chicks.",
    "w0": 80,
    "w1": 82,
-   "start": 29.189,
-   "end": 30.04
+   "start": 30.209999999999997,
+   "end": 31.43
   },
   {
    "text": "Three weeks later,",
    "w0": 83,
    "w1": 85,
-   "start": 30.54,
-   "end": 31.391
+   "start": 32.05,
+   "end": 32.86
   },
   {
    "text": "the first chicks hatch.",
    "w0": 86,
    "w1": 89,
-   "start": 31.591,
-   "end": 32.443
+   "start": 32.86,
+   "end": 34.22
   },
   {
    "text": "About five months after that,",
    "w0": 90,
    "w1": 94,
-   "start": 32.943,
-   "end": 34.432
+   "start": 34.57,
+   "end": 35.97
   },
   {
    "text": "they're laying eggs too.",
    "w0": 95,
    "w1": 98,
-   "start": 34.632,
-   "end": 35.696
+   "start": 36.15,
+   "end": 37.15
   },
   {
    "text": "Blob's yard fills up so fast",
    "w0": 99,
    "w1": 104,
-   "start": 36.196,
-   "end": 37.472
+   "start": 37.67,
+   "end": 39.58
   },
   {
    "text": "he can't keep up,",
    "w0": 105,
    "w1": 108,
-   "start": 37.472,
-   "end": 38.323
+   "start": 39.58,
+   "end": 40.51
   },
   {
    "text": "so he hires the first neighbour",
    "w0": 109,
    "w1": 114,
-   "start": 38.523,
-   "end": 40.226
+   "start": 40.85,
+   "end": 42.43
   },
   {
    "text": "and pays him in eggs.",
    "w0": 115,
    "w1": 119,
-   "start": 40.226,
-   "end": 41.289
+   "start": 42.43,
+   "end": 43.74
   },
   {
    "text": "Same start.",
    "w0": 120,
    "w1": 121,
-   "start": 41.789,
-   "end": 42.215
+   "start": 44.23,
+   "end": 44.89
   },
   {
    "text": "Same chicken.",
    "w0": 122,
    "w1": 123,
-   "start": 42.715,
-   "end": 43.353
+   "start": 45.129999999999995,
+   "end": 45.8
   },
   {
    "text": "Now one is poor,",
    "w0": 124,
    "w1": 127,
-   "start": 43.853,
-   "end": 44.704
+   "start": 46.23,
+   "end": 47.37
   },
   {
    "text": "one is comfortable,",
    "w0": 128,
    "w1": 130,
-   "start": 44.904,
-   "end": 46.181
+   "start": 47.589999999999996,
+   "end": 48.48
   },
   {
    "text": "and one is rich.",
    "w0": 131,
    "w1": 134,
-   "start": 46.381,
-   "end": 47.232
+   "start": 48.72,
+   "end": 49.86
   },
   {
    "text": "Subscribe so you don't miss",
    "w0": 135,
    "w1": 139,
-   "start": 47.732,
-   "end": 49.009
+   "start": 50.44,
+   "end": 51.65
   },
   {
    "text": "Blob's next lesson.",
    "w0": 140,
    "w1": 142,
-   "start": 49.009,
-   "end": 49.86
+   "start": 51.65,
+   "end": 52.78
   }
  ],
  "sentences": [
   {
    "start": 0.4,
-   "end": 3.166,
+   "end": 3.5,
    "text": "Blob and his two neighbours lose everything overnight."
   },
   {
-   "start": 3.666,
-   "end": 5.13,
+   "start": 3.81,
+   "end": 5.67,
    "text": "Money, houses, fields."
   },
   {
-   "start": 5.63,
-   "end": 6.055,
+   "start": 6.03,
+   "end": 6.62,
    "text": "All gone."
   },
   {
-   "start": 6.555,
-   "end": 9.521,
+   "start": 7.25,
+   "end": 10.39,
    "text": "Three hungry days later, each of them gets one chicken."
   },
   {
-   "start": 10.021,
-   "end": 11.936,
+   "start": 10.950000000000001,
+   "end": 12.790000000000001,
    "text": "The first neighbour cooks his right away."
   },
   {
-   "start": 12.436,
-   "end": 13.5,
+   "start": 13.16,
+   "end": 14.59,
    "text": "Best dinner in days."
   },
   {
-   "start": 14.0,
-   "end": 14.851,
+   "start": 15.1,
+   "end": 16.099999999999998,
    "text": "Also his last."
   },
   {
-   "start": 15.351,
-   "end": 18.755,
+   "start": 16.709999999999997,
+   "end": 19.91,
    "text": "The second neighbour gets a hen and eats one egg every morning."
   },
   {
-   "start": 19.255,
-   "end": 20.319,
+   "start": 20.459999999999997,
+   "end": 21.52,
    "text": "Blob gets a rooster."
   },
   {
-   "start": 20.819,
-   "end": 21.67,
+   "start": 21.889999999999997,
+   "end": 22.75,
    "text": "No eggs at all."
   },
   {
-   "start": 22.17,
-   "end": 24.085,
+   "start": 23.24,
+   "end": 25.07,
    "text": "So he knocks on her door with a deal."
   },
   {
-   "start": 24.585,
-   "end": 27.338,
+   "start": 25.509999999999998,
+   "end": 28.43,
    "text": "Let my rooster meet your hen, and I'll share the eggs."
   },
   {
-   "start": 27.838,
-   "end": 28.689,
+   "start": 28.97,
+   "end": 29.91,
    "text": "She wanted eggs."
   },
   {
-   "start": 29.189,
-   "end": 30.04,
+   "start": 30.209999999999997,
+   "end": 31.43,
    "text": "Blob wanted chicks."
   },
   {
-   "start": 30.54,
-   "end": 32.443,
+   "start": 32.05,
+   "end": 34.22,
    "text": "Three weeks later, the first chicks hatch."
   },
   {
-   "start": 32.943,
-   "end": 35.696,
+   "start": 34.57,
+   "end": 37.15,
    "text": "About five months after that, they're laying eggs too."
   },
   {
-   "start": 36.196,
-   "end": 41.289,
+   "start": 37.67,
+   "end": 43.74,
    "text": "Blob's yard fills up so fast he can't keep up, so he hires the first neighbour and pays him in eggs."
   },
   {
-   "start": 41.789,
-   "end": 42.215,
+   "start": 44.23,
+   "end": 44.89,
    "text": "Same start."
   },
   {
-   "start": 42.715,
-   "end": 43.353,
+   "start": 45.129999999999995,
+   "end": 45.8,
    "text": "Same chicken."
   },
   {
-   "start": 43.853,
-   "end": 47.232,
+   "start": 46.23,
+   "end": 49.86,
    "text": "Now one is poor, one is comfortable, and one is rich."
   },
   {
-   "start": 47.732,
-   "end": 49.86,
+   "start": 50.44,
+   "end": 52.78,
    "text": "Subscribe so you don't miss Blob's next lesson."
   }
  ],
  "keys": {
-  "lose": 1.677,
-  "money": 3.666,
-  "houses": 4.291,
-  "fields": 4.917,
-  "gone": 5.843,
-  "hungry": 6.768,
-  "chicken": 9.096,
-  "first": 10.234,
-  "cooks": 10.872,
-  "best": 12.436,
-  "last": 14.638,
-  "second": 15.564,
-  "hen": 16.84,
-  "egg": 17.691,
-  "rooster": 19.894,
-  "noeggs": 20.819,
-  "knocks": 22.596,
-  "deal": 23.872,
-  "meet": 25.436,
-  "share": 26.7,
-  "wanted": 28.477,
-  "chicks": 29.828,
-  "weeks": 30.753,
-  "hatch": 32.23,
-  "months": 33.581,
-  "laying": 34.845,
-  "fills": 36.621,
-  "keep": 37.898,
-  "hires": 38.949,
-  "pays": 40.438,
-  "same1": 41.789,
-  "same2": 42.928,
-  "poor": 44.491,
-  "comfortable": 45.33,
-  "rich": 47.019,
-  "subscribe": 47.732,
-  "miss": 48.796,
-  "lesson": 49.434
+  "lose": 1.81,
+  "money": 3.81,
+  "houses": 4.44,
+  "fields": 5.075,
+  "gone": 6.22,
+  "hungry": 7.515,
+  "chicken": 9.985,
+  "first": 10.95,
+  "cooks": 11.56,
+  "best": 13.16,
+  "last": 15.565,
+  "second": 16.71,
+  "hen": 17.725,
+  "egg": 18.845,
+  "rooster": 21.035,
+  "noeggs": 21.89,
+  "knocks": 23.645,
+  "deal": 24.655,
+  "meet": 26.33,
+  "share": 27.62,
+  "wanted": 29.47,
+  "chicks": 30.91,
+  "weeks": 32.23,
+  "hatch": 33.76,
+  "months": 35.085,
+  "laying": 36.15,
+  "fills": 38.32,
+  "keep": 39.97,
+  "hires": 41.26,
+  "pays": 42.6,
+  "same1": 44.23,
+  "same2": 45.42,
+  "poor": 46.915,
+  "comfortable": 47.875,
+  "rich": 49.415,
+  "subscribe": 50.44,
+  "miss": 51.46,
+  "lesson": 52.35
  },
  "keyEnd": {
-  "lose": 1.889,
-  "money": 4.091,
-  "houses": 4.717,
-  "fields": 5.13,
-  "gone": 6.055,
-  "hungry": 7.194,
-  "chicken": 9.521,
-  "first": 10.447,
-  "cooks": 11.085,
-  "best": 12.649,
-  "last": 14.851,
-  "second": 15.989,
-  "hen": 17.053,
-  "egg": 17.904,
-  "rooster": 20.319,
-  "noeggs": 21.032,
-  "knocks": 22.809,
-  "deal": 24.085,
-  "meet": 25.649,
-  "share": 26.913,
-  "wanted": 28.689,
-  "chicks": 30.04,
-  "weeks": 30.966,
-  "hatch": 32.443,
-  "months": 33.794,
-  "laying": 35.27,
-  "fills": 36.834,
-  "keep": 38.111,
-  "hires": 39.374,
-  "pays": 40.651,
-  "same1": 42.002,
-  "same2": 43.353,
-  "poor": 44.704,
-  "comfortable": 46.181,
-  "rich": 47.232,
-  "subscribe": 48.157,
-  "miss": 49.009,
-  "lesson": 49.86
+  "lose": 2.12,
+  "money": 4.3,
+  "houses": 5.075,
+  "fields": 5.67,
+  "gone": 6.62,
+  "hungry": 7.965,
+  "chicken": 10.39,
+  "first": 11.29,
+  "cooks": 11.87,
+  "best": 13.435,
+  "last": 16.1,
+  "second": 17.125,
+  "hen": 18.185,
+  "egg": 19.125,
+  "rooster": 21.52,
+  "noeggs": 22.135,
+  "knocks": 23.985,
+  "deal": 25.07,
+  "meet": 26.57,
+  "share": 27.84,
+  "wanted": 29.91,
+  "chicks": 31.43,
+  "weeks": 32.5,
+  "hatch": 34.22,
+  "months": 35.345,
+  "laying": 36.575,
+  "fills": 38.67,
+  "keep": 40.2,
+  "hires": 41.64,
+  "pays": 42.95,
+  "same1": 44.475,
+  "same2": 45.8,
+  "poor": 47.37,
+  "comfortable": 48.48,
+  "rich": 49.86,
+  "subscribe": 51.01,
+  "miss": 51.65,
+  "lesson": 52.78
  }
 }

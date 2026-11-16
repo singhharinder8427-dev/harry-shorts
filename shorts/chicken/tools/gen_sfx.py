@@ -26,7 +26,7 @@ def creak(d=0.5):
 def crackle(d):
     out = np.zeros(int(SR * d))
     for i in range(int(d * 18)):
-        a = int(rng.random() * (len(out) - 2000)); c = crack() * (0.3 + rng.random() * 0.7); out[a:a + len(c)] += c
+        a = int(rng.random() * max(1, len(out) - 2600)); c = crack() * (0.3 + rng.random() * 0.7); out[a:a + len(c)] += c
     return out + 0.15 * lp(rng.standard_normal(len(out)), 0.05)
 SA = lambda i: S[i]['start']
 C = {'wide': K['money'] - 0.3, 'gone': K['gone'] - 0.2, 'days': K['hungry'] - 0.5, 'gets': K['chicken'] - 0.95, 'cook': K['first'] - 0.25, 'best': K['best'] - 0.15,
@@ -103,7 +103,7 @@ for i in range(4): add(ding(1568 * 2 ** (i * 4 / 12), 0.6), K['rich'] + 0.1 + i 
 for i in range(4): add(ding(1568 * 2 ** (i * 4 / 12), 0.5), 0.15 + i * 0.07, -22)
 add(whoosh(0.6, 300, 4000, 0.7), K['lose'] - 0.55, -10)
 for i in range(10): add(plip(1600 + i * 120), K['lose'] - 0.5 + i * 0.04, -18)
-add(shimmer(0.5), K['lose'] - 0.2, -18)
+add(shimmer(0.9), K['lose'] - 0.2, -18)
 for i in range(4): add(pop_(1000, 0.07), C['wanted'] + 0.15 + i * 0.5, -14); add(slurp(0.25), C['wanted'] + 0.45 + i * 0.5, -20)
 add(whoosh(0.35, 500, 4000, 0.6), K['chicks'] - 0.15, -14)
 for g in range(5):
