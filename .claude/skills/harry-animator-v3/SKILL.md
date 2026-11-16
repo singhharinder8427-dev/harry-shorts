@@ -1,6 +1,6 @@
 ---
-name: harry-animator-v3
-description: THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says "harry-animator", "/harry-animator-v3" or "make a Short" without naming an older version. Makes the complete Short (2K vertical 1440x2560, 60 fps, at the length the user asks for) end to end - topic (the user's own, a researched viral-potential topic, or a pasted script to fact-check and make original), five source-checked voiceover script variants with a subscribe line, then an animation made entirely in code with Remotion in one permanent look - flat 2D cel characters (round heads, thin line limbs, flat clothes, face colour that follows the situation) acting in a stylized shaded 3D world (three.js), a new picture for every caption phrase with one-layer-deep cutaways, one-word captions, code-made sound and music bed, subscribe ending, seamless loop - re-timed to the user's voice take, plus thumbnails, captions file and YouTube metadata.
+name: "harry-animator-v3"
+description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical 1440x2560, 60 fps, at the length the user asks for) end to end - topic (the user's own, a researched viral-potential topic, or a pasted script to fact-check and make original), five source-checked voiceover script variants with a subscribe line, then an animation made entirely in code with Remotion in one permanent look - flat 2D cel characters (round heads, thin line limbs, flat clothes, face colour that follows the situation) acting in a stylized shaded 3D world (three.js), a new picture for every caption phrase with one-layer-deep cutaways, one-word captions, code-made sound and music bed, subscribe ending, seamless loop - re-timed to the user's voice take, plus thumbnails, captions file and YouTube metadata."
 ---
 
 # harry-animator v3: researched script -> flat 2D cast acting in a stylized 3D world
@@ -54,6 +54,24 @@ the one-word captions, the sound and the subscribe button are separate layers ad
   1.5-2.5 s, and each fact gets a 1-2 s cutaway that shows how it works.
 - **The length is asked every time** (section 0); there is no fixed 45 s limit.
 
+**Owner's amendments (16 Nov 2026, Blob the Brilliant cast) - these override the lines above and sections 5 and 15
+where they differ:**
+- **Blob is the channel's fixed brand character** (`BLOB` in `Roles.ts`): white round face, black short hair on top,
+  teal shirt `#1FA6A0`, thin line limbs, white round hands - identical in every video and every thumbnail. A video that
+  needs one character uses Blob only. He wears a costume (`costume('prison' | 'astronaut' | 'chef' | 'winter' |
+  'scientist' | 'worker' | 'detective' | 'athlete')`) only when the story needs one; his head, hair and face never
+  change. Channel brand yellow: `#FFC83D`.
+- **Supporting characters come from role templates** (`role(name, seed)` in `Roles.ts`, seed = the short's name):
+  scientist, boss, guard, police, detective, athlete, friend, kid, worker. Each keeps its signature items; hair,
+  colours and accessories change per video. When a story needs a role that isn't there, add a template that follows
+  the same rules.
+- **Never on a supporting character**: Blob's teal; the `bun` hairstyle (it reads as a brown circle / turban). Variety
+  comes from caps, hats, headbands, glasses, sunglasses and held props (`hold`: gun, magnifier, clipboard, briefcase,
+  coffee, phone, wrench).
+- **Act with the library** (`Poses.ts`): named poses + expressions blended over time, limbs with elbows and knees
+  (section 5).
+- Smoking and guns can limit ads on YouTube: use the cigarette rarely and the gun only where the story needs it.
+
 **Restate the look concretely for every shot.** In `story.json` every shot gets a `look` line written out in full -
 who is in it (name, clothes colours, hair), the place, its materials and palette, the light direction, the camera move.
 Never write "same style as before". **Never drift into**: rounded 3D characters, anime faces, photoreal people,
@@ -82,9 +100,14 @@ Folder map (`<SKILL>` = this skill's base directory):
   remotion.config.ts, tsconfig, `src/`: **`World3D.tsx`** = the 3D world (`World`, `Cel`, `cam3At`, `toScreen`,
   `celPoint`, `Box` / `Cyl` / `Ball` / `Ground`, `tex`, `Light`, `Cuts`, `Dissolve`), **`Cast.tsx`** = the flat
   `Person`, `Captions.tsx` = one-word safe-area captions + `SafeGuides`, `Cta.tsx` = `Cta` subscribe button,
-  `ThumbText`, `Tag`, `Bits.tsx` = `Puff` / `Pill` / `Bracket` / `Sparkle` (flat screen-space effects), `Layer.tsx` =
+  `ThumbText`, `Tag`, **`ThumbKit.tsx`** = `ThumbFrame`, `POP`, `Ring`, `Arrow` (section 12), `Bits.tsx` = `Puff` / `Pill` / `Bracket` / `Sparkle` (flat screen-space effects), `Layer.tsx` =
   outline scale, `math.ts`, `color.ts`, `Root.tsx`
+- **Cast library - Appendix A at the end of this file**: the current `Cast.tsx` (elbows + knees, outfit pieces, held
+  props), `Poses.ts` (24 named poses, 18 expressions, blending, walk / run) and `Roles.ts` (Blob, his costumes, 9 role
+  templates). They supersede the template's `Cast.tsx`; section 2 says when to write them.
 - `examples/v3-demo/` - `Short.tsx`, `timing.json`; `examples/water/` - pipeline file formats only
+- `examples/thumbnails/` - `reference-feed.jpg` (the owner's thumbnail reference - read it before section 12) and
+  `chaseout-thumbs.jpg` (a worked example)
 - `references/youtube-metadata.md` - title / description / tags rules and template
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -211,6 +234,9 @@ numpy / pillow / opencv / ffmpeg. Put the project inside the user's primary work
 Project layout: `story.json`, `src/` (components + `timing.json`), `tools/`, `voiceover/` (script.txt, timing sheet,
 take/, captions), `public/<short>/` (vo.wav, sfx.wav only), `qa/`, `out/`, `thumbnails/`.
 The demo is copied to `reference/v3-demo-Short.tsx` in every project.
+**Then write the cast library (every project):** copy the three files in Appendix A verbatim into `src/` -
+`src/Cast.tsx` (replaces the template's), `src/Poses.ts`, `src/Roles.ts` - and run `npx tsc -p .`. Every character in
+the video is built from them (Blob from `BLOB` / `costume()`, everyone else from `role()`).
 Cloud sandbox notes: Remotion uses the pre-installed headless Chromium when present (config auto-detects). The 3D
 world needs WebGL: with no GPU only the software renderer works (`swangle`, the default in `remotion.config.ts`,
 `stills.mjs` and `thumbs.mjs`; set env `GL=angle` on a machine with a GPU). Measured on 4 cores without a GPU: about
@@ -295,8 +321,9 @@ Done = timing sheet sent to the user.
 Everything alive is a flat SVG drawing. Study `templates/remotion/src/Cast.tsx`; add to it, never around it.
 - **Anatomy** (fixed): round head (r 100; white at rest, flat situation colour when the story calls for it) with one thick dark outline; flat black oval eyes; separate
   curved eyebrow strokes; a simple drawn mouth; flat solid-colour hair (`short`, `sides`, `long`, `bun`, `ponytail`) and
-  an optional flat hat / glasses / moustache / scarf; a small narrow flat-colour torso (`shirt`, optional `vest`,
-  `buttons`); extremely thin black line arms and legs; small flat white rounded hands; minimal black feet. Feet at
+  optional flat extras (hats incl. fedora / police / helmet, glasses or sunglasses, moustache, scarf, headband,
+  cigarette, lab coat / suit / trench coat, tie, apron, badge, belt, a held prop - see `Outfit` in `Cast.tsx`; no `bun`
+  on anyone); a small narrow flat-colour torso (`shirt`, optional `vest`, `buttons`); extremely thin black line arms and legs; small flat white rounded hands; minimal black feet. Feet at
   (0,0), about 430 units tall.
 - **Never on a character**: gradients, highlights, crescent shades, textures, blur, drop shadows, 3D
   transforms, perspective skew, visible thickness.
@@ -306,8 +333,9 @@ Everything alive is a flat SVG drawing. Study `templates/remotion/src/Cast.tsx`;
   red dots (rash, blisters, stings). Clothes may be a flat pattern (dots, flowers, stripes) - flat shapes only. A character is the same flat drawing in a wide and in a close-up.
 - **Outline**: every stroke is `px / useK()` (9 px body outline, thinner limbs); `<Cel>` sets `k`, so the outline keeps
   one consistent on-screen weight across shots and only thins when a character is small in a wide.
-- **A cast per video** (1-3 people): each has a role colour, hair and one accessory a viewer reads instantly; define
-  each outfit once as a constant and reuse it in every shot. New cast, clothes and colours for every video.
+- **The cast** (1-3 people): Blob (`BLOB`, fixed) plus supporting roles from `role(name, shortName)` (`Roles.ts`, 16 Nov
+  amendment). Define each outfit once as a constant and reuse it in every shot; scale each role by its `size` (kid 0.72,
+  boss 1.05) on `<Cel h>`. Supporting looks change with every video; Blob never does.
 - **Turns are redrawn poses**: `view="front" | "left" | "right" | "back"` (the face slides, the far eye narrows, feet
   and cap peak point that way; `back` hides the face). Switch view on a step change (`pick`), never by scaling x
   through zero, never by a 3D rotation. `faceDx/faceDy` and `lookX/lookY` give small looks within a view.
@@ -316,9 +344,23 @@ Everything alive is a flat SVG drawing. Study `templates/remotion/src/Cast.tsx`;
   `eyes` (`dot`, `wide`, `squeeze`, `closed`), `mouth` (`smile`, `flat`, `frown`, `o`, `open`, `grin`, `teeth`, `wavy`,
   `smirk`), `blink`, `sweat`. Change expression on the word, hold it, blink on holds. Anticipation before a gesture and
   a small settle after (`spring`). No mouth flapping to the narration: the mouth is an expression, not speech.
-- **Walking**: move the `<Cel at>` along the ground and alternate the feet with the same phase (`sin`) plus a small
-  `bounce`, so each foot plants and does not slide (step length = distance travelled per half cycle). Stop the cycle
-  when the character stops.
+- **Pose + expression library** (`Poses.ts`) - use it instead of hand-placing hands and feet:
+  body poses `POSES`: stand, relaxed, wave, point, pointUp, explain, shrug, facepalm, handsOnHead, think, crossArms,
+  holdFront, reach, cheer, sad, scared, crouch, sit, sitThink, kneel, kick, jump, fall, run (side poses face right;
+  `mirrorPose` flips them); faces `EXPR`: neutral, happy, joy, shocked, scared, angry, furious, sad, sick, smug,
+  confused, thinking, nervous, sleepy, determined, freezing, awe, grin (each sets eyes, brows, mouth, look and face
+  colour together).
+  `<Person id="blob" outfit={BLOB} t={t} {...breathe(act(t, [[0, 'stand'], [K.word - 0.3, 'shrug']], [[0, 'happy'], [K.word - 0.3, 'confused']]), t)} />`
+  `act` = body + face keyed on word times, each change blended over 0.3 s (`blendPose` interpolates points and joints
+  and fades face colour; view / eyes / mouth switch at the midpoint); `breathe` adds whole-cycle idle life (loops stay
+  clean). Override any value by spreading after it (`{...act(...), handR: [120, -300]}`).
+- **Joints**: arms and legs have elbows and knees (two straight segments, 48 + 48 / 52 + 52 units). They hang straight
+  at rest and bend only when a hand or foot comes closer; elbows bend outward, knees toward the facing side. Set
+  `elbowL/R`, `kneeL/R` to place a joint exactly (sitting, kneeling). `joints: false` restores the old curved limbs.
+- **Walking / running**: `walk(phase, {run, view})` from `Poses.ts` while the `<Cel at>` moves along the ground. Drive the
+  phase from distance so feet plant instead of sliding: `phase = 2 * PI * distance / (4 * stride * scale)` (stride 50
+  walking, 58 running, in character units). When the character stops, blend out of the cycle into the next pose over
+  0.3 s.
 - **Framing**: most shots waist-up or closer; full body in wides. Characters look at each other, at the prop, or at
   the lens for a reaction. Fully in frame or fully out - a half-cut face at the edge reads as a glitch.
 - Animals or creatures, if a story needs them, follow the same rules: flat white or flat-colour shapes, thick outline,
@@ -501,17 +543,39 @@ times out creating its 3D canvas, lower `CONC`.
 on the final: flags all intended, loop diff < 0.2, loudness about -14 LUFS (mastered), true peak below -1 dBTP, no audio silences (continuous bed). Say sync was verified by measurement and stills, not by ear.
 
 ---------------------------------------------------------------------------------------------------------------------
-## 12. Thumbnails (three variants)
+## 12. Thumbnails (three variants) - engaging, a little click-baity, always true
 
-- `Thumb` composition (`variant` A/B/C) renders a chosen moment from the same components with no tags in the way + big
-  text; `SCALE=2 node tools/thumbs.mjs A B C`, then save 1080x1920 JPGs (quality 93) with PIL.
-- Text: at most five words, Inter 900, white line + yellow line, 26-30 px #111 stroke, drop shadow, `white-space: nowrap`,
-  inside the safe zone (x 90-990, y ~285-1635), never over the main face. Every claim must be true for the video; keep
-  "drawn to scale" / "not to scale" tags.
-- Concepts: (A) the premise moment with the main character's shocked face next to the thing; (B) the funniest
-  character reaction in close-up; (C) the key size comparison or payoff event as the hero. Text via `ThumbText`; the
-  picture is a frame of the video (flat cast in the 3D set), never a different style. Check all three at phone-feed size (216x384) on one
-  sheet. Recommend one and say it is design judgment, not click data.
+**Reference (look at it every time before making thumbnails): `examples/thumbnails/reference-feed.jpg`** - the owner's
+favourite Shorts feed (cartoon channel, crore-view videos). What makes those tiles irresistible, and what ours must copy:
+- **ONE huge expressive face** fills 40-70 % of the tile: shock ("o" mouth, wide eyes, raised brows), smugness (closed
+  eyes, smirk), panic (sweat drop, "teeth" grimace), or a face colour (pale blue, green, red with steam). Never a wide
+  shot with small figures - at feed size (216x384) small faces disappear.
+- **A mystery or a promise**, not a summary: something is wrong, missing, about to happen, or absurd, and only the video
+  answers it (an empty chair circled in red, a hand reaching for the wrong thing, a smug character doing nothing).
+- **Saturated, high-contrast colour** (`POP` filter on the scene only), a clear light/dark split between the face and the
+  background, one bright accent prop.
+- **Few words**: 2-3 words, at most 5, white line + yellow line; often a question ("WHERE DID HE GO?") or a bold claim
+  ("PAID TO DO NOTHING"). Many reference tiles work with almost no text, so the picture must read on its own.
+- **One pointer at most**: a red ring + red arrow (`Ring`, `Arrow`) on the mystery object, placed with `toScreen` so it
+  sits exactly on the 3D object.
+
+Rules that do not change: every word and picture must be true for the video (a teaser, never a lie - no events, numbers
+or outcomes the video doesn't show); same look as the video (flat cast in the 3D set, re-staged with a punchier camera,
+not a different style); keep honesty tags ("not to scale") when they apply.
+
+How to build them:
+- `Thumb` composition (`variant` A/B/C). Use `ThumbKit.tsx` (`ThumbFrame`, `POP`, `Ring`, `Arrow`). Each variant is its
+  OWN staged `World` (not just a frame of a shot): camera 2-3 m from the hero face, fov 36-42, the face big in the
+  lower-middle (y 500-1300), the mystery object visible beside it, text at top 190 (safe zone x 90-990, y ~285-1635,
+  never over the main face). `SCALE=2 node tools/thumbs.mjs A B C`, then 1080x1920 JPGs (quality 93) with PIL.
+- Three concepts every time: (A) **the mystery** - the hero's biggest reaction face + the circled thing that causes it
+  + a question; (B) **the absurd / smug character** close-up + a bold short claim; (C) **the antagonist or the stakes**
+  - the villain/boss/danger huge in the foreground with the hero small and worried behind + the topic's name.
+- Check all three on one sheet at phone-feed size (216x384) next to the reference: the face and the hook must read at
+  that size. Recommend one (usually A: big emotional face + unanswered question) and say it is design judgment, not click
+  data; suggest testing A vs B.
+- Worked example: `examples/thumbnails/chaseout-thumbs.jpg` ("WHERE DID HE GO?" / "PAID TO DO NOTHING" / "JAPAN'S
+  BANISHMENT ROOM") and its `Thumb` code in `shorts/chaseout/src/Short.tsx` of the harry-shorts repo.
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 13. YouTube title, description, tags (every video)
@@ -543,7 +607,9 @@ Append the topic to `topics_log.md`.
 - World: real 3D meshes with texture, ambient shading, one directional light, cast and contact shadows, fog for
   distance. No flat vector scenery, no 2D parallax backdrops.
 - Never: rounded 3D characters, anime faces, photoreal people, whiteboard animation, objects with faces.
-- New cast, clothes, place and palette for every video; identical cast and set within a video.
+- Blob identical in every video (teal shirt; a costume only when the story needs it); supporting roles from the
+  templates with a new look per video; new place and palette for every video; identical cast and set within a video.
+  No bun on anyone, and never Blob's teal on anyone else.
 - Smooth camera in every shot (track, dolly, gentle push-in, high-angle insert, reaction close-up); clean cuts on
   actions and reveals; at most 1-2 short dissolves; no whips, speed lines or shake.
 - Scenes carry no dialogue, lip-sync, speech bubbles, logos, watermarks or unnecessary labels; honesty tags stay.
@@ -567,6 +633,14 @@ disc or a sliver of white shows above it; a moustache hides `grin` / `open` mout
 everything in `front` covers the characters wherever it is in depth, so only put things there that really are nearer
 the lens than every character they overlap; a `Pill` (or any SVG element) outside an `<svg>` silently doesn't render -
 put flat extras as children of `<World>` (they are drawn in its SVG layer).
+Pitfalls met on the chase-out room Short (Nov 2026): a cast head is 0.8 m across, so a camera 3-4 m away fills the
+frame with one face - stage at most two main characters per shot, at least 1.2 m apart, camera 5-9 m back for
+two-shots (remove the wall behind the camera: a front-cutaway set), and never seat background extras where their heads
+land behind a main face; a camera looking +z mirrors left/right (screen right = -x), so set `view` and `front` wall
+pieces by screen side, not by world side; every beat needs the hero in the picture (empty object inserts read as random
+furniture) and a repeated framing for before/after payoffs; when a take has a long pause inside a sentence the aligner
+can slip a sentence - pass `BOUNDS` from `silencedetect`; a cloud background job stops at its time limit, so render 2K in
+~1050-frame chunks (`--frames`, `--muted`) and join them with the mixed audio (concat + mix + `master_audio.py`).
 Pitfalls kept from v1/v2: a closing quote after the full stop used to hide the sentence end (handled in
 `gen_timing.py` / `align_take.py`); when a component switches between differently shaped drawings (eye styles, mouth
 shapes), give each style its own React `key` - with `--concurrency` > 1 each tab renders non-contiguous frames and
@@ -577,3 +651,426 @@ leave before the end; TypeScript 6 breaks the Remotion 4.0.250 bundler (keep 5.6
 (use `Short2K`); pocketsphinx fails to align 40 s in one pass (align per sentence); words like "adult's" aren't in its
 dictionary (fallbacks / `spoken`); a 0.10 s silence threshold mistakes plosives for gaps (use 0.12 s); a thumbnail
 line that wraps to three lines crowds the face (nowrap, smaller size for long lines).
+
+---------------------------------------------------------------------------------------------------------------------
+## Appendix A. Cast library (write these three files into `src/` in every project, verbatim)
+
+### `src/Cast.tsx`
+````tsx
+import React from 'react';
+import {useK} from './Layer';
+import {INK, mix} from './color';
+import {Puff} from './Bits';
+
+/** v3 cast member: a STRICTLY FLAT 2D cel. Solid white circular face, thick consistent dark outline, flat black oval
+ *  eyes, separate graphic eyebrows, a simple drawn mouth, flat solid-colour hair and clothes, a small narrow torso,
+ *  extremely thin black line arms and legs, small flat rounded hands, minimal feet.
+ *  NO gradients, highlights, shading, textures or thickness here - ever. Shadows come from the 3D world.
+ *  The face is white at rest and takes ONE flat colour when the situation calls for it (`tint`, `tintAmt`): green =
+ *  poisoned, red + `steam` = burning / furious, pale blue = freezing / scared. Ramp it in and out; never a gradient.
+ *  Feet at (0,0); head centre (0,-330), r 100; about 430 units tall. Strokes are px / k (constant screen weight).
+ *  Turns are REDRAWN poses (`view`), never a rotated solid: front, left, right, back. */
+export type Outfit = {
+  shirt?: string; vest?: string; hat?: 'cap' | 'bowler' | 'top' | 'hardhat' | 'beanie' | 'fedora' | 'police' | 'helmet' | 'none'; hatColor?: string;
+  hair?: string; hairStyle?: 'short' | 'sides' | 'long' | 'bun' | 'ponytail'; mustache?: boolean; glasses?: boolean; scarf?: string; buttons?: boolean;
+  coat?: string; coatStyle?: 'lab' | 'suit' | 'trench';   // long open lab coat, suit jacket with a white V, or a belted trench coat
+  headband?: string;                                     // sports headband with two ribbon tails
+  sunglasses?: boolean; glassesColor?: string; cigarette?: boolean;
+  hold?: 'gun' | 'magnifier' | 'clipboard' | 'briefcase' | 'coffee' | 'phone' | 'wrench';   // prop held in the right hand
+  tie?: string; apron?: string; badge?: string; belt?: string;   // flat extras: tie, front apron, small star badge on the chest, waist belt
+};
+export type PersonPose = {
+  id: string; outfit?: Outfit; view?: 'front' | 'left' | 'right' | 'back';
+  lean?: number; sx?: number; sy?: number; bounce?: number;                 // lean = whole-body tilt (deg); bounce = lift of the body (units), feet stay
+  headTilt?: number; faceDx?: number; faceDy?: number;                      // head tilt (deg) about the neck; face slides on the head = look direction
+  lookX?: number; lookY?: number; blink?: number; brow?: number; browUp?: number;   // brow: + = inner end down (angry), - = inner end up (worried)
+  eyes?: 'dot' | 'wide' | 'squeeze' | 'closed'; mouth?: 'smile' | 'flat' | 'o' | 'open' | 'grin' | 'teeth' | 'wavy' | 'smirk' | 'frown';
+  handL?: [number, number]; handR?: [number, number]; footL?: [number, number]; footR?: [number, number];
+  sweat?: number; handsBack?: boolean;
+  elbowL?: [number, number]; elbowR?: [number, number]; kneeL?: [number, number]; kneeR?: [number, number];   // optional explicit joints (else auto-bent)
+  joints?: boolean;                                                         // false = the old single-curve limbs
+  tint?: string; tintAmt?: number; steam?: number; t?: number;              // flat face colour for the situation (hex), 0..1; steam puffs 0..1 (pass t for their motion)
+  spots?: number;                                                           // 0..1 flat red spots popping out on the face one by one (rash, blisters, stings)
+};
+
+/** Two-segment limbs. Upper arm + forearm 48 + 48, thigh + shin 52 + 52 (limbs hang straight at rest, bend only when a hand or foot comes closer) (units). A joint the pose doesn't set is solved:
+ *  elbows bend outward (away from the body), knees bend toward where the character faces (outward in a front view). */
+export const ARM = 48, LEG = 52;
+const ik = (a: [number, number], b: [number, number], L: number, pickBetter: (q: [number, number]) => number): [number, number] => {
+  const dx = b[0] - a[0], dy = b[1] - a[1], d = Math.max(1e-3, Math.min(Math.hypot(dx, dy), 2 * L - 0.01));
+  const base = Math.atan2(dy, dx), off = Math.acos(Math.max(-1, Math.min(1, d / (2 * L))));
+  const c1: [number, number] = [a[0] + Math.cos(base + off) * L, a[1] + Math.sin(base + off) * L];
+  const c2: [number, number] = [a[0] + Math.cos(base - off) * L, a[1] + Math.sin(base - off) * L];
+  return pickBetter(c1) >= pickBetter(c2) ? c1 : c2;
+};
+export const jointsFor = (p: Partial<PersonPose>) => {
+  const bounce = p.bounce ?? 0, dir = p.view === 'left' ? -1 : p.view === 'right' ? 1 : 0;
+  const hL = p.handL ?? [-78, -120], hR = p.handR ?? [78, -120], fL = p.footL ?? [-30, -5], fR = p.footR ?? [30, -5];
+  const kneePick = (side: number) => (q: [number, number]) => (dir ? q[0] * dir : q[0] * side) - q[1] * 0.01;
+  return {
+    elbowL: p.elbowL ?? ik([-34, -204 - bounce], hL, ARM, (q) => -q[0] + q[1] * 0.15),
+    elbowR: p.elbowR ?? ik([34, -204 - bounce], hR, ARM, (q) => q[0] + q[1] * 0.15),
+    kneeL: p.kneeL ?? ik([-18, -112 - bounce], [fL[0], fL[1] - 4], LEG, kneePick(-1)),
+    kneeR: p.kneeR ?? ik([18, -112 - bounce], [fR[0], fR[1] - 4], LEG, kneePick(1)),
+  };
+};
+const HY = -330, HR = 100;
+const SPOTS: [number, number, number][] = [[-64, -54, 11], [60, -60, 9], [-72, 20, 9], [68, 24, 12], [-46, 62, 8], [50, 64, 10], [2, -76, 9]];
+const TORSO = 'M -40 -118 C -52 -166 -44 -226 0 -230 C 44 -226 52 -166 40 -118 Q 0 -104 -40 -118 Z';
+export const Person: React.FC<PersonPose> = (p) => {
+  const k = useK(); const ow = 9 / k;
+  const {id, outfit = {}, view = 'front', lean = 0, sx = 1, sy = 1, bounce = 0, headTilt = 0, faceDx = 0, faceDy = 0, lookX = 0, lookY = 0, blink = 0, brow = 0, browUp = 0,
+    eyes = 'dot', mouth = 'smile', handL = [-78, -120], handR = [78, -120], footL = [-30, -5], footR = [30, -5], sweat = 0, handsBack = false, spots = 0, tint, tintAmt = 0, steam = 0, t = 0, joints = true} = p;
+  const J = jointsFor(p);
+  const face = tint ? mix('#FFFFFF', tint, tintAmt) : '#FFFFFF';
+  const o = {shirt: '#3F7FD9', vest: undefined as string | undefined, hat: 'none' as Outfit['hat'], hatColor: '#3A3A3E', hair: undefined as string | undefined, hairStyle: 'short' as Outfit['hairStyle'], ...outfit};
+  const dir = view === 'left' ? -1 : view === 'right' ? 1 : 0, back = view === 'back';
+  const fx = faceDx + dir * 40, fy = HY + faceDy;
+  const limb = ow * 0.72;                                                    // extremely thin line limbs
+  const arm = (s: [number, number], h: [number, number], side: number) => `M ${s[0]} ${s[1] - bounce} Q ${(s[0] + h[0]) / 2 + side * 20} ${(s[1] - bounce + h[1]) / 2 + 12} ${h[0]} ${h[1]}`;
+  const eye = (sgn: number) => {
+    const far = dir !== 0 && sgn === dir;                                    // in a side view the eye nearer the edge is drawn narrower
+    const ex = fx + sgn * (dir ? 27 : 34) + lookX, ey = fy - 10 + lookY, w = far ? 0.68 : 1;
+    if (eyes === 'squeeze') return <path key={'sq' + sgn} d={`M ${ex - sgn * 13} ${ey - 12} L ${ex + sgn * 9} ${ey} L ${ex - sgn * 13} ${ey + 12}`} stroke={INK} strokeWidth={ow * 0.9} fill="none" strokeLinecap="round" strokeLinejoin="round" />;
+    if (eyes === 'closed') return <path key={'cl' + sgn} d={`M ${ex - 14 * w} ${ey - 2} Q ${ex} ${ey + 8} ${ex + 14 * w} ${ey - 2}`} stroke={INK} strokeWidth={ow} fill="none" strokeLinecap="round" />;
+    if (eyes === 'wide') return <ellipse key={'wide' + sgn} cx={ex} cy={ey} rx={13.5 * w} ry={20 * (1 - 0.85 * blink)} fill={INK} />;
+    return <ellipse key={'dot' + sgn} cx={ex} cy={ey} rx={10.5 * w} ry={15 * (1 - 0.85 * blink)} fill={INK} />;
+  };
+  const browD = (sgn: number) => {
+    const bx = fx + sgn * (dir ? 29 : 36), by = fy - 50 - browUp * 14, a = brow * 0.38 * sgn, dx = Math.cos(a) * 20, dy = Math.sin(a) * 20;
+    return <path key={sgn} d={`M ${bx - dx * sgn} ${by + dy} Q ${bx} ${by - 6} ${bx + dx * sgn} ${by - dy}`} stroke={INK} strokeWidth={ow * 1.15} fill="none" strokeLinecap="round" />;
+  };
+  const mx = fx + dir * 6, my = fy + 40;
+  const line = (d: string, w = 0.85) => <path d={d} stroke={INK} strokeWidth={ow * w} fill="none" strokeLinecap="round" strokeLinejoin="round" />;
+  let m: React.ReactNode = null;
+  if (mouth === 'smile') m = line(`M ${mx - 22} ${my - 4} Q ${mx} ${my + 15} ${mx + 22} ${my - 4}`);
+  else if (mouth === 'frown') m = line(`M ${mx - 20} ${my + 10} Q ${mx} ${my - 8} ${mx + 20} ${my + 10}`);
+  else if (mouth === 'flat') m = line(`M ${mx - 17} ${my + 2} L ${mx + 17} ${my + 2}`);
+  else if (mouth === 'wavy') m = line(`M ${mx - 22} ${my + 4} q 7 -8 14 0 t 15 0 t 15 0`, 0.8);
+  else if (mouth === 'smirk') m = line(`M ${mx - 20} ${my + 4} Q ${mx + 4} ${my + 14} ${mx + 24} ${my - 8}`, 0.9);
+  else if (mouth === 'o') m = <ellipse cx={mx} cy={my + 6} rx={12} ry={16} fill={INK} />;
+  else if (mouth === 'teeth') m = (<g><rect x={mx - 30} y={my - 8} width={60} height={28} rx={10} fill="white" stroke={INK} strokeWidth={ow * 0.85} />
+    {[-15, 0, 15].map((d) => <path key={d} d={`M ${mx + d} ${my - 8} L ${mx + d} ${my + 20}`} stroke={INK} strokeWidth={ow * 0.5} />)}
+    <path d={`M ${mx - 30} ${my + 6} L ${mx + 30} ${my + 6}`} stroke={INK} strokeWidth={ow * 0.5} /></g>);
+  else m = <path d={mouth === 'open' ? `M ${mx - 24} ${my - 4} Q ${mx} ${my + 44} ${mx + 24} ${my - 4} Z` : `M ${mx - 28} ${my - 6} Q ${mx} ${my + 34} ${mx + 28} ${my - 6} Z`} fill={INK} stroke={INK} strokeWidth={ow * 0.7} strokeLinejoin="round" />;
+  const hc = o.hatColor, top = HY - HR, hx = dir * 6;
+  const hatEl = (() => {
+    const peak = dir || 1;                                                   // a cap's peak points where the character faces
+    switch (o.hat) {
+      case 'cap': return <g><path d={`M ${hx - 98} ${top + 46} C ${hx - 96} ${top - 24} ${hx + 96} ${top - 24} ${hx + 98} ${top + 46} Z`} fill={hc} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />
+        {!back && <path d={`M ${hx + peak * 30} ${top + 44} Q ${hx + peak * 110} ${top + 36} ${hx + peak * 132} ${top + 56} Q ${hx + peak * 80} ${top + 62} ${hx + peak * 30} ${top + 56} Z`} fill={hc} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />}</g>;
+      case 'bowler': return <g><ellipse cx={hx} cy={top + 34} rx={124} ry={22} fill={hc} stroke={INK} strokeWidth={ow} />
+        <path d={`M ${hx - 80} ${top + 34} C ${hx - 82} ${top - 56} ${hx + 82} ${top - 56} ${hx + 80} ${top + 34} Z`} fill={hc} stroke={INK} strokeWidth={ow} strokeLinejoin="round" /></g>;
+      case 'top': return <g><rect x={hx - 66} y={top - 110} width={132} height={150} rx={8} fill={hc} stroke={INK} strokeWidth={ow} />
+        <ellipse cx={hx} cy={top + 40} rx={118} ry={18} fill={hc} stroke={INK} strokeWidth={ow} /></g>;
+      case 'hardhat': return <g><path d={`M ${hx - 92} ${top + 40} C ${hx - 92} ${top - 44} ${hx + 92} ${top - 44} ${hx + 92} ${top + 40} Z`} fill={hc} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />
+        <rect x={hx - 122} y={top + 32} width={244} height={20} rx={10} fill={hc} stroke={INK} strokeWidth={ow} /></g>;
+      case 'beanie': return <g><path d={`M ${hx - 96} ${top + 50} C ${hx - 96} ${top - 40} ${hx + 96} ${top - 40} ${hx + 96} ${top + 50} Z`} fill={hc} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />
+        <rect x={hx - 100} y={top + 30} width={200} height={30} rx={12} fill={mix(hc, '#000000', 0.15)} stroke={INK} strokeWidth={ow} /><circle cx={hx} cy={top - 22} r={20} fill={hc} stroke={INK} strokeWidth={ow} /></g>;
+      case 'fedora': return <g><ellipse cx={hx} cy={top + 40} rx={136} ry={20} fill={hc} stroke={INK} strokeWidth={ow} />
+        <path d={`M ${hx - 74} ${top + 40} L ${hx - 64} ${top - 34} Q ${hx} ${top - 12} ${hx + 64} ${top - 34} L ${hx + 74} ${top + 40} Z`} fill={hc} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />
+        <path d={`M ${hx - 72} ${top + 14} L ${hx + 72} ${top + 14} L ${hx + 74} ${top + 36} L ${hx - 74} ${top + 36} Z`} fill={mix(hc, '#000000', 0.45)} stroke={INK} strokeWidth={ow * 0.8} strokeLinejoin="round" /></g>;
+      case 'police': return <g><path d={`M ${hx - 102} ${top + 42} L ${hx - 116} ${top - 4} Q ${hx} ${top - 50} ${hx + 116} ${top - 4} L ${hx + 102} ${top + 42} Z`} fill={hc} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />
+        <rect x={hx - 100} y={top + 22} width={200} height={20} rx={6} fill={mix(hc, '#000000', 0.45)} stroke={INK} strokeWidth={ow * 0.8} />
+        {!back && <path d={`M ${hx - 84} ${top + 42} Q ${hx + (dir || 0) * 20} ${top + 80} ${hx + 84} ${top + 42} Z`} fill={INK} stroke={INK} strokeWidth={ow * 0.6} strokeLinejoin="round" />}
+        {!back && <circle cx={hx} cy={top + 2} r={15} fill="#F2C94C" stroke={INK} strokeWidth={ow * 0.6} />}</g>;
+      case 'helmet': return <g><circle cx={0} cy={HY} r={140} fill="#CFEFFF" fillOpacity={0.32} stroke={INK} strokeWidth={ow} />
+        <rect x={-92} y={HY + 112} width={184} height={30} rx={12} fill="#DADFE6" stroke={INK} strokeWidth={ow} /></g>;
+      default: return null;
+    }
+  })();
+  const noHat = !o.hat || o.hat === 'none' || o.hat === 'helmet';
+  const hand = (h: [number, number], i: number) => <circle key={'h' + i} cx={h[0]} cy={h[1]} r={13} fill="#FFFFFF" stroke={INK} strokeWidth={ow * 0.7} />;
+  const tailSide = dir ? -dir : 1;                                           // ponytail hangs behind the head
+  return (
+    <g transform={`rotate(${lean}) scale(${sx} ${sy})`}>
+      {/* thin line limbs */}
+      <g stroke={INK} strokeWidth={limb} fill="none" strokeLinecap="round" strokeLinejoin="round">
+        {joints ? <>
+          <path d={`M -18 ${-112 - bounce} L ${J.kneeL[0]} ${J.kneeL[1]} L ${footL[0]} ${footL[1] - 4}`} /><path d={`M 18 ${-112 - bounce} L ${J.kneeR[0]} ${J.kneeR[1]} L ${footR[0]} ${footR[1] - 4}`} />
+          <path d={`M -34 ${-204 - bounce} L ${J.elbowL[0]} ${J.elbowL[1]} L ${handL[0]} ${handL[1]}`} /><path d={`M 34 ${-204 - bounce} L ${J.elbowR[0]} ${J.elbowR[1]} L ${handR[0]} ${handR[1]}`} />
+        </> : <>
+          <path d={`M -18 ${-112 - bounce} Q -22 -60 ${footL[0]} ${footL[1] - 4}`} /><path d={`M 18 ${-112 - bounce} Q 22 -60 ${footR[0]} ${footR[1] - 4}`} />
+          <path d={arm([-34, -204], handL, -1)} /><path d={arm([34, -204], handR, 1)} />
+        </>}
+      </g>
+      {handsBack && [handL, handR].map(hand)}
+      {/* minimal feet, pointing where the character faces */}
+      <ellipse cx={footL[0] + (dir || -1) * 8} cy={footL[1]} rx={17} ry={7.5} fill={INK} /><ellipse cx={footR[0] + (dir || 1) * 8} cy={footR[1]} rx={17} ry={7.5} fill={INK} />
+      <g transform={`translate(0 ${-bounce})`}>
+        {/* small narrow torso, flat colour */}
+        <path d={TORSO} fill={o.shirt} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />
+        {o.vest && !back && <g fill={o.vest} stroke={INK} strokeWidth={ow * 0.8} strokeLinejoin="round">
+          <path d="M -40 -118 C -52 -166 -44 -226 -10 -229 L -6 -110 Q -24 -110 -40 -118 Z" /><path d="M 40 -118 C 52 -166 44 -226 10 -229 L 6 -110 Q 24 -110 40 -118 Z" /></g>}
+        {o.vest && back && <path d={TORSO} fill={o.vest} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />}
+        {o.buttons && !back && [-190, -160, -130].map((y) => <circle key={y} cx={o.vest ? 16 : 0} cy={y} r={5} fill={INK} />)}
+        {o.scarf && <path d="M -30 -232 Q 0 -214 30 -232 L 26 -206 Q 0 -192 -26 -206 Z" fill={o.scarf} stroke={INK} strokeWidth={ow * 0.8} strokeLinejoin="round" />}
+        {o.belt && <path d="M -41 -128 Q 0 -116 41 -128 L 40 -116 Q 0 -104 -40 -116 Z" fill={o.belt} stroke={INK} strokeWidth={ow * 0.7} strokeLinejoin="round" />}
+        {o.coat && (o.coatStyle === 'lab' || o.coatStyle === 'trench') && <g strokeLinejoin="round">
+          <path d="M -47 -92 C -60 -166 -50 -227 0 -233 C 50 -227 60 -166 47 -92 Q 0 -82 -47 -92 Z" fill={o.coat} stroke={INK} strokeWidth={ow} />
+          {!back && <><path d="M -15 -229 L 15 -229 L 0 -168 Z" fill={o.shirt} stroke={INK} strokeWidth={ow * 0.7} />
+            <path d="M 0 -168 L 0 -88" stroke={INK} strokeWidth={ow * 0.6} fill="none" />
+            <path d="M -15 -229 L -26 -196 L -6 -186" stroke={INK} strokeWidth={ow * 0.6} fill="none" /><path d="M 15 -229 L 26 -196 L 6 -186" stroke={INK} strokeWidth={ow * 0.6} fill="none" />
+            {o.coatStyle === 'lab' ? <rect x={14} y={-150} width={20} height={16} rx={3} fill="none" stroke={INK} strokeWidth={ow * 0.55} />
+              : <>{[-176, -152].map((y) => [-1, 1].map((sd) => <circle key={y + '' + sd} cx={sd * 14} cy={y} r={4} fill={INK} />))}</>}</>}
+          {o.coatStyle === 'trench' && <path d="M -52 -136 Q 0 -124 52 -136 L 51 -122 Q 0 -110 -51 -122 Z" fill={mix(o.coat, '#000000', 0.3)} stroke={INK} strokeWidth={ow * 0.7} />}</g>}
+        {o.coat && o.coatStyle === 'suit' && <g strokeLinejoin="round">
+          <path d={TORSO} fill={o.coat} stroke={INK} strokeWidth={ow} />
+          {!back && <><path d="M -16 -229 L 16 -229 L 0 -160 Z" fill="#FFFFFF" stroke={INK} strokeWidth={ow * 0.7} />
+            {o.tie && <path d="M -6 -226 L 6 -226 L 8 -216 L 4 -214 L 9 -176 L 0 -164 L -9 -176 L -4 -214 L -8 -216 Z" fill={o.tie} stroke={INK} strokeWidth={ow * 0.5} />}
+            <path d="M -16 -229 L -30 -200 L -8 -182" stroke={INK} strokeWidth={ow * 0.6} fill="none" /><path d="M 16 -229 L 30 -200 L 8 -182" stroke={INK} strokeWidth={ow * 0.6} fill="none" />
+            {[-148, -130].map((y) => <circle key={y} cx={6} cy={y} r={4.5} fill={INK} />)}</>}</g>}
+        {o.apron && !back && <g strokeLinejoin="round"><path d="M -14 -224 L -22 -192 M 14 -224 L 22 -192" stroke={INK} strokeWidth={ow * 0.55} fill="none" />
+          <path d="M -24 -194 L 24 -194 L 30 -112 Q 0 -102 -30 -112 Z" fill={o.apron} stroke={INK} strokeWidth={ow * 0.8} />
+          <rect x={-12} y={-160} width={24} height={16} rx={3} fill="none" stroke={INK} strokeWidth={ow * 0.5} /></g>}
+        {o.tie && !o.coat && !back && <path d="M -6 -228 L 6 -228 L 8 -218 L 4 -216 L 10 -160 L 0 -146 L -10 -160 L -4 -216 L -8 -218 Z" fill={o.tie} stroke={INK} strokeWidth={ow * 0.55} strokeLinejoin="round" />}
+        {o.badge && !back && <path d={(() => { const cx = -20, cy = -186, R = 16, r = 6.6; return [...Array(10)].map((_, i) => { const a = -Math.PI / 2 + (i * Math.PI) / 5, q = i % 2 ? r : R; return `${i ? 'L' : 'M'} ${(cx + Math.cos(a) * q).toFixed(1)} ${(cy + Math.sin(a) * q).toFixed(1)}`; }).join(' ') + ' Z'; })()}
+          fill={o.badge} stroke={INK} strokeWidth={ow * 0.45} strokeLinejoin="round" />}
+        {/* head: one solid white disc, one outline */}
+        <g transform={`rotate(${headTilt} 0 ${HY + HR})`}>
+          {o.hair && o.hairStyle === 'sides' && [-1, 1].map((s) => <ellipse key={s} cx={s * 90} cy={HY + 8} rx={24} ry={42} fill={o.hair} stroke={INK} strokeWidth={ow} />)}
+          {o.hair && o.hairStyle === 'long' && <path d={`M -108 ${HY - 20} C -130 ${HY + 60} -124 ${HY + 100} -92 ${HY + 112} L 92 ${HY + 112} C 124 ${HY + 100} 130 ${HY + 60} 108 ${HY - 20} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />}
+          {o.hair && o.hairStyle === 'ponytail' && <path d={`M ${tailSide * 70} ${HY - 60} C ${tailSide * 170} ${HY - 40} ${tailSide * 170} ${HY + 80} ${tailSide * 130} ${HY + 140} C ${tailSide * 120} ${HY + 80} ${tailSide * 110} ${HY + 20} ${tailSide * 60} ${HY - 10} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" />}
+          {o.hair && o.hairStyle === 'bun' && <circle cx={0} cy={HY - 118} r={44} fill={o.hair} stroke={INK} strokeWidth={ow} />}
+          <circle cx={0} cy={HY} r={HR} fill={back && o.hair ? o.hair : face} stroke={INK} strokeWidth={ow} />
+          <defs><clipPath id={`${id}-head`}><circle cx={0} cy={HY} r={HR} /></clipPath></defs>
+          {!back && o.hair && o.hairStyle !== 'sides' && noHat && <g clipPath={`url(#${id}-head)`}><path d={`M -120 ${HY - 16} L -120 ${HY - 130} L 120 ${HY - 130} L 120 ${HY - 16} L 100 ${HY - 16} C ${70 + dir * 10} ${HY - 70} ${10 + dir * 30} ${HY - 82} ${-30 + dir * 30} ${HY - 60} C ${-60 + dir * 20} ${HY - 72} -86 ${HY - 52} -100 ${HY - 16} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" /></g>}
+          {!back && o.hair && o.hairStyle !== 'sides' && noHat && <circle cx={0} cy={HY} r={HR} fill="none" stroke={INK} strokeWidth={ow} />}
+          {!back && <>
+            {!o.sunglasses && <>{eye(-1)}{eye(1)}</>}{browD(-1)}{browD(1)}
+            {o.sunglasses && <g>{[-1, 1].map((s) => { const ex = fx + s * (dir ? 27 : 34), w = dir !== 0 && s === dir ? 0.72 : 1;
+              return <rect key={'sg' + s} x={ex - 27 * w} y={fy - 30} width={54 * w} height={36} rx={12} fill={INK} stroke={INK} strokeWidth={ow * 0.6} />; })}
+              <path d={`M ${fx - (dir ? 4 : 8)} ${fy - 18} L ${fx + (dir ? 4 : 8)} ${fy - 18}`} stroke={INK} strokeWidth={ow * 0.7} /></g>}
+            {o.glasses && !o.sunglasses && [-1, 1].map((s) => <circle key={'g' + s} cx={fx + s * (dir ? 27 : 34)} cy={fy - 10} r={26} fill="none" stroke={o.glassesColor ?? INK} strokeWidth={ow * (o.glassesColor ? 0.95 : 0.7)} />)}
+            {o.mustache && <path d={`M ${mx} ${my - 12} C ${mx - 10} ${my - 22} ${mx - 34} ${my - 20} ${mx - 38} ${my - 6} C ${mx - 24} ${my - 10} ${mx - 10} ${my - 6} ${mx} ${my - 8} C ${mx + 10} ${my - 6} ${mx + 24} ${my - 10} ${mx + 38} ${my - 6} C ${mx + 34} ${my - 20} ${mx + 10} ${my - 22} ${mx} ${my - 12} Z`} fill={o.hair ?? INK} stroke={INK} strokeWidth={ow * 0.5} />}
+            <g key={'mouth-' + mouth}>{m}</g>
+            {o.cigarette && (() => { const sd = dir || 1; return <g transform={`translate(${mx + sd * 18} ${my + 6}) scale(${sd} 1) rotate(14)`}>
+              <rect x={0} y={-4.5} width={46} height={9} rx={3} fill="#FFFFFF" stroke={INK} strokeWidth={ow * 0.45} /><rect x={38} y={-4.5} width={8} height={9} rx={2} fill="#FF7A2F" /></g>; })()}
+            {spots > 0.01 && SPOTS.map(([x, y, r], i) => { const u = Math.max(0, Math.min(1, spots * SPOTS.length - i)); return u <= 0 ? null :
+              <circle key={'sp' + i} cx={x + dir * 14} cy={HY + y} r={r * (u < 1 ? u * 1.25 : 1)} fill="#E5484D" stroke={INK} strokeWidth={ow * 0.45} />; })}
+          </>}
+          {o.headband && noHat && (() => { const ts = dir ? -dir : -1; return <g>
+            <path d={`M ${ts * 88} ${HY - 50} C ${ts * 130} ${HY - 60} ${ts * 150} ${HY - 30} ${ts * 172} ${HY - 4} L ${ts * 154} ${HY + 6} C ${ts * 138} ${HY - 18} ${ts * 120} ${HY - 34} ${ts * 92} ${HY - 34} Z`} fill={o.headband} stroke={INK} strokeWidth={ow * 0.8} strokeLinejoin="round" />
+            <path d={`M ${ts * 90} ${HY - 42} C ${ts * 126} ${HY - 30} ${ts * 140} ${HY + 2} ${ts * 150} ${HY + 34} L ${ts * 132} ${HY + 38} C ${ts * 124} ${HY + 8} ${ts * 112} ${HY - 18} ${ts * 92} ${HY - 28} Z`} fill={o.headband} stroke={INK} strokeWidth={ow * 0.8} strokeLinejoin="round" />
+            <g clipPath={`url(#${id}-head)`}><rect x={-110} y={HY - 72} width={220} height={36} fill={o.headband} stroke={INK} strokeWidth={ow * 0.8} /></g>
+            <circle cx={0} cy={HY} r={HR} fill="none" stroke={INK} strokeWidth={ow} /></g>; })()}
+          {hatEl}
+          {steam > 0.01 && [-1, 1].map((sd) => { const ph = (t * 1.6 + (sd > 0 ? 0.5 : 0)) % 1, sc = steam * Math.sin(Math.PI * ph);
+            return <g key={'st' + sd} transform={`translate(${sd * (112 + ph * 36)} ${HY - 30 - ph * 80}) scale(${sc})`}><Puff c={[[-18, 0, 20], [8, -10, 24], [20, 8, 16]]} ow={7} /></g>; })}
+          {sweat > 0.01 && !back && <g transform={`translate(${fx + 92} ${HY - 50}) scale(${sweat})`}>
+            <path d="M 0 -26 C 10 -10 16 0 16 8 A 16 16 0 0 1 -16 8 C -16 0 -10 -10 0 -26 Z" fill="#8FD3FF" stroke={INK} strokeWidth={ow * 0.8} strokeLinejoin="round" /></g>}
+        </g>
+      </g>
+      {o.hold && !handsBack && (() => { const sd = dir || 1, [px, py] = handR, k = o.hold;
+        const st = {stroke: INK, strokeWidth: ow * 0.7, strokeLinejoin: 'round' as const};
+        return <g transform={`translate(${px} ${py}) scale(${sd} 1)`}>
+          {k === 'gun' && <path d="M -8 -26 L 58 -26 L 58 -10 L 16 -10 L 12 12 L -8 12 Z" fill="#33353B" {...st} />}
+          {k === 'magnifier' && <><path d="M 0 0 L 24 -34" stroke={INK} strokeWidth={ow * 1.3} strokeLinecap="round" /><circle cx={42} cy={-58} r={28} fill="#DFF3FF" {...st} strokeWidth={ow * 1.1} /></>}
+          {k === 'clipboard' && <><rect x={-6} y={-70} width={58} height={76} rx={6} fill="#B98552" {...st} /><rect x={2} y={-58} width={42} height={58} fill="#FFFFFF" {...st} strokeWidth={ow * 0.5} />
+            <rect x={12} y={-76} width={22} height={12} rx={3} fill="#9AA0A6" {...st} strokeWidth={ow * 0.5} />{[-44, -32, -20].map((y) => <path key={y} d={`M 9 ${y} L 37 ${y}`} stroke={INK} strokeWidth={ow * 0.4} />)}</>}
+          {k === 'briefcase' && <><path d="M 4 6 Q 4 -8 18 -8 L 30 -8 Q 44 -8 44 6" fill="none" stroke={INK} strokeWidth={ow * 0.8} /><rect x={-14} y={6} width={76} height={52} rx={8} fill="#7A4A2A" {...st} />
+            <path d="M -14 26 L 62 26" stroke={INK} strokeWidth={ow * 0.5} /></>}
+          {k === 'coffee' && <><path d="M -10 -44 L 26 -44 L 22 8 L -6 8 Z" fill="#FFFFFF" {...st} /><rect x={-12} y={-50} width={40} height={10} rx={3} fill="#5B3A29" {...st} strokeWidth={ow * 0.5} />
+            <rect x={-8} y={-26} width={32} height={14} fill="#C9A27A" stroke="none" /></>}
+          {k === 'phone' && <rect x={-4} y={-44} width={24} height={44} rx={5} fill="#2B2B30" {...st} />}
+          {k === 'wrench' && <path d="M -4 6 L 40 -38 M 34 -48 A 14 14 0 1 0 52 -30" stroke="#8C939B" strokeWidth={ow * 1.6} fill="none" strokeLinecap="round" />}
+        </g>; })()}
+      {!handsBack && [handL, handR].map(hand)}
+    </g>
+  );
+};
+````
+
+### `src/Poses.ts`
+````ts
+/* Named poses + expressions for the flat cast (Cast.tsx -> Person), and helpers to blend between them.
+ * A pose sets the body (hands, feet, joints, lean, bounce, head tilt, view); an expression sets the face
+ * (eyes, brows, mouth, look, face colour). Use them together:  <Person id="blob" outfit={BLOB} {...act(t, ...)} />
+ * Units: feet at (0,0), head centre (0,-330), shoulders (±34,-204), hips (±18,-112). Negative x = screen left. */
+import {PersonPose, jointsFor} from './Cast';
+import {clamp, lerp, eio} from './math';
+
+export type Pose = Partial<Omit<PersonPose, 'id' | 'outfit'>>;
+type P2 = [number, number];
+
+// ---------------------------------------------------------------- body poses
+export const POSES: Record<string, Pose> = {
+  stand:       {handL: [-78, -120], handR: [78, -120], footL: [-30, -5], footR: [30, -5]},
+  relaxed:     {handL: [-60, -112], handR: [66, -116], footL: [-34, -5], footR: [28, -5], lean: 2, headTilt: 3},
+  wave:        {handL: [-72, -118], handR: [128, -340], footL: [-30, -5], footR: [30, -5], headTilt: 5},
+  point:       {handL: [-72, -120], handR: [178, -222], footL: [-34, -5], footR: [36, -5], lean: 4, view: 'right'},
+  pointUp:     {handL: [-72, -120], handR: [70, -392], footL: [-30, -5], footR: [30, -5], headTilt: -4},
+  explain:     {handL: [-118, -168], handR: [124, -176], footL: [-32, -5], footR: [32, -5], headTilt: 4},
+  shrug:       {handL: [-128, -214], handR: [128, -214], elbowL: [-82, -168], elbowR: [82, -168], footL: [-30, -5], footR: [30, -5], headTilt: 9, bounce: 4},
+  facepalm:    {handL: [-70, -118], handR: [14, -318], footL: [-30, -5], footR: [30, -5], headTilt: -12, lean: -3},
+  handsOnHead: {handL: [-62, -432], handR: [62, -432], elbowL: [-120, -320], elbowR: [120, -320], footL: [-34, -5], footR: [34, -5]},
+  think:       {handL: [16, -160], handR: [30, -236], elbowL: [-50, -150], elbowR: [72, -168], footL: [-30, -5], footR: [30, -5], headTilt: 7},
+  crossArms:   {handL: [58, -176], handR: [-58, -168], elbowL: [-64, -136], elbowR: [64, -132], footL: [-34, -5], footR: [34, -5], headTilt: -3},
+  holdFront:   {handL: [-26, -150], handR: [26, -150], footL: [-30, -5], footR: [30, -5]},
+  reach:       {handL: [-80, -150], handR: [196, -262], footL: [-40, -5], footR: [40, -5], lean: 9, view: 'right'},
+  cheer:       {handL: [-118, -410], handR: [118, -410], footL: [-38, -5], footR: [38, -5], bounce: 10, headTilt: -4},
+  sad:         {handL: [-42, -98], handR: [42, -98], footL: [-24, -5], footR: [24, -5], bounce: -8, headTilt: 10, lean: 2},
+  scared:      {handL: [-40, -262], handR: [40, -262], elbowL: [-92, -200], elbowR: [92, -200], footL: [-46, -5], footR: [46, -5], bounce: -22, lean: -4},
+  crouch:      {handL: [-58, -66], handR: [58, -66], footL: [-52, -5], footR: [52, -5], bounce: -64},
+  // side-view poses (view 'right'; mirror with mirrorPose for 'left')
+  sit:         {view: 'right', bounce: -56, kneeL: [64, -62], kneeR: [80, -60], footL: [66, -5], footR: [82, -5], handL: [50, -70], handR: [70, -68]},
+  sitThink:    {view: 'right', bounce: -56, kneeL: [64, -62], kneeR: [80, -60], footL: [66, -5], footR: [82, -5], handL: [58, -70], handR: [34, -190], elbowR: [70, -118], headTilt: 8},
+  kneel:       {view: 'right', bounce: -52, kneeL: [-30, -10], footL: [-92, -12], kneeR: [62, -70], footR: [66, -5], handL: [-44, -104], handR: [58, -78]},
+  kick:        {view: 'right', handL: [-118, -196], handR: [70, -236], footL: [-26, -5], footR: [142, -122], kneeR: [64, -96], lean: -10},
+  jump:        {handL: [-120, -380], handR: [120, -380], footL: [-46, -54], footR: [46, -54], kneeL: [-58, -82], kneeR: [58, -82], bounce: 0},
+  fall:        {handL: [-150, -320], handR: [154, -276], footL: [-40, -5], footR: [78, -64], lean: 22, headTilt: 14},
+  run:         {view: 'right', handL: [-56, -150], handR: [78, -200], elbowL: [-60, -188], elbowR: [70, -150], footL: [-70, -36], footR: [52, -5], kneeL: [-34, -60], kneeR: [44, -54], lean: 10},
+};
+/** mirror a side-view pose (right <-> left) */
+export const mirrorPose = (p: Pose): Pose => {
+  const m = (v?: P2) => (v ? [-v[0], v[1]] as P2 : undefined), o: Pose = {...p};
+  o.handL = m(p.handR); o.handR = m(p.handL); o.footL = m(p.footR); o.footR = m(p.footL);
+  o.elbowL = m(p.elbowR); o.elbowR = m(p.elbowL); o.kneeL = m(p.kneeR); o.kneeR = m(p.kneeL);
+  o.view = p.view === 'right' ? 'left' : p.view === 'left' ? 'right' : p.view;
+  if (p.lean) o.lean = -p.lean; if (p.headTilt) o.headTilt = -p.headTilt;
+  return o;
+};
+
+// ---------------------------------------------------------------- expressions (face only)
+export const EXPR: Record<string, Pose> = {
+  neutral:    {eyes: 'dot', mouth: 'flat', brow: 0, browUp: 0},
+  happy:      {eyes: 'dot', mouth: 'smile', brow: 0, browUp: 0.2},
+  joy:        {eyes: 'closed', mouth: 'grin', brow: 0, browUp: 0.5},
+  shocked:    {eyes: 'wide', mouth: 'o', brow: 0, browUp: 1},
+  scared:     {eyes: 'wide', mouth: 'wavy', brow: -1, browUp: 0.6, sweat: 1, tint: '#BFE6FF', tintAmt: 0.55},
+  angry:      {eyes: 'dot', mouth: 'flat', brow: 1, browUp: -0.2},
+  furious:    {eyes: 'squeeze', mouth: 'teeth', brow: 1, browUp: -0.3, tint: '#F2564E', tintAmt: 1, steam: 1},
+  sad:        {eyes: 'dot', mouth: 'frown', brow: -1, browUp: 0.3, faceDy: 10, lookY: 6},
+  sick:       {eyes: 'squeeze', mouth: 'wavy', brow: -0.6, browUp: 0.2, tint: '#7BD66A', tintAmt: 0.9},
+  smug:       {eyes: 'closed', mouth: 'smirk', brow: 0.2, browUp: 0.3},
+  confused:   {eyes: 'dot', mouth: 'wavy', brow: -0.5, browUp: 0.4, lookX: 6},
+  thinking:   {eyes: 'dot', mouth: 'flat', brow: 0, browUp: 0.6, lookX: 10, lookY: -12, faceDy: -6},
+  nervous:    {eyes: 'dot', mouth: 'wavy', brow: -0.7, browUp: 0.4, sweat: 1},
+  sleepy:     {eyes: 'closed', mouth: 'flat', brow: 0, browUp: -0.2},
+  determined: {eyes: 'dot', mouth: 'flat', brow: 0.8, browUp: -0.2},
+  freezing:   {eyes: 'squeeze', mouth: 'teeth', brow: -0.6, browUp: 0.3, tint: '#A9DBFF', tintAmt: 1},
+  awe:        {eyes: 'wide', mouth: 'o', brow: -0.2, browUp: 0.8, lookY: -14, faceDy: -10},
+  grin:       {eyes: 'dot', mouth: 'grin', brow: 0, browUp: 0.4},
+};
+
+// ---------------------------------------------------------------- blending
+const DISCRETE = new Set(['view', 'eyes', 'mouth', 'handsBack', 'tint', 'joints']);
+const resolve = (p: Pose): Pose => ({...p, ...jointsFor(p)});          // fill every joint so joints always blend smoothly
+/** blend two poses (names or objects), k 0..1; numbers and points interpolate, view / eyes / mouth switch at k = 0.5 */
+export const blendPose = (a: Pose | string, b: Pose | string, k: number): Pose => {
+  const A = resolve(typeof a === 'string' ? POSES[a] ?? EXPR[a] : a), B = resolve(typeof b === 'string' ? POSES[b] ?? EXPR[b] : b);
+  k = clamp(k); const out: any = {};
+  for (const key of new Set([...Object.keys(A), ...Object.keys(B)])) {
+    const va: any = (A as any)[key], vb: any = (B as any)[key];
+    if (DISCRETE.has(key)) { out[key] = k < 0.5 ? (va ?? vb) : (vb ?? va); continue; }
+    if (Array.isArray(va) || Array.isArray(vb)) { const x = va ?? vb, y = vb ?? va; out[key] = [lerp(x[0], y[0], k), lerp(x[1], y[1], k)]; continue; }
+    if (typeof va === 'number' || typeof vb === 'number') { out[key] = lerp(va ?? 0, vb ?? 0, k); continue; }
+    out[key] = k < 0.5 ? (va ?? vb) : (vb ?? va);
+  }
+  if (out.tint && (A.tint !== B.tint)) out.tintAmt = A.tint && B.tint ? out.tintAmt : (A.tint ? (A.tintAmt ?? 0) * (1 - k) : (B.tintAmt ?? 0) * k);   // face colour fades, never pops
+  if (!A.tint && B.tint) out.tint = B.tint; if (A.tint && !B.tint) out.tint = A.tint;
+  return out;
+};
+/** step through keyed poses over time: posesAt(t, [[0, 'stand'], [1.2, 'shrug'], ...], 0.3) — each change blends over `dur` s */
+export const posesAt = (t: number, keys: [number, Pose | string][], dur = 0.3): Pose => {
+  let cur: Pose | string = keys[0][1];
+  for (let i = 1; i < keys.length; i++) {
+    const [ti, p] = keys[i]; if (t < ti) break;
+    const k = (t - ti) / dur; if (k < 1) return blendPose(cur, p, eio(k));
+    cur = p;
+  }
+  return typeof cur === 'string' ? resolve(POSES[cur] ?? EXPR[cur]) : resolve(cur);
+};
+/** body + face together: act(t, bodyKeys, faceKeys) */
+export const act = (t: number, body: [number, Pose | string][], face: [number, Pose | string][] = [[0, 'happy']], dur = 0.3): Pose =>
+  ({...posesAt(t, body, dur), ...posesAt(t, face, dur * 0.8)});
+/** small life on any held pose: breathing bounce and a slight head sway (whole cycles, so loops stay clean) */
+export const breathe = (p: Pose, t: number, amt = 1): Pose => ({...p, bounce: (p.bounce ?? 0) + Math.sin(t * 2 * Math.PI * 0.5) * 2.5 * amt, headTilt: (p.headTilt ?? 0) + Math.sin(t * 2 * Math.PI * 0.25) * 1.5 * amt});
+/** walk / run cycle seen from the side. phase advances 2*PI per stride pair (one left + one right step). */
+export const walk = (phase: number, o: {stride?: number; lift?: number; run?: boolean; view?: 'right' | 'left'} = {}): Pose => {
+  const run = !!o.run, S = o.stride ?? (run ? 58 : 50), L = o.lift ?? (run ? 46 : 30), view = o.view ?? 'right', d = view === 'right' ? 1 : -1;
+  const foot = (ph: number): P2 => [d * S * Math.sin(ph), -5 - L * Math.max(0, Math.cos(ph))];
+  const hand = (ph: number): P2 => run ? [d * (20 + 46 * Math.sin(ph)), -170 - 30 * Math.max(0, Math.sin(ph))] : [d * 52 * Math.sin(ph), -122 + 8 * Math.cos(2 * ph)];
+  return {view, footL: foot(phase), footR: foot(phase + Math.PI), handL: hand(phase + Math.PI), handR: hand(phase),
+    bounce: (run ? 10 : 5) * Math.abs(Math.cos(phase)) - (run ? 8 : 0), lean: d * (run ? 9 : 2)};
+};
+````
+
+### `src/Roles.ts`
+````ts
+/* The cast for Blob the Brilliant.
+ * BLOB is fixed in every video (brand character): white face, black hair on top, teal shirt #1FA6A0.
+ * A costume is allowed only when the story needs one (costume('prison'), ...) - head, hair and face never change.
+ * Supporting roles are TEMPLATES: each keeps its signature items, while colours, hair and accessories change per video.
+ * Pass a different seed per video (e.g. the short's name) to get a new-looking scientist / boss / police officer.
+ * Rules: no supporting role ever wears Blob's teal; no bun hairstyle on anyone (it reads as a brown circle / turban);
+ * variety comes from caps, hats, headbands, glasses, sunglasses and held props instead. */
+import {Outfit} from './Cast';
+import {INK} from './color';
+
+export const BLOB_TEAL = '#1FA6A0', BRAND_YELLOW = '#FFC83D';
+export const BLOB: Outfit = {shirt: BLOB_TEAL, hair: INK, hairStyle: 'short'};
+
+/** story costumes for Blob (head, hair and face stay Blob's) */
+export const COSTUMES: Record<string, Outfit> = {
+  prison:    {...BLOB, shirt: '#F08A24', buttons: true},
+  astronaut: {...BLOB, shirt: '#ECEFF3', belt: '#5B6270', badge: '#E5484D', hat: 'helmet'},
+  chef:      {...BLOB, shirt: '#FFFFFF', apron: '#F2F2F2', scarf: '#E5484D'},
+  winter:    {...BLOB, scarf: '#E5484D', hat: 'beanie', hatColor: '#E5484D'},
+  scientist: {...BLOB, coat: '#F7F7F2', coatStyle: 'lab', glasses: true, hold: 'clipboard'},
+  worker:    {...BLOB, vest: '#FF8A1F', hat: 'hardhat', hatColor: '#FFD23F', hold: 'wrench'},
+  detective: {...BLOB, coat: '#C8A46B', coatStyle: 'trench', hat: 'fedora', hatColor: '#3A3330', hold: 'magnifier'},
+  athlete:   {...BLOB, headband: '#E5484D'},
+};
+export const costume = (name: string): Outfit => COSTUMES[name] ?? BLOB;
+
+// deterministic choice from a seed (string or number), so the same video always gets the same look
+const hash = (s: string) => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  h ^= h >>> 16; h = Math.imul(h, 0x85ebca6b); h ^= h >>> 13; h = Math.imul(h, 0xc2b2ae35); h ^= h >>> 16; return h >>> 0; };   // FNV-1a + murmur finaliser = even spread
+const chooser = (seed: string | number, salt: string) => { let n = 0; return <T,>(arr: T[]): T => arr[hash(`${seed}|${salt}|${n++}`) % arr.length]; };
+
+type HS = Outfit['hairStyle'];
+const HAIR = ['#151515', '#3B2416', '#6B4423', '#A0522D', '#D9A441', '#C0392B'];
+const GREY = ['#8E8E8E', '#BDBDBD', '#E6E6E6'];
+const CASUAL = ['#E5484D', '#3F7FD9', '#8E5BD6', '#F2994A', '#E85D9E', '#4CAF50', '#F2C94C', '#56CCF2'];   // no teal
+const SPORT = ['#E5484D', '#2F5BEA', '#8E5BD6', '#F2994A', '#111827', '#4CAF50', '#FFFFFF'];
+
+export type RoleName = 'scientist' | 'boss' | 'guard' | 'police' | 'detective' | 'athlete' | 'friend' | 'kid' | 'worker';
+export type RoleLook = {outfit: Outfit; size: number; signature: string};
+export const ROLES: Record<RoleName, (seed: string | number) => RoleLook> = {
+  scientist: (seed) => { const c = chooser(seed, 'scientist'); const hs = c<HS>(['short', 'sides', 'long', 'ponytail', 'short']);
+    return {signature: 'lab coat + glasses (+ clipboard)', size: 1, outfit: {coat: '#F7F7F2', coatStyle: 'lab', glasses: true,
+      glassesColor: c([undefined, '#E5484D', '#2F5BEA', '#8E5BD6', '#F2994A']), shirt: c(['#7FB3E8', '#B79CE6', '#8FD18A', '#F2B36B', '#E8848A', '#F2C94C']),
+      hair: hs === 'sides' ? c(GREY) : c([...HAIR, ...GREY]), hairStyle: hs, mustache: (hs === 'sides' || hs === 'short') && c([false, false, true]),
+      tie: c([undefined, '#2E3A59', '#B03A48', '#2F5BEA']), hold: c([undefined, 'clipboard', 'clipboard', 'coffee'])}}; },
+  boss: (seed) => { const c = chooser(seed, 'boss');
+    return {signature: 'suit jacket + tie (+ briefcase / coffee / phone)', size: 1.05, outfit: {coat: c(['#24324F', '#5B1F2A', '#2F4F3A', '#4A2F5E', '#8A6A3E', '#2B2B30', '#7A7F88']), coatStyle: 'suit', shirt: '#FFFFFF',
+      tie: c(['#E5484D', '#F2C94C', '#8E5BD6', '#2F5BEA', '#4CAF50']), hair: c([...HAIR, ...GREY]), hairStyle: c<HS>(['short', 'sides', 'short']),
+      mustache: c([false, false, true]), sunglasses: c([false, false, false, true]), hat: c<Outfit['hat']>(['none', 'none', 'none', 'none', 'bowler', 'top']), hatColor: '#1E1E22',
+      hold: c([undefined, 'briefcase', 'coffee', 'phone'])}}; },
+  guard: (seed) => { const c = chooser(seed, 'guard'); const u = c(['#22365C', '#4A4A55', '#6B6A3A', '#7A2E2E', '#2F5D9E', '#3F5F4A']);
+    return {signature: 'uniform + cap + big gold badge', size: 1, outfit: {shirt: u, hat: 'cap', hatColor: c([u, '#151515']), badge: '#F2C94C', belt: '#151515',
+      buttons: true, hair: c(HAIR), hairStyle: 'short', mustache: c([false, false, true]), sunglasses: c([false, false, true]), hold: c([undefined, undefined, 'phone', 'coffee'])}}; },
+  police: (seed) => { const c = chooser(seed, 'police'); const u = c(['#1E2F55', '#2C4A86', '#24324F', '#3B5BA8']);
+    return {signature: 'police hat + badge + gun', size: 1.02, outfit: {shirt: u, hat: 'police', hatColor: c([u, '#151515']), badge: '#F2C94C', belt: '#151515',
+      buttons: true, hair: c(HAIR), hairStyle: 'short', mustache: c([false, true]), sunglasses: c([false, true]), hold: 'gun'}}; },
+  detective: (seed) => { const c = chooser(seed, 'detective');
+    return {signature: 'trench coat + fedora + sunglasses + magnifier', size: 1, outfit: {coat: c(['#C8A46B', '#8A6A4A', '#6E6E73', '#4A3A2A', '#A9925E']), coatStyle: 'trench',
+      shirt: '#FFFFFF', tie: c([undefined, '#151515', '#7A2E2E']), hat: 'fedora', hatColor: c(['#3A3330', '#2B2B30', '#5A4632', '#6E6E73']),
+      sunglasses: c([true, true, false]), glasses: true, hair: c(HAIR), hairStyle: 'short', mustache: c([false, true]), cigarette: c([false, false, true]), hold: 'magnifier'}}; },
+  athlete: (seed) => { const c = chooser(seed, 'athlete'); const shirt = c(SPORT);
+    return {signature: 'sports shirt + headband with ribbon', size: 1, outfit: {shirt, headband: c(['#E5484D', '#2F5BEA', '#F2C94C', '#F2994A', '#E85D9E', '#8E5BD6'].filter((x) => x !== shirt)), hair: c(HAIR),
+      hairStyle: c<HS>(['short', 'ponytail', 'short']), sunglasses: c([false, false, false, true])}}; },
+  friend: (seed) => { const c = chooser(seed, 'friend');
+    return {signature: 'bright casual shirt + one accessory', size: 1, outfit: {shirt: c(CASUAL), hair: c(HAIR), hairStyle: c<HS>(['short', 'long', 'ponytail', 'sides', 'short']),
+      ...c<Partial<Outfit>>([{}, {hat: 'cap', hatColor: c(CASUAL)}, {hat: 'beanie', hatColor: c(CASUAL)}, {scarf: c(CASUAL)}, {glasses: true, glassesColor: c(CASUAL)}, {sunglasses: true}, {hold: 'phone'}, {hold: 'coffee'}])}}; },
+  kid: (seed) => { const c = chooser(seed, 'kid');
+    return {signature: 'smaller size + bright shirt', size: 0.72, outfit: {shirt: c(CASUAL), hair: c(HAIR.slice(0, 5)), hairStyle: c<HS>(['short', 'ponytail', 'short']),
+      ...c<Partial<Outfit>>([{}, {hat: 'cap', hatColor: c(CASUAL)}, {scarf: c(CASUAL)}, {headband: c(CASUAL)}, {glasses: true, glassesColor: c(CASUAL)}])}}; },
+  worker: (seed) => { const c = chooser(seed, 'worker');
+    return {signature: 'hard hat + high-vis vest (+ wrench)', size: 1.02, outfit: {shirt: c(['#3F7FD9', '#6B6A3A', '#5B5B66', '#8C4A2F', '#2F5BEA']), vest: c(['#FF8A1F', '#D4E157']),
+      hat: 'hardhat', hatColor: c(['#FFD23F', '#FF8A1F', '#F2F2F2', '#E5484D']), hair: c(HAIR), hairStyle: 'short', mustache: c([false, true]), hold: c(['wrench', 'wrench', 'coffee', undefined])}}; },
+};
+/** one supporting character for a video: role('scientist', 'pink-cell') */
+export const role = (name: RoleName, seed: string | number): RoleLook => ROLES[name](seed);
+````
