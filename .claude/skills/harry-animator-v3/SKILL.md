@@ -72,6 +72,22 @@ where they differ:**
   (section 5).
 - Smoking and guns can limit ads on YouTube: use the cigarette rarely and the gun only where the story needs it.
 
+**Owner's amendments (16 Nov 2026, after studying a fast-growing cartoon Shorts channel) - these override every
+"smooth camera only / no whips / no speed lines / no text in the scene" line in this file where they differ:**
+- **Fast moves are allowed as accents** (`Moves.tsx`, section 6 "Fast moves"): a slam zoom into a face, a
+  fly-through (the camera dives into an object, white flash, comes out in the next place), a smear / whip cut, a
+  punch-in with overshoot - with **motion blur** (and speed lines on zooms) computed from the camera's real speed.
+  At most one accent every ~5-8 s, each move <= 0.5 s, always landing on a word and settling into a smooth, sharp
+  hold. Everything else stays the calm v3 camera. No hand-held shake, no roll, no random wobble - ever.
+- **Pop-up cards are allowed in the scene** (`Cards.tsx`, section 8.1): a generic social post (`PostCard`), a
+  newspaper front page (`Headline`), a big counting number (`BigNumber`). Invented names, handles and papers only;
+  **no real logos or platform marks**; a card that quotes a real person quotes only something they really said
+  (in the fact sheet, with its source); the words on a card match the narration at that moment. One card at a time,
+  <= ~2.5 s, never covering the main face or the caption box. Explanation cutaways still carry no text.
+- **Render speed rule**: these are 2D post effects - no extra 3D geometry, no second `World`. Sharp frames render at
+  the old speed (measured: no change); only frames that are actually blurred cost more (measured ~1.6x per blurred
+  frame at full size, i.e. about +2-4 % on a whole video with 4-6 accents). Cards cost nothing measurable.
+
 **Restate the look concretely for every shot.** In `story.json` every shot gets a `look` line written out in full -
 who is in it (name, clothes colours, hair), the place, its materials and palette, the light direction, the camera move.
 Never write "same style as before". **Never drift into**: rounded 3D characters, anime faces, photoreal people,
@@ -85,7 +101,9 @@ and the video is re-timed to it word by word.
 
 Worked example: `examples/v3-demo/Short.tsx` (8 s: a market street with a dolly and push-in, a clean cut on the
 action, a kitchen with a high-angle insert that moves into a reaction close-up, a table edge passing in front of the
-character, a 3D mug in a flat hand, real cast shadows). Copy its patterns, never its content. `examples/water/` holds
+character, a 3D mug in a flat hand, real cast shadows). Copy its patterns, never its content.
+`examples/v3-moves/MoveTest.tsx` (5 s) shows the fast-move accents and pop-up cards: a slam zoom, a fly-through, a
+smear cut, a post card, a counting number and a newspaper (`moves-sheet.jpg` = its contact sheet). `examples/water/` holds
 only pipeline files from an older video (`story.json`, `timing.json`, `gen_sfx.py`, `youtube.md`) - use them for file
 formats and the sound cue list, not for the look.
 
@@ -100,7 +118,9 @@ Folder map (`<SKILL>` = this skill's base directory):
   remotion.config.ts, tsconfig, `src/`: **`World3D.tsx`** = the 3D world (`World`, `Cel`, `cam3At`, `toScreen`,
   `celPoint`, `Box` / `Cyl` / `Ball` / `Ground`, `tex`, `Light`, `Cuts`, `Dissolve`), **`Cast.tsx`** = the flat
   `Person`, `Captions.tsx` = one-word safe-area captions + `SafeGuides`, `Cta.tsx` = `Cta` subscribe button,
-  `ThumbText`, `Tag`, **`ThumbKit.tsx`** = `ThumbFrame`, `POP`, `Ring`, `Arrow` (section 12), `Bits.tsx` = `Puff` / `Pill` / `Bracket` / `Sparkle` (flat screen-space effects), `Layer.tsx` =
+  `ThumbText`, `Tag`, **`Moves.tsx`** = fast-move accents (`EASE`, `camBlur`, `MotionBlur`, `ShotBlur`, `Transition`,
+  `SpeedLines`), **`Cards.tsx`** = pop-up cards (`PostCard`, `Headline`, `BigNumber`, `cardIn`, `flyX`),
+  **`ThumbKit.tsx`** = `ThumbFrame`, `POP`, `Ring`, `Arrow` (section 12), `Bits.tsx` = `Puff` / `Pill` / `Bracket` / `Sparkle` (flat screen-space effects), `Layer.tsx` =
   outline scale, `math.ts`, `color.ts`, `Root.tsx`
 - **Cast library - Appendix A at the end of this file**: the current `Cast.tsx` (elbows + knees, outfit pieces, held
   props), `Poses.ts` (24 named poses, 18 expressions, blending, walk / run) and `Roles.ts` (Blob, his costumes, 9 role
@@ -261,7 +281,9 @@ forced alignment with pocketsphinx (its wheel ships the English model), installe
    **The hook shows the consequence**: within the first 3 s the picture already shows what goes wrong (the character
    does the thing and suffers), then the story rewinds into the explanation.
    **Clean cuts** between pictures (cut on the word); one smooth camera move inside each; at most 1-2 short
-   dissolves; no whip pans, speed lines or shake as a style. A video has 1-3 places, each with its own palette.
+   dissolves. Mark 4-6 **accent beats** in the table (the hook, a reveal, a place change, the payoff): each gets one
+   fast move from `Moves.tsx` (slam zoom, fly-through, smear cut, punch-in, flash cut). Never shake. A video has 1-3
+   places, each with its own palette.
 5. **One layer deep.** Every fact in the script gets one short cutaway (1-2 s) that shows HOW it works, one level
    below what the eye sees - never a lecture, never two levels. Build them in the same style (3D objects, flat
    characters) and **without text**:
@@ -408,9 +430,23 @@ Units are metres, Y is up, the floor is y = 0. A shot is one `<World>`:
   conversation, 3-5 m looking down for a high-angle insert, fov 24-30 for close-ups, 32-40 for wides. Every shot moves
   smoothly: a slow dolly in or out, a lateral track (move `pos` and `look` together), a gentle push-in on the key word
   (5-10 % over 0.5-0.8 s), a crane down from the insert to the face. Eased glides of at least 1 s; no hand-held
-  wobble, no whip, no roll. Keys sit on word keys (`K.word - 0.4`); the last camera equals the first (loop).
+  wobble, no roll. Keys sit on word keys (`K.word - 0.4`); the last camera equals the first (loop). The exception is
+  the fast-move accents below.
+- **Fast moves** (`Moves.tsx`, the 16 Nov amendment): a key may carry its own ease as a third element -
+  `[K.word, {pos, look, fov}, EASE.slam]` - which shapes the move INTO that key: `EASE.slam` (full speed, hard brake:
+  the rush from a wide into a face, 0.3-0.45 s), `EASE.punch` (slam with a small overshoot: a push-in on a key word),
+  `EASE.dive` (accelerates into the key: flying INTO an object right before a fly-through cut), `EASE.whip` (all the
+  motion in the middle: a fast pan / track between two held framings). Wrap each shot's `World` in
+  `<ShotBlur t={t} cam={KEYS}>` (the same key list the shot passes to `cam3At`): it measures how fast the picture
+  moves and adds motion blur (directional for pans, a soft blur + slight stretch + speed lines for zooms) ONLY above
+  ~14 px per frame, so normal glides stay sharp and cost nothing. An orbit around the subject keeps the subject
+  sharp (turning and sliding cancel). Never put captions, the CTA or a card that must be read inside the blur.
 - **Editing**: `<Cuts t shots={[[0, <A/>], [K.x, <B/>], ...]}>` = clean cuts on actions and reveals;
-  `<Dissolve t at a b>` = a 0.25-0.4 s dissolve, 1-2 per video at most.
+  `<Dissolve t at a b>` = a 0.25-0.4 s dissolve, 1-2 per video at most;
+  `<Transition t at kind a b>` (`Moves.tsx`) = a fast transition that renders only one shot at a time (free):
+  `'fly'` (push + zoom blur + white flash: pair with an `EASE.dive` camera into an object in shot a), `'smear'` (a
+  whip into horizontal blur, the next shot arrives from the other side; `dir` = -1 / 1), `'flash'` (a clean cut under a
+  quick white or coloured flash: big reveals and impacts). 0.35-0.45 s, on the word. Use 2-4 per video, not every cut.
 - **Richness** (the set must feel lush, not like a few primitives): a sky with 3D cloud clusters (soft white `Ball`
   groups, slowly drifting whole cycles) and a low sun disc with a glow; sea with 2-3 animated foam lines and a
   darker far band; ground with a second texture layer and scattered small things (fallen leaves, fruit, shells,
@@ -442,10 +478,22 @@ consistent within a place, the cast separates from the background.
 ---------------------------------------------------------------------------------------------------------------------
 ## 8. Effects, labels, captions, CTA
 
-8.1 **In the scene, no writing by default.** No floating labels, speech bubbles, logos or watermarks. Show numbers
-    with things instead: a row of copies for a size comparison, a gauge needle, a pile that grows, a ruler prop, a
-    character counting on raised hands. Use a `Pill` label only when a number cannot be shown any other way and the
-    voice says it at that moment (exactly as spoken), and pop it out when the beat ends.
+8.1 **In the scene, no stray writing.** No floating labels, speech bubbles, logos or watermarks; show numbers with
+    things first (a row of copies, a gauge needle, a pile that grows, a ruler prop, a character counting on raised
+    hands). **Pop-up cards** (`Cards.tsx`, 16 Nov amendment) are the allowed exception, on the beat where the voice
+    says the words:
+    - `PostCard` (name, handle, text, avatar colour + initial, optional likes / verified tick) - a generic post, no
+      platform logo; for "people online said...", "he posted...", "the company announced...";
+    - `Headline` (invented masthead `paper`, `title`) - a newspaper page that pops or tumbles in; for "the news called
+      it...", "headlines everywhere...";
+    - `BigNumber` (`text`, or `to` + `count` 0..1 to count up, optional `sub`) - for the one striking number of the
+      video, exactly as spoken.
+    Place them with `cardIn(t, tIn, tOut)` (pop + tilt spring, pop out) or `flyX` (fly in from a side), as children of
+    `<World>` (its SVG layer) or anchored to a 3D object with `toScreen`. Rules: invented names only, never a real
+    logo, platform mark or real account presented as a real post; a real person's words only if they really said them
+    (sourced); one card at a time, <= ~2.5 s; inside x 140-900, y 250-1100, never over the main face or the caption
+    box; a character reacts to the card (looks at it, face changes). Pop a card out before a fast move or keep it in
+    a full-frame overlay outside `ShotBlur` so it is never smeared. A `Pill` stays the fallback for a short label.
 8.2 Honesty tags: when a drawing is far from scale, a small top `Tag` "not to scale"; when a comparison is truly to
     scale, "drawn to scale". These are necessary labels - keep them, also on thumbnails.
 8.3 Liquids, smoke, fire, heat in the world are 3D: translucent `Ground` / `Cyl` sheets (`opacity`, low `rough`),
@@ -501,8 +549,9 @@ consistent within a place, the cast separates from the background.
   re-check.
 - **Preview**: render 0.5x (`npx remotion render src/index.ts Short out/preview.mp4 --scale=0.5 --crf=20 --concurrency=4`), then
   `python3 tools/qa_video.py out/preview.mp4`:
-  - pop scan (caption + tag bands masked): every flag must be an intended cut, pop-in or fast action - list them against
-    the beat table; an unexplained isolated spike is a bug;
+  - pop scan (caption + tag bands masked): every flag must be an intended cut, pop-in, fast move / transition accent or
+    fast action - list them against the beat table; an unexplained isolated spike is a bug; accents: 4-6 per video,
+    each <= 0.5 s, each settling into a sharp hold (check a still 0.2 s after every accent);
   - loop: first vs last frame mean abs diff < 0.5 on the preview (< 0.2 at full size). Things that break loops: a drifting
     3D cloud, swaying foliage or breathing that doesn't complete whole cycles over the duration, a state that isn't reset;
   - loudness and audio silences (v2: no silences expected - the bed is continuous; loudness about -14 LUFS after
@@ -611,8 +660,10 @@ Append the topic to `topics_log.md`.
   templates with a new look per video; new place and palette for every video; identical cast and set within a video.
   No bun on anyone, and never Blob's teal on anyone else.
 - Smooth camera in every shot (track, dolly, gentle push-in, high-angle insert, reaction close-up); clean cuts on
-  actions and reveals; at most 1-2 short dissolves; no whips, speed lines or shake.
-- Scenes carry no dialogue, lip-sync, speech bubbles, logos, watermarks or unnecessary labels; honesty tags stay.
+  actions and reveals; at most 1-2 short dissolves; 4-6 fast-move accents per video (slam zoom, fly-through, smear,
+  punch-in, flash) with motion blur from `Moves.tsx`, each <= 0.5 s and settling sharp; never shake or roll.
+- Scenes carry no dialogue, lip-sync, speech bubbles, logos, watermarks or unnecessary labels; honesty tags stay;
+  pop-up cards (`PostCard`, `Headline`, `BigNumber`) only on the beat the voice says it, invented names, no real logos.
 - Frame 0 = the premise, centred, big, readable; the first spoken line names what you see.
 - Feet planted, hands reach props before they move, one focal action at a time.
 - One-word captions in the safe box; the sound never drops out; every visual on its word; the payoff on the last
@@ -641,6 +692,11 @@ pieces by screen side, not by world side; every beat needs the hero in the pictu
 furniture) and a repeated framing for before/after payoffs; when a take has a long pause inside a sentence the aligner
 can slip a sentence - pass `BOUNDS` from `silencedetect`; a cloud background job stops at its time limit, so render 2K in
 ~1050-frame chunks (`--frames`, `--muted`) and join them with the mixed audio (concat + mix + `master_audio.py`).
+Pitfalls met building the fast-move kit (16 Nov 2026): any CSS / SVG filter over the WebGL canvas forces a copy of the
+3D frame out of the GPU layer - that copy, not the blur size, is the cost (an identity filter cost almost as much as
+a 30 px blur; rendering the blur at 1/4 resolution saved nothing), so `MotionBlur` renders NO filter element at all
+below its threshold; a first version blurred normal glides (4-8 px/frame) and made a whole test render 2x slower;
+the screen-speed formula must let turning and sliding cancel on an orbit, or every orbit shot blurs.
 Pitfalls kept from v1/v2: a closing quote after the full stop used to hide the sentence end (handled in
 `gen_timing.py` / `align_take.py`); when a component switches between differently shaped drawings (eye styles, mouth
 shapes), give each style its own React `key` - with `--concurrency` > 1 each tab renders non-contiguous frames and
