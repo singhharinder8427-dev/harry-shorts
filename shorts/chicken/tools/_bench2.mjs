@@ -10,6 +10,6 @@ for (const variant of (process.env.VARS || 'full').split(',')) {
   const c = await selectComposition({serveUrl, id: process.env.COMP || 'Short', inputProps: props, browserExecutable, chromiumOptions});
   const t0 = Date.now();
   await renderMedia({serveUrl, composition: c, codec: 'h264', outputLocation: '/tmp/claude-0/-home-user-harry-shorts/f8a76095-835c-5b17-b090-2c46e4b77af2/scratchpad/b.mp4', frameRange: [a, b],
-    scale: Number(process.env.SCALE || 0.5), concurrency: Number(process.env.CONC || 1), inputProps: props, browserExecutable, chromiumOptions, muted: true, crf: 20});
+    scale: Number(process.env.SCALE || 0.5), concurrency: Number(process.env.CONC || 1), inputProps: {...props, voice: false}, browserExecutable, chromiumOptions, muted: true, crf: 20, imageFormat: process.env.IMG || 'jpeg'});
   console.log(variant, 'conc', process.env.CONC || 1, ((Date.now() - t0) / (b - a + 1) / 1000).toFixed(3), 's/frame');
 }
