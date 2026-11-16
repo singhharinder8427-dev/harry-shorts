@@ -32,11 +32,11 @@ const OTTO0: Partial<PersonPose> = {view: 'left', handL: [24, -168], handR: [-24
 const WALLZ = -1.2;
 const CAB: Light = {sun: [3, 5, 4], sunColor: '#FFF1DC', sunI: 2.1, sky: '#FFF6E8', bounce: '#8FA8A6', ambI: 1.5, fog: ['#EADFCB', 16, 50], focus: [0, 0.8, -0.5], span: 5};
 const CAB_SKY: [string, string] = ['#EFE6D3', '#EFE6D3'];
-const Win: React.FC<{x?: number; hole?: boolean; haze?: number; sc?: number}> = ({x = 0, hole = true, haze = 0, sc = 1}) => (<group position={[x, 0, WALLZ]} scale={sc}>
+const Win: React.FC<{x?: number; hole?: boolean; haze?: number; sc?: number; holeR?: number}> = ({x = 0, hole = true, haze = 0, sc = 1, holeR = 0.02}) => (<group position={[x, 0, WALLZ]} scale={sc}>
   <Box pos={[0, 0.88, 0.02]} size={[0.62, 0.8, 0.06]} color="#E4DCCB" r={0.14} rough={0.6} />
   <Box pos={[0, 0.93, 0.07]} size={[0.44, 0.68, 0.04]} color="#74B8EE" r={0.1} rough={0.2} emissive="#9ED3F7" glow={0.75} />
   <Box pos={[0, 0.93, 0.1]} size={[0.44, 0.68, 0.01]} color="#D6ECFB" opacity={0.3} r={0.1} rough={0.1} cast={false} />
-  {hole && <Cyl pos={[0, 1.12, 0.112]} rot={[Math.PI / 2, 0, 0]} r={0.02} h={0.012} color="#0B0B0D" cast={false} />}
+  {hole && <Cyl pos={[0, 1.12, 0.112]} rot={[Math.PI / 2, 0, 0]} r={holeR} h={0.012} color="#0B0B0D" cast={false} />}
   {haze > 0.01 && <Box pos={[0, 0.93, 0.125]} size={[0.44, 0.68, 0.01]} color="#F4F7FA" opacity={haze} r={0.1} cast={false} />}
 </group>);
 const Cabin: React.FC<{wins?: number[]; haze?: number; hole?: boolean; sc?: number; seats?: boolean}> = ({wins = [0], haze = 0, hole = true, sc = 1, seats = true}) => (<>
@@ -279,8 +279,36 @@ export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: bool
   </AbsoluteFill>);
 };
 
-// ---------------------------------------------------------------- thumbnails (frames of the video + text)
+// ---------------------------------------------------------------- thumbnails (purpose-built frames + text)
+const Ring: React.FC<{p: V3; r: number}> = ({p, r}) => (<mesh position={p}><torusGeometry args={[r, r * 0.16, 14, 48]} /><meshStandardMaterial color="#E5483D" emissive="#E5483D" emissiveIntensity={0.9} roughness={0.5} /></mesh>);
+const ThumbSeats: React.FC<{xs: number[]; front?: boolean}> = ({xs, front}) => (<>{xs.map((x, i) => front
+  ? <Box key={i} pos={[x, 0, -0.3]} size={[0.8, 0.5, 0.52]} color="#1F8A8A" map={tex('speckle', [3, 3], 14)} r={0.1} />
+  : <Box key={i} pos={[x, 0, -0.98]} size={[0.8, 1.22, 0.2]} color="#1F8A8A" map={tex('speckle', [3, 3], 12)} r={0.1} />)}</>);
+/** the big window with an exaggerated hole, a red ring and a yellow arrow pointing at it */
+const HeroWindow: React.FC<{x: number; sc: number}> = ({x, sc}) => {
+  const hp: V3 = [x, 1.12 * sc, WALLZ + 0.112 * sc + 0.035];
+  return (<><Win x={x} sc={sc} holeR={0.04} /><Ring p={hp} r={0.115 * sc} />
+    <Arrow pos={[hp[0], hp[1] - 0.66 * sc, hp[2] + 0.05]} rot={[0, 0, 0]} len={0.3 * sc} s={1} /></>);
+};
+const ThumbA: React.FC = () => (
+  <World cam={{pos: [0, 1.5, 5.2], look: [0, 1.3, -0.8], fov: 38}} light={CAB} sky={CAB_SKY}
+    scene={<><Cabin wins={[]} seats={false} /><ThumbSeats xs={[-0.72, 0.72]} /><HeroWindow x={0} sc={1.25} /></>} front={<ThumbSeats xs={[-0.72, 0.72]} front />}>
+    <Cel at={[-0.72, 0, -0.55]}><Mia view="right" handR={[108, -272]} handL={[-70, -128]} eyes="wide" mouth="o" browUp={1} headTilt={4} /></Cel>
+    <Cel at={[0.72, 0, -0.55]}><Otto view="left" handL={[24, -168]} handR={[-24, -162]} eyes="squeeze" mouth="teeth" brow={0.9} tint="#E5483D" tintAmt={0.9} steam={0.9} t={1} /></Cel>
+  </World>);
+const ThumbB: React.FC = () => (
+  <World cam={{pos: [0, 1.5, 4.4], look: [0, 1.25, -0.8], fov: 38}} light={CAB} sky={CAB_SKY}
+    scene={<><Cabin wins={[]} seats={false} /><ThumbSeats xs={[0.42]} /><HeroWindow x={-0.38} sc={1.15} /></>} front={<ThumbSeats xs={[0.42]} front />}>
+    <Cel at={[0.42, 0, -0.55]}><Otto view="left" handL={[24, -168]} handR={[-24, -162]} eyes="squeeze" mouth="teeth" brow={0.9} tint="#E5483D" tintAmt={0.9} steam={0.9} t={1} /></Cel>
+  </World>);
+const ThumbC: React.FC = () => (
+  <World cam={{pos: [0.0, 1.3, 5.2], look: [-0.12, 0.62, 0], fov: 38}} light={STAGE} sky={STAGE_SKY}
+    scene={<><Stage /><GlassP x={-0.5} hot={0.9} /><GlassP x={0} holed /><GlassP x={0.5} />
+      {[0.35, 0.61, 0.87].map((y, i) => <Arrow key={i} pos={[0.95, y, 0]} rot={[0, 0, POINT_L]} len={0.35} s={1} />)}
+      <Dots pts={cloudPts(30, 0.1, 1.0, 0.08, 1.12, -0.3, 0.3, 90, 0)} r={0.03} color="#FFFFFF" /></>}>
+    <Cel at={[-0.66, 0, 0.45]} h={1.1}><Mia view="right" eyes="wide" mouth="o" browUp={1} handR={[100, -270]} handL={[-70, -128]} /></Cel>
+  </World>);
 export const Thumb: React.FC<{variant: 'A' | 'B' | 'C'}> = ({variant}) => {
-  const cfg = {A: {t: K.hole + 0.15, l1: 'WHY THE', l2: 'TINY HOLE?', top: 250}, B: {t: K.sure + 0.6, l1: 'A MISTAKE?', l2: 'NOPE', top: 130}, C: {t: K.gap + 0.5, l1: 'THE REAL', l2: 'REASON', top: 205}}[variant];
-  return (<AbsoluteFill><Scenes t={cfg.t} /><ThumbText l1={cfg.l1} l2={cfg.l2} top={cfg.top} /></AbsoluteFill>);
+  const cfg = {A: {n: <ThumbA />, l1: 'WHY THE', l2: 'TINY HOLE?', top: 230}, B: {n: <ThumbB />, l1: 'A MISTAKE?', l2: 'NOPE', top: 130}, C: {n: <ThumbC />, l1: 'THE REAL', l2: 'REASON', top: 230}}[variant];
+  return (<AbsoluteFill>{cfg.n}<ThumbText l1={cfg.l1} l2={cfg.l2} top={cfg.top} /></AbsoluteFill>);
 };
