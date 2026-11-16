@@ -1,554 +1,554 @@
 {
  "short": "windowhole",
  "title": "Why does an airplane window have a tiny hole?",
- "duration": 41.23,
- "voiceOffset": 0.0,
- "estimated": true,
+ "duration": 41.14,
+ "voiceOffset": 0.4,
+ "estimated": false,
  "words": [
   {
    "w": "Mia",
    "start": 0.4,
-   "end": 0.613
+   "end": 0.73
   },
   {
    "w": "spots",
-   "start": 0.613,
-   "end": 0.826
+   "start": 0.73,
+   "end": 1.14
   },
   {
    "w": "a",
-   "start": 0.826,
-   "end": 1.038
+   "start": 1.14,
+   "end": 1.2
   },
   {
    "w": "tiny",
-   "start": 1.038,
-   "end": 1.464
+   "start": 1.2,
+   "end": 1.72
   },
   {
    "w": "hole",
-   "start": 1.464,
-   "end": 1.677
+   "start": 1.72,
+   "end": 2.25
   },
   {
    "w": "in",
-   "start": 1.677,
-   "end": 1.889
+   "start": 2.25,
+   "end": 2.33
   },
   {
    "w": "her",
-   "start": 1.889,
-   "end": 2.102
+   "start": 2.33,
+   "end": 2.49
   },
   {
    "w": "airplane",
-   "start": 2.102,
-   "end": 2.528
+   "start": 2.49,
+   "end": 2.91
   },
   {
    "w": "window.",
-   "start": 2.528,
-   "end": 2.953
+   "start": 2.91,
+   "end": 3.37
   },
   {
    "w": "Her",
-   "start": 3.453,
-   "end": 3.666
+   "start": 3.85,
+   "end": 3.37
   },
   {
    "w": "seatmate",
-   "start": 3.666,
-   "end": 4.091
+   "start": 3.85,
+   "end": 4.48
   },
   {
    "w": "Otto",
-   "start": 4.091,
-   "end": 4.517
+   "start": 4.48,
+   "end": 4.87
   },
   {
    "w": "is",
-   "start": 4.517,
-   "end": 4.73
+   "start": 4.87,
+   "end": 4.93
   },
   {
    "w": "sure",
-   "start": 4.73,
-   "end": 4.943
+   "start": 4.93,
+   "end": 5.37
   },
   {
    "w": "it's",
-   "start": 4.943,
-   "end": 5.155
+   "start": 5.37,
+   "end": 5.5
   },
   {
    "w": "a",
-   "start": 5.155,
-   "end": 5.368
+   "start": 5.5,
+   "end": 5.54
   },
   {
    "w": "manufacturing",
-   "start": 5.368,
-   "end": 6.432
+   "start": 5.54,
+   "end": 6.29
   },
   {
    "w": "mistake.",
-   "start": 6.432,
-   "end": 6.857
+   "start": 6.29,
+   "end": 6.83
   },
   {
    "w": "It",
-   "start": 7.357,
-   "end": 7.57
+   "start": 7.37,
+   "end": 6.83
   },
   {
    "w": "isn't.",
-   "start": 7.57,
-   "end": 7.996
+   "start": 7.37,
+   "end": 7.93
   },
   {
    "w": "Up",
-   "start": 8.496,
-   "end": 8.709
+   "start": 8.63,
+   "end": 7.93
   },
   {
    "w": "at",
-   "start": 8.709,
-   "end": 8.921
+   "start": 8.63,
+   "end": 8.88
   },
   {
    "w": "cruising",
-   "start": 8.921,
-   "end": 9.347
+   "start": 8.88,
+   "end": 9.33
   },
   {
    "w": "height,",
-   "start": 9.347,
-   "end": 9.56
+   "start": 9.33,
+   "end": 9.74
   },
   {
    "w": "the",
-   "start": 9.76,
-   "end": 9.972
+   "start": 9.74,
+   "end": 9.97
   },
   {
    "w": "air",
-   "start": 9.972,
-   "end": 10.185
+   "start": 9.97,
+   "end": 10.15
   },
   {
    "w": "outside",
-   "start": 10.185,
-   "end": 10.611
+   "start": 10.15,
+   "end": 10.62
   },
   {
    "w": "is",
-   "start": 10.611,
-   "end": 10.823
+   "start": 10.62,
+   "end": 10.77
   },
   {
    "w": "too",
-   "start": 10.823,
-   "end": 11.036
+   "start": 10.77,
+   "end": 11.03
   },
   {
    "w": "thin",
-   "start": 11.036,
-   "end": 11.249
+   "start": 11.03,
+   "end": 11.38
   },
   {
    "w": "to",
-   "start": 11.249,
-   "end": 11.462
+   "start": 11.38,
+   "end": 11.46
   },
   {
    "w": "breathe,",
-   "start": 11.462,
-   "end": 11.674
+   "start": 11.46,
+   "end": 11.97
   },
   {
    "w": "so",
-   "start": 11.874,
-   "end": 12.087
+   "start": 12.15,
+   "end": 11.97
   },
   {
    "w": "the",
-   "start": 12.087,
-   "end": 12.3
+   "start": 12.15,
+   "end": 12.35
   },
   {
    "w": "cabin",
-   "start": 12.3,
-   "end": 12.726
+   "start": 12.35,
+   "end": 12.77
   },
   {
    "w": "air",
-   "start": 12.726,
-   "end": 12.938
+   "start": 12.77,
+   "end": 12.93
   },
   {
    "w": "is",
-   "start": 12.938,
-   "end": 13.151
+   "start": 12.93,
+   "end": 13.04
   },
   {
    "w": "pressurized.",
-   "start": 13.151,
-   "end": 13.789
+   "start": 13.04,
+   "end": 13.83
   },
   {
    "w": "That",
-   "start": 14.289,
-   "end": 14.502
+   "start": 14.22,
+   "end": 14.4
   },
   {
    "w": "pressure",
-   "start": 14.502,
-   "end": 14.928
+   "start": 14.4,
+   "end": 14.84
   },
   {
    "w": "pushes",
-   "start": 14.928,
-   "end": 15.353
+   "start": 14.84,
+   "end": 15.3
   },
   {
    "w": "outward",
-   "start": 15.353,
-   "end": 15.779
+   "start": 15.3,
+   "end": 15.74
   },
   {
    "w": "on",
-   "start": 15.779,
-   "end": 15.991
+   "start": 15.74,
+   "end": 15.88
   },
   {
    "w": "every",
-   "start": 15.991,
-   "end": 16.63
+   "start": 16.0,
+   "end": 16.3
   },
   {
    "w": "window,",
-   "start": 16.63,
-   "end": 17.055
+   "start": 16.3,
+   "end": 16.8
   },
   {
    "w": "the",
-   "start": 17.255,
-   "end": 17.468
+   "start": 16.97,
+   "end": 16.8
   },
   {
    "w": "whole",
-   "start": 17.468,
-   "end": 17.681
+   "start": 16.97,
+   "end": 17.34
   },
   {
    "w": "flight.",
-   "start": 17.681,
-   "end": 17.894
+   "start": 17.34,
+   "end": 17.83
   },
   {
    "w": "A",
-   "start": 18.394,
-   "end": 18.606
+   "start": 18.27,
+   "end": 17.83
   },
   {
    "w": "window",
-   "start": 18.606,
-   "end": 19.032
+   "start": 18.27,
+   "end": 18.73
   },
   {
    "w": "has",
-   "start": 19.032,
-   "end": 19.245
+   "start": 18.73,
+   "end": 18.9
   },
   {
    "w": "several",
-   "start": 19.245,
-   "end": 19.883
+   "start": 18.9,
+   "end": 19.32
   },
   {
    "w": "panes,",
-   "start": 19.883,
-   "end": 20.096
+   "start": 19.32,
+   "end": 19.95
   },
   {
    "w": "and",
-   "start": 20.296,
-   "end": 20.509
+   "start": 20.08,
+   "end": 19.95
   },
   {
    "w": "the",
-   "start": 20.509,
-   "end": 20.721
+   "start": 20.08,
+   "end": 20.24
   },
   {
    "w": "hole",
-   "start": 20.721,
-   "end": 20.934
+   "start": 20.24,
+   "end": 20.62
   },
   {
    "w": "is",
-   "start": 20.934,
-   "end": 21.147
+   "start": 20.62,
+   "end": 20.76
   },
   {
    "w": "drilled",
-   "start": 21.147,
-   "end": 21.36
+   "start": 20.76,
+   "end": 21.05
   },
   {
    "w": "in",
-   "start": 21.36,
-   "end": 21.572
+   "start": 21.05,
+   "end": 21.13
   },
   {
    "w": "the",
-   "start": 21.572,
-   "end": 21.785
+   "start": 21.13,
+   "end": 21.19
   },
   {
    "w": "middle",
-   "start": 21.785,
-   "end": 22.211
+   "start": 21.19,
+   "end": 21.57
   },
   {
    "w": "one.",
-   "start": 22.211,
-   "end": 22.423
+   "start": 21.57,
+   "end": 21.82
   },
   {
    "w": "It",
-   "start": 22.923,
-   "end": 23.136
+   "start": 22.28,
+   "end": 21.82
   },
   {
    "w": "lets",
-   "start": 23.136,
-   "end": 23.349
+   "start": 22.28,
+   "end": 22.57
   },
   {
    "w": "cabin",
-   "start": 23.349,
-   "end": 23.774
+   "start": 22.57,
+   "end": 22.96
   },
   {
    "w": "pressure",
-   "start": 23.774,
-   "end": 24.2
+   "start": 22.96,
+   "end": 23.32
   },
   {
    "w": "into",
-   "start": 24.2,
-   "end": 24.626
+   "start": 23.32,
+   "end": 23.47
   },
   {
    "w": "the",
-   "start": 24.626,
-   "end": 24.838
+   "start": 23.47,
+   "end": 23.57
   },
   {
    "w": "gap,",
-   "start": 24.838,
-   "end": 25.051
+   "start": 23.57,
+   "end": 24.06
   },
   {
    "w": "so",
-   "start": 25.251,
-   "end": 25.464
+   "start": 24.06,
+   "end": 24.19
   },
   {
    "w": "the",
-   "start": 25.464,
-   "end": 25.677
+   "start": 24.19,
+   "end": 24.36
   },
   {
    "w": "outer",
-   "start": 25.677,
-   "end": 26.102
+   "start": 24.36,
+   "end": 24.66
   },
   {
    "w": "pane",
-   "start": 26.102,
-   "end": 26.315
+   "start": 24.66,
+   "end": 24.97
   },
   {
    "w": "carries",
-   "start": 26.315,
-   "end": 26.74
+   "start": 24.97,
+   "end": 25.34
   },
   {
    "w": "the",
-   "start": 26.74,
-   "end": 26.953
+   "start": 25.34,
+   "end": 25.4
   },
   {
    "w": "load.",
-   "start": 26.953,
-   "end": 27.166
+   "start": 25.4,
+   "end": 25.86
   },
   {
    "w": "It",
-   "start": 27.666,
-   "end": 27.879
+   "start": 26.27,
+   "end": 25.86
   },
   {
    "w": "also",
-   "start": 27.879,
-   "end": 28.304
+   "start": 26.27,
+   "end": 26.59
   },
   {
    "w": "lets",
-   "start": 28.304,
-   "end": 28.517
+   "start": 26.59,
+   "end": 26.8
   },
   {
    "w": "moisture",
-   "start": 28.517,
-   "end": 28.943
+   "start": 26.8,
+   "end": 27.28
   },
   {
    "w": "escape,",
-   "start": 28.943,
-   "end": 29.368
+   "start": 27.28,
+   "end": 27.73
   },
   {
    "w": "so",
-   "start": 29.568,
-   "end": 29.781
+   "start": 27.73,
+   "end": 27.86
   },
   {
    "w": "the",
-   "start": 29.781,
-   "end": 29.994
+   "start": 27.86,
+   "end": 27.96
   },
   {
    "w": "glass",
-   "start": 29.994,
-   "end": 30.206
+   "start": 27.96,
+   "end": 28.26
   },
   {
    "w": "doesn't",
-   "start": 30.206,
-   "end": 30.632
+   "start": 28.26,
+   "end": 28.52
   },
   {
    "w": "fog.",
-   "start": 30.632,
-   "end": 30.845
+   "start": 28.52,
+   "end": 28.97
   },
   {
    "w": "Otto",
-   "start": 31.345,
-   "end": 31.77
+   "start": 29.58,
+   "end": 29.84
   },
   {
    "w": "leans",
-   "start": 31.77,
-   "end": 31.983
+   "start": 29.84,
+   "end": 30.28
   },
   {
    "w": "in,",
-   "start": 31.983,
-   "end": 32.196
+   "start": 30.28,
+   "end": 30.61
   },
   {
    "w": "squints,",
-   "start": 32.396,
-   "end": 32.609
+   "start": 30.77,
+   "end": 31.47
   },
   {
    "w": "and",
-   "start": 32.809,
-   "end": 33.021
+   "start": 31.7,
+   "end": 31.47
   },
   {
    "w": "goes",
-   "start": 33.021,
-   "end": 33.234
+   "start": 31.7,
+   "end": 32.0
   },
   {
    "w": "quiet.",
-   "start": 33.234,
-   "end": 33.66
+   "start": 32.0,
+   "end": 32.51
   },
   {
    "w": "Mia",
-   "start": 34.16,
-   "end": 34.372
+   "start": 32.87,
+   "end": 33.03
   },
   {
    "w": "smiles.",
-   "start": 34.372,
-   "end": 34.798
+   "start": 33.03,
+   "end": 33.23
   },
   {
    "w": "Some",
-   "start": 35.298,
-   "end": 35.511
+   "start": 33.56,
+   "end": 33.23
   },
   {
    "w": "mistakes",
-   "start": 35.511,
-   "end": 35.936
+   "start": 33.56,
+   "end": 33.96
   },
   {
    "w": "are",
-   "start": 35.936,
-   "end": 36.149
+   "start": 33.96,
+   "end": 34.0
   },
   {
    "w": "on",
-   "start": 36.149,
-   "end": 36.362
+   "start": 34.0,
+   "end": 34.18
   },
   {
    "w": "purpose.",
-   "start": 36.362,
-   "end": 36.787
+   "start": 34.18,
+   "end": 34.45
   },
   {
    "w": "Subscribe",
-   "start": 37.287,
-   "end": 37.713
+   "start": 34.84,
+   "end": 35.52
   },
   {
    "w": "so",
-   "start": 37.713,
-   "end": 37.926
+   "start": 35.52,
+   "end": 35.65
   },
   {
    "w": "you",
-   "start": 37.926,
-   "end": 38.138
+   "start": 35.65,
+   "end": 35.8
   },
   {
    "w": "never",
-   "start": 38.138,
-   "end": 38.564
+   "start": 35.8,
+   "end": 36.06
   },
   {
    "w": "miss",
-   "start": 38.564,
-   "end": 38.777
+   "start": 36.17,
+   "end": 36.42
   },
   {
    "w": "the",
-   "start": 38.777,
-   "end": 38.989
+   "start": 36.75,
+   "end": 37.49
   },
   {
    "w": "next",
-   "start": 38.989,
-   "end": 39.202
+   "start": 37.58,
+   "end": 37.94
   },
   {
    "w": "strange",
-   "start": 39.202,
-   "end": 39.415
+   "start": 37.94,
+   "end": 38.22
   },
   {
    "w": "fact.",
-   "start": 39.415,
-   "end": 39.628
+   "start": 38.96,
+   "end": 39.54
   }
  ],
  "chunks": [
@@ -557,302 +557,302 @@
    "w0": 0,
    "w1": 4,
    "start": 0.4,
-   "end": 1.677
+   "end": 2.25
   },
   {
    "text": "in her airplane window.",
    "w0": 5,
    "w1": 8,
-   "start": 1.677,
-   "end": 2.953
+   "start": 2.25,
+   "end": 3.37
   },
   {
    "text": "Her seatmate Otto is sure",
    "w0": 9,
    "w1": 13,
-   "start": 3.453,
-   "end": 4.943
+   "start": 3.85,
+   "end": 5.37
   },
   {
    "text": "it's a manufacturing mistake.",
    "w0": 14,
    "w1": 17,
-   "start": 4.943,
-   "end": 6.857
+   "start": 5.37,
+   "end": 6.83
   },
   {
    "text": "It isn't.",
    "w0": 18,
    "w1": 19,
-   "start": 7.357,
-   "end": 7.996
+   "start": 7.37,
+   "end": 7.930000000000001
   },
   {
    "text": "Up at cruising height,",
    "w0": 20,
    "w1": 23,
-   "start": 8.496,
-   "end": 9.56
+   "start": 8.63,
+   "end": 9.74
   },
   {
    "text": "the air outside is too thin to breathe,",
    "w0": 24,
    "w1": 31,
-   "start": 9.76,
-   "end": 11.674
+   "start": 9.74,
+   "end": 11.97
   },
   {
    "text": "so the cabin air is pressurized.",
    "w0": 32,
    "w1": 37,
-   "start": 11.874,
-   "end": 13.789
+   "start": 12.15,
+   "end": 13.83
   },
   {
    "text": "That pressure pushes outward",
    "w0": 38,
    "w1": 41,
-   "start": 14.289,
-   "end": 15.779
+   "start": 14.22,
+   "end": 15.74
   },
   {
    "text": "on every window,",
    "w0": 42,
    "w1": 44,
-   "start": 15.779,
-   "end": 17.055
+   "start": 15.74,
+   "end": 16.799999999999997
   },
   {
    "text": "the whole flight.",
    "w0": 45,
    "w1": 47,
-   "start": 17.255,
-   "end": 17.894
+   "start": 16.97,
+   "end": 17.83
   },
   {
    "text": "A window has several panes,",
    "w0": 48,
    "w1": 52,
-   "start": 18.394,
-   "end": 20.096
+   "start": 18.27,
+   "end": 19.95
   },
   {
    "text": "and the hole is drilled",
    "w0": 53,
    "w1": 57,
-   "start": 20.296,
-   "end": 21.36
+   "start": 20.08,
+   "end": 21.049999999999997
   },
   {
    "text": "in the middle one.",
    "w0": 58,
    "w1": 61,
-   "start": 21.36,
-   "end": 22.423
+   "start": 21.049999999999997,
+   "end": 21.82
   },
   {
    "text": "It lets cabin pressure",
    "w0": 62,
    "w1": 65,
-   "start": 22.923,
-   "end": 24.2
+   "start": 22.279999999999998,
+   "end": 23.32
   },
   {
    "text": "into the gap,",
    "w0": 66,
    "w1": 68,
-   "start": 24.2,
-   "end": 25.051
+   "start": 23.32,
+   "end": 24.06
   },
   {
    "text": "so the outer pane",
    "w0": 69,
    "w1": 72,
-   "start": 25.251,
-   "end": 26.315
+   "start": 24.06,
+   "end": 24.97
   },
   {
    "text": "carries the load.",
    "w0": 73,
    "w1": 75,
-   "start": 26.315,
-   "end": 27.166
+   "start": 24.97,
+   "end": 25.86
   },
   {
    "text": "It also lets moisture escape,",
    "w0": 76,
    "w1": 80,
-   "start": 27.666,
-   "end": 29.368
+   "start": 26.27,
+   "end": 27.729999999999997
   },
   {
    "text": "so the glass doesn't fog.",
    "w0": 81,
    "w1": 85,
-   "start": 29.568,
-   "end": 30.845
+   "start": 27.729999999999997,
+   "end": 28.97
   },
   {
    "text": "Otto leans in,",
    "w0": 86,
    "w1": 88,
-   "start": 31.345,
-   "end": 32.196
+   "start": 29.58,
+   "end": 30.61
   },
   {
    "text": "squints, and goes quiet.",
    "w0": 89,
    "w1": 92,
-   "start": 32.396,
-   "end": 33.66
+   "start": 30.77,
+   "end": 32.51
   },
   {
    "text": "Mia smiles.",
    "w0": 93,
    "w1": 94,
-   "start": 34.16,
-   "end": 34.798
+   "start": 32.87,
+   "end": 33.23
   },
   {
    "text": "Some mistakes are on purpose.",
    "w0": 95,
    "w1": 99,
-   "start": 35.298,
-   "end": 36.787
+   "start": 33.559999999999995,
+   "end": 34.449999999999996
   },
   {
    "text": "Subscribe so you never miss",
    "w0": 100,
    "w1": 104,
-   "start": 37.287,
-   "end": 38.777
+   "start": 34.839999999999996,
+   "end": 36.42
   },
   {
    "text": "the next strange fact.",
    "w0": 105,
    "w1": 108,
-   "start": 38.777,
-   "end": 39.628
+   "start": 36.75,
+   "end": 39.54
   }
  ],
  "sentences": [
   {
    "start": 0.4,
-   "end": 2.953,
+   "end": 3.37,
    "text": "Mia spots a tiny hole in her airplane window."
   },
   {
-   "start": 3.453,
-   "end": 6.857,
+   "start": 3.85,
+   "end": 6.83,
    "text": "Her seatmate Otto is sure it's a manufacturing mistake."
   },
   {
-   "start": 7.357,
-   "end": 7.996,
+   "start": 7.37,
+   "end": 7.930000000000001,
    "text": "It isn't."
   },
   {
-   "start": 8.496,
-   "end": 13.789,
+   "start": 8.63,
+   "end": 13.83,
    "text": "Up at cruising height, the air outside is too thin to breathe, so the cabin air is pressurized."
   },
   {
-   "start": 14.289,
-   "end": 17.894,
+   "start": 14.22,
+   "end": 17.83,
    "text": "That pressure pushes outward on every window, the whole flight."
   },
   {
-   "start": 18.394,
-   "end": 22.423,
+   "start": 18.27,
+   "end": 21.82,
    "text": "A window has several panes, and the hole is drilled in the middle one."
   },
   {
-   "start": 22.923,
-   "end": 27.166,
+   "start": 22.279999999999998,
+   "end": 25.86,
    "text": "It lets cabin pressure into the gap, so the outer pane carries the load."
   },
   {
-   "start": 27.666,
-   "end": 30.845,
+   "start": 26.27,
+   "end": 28.97,
    "text": "It also lets moisture escape, so the glass doesn't fog."
   },
   {
-   "start": 31.345,
-   "end": 33.66,
+   "start": 29.58,
+   "end": 32.51,
    "text": "Otto leans in, squints, and goes quiet."
   },
   {
-   "start": 34.16,
-   "end": 34.798,
+   "start": 32.87,
+   "end": 33.23,
    "text": "Mia smiles."
   },
   {
-   "start": 35.298,
-   "end": 36.787,
+   "start": 33.559999999999995,
+   "end": 34.449999999999996,
    "text": "Some mistakes are on purpose."
   },
   {
-   "start": 37.287,
-   "end": 39.628,
+   "start": 34.839999999999996,
+   "end": 39.54,
    "text": "Subscribe so you never miss the next strange fact."
   }
  ],
  "keys": {
-  "hole": 1.464,
-  "window": 2.528,
-  "sure": 4.73,
-  "mistake": 6.432,
-  "isnt": 7.57,
-  "cruising": 8.921,
-  "thin": 11.036,
-  "pressurized": 13.151,
-  "pushes": 14.928,
-  "every": 15.991,
-  "flight": 17.681,
-  "panes": 19.883,
-  "drilled": 21.147,
-  "middle": 21.785,
-  "lets": 23.136,
-  "gap": 24.838,
-  "outer": 25.677,
-  "load": 26.953,
-  "moisture": 28.517,
-  "fog": 30.632,
-  "leans": 31.77,
-  "quiet": 33.234,
-  "smiles": 34.372,
-  "purpose": 36.362,
-  "subscribe": 37.287,
-  "strange": 39.202,
-  "fact": 39.415
+  "hole": 1.72,
+  "window": 2.91,
+  "sure": 4.93,
+  "mistake": 6.29,
+  "isnt": 7.37,
+  "cruising": 8.88,
+  "thin": 11.03,
+  "pressurized": 13.04,
+  "pushes": 14.84,
+  "every": 16.0,
+  "flight": 17.34,
+  "panes": 19.32,
+  "drilled": 20.76,
+  "middle": 21.19,
+  "lets": 22.28,
+  "gap": 23.57,
+  "outer": 24.36,
+  "load": 25.4,
+  "moisture": 26.8,
+  "fog": 28.52,
+  "leans": 29.84,
+  "quiet": 32.0,
+  "smiles": 33.03,
+  "purpose": 34.18,
+  "subscribe": 34.84,
+  "strange": 37.94,
+  "fact": 38.96
  },
  "keyEnd": {
-  "hole": 1.677,
-  "window": 2.953,
-  "sure": 4.943,
-  "mistake": 6.857,
-  "isnt": 7.996,
-  "cruising": 9.347,
-  "thin": 11.249,
-  "pressurized": 13.789,
-  "pushes": 15.353,
-  "every": 16.63,
-  "flight": 17.894,
-  "panes": 20.096,
-  "drilled": 21.36,
-  "middle": 22.211,
-  "lets": 23.349,
-  "gap": 25.051,
-  "outer": 26.102,
-  "load": 27.166,
-  "moisture": 28.943,
-  "fog": 30.845,
-  "leans": 31.983,
-  "quiet": 33.66,
-  "smiles": 34.798,
-  "purpose": 36.787,
-  "subscribe": 37.713,
-  "strange": 39.415,
-  "fact": 39.628
+  "hole": 2.25,
+  "window": 3.37,
+  "sure": 5.37,
+  "mistake": 6.83,
+  "isnt": 7.93,
+  "cruising": 9.33,
+  "thin": 11.38,
+  "pressurized": 13.83,
+  "pushes": 15.3,
+  "every": 16.3,
+  "flight": 17.83,
+  "panes": 19.95,
+  "drilled": 21.05,
+  "middle": 21.57,
+  "lets": 22.57,
+  "gap": 24.06,
+  "outer": 24.66,
+  "load": 25.86,
+  "moisture": 27.28,
+  "fog": 28.97,
+  "leans": 30.28,
+  "quiet": 32.51,
+  "smiles": 33.23,
+  "purpose": 34.45,
+  "subscribe": 35.52,
+  "strange": 38.22,
+  "fact": 39.54
  }
 }

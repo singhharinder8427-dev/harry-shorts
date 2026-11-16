@@ -1,7 +1,9 @@
 {
  "short": "windowhole",
  "title": "Why does an airplane window have a tiny hole?",
- "spoken": {},
+ "spoken": {
+  "seatmate": "seat mate"
+ },
  "chunks": [
   "Mia spots a tiny hole",
   "in her airplane window.",

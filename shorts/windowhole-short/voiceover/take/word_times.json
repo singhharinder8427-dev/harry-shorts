@@ -1,0 +1,547 @@
+[
+ {
+  "w": "Mia",
+  "start": 0.0,
+  "end": 0.33
+ },
+ {
+  "w": "spots",
+  "start": 0.33,
+  "end": 0.74
+ },
+ {
+  "w": "a",
+  "start": 0.74,
+  "end": 0.8
+ },
+ {
+  "w": "tiny",
+  "start": 0.8,
+  "end": 1.32
+ },
+ {
+  "w": "hole",
+  "start": 1.32,
+  "end": 1.85
+ },
+ {
+  "w": "in",
+  "start": 1.85,
+  "end": 1.93
+ },
+ {
+  "w": "her",
+  "start": 1.93,
+  "end": 2.09
+ },
+ {
+  "w": "airplane",
+  "start": 2.09,
+  "end": 2.51
+ },
+ {
+  "w": "window.",
+  "start": 2.51,
+  "end": 2.97
+ },
+ {
+  "w": "Her",
+  "start": 3.45,
+  "end": 2.97
+ },
+ {
+  "w": "seatmate",
+  "start": 3.45,
+  "end": 4.08
+ },
+ {
+  "w": "Otto",
+  "start": 4.08,
+  "end": 4.47
+ },
+ {
+  "w": "is",
+  "start": 4.47,
+  "end": 4.53
+ },
+ {
+  "w": "sure",
+  "start": 4.53,
+  "end": 4.97
+ },
+ {
+  "w": "it's",
+  "start": 4.97,
+  "end": 5.1
+ },
+ {
+  "w": "a",
+  "start": 5.1,
+  "end": 5.14
+ },
+ {
+  "w": "manufacturing",
+  "start": 5.14,
+  "end": 5.89
+ },
+ {
+  "w": "mistake.",
+  "start": 5.89,
+  "end": 6.43
+ },
+ {
+  "w": "It",
+  "start": 6.97,
+  "end": 6.43
+ },
+ {
+  "w": "isn't.",
+  "start": 6.97,
+  "end": 7.53
+ },
+ {
+  "w": "Up",
+  "start": 8.23,
+  "end": 7.53
+ },
+ {
+  "w": "at",
+  "start": 8.23,
+  "end": 8.48
+ },
+ {
+  "w": "cruising",
+  "start": 8.48,
+  "end": 8.93
+ },
+ {
+  "w": "height,",
+  "start": 8.93,
+  "end": 9.34
+ },
+ {
+  "w": "the",
+  "start": 9.34,
+  "end": 9.57
+ },
+ {
+  "w": "air",
+  "start": 9.57,
+  "end": 9.75
+ },
+ {
+  "w": "outside",
+  "start": 9.75,
+  "end": 10.22
+ },
+ {
+  "w": "is",
+  "start": 10.22,
+  "end": 10.37
+ },
+ {
+  "w": "too",
+  "start": 10.37,
+  "end": 10.63
+ },
+ {
+  "w": "thin",
+  "start": 10.63,
+  "end": 10.98
+ },
+ {
+  "w": "to",
+  "start": 10.98,
+  "end": 11.06
+ },
+ {
+  "w": "breathe,",
+  "start": 11.06,
+  "end": 11.57
+ },
+ {
+  "w": "so",
+  "start": 11.75,
+  "end": 11.57
+ },
+ {
+  "w": "the",
+  "start": 11.75,
+  "end": 11.95
+ },
+ {
+  "w": "cabin",
+  "start": 11.95,
+  "end": 12.37
+ },
+ {
+  "w": "air",
+  "start": 12.37,
+  "end": 12.53
+ },
+ {
+  "w": "is",
+  "start": 12.53,
+  "end": 12.64
+ },
+ {
+  "w": "pressurized.",
+  "start": 12.64,
+  "end": 13.43
+ },
+ {
+  "w": "That",
+  "start": 13.82,
+  "end": 14.0
+ },
+ {
+  "w": "pressure",
+  "start": 14.0,
+  "end": 14.44
+ },
+ {
+  "w": "pushes",
+  "start": 14.44,
+  "end": 14.9
+ },
+ {
+  "w": "outward",
+  "start": 14.9,
+  "end": 15.34
+ },
+ {
+  "w": "on",
+  "start": 15.34,
+  "end": 15.48
+ },
+ {
+  "w": "every",
+  "start": 15.6,
+  "end": 15.9
+ },
+ {
+  "w": "window,",
+  "start": 15.9,
+  "end": 16.4
+ },
+ {
+  "w": "the",
+  "start": 16.57,
+  "end": 16.4
+ },
+ {
+  "w": "whole",
+  "start": 16.57,
+  "end": 16.94
+ },
+ {
+  "w": "flight.",
+  "start": 16.94,
+  "end": 17.43
+ },
+ {
+  "w": "A",
+  "start": 17.87,
+  "end": 17.43
+ },
+ {
+  "w": "window",
+  "start": 17.87,
+  "end": 18.33
+ },
+ {
+  "w": "has",
+  "start": 18.33,
+  "end": 18.5
+ },
+ {
+  "w": "several",
+  "start": 18.5,
+  "end": 18.92
+ },
+ {
+  "w": "panes,",
+  "start": 18.92,
+  "end": 19.55
+ },
+ {
+  "w": "and",
+  "start": 19.68,
+  "end": 19.55
+ },
+ {
+  "w": "the",
+  "start": 19.68,
+  "end": 19.84
+ },
+ {
+  "w": "hole",
+  "start": 19.84,
+  "end": 20.22
+ },
+ {
+  "w": "is",
+  "start": 20.22,
+  "end": 20.36
+ },
+ {
+  "w": "drilled",
+  "start": 20.36,
+  "end": 20.65
+ },
+ {
+  "w": "in",
+  "start": 20.65,
+  "end": 20.73
+ },
+ {
+  "w": "the",
+  "start": 20.73,
+  "end": 20.79
+ },
+ {
+  "w": "middle",
+  "start": 20.79,
+  "end": 21.17
+ },
+ {
+  "w": "one.",
+  "start": 21.17,
+  "end": 21.42
+ },
+ {
+  "w": "It",
+  "start": 21.88,
+  "end": 21.42
+ },
+ {
+  "w": "lets",
+  "start": 21.88,
+  "end": 22.17
+ },
+ {
+  "w": "cabin",
+  "start": 22.17,
+  "end": 22.56
+ },
+ {
+  "w": "pressure",
+  "start": 22.56,
+  "end": 22.92
+ },
+ {
+  "w": "into",
+  "start": 22.92,
+  "end": 23.07
+ },
+ {
+  "w": "the",
+  "start": 23.07,
+  "end": 23.17
+ },
+ {
+  "w": "gap,",
+  "start": 23.17,
+  "end": 23.66
+ },
+ {
+  "w": "so",
+  "start": 23.66,
+  "end": 23.79
+ },
+ {
+  "w": "the",
+  "start": 23.79,
+  "end": 23.96
+ },
+ {
+  "w": "outer",
+  "start": 23.96,
+  "end": 24.26
+ },
+ {
+  "w": "pane",
+  "start": 24.26,
+  "end": 24.57
+ },
+ {
+  "w": "carries",
+  "start": 24.57,
+  "end": 24.94
+ },
+ {
+  "w": "the",
+  "start": 24.94,
+  "end": 25.0
+ },
+ {
+  "w": "load.",
+  "start": 25.0,
+  "end": 25.46
+ },
+ {
+  "w": "It",
+  "start": 25.87,
+  "end": 25.46
+ },
+ {
+  "w": "also",
+  "start": 25.87,
+  "end": 26.19
+ },
+ {
+  "w": "lets",
+  "start": 26.19,
+  "end": 26.4
+ },
+ {
+  "w": "moisture",
+  "start": 26.4,
+  "end": 26.88
+ },
+ {
+  "w": "escape,",
+  "start": 26.88,
+  "end": 27.33
+ },
+ {
+  "w": "so",
+  "start": 27.33,
+  "end": 27.46
+ },
+ {
+  "w": "the",
+  "start": 27.46,
+  "end": 27.56
+ },
+ {
+  "w": "glass",
+  "start": 27.56,
+  "end": 27.86
+ },
+ {
+  "w": "doesn't",
+  "start": 27.86,
+  "end": 28.12
+ },
+ {
+  "w": "fog.",
+  "start": 28.12,
+  "end": 28.57
+ },
+ {
+  "w": "Otto",
+  "start": 29.18,
+  "end": 29.44
+ },
+ {
+  "w": "leans",
+  "start": 29.44,
+  "end": 29.88
+ },
+ {
+  "w": "in,",
+  "start": 29.88,
+  "end": 30.21
+ },
+ {
+  "w": "squints,",
+  "start": 30.37,
+  "end": 31.07
+ },
+ {
+  "w": "and",
+  "start": 31.3,
+  "end": 31.07
+ },
+ {
+  "w": "goes",
+  "start": 31.3,
+  "end": 31.6
+ },
+ {
+  "w": "quiet.",
+  "start": 31.6,
+  "end": 32.11
+ },
+ {
+  "w": "Mia",
+  "start": 32.47,
+  "end": 32.63
+ },
+ {
+  "w": "smiles.",
+  "start": 32.63,
+  "end": 32.83
+ },
+ {
+  "w": "Some",
+  "start": 33.16,
+  "end": 32.83
+ },
+ {
+  "w": "mistakes",
+  "start": 33.16,
+  "end": 33.56
+ },
+ {
+  "w": "are",
+  "start": 33.56,
+  "end": 33.6
+ },
+ {
+  "w": "on",
+  "start": 33.6,
+  "end": 33.78
+ },
+ {
+  "w": "purpose.",
+  "start": 33.78,
+  "end": 34.05
+ },
+ {
+  "w": "Subscribe",
+  "start": 34.44,
+  "end": 35.12
+ },
+ {
+  "w": "so",
+  "start": 35.12,
+  "end": 35.25
+ },
+ {
+  "w": "you",
+  "start": 35.25,
+  "end": 35.4
+ },
+ {
+  "w": "never",
+  "start": 35.4,
+  "end": 35.66
+ },
+ {
+  "w": "miss",
+  "start": 35.77,
+  "end": 36.02
+ },
+ {
+  "w": "the",
+  "start": 36.35,
+  "end": 37.09
+ },
+ {
+  "w": "next",
+  "start": 37.18,
+  "end": 37.54
+ },
+ {
+  "w": "strange",
+  "start": 37.54,
+  "end": 37.82
+ },
+ {
+  "w": "fact.",
+  "start": 38.56,
+  "end": 39.14
+ }
+]
