@@ -1,0 +1,858 @@
+{
+ "short": "windowhole",
+ "title": "Why does an airplane window have a tiny hole?",
+ "duration": 41.23,
+ "voiceOffset": 0.0,
+ "estimated": true,
+ "words": [
+  {
+   "w": "Mia",
+   "start": 0.4,
+   "end": 0.613
+  },
+  {
+   "w": "spots",
+   "start": 0.613,
+   "end": 0.826
+  },
+  {
+   "w": "a",
+   "start": 0.826,
+   "end": 1.038
+  },
+  {
+   "w": "tiny",
+   "start": 1.038,
+   "end": 1.464
+  },
+  {
+   "w": "hole",
+   "start": 1.464,
+   "end": 1.677
+  },
+  {
+   "w": "in",
+   "start": 1.677,
+   "end": 1.889
+  },
+  {
+   "w": "her",
+   "start": 1.889,
+   "end": 2.102
+  },
+  {
+   "w": "airplane",
+   "start": 2.102,
+   "end": 2.528
+  },
+  {
+   "w": "window.",
+   "start": 2.528,
+   "end": 2.953
+  },
+  {
+   "w": "Her",
+   "start": 3.453,
+   "end": 3.666
+  },
+  {
+   "w": "seatmate",
+   "start": 3.666,
+   "end": 4.091
+  },
+  {
+   "w": "Otto",
+   "start": 4.091,
+   "end": 4.517
+  },
+  {
+   "w": "is",
+   "start": 4.517,
+   "end": 4.73
+  },
+  {
+   "w": "sure",
+   "start": 4.73,
+   "end": 4.943
+  },
+  {
+   "w": "it's",
+   "start": 4.943,
+   "end": 5.155
+  },
+  {
+   "w": "a",
+   "start": 5.155,
+   "end": 5.368
+  },
+  {
+   "w": "manufacturing",
+   "start": 5.368,
+   "end": 6.432
+  },
+  {
+   "w": "mistake.",
+   "start": 6.432,
+   "end": 6.857
+  },
+  {
+   "w": "It",
+   "start": 7.357,
+   "end": 7.57
+  },
+  {
+   "w": "isn't.",
+   "start": 7.57,
+   "end": 7.996
+  },
+  {
+   "w": "Up",
+   "start": 8.496,
+   "end": 8.709
+  },
+  {
+   "w": "at",
+   "start": 8.709,
+   "end": 8.921
+  },
+  {
+   "w": "cruising",
+   "start": 8.921,
+   "end": 9.347
+  },
+  {
+   "w": "height,",
+   "start": 9.347,
+   "end": 9.56
+  },
+  {
+   "w": "the",
+   "start": 9.76,
+   "end": 9.972
+  },
+  {
+   "w": "air",
+   "start": 9.972,
+   "end": 10.185
+  },
+  {
+   "w": "outside",
+   "start": 10.185,
+   "end": 10.611
+  },
+  {
+   "w": "is",
+   "start": 10.611,
+   "end": 10.823
+  },
+  {
+   "w": "too",
+   "start": 10.823,
+   "end": 11.036
+  },
+  {
+   "w": "thin",
+   "start": 11.036,
+   "end": 11.249
+  },
+  {
+   "w": "to",
+   "start": 11.249,
+   "end": 11.462
+  },
+  {
+   "w": "breathe,",
+   "start": 11.462,
+   "end": 11.674
+  },
+  {
+   "w": "so",
+   "start": 11.874,
+   "end": 12.087
+  },
+  {
+   "w": "the",
+   "start": 12.087,
+   "end": 12.3
+  },
+  {
+   "w": "cabin",
+   "start": 12.3,
+   "end": 12.726
+  },
+  {
+   "w": "air",
+   "start": 12.726,
+   "end": 12.938
+  },
+  {
+   "w": "is",
+   "start": 12.938,
+   "end": 13.151
+  },
+  {
+   "w": "pressurized.",
+   "start": 13.151,
+   "end": 13.789
+  },
+  {
+   "w": "That",
+   "start": 14.289,
+   "end": 14.502
+  },
+  {
+   "w": "pressure",
+   "start": 14.502,
+   "end": 14.928
+  },
+  {
+   "w": "pushes",
+   "start": 14.928,
+   "end": 15.353
+  },
+  {
+   "w": "outward",
+   "start": 15.353,
+   "end": 15.779
+  },
+  {
+   "w": "on",
+   "start": 15.779,
+   "end": 15.991
+  },
+  {
+   "w": "every",
+   "start": 15.991,
+   "end": 16.63
+  },
+  {
+   "w": "window,",
+   "start": 16.63,
+   "end": 17.055
+  },
+  {
+   "w": "the",
+   "start": 17.255,
+   "end": 17.468
+  },
+  {
+   "w": "whole",
+   "start": 17.468,
+   "end": 17.681
+  },
+  {
+   "w": "flight.",
+   "start": 17.681,
+   "end": 17.894
+  },
+  {
+   "w": "A",
+   "start": 18.394,
+   "end": 18.606
+  },
+  {
+   "w": "window",
+   "start": 18.606,
+   "end": 19.032
+  },
+  {
+   "w": "has",
+   "start": 19.032,
+   "end": 19.245
+  },
+  {
+   "w": "several",
+   "start": 19.245,
+   "end": 19.883
+  },
+  {
+   "w": "panes,",
+   "start": 19.883,
+   "end": 20.096
+  },
+  {
+   "w": "and",
+   "start": 20.296,
+   "end": 20.509
+  },
+  {
+   "w": "the",
+   "start": 20.509,
+   "end": 20.721
+  },
+  {
+   "w": "hole",
+   "start": 20.721,
+   "end": 20.934
+  },
+  {
+   "w": "is",
+   "start": 20.934,
+   "end": 21.147
+  },
+  {
+   "w": "drilled",
+   "start": 21.147,
+   "end": 21.36
+  },
+  {
+   "w": "in",
+   "start": 21.36,
+   "end": 21.572
+  },
+  {
+   "w": "the",
+   "start": 21.572,
+   "end": 21.785
+  },
+  {
+   "w": "middle",
+   "start": 21.785,
+   "end": 22.211
+  },
+  {
+   "w": "one.",
+   "start": 22.211,
+   "end": 22.423
+  },
+  {
+   "w": "It",
+   "start": 22.923,
+   "end": 23.136
+  },
+  {
+   "w": "lets",
+   "start": 23.136,
+   "end": 23.349
+  },
+  {
+   "w": "cabin",
+   "start": 23.349,
+   "end": 23.774
+  },
+  {
+   "w": "pressure",
+   "start": 23.774,
+   "end": 24.2
+  },
+  {
+   "w": "into",
+   "start": 24.2,
+   "end": 24.626
+  },
+  {
+   "w": "the",
+   "start": 24.626,
+   "end": 24.838
+  },
+  {
+   "w": "gap,",
+   "start": 24.838,
+   "end": 25.051
+  },
+  {
+   "w": "so",
+   "start": 25.251,
+   "end": 25.464
+  },
+  {
+   "w": "the",
+   "start": 25.464,
+   "end": 25.677
+  },
+  {
+   "w": "outer",
+   "start": 25.677,
+   "end": 26.102
+  },
+  {
+   "w": "pane",
+   "start": 26.102,
+   "end": 26.315
+  },
+  {
+   "w": "carries",
+   "start": 26.315,
+   "end": 26.74
+  },
+  {
+   "w": "the",
+   "start": 26.74,
+   "end": 26.953
+  },
+  {
+   "w": "load.",
+   "start": 26.953,
+   "end": 27.166
+  },
+  {
+   "w": "It",
+   "start": 27.666,
+   "end": 27.879
+  },
+  {
+   "w": "also",
+   "start": 27.879,
+   "end": 28.304
+  },
+  {
+   "w": "lets",
+   "start": 28.304,
+   "end": 28.517
+  },
+  {
+   "w": "moisture",
+   "start": 28.517,
+   "end": 28.943
+  },
+  {
+   "w": "escape,",
+   "start": 28.943,
+   "end": 29.368
+  },
+  {
+   "w": "so",
+   "start": 29.568,
+   "end": 29.781
+  },
+  {
+   "w": "the",
+   "start": 29.781,
+   "end": 29.994
+  },
+  {
+   "w": "glass",
+   "start": 29.994,
+   "end": 30.206
+  },
+  {
+   "w": "doesn't",
+   "start": 30.206,
+   "end": 30.632
+  },
+  {
+   "w": "fog.",
+   "start": 30.632,
+   "end": 30.845
+  },
+  {
+   "w": "Otto",
+   "start": 31.345,
+   "end": 31.77
+  },
+  {
+   "w": "leans",
+   "start": 31.77,
+   "end": 31.983
+  },
+  {
+   "w": "in,",
+   "start": 31.983,
+   "end": 32.196
+  },
+  {
+   "w": "squints,",
+   "start": 32.396,
+   "end": 32.609
+  },
+  {
+   "w": "and",
+   "start": 32.809,
+   "end": 33.021
+  },
+  {
+   "w": "goes",
+   "start": 33.021,
+   "end": 33.234
+  },
+  {
+   "w": "quiet.",
+   "start": 33.234,
+   "end": 33.66
+  },
+  {
+   "w": "Mia",
+   "start": 34.16,
+   "end": 34.372
+  },
+  {
+   "w": "smiles.",
+   "start": 34.372,
+   "end": 34.798
+  },
+  {
+   "w": "Some",
+   "start": 35.298,
+   "end": 35.511
+  },
+  {
+   "w": "mistakes",
+   "start": 35.511,
+   "end": 35.936
+  },
+  {
+   "w": "are",
+   "start": 35.936,
+   "end": 36.149
+  },
+  {
+   "w": "on",
+   "start": 36.149,
+   "end": 36.362
+  },
+  {
+   "w": "purpose.",
+   "start": 36.362,
+   "end": 36.787
+  },
+  {
+   "w": "Subscribe",
+   "start": 37.287,
+   "end": 37.713
+  },
+  {
+   "w": "so",
+   "start": 37.713,
+   "end": 37.926
+  },
+  {
+   "w": "you",
+   "start": 37.926,
+   "end": 38.138
+  },
+  {
+   "w": "never",
+   "start": 38.138,
+   "end": 38.564
+  },
+  {
+   "w": "miss",
+   "start": 38.564,
+   "end": 38.777
+  },
+  {
+   "w": "the",
+   "start": 38.777,
+   "end": 38.989
+  },
+  {
+   "w": "next",
+   "start": 38.989,
+   "end": 39.202
+  },
+  {
+   "w": "strange",
+   "start": 39.202,
+   "end": 39.415
+  },
+  {
+   "w": "fact.",
+   "start": 39.415,
+   "end": 39.628
+  }
+ ],
+ "chunks": [
+  {
+   "text": "Mia spots a tiny hole",
+   "w0": 0,
+   "w1": 4,
+   "start": 0.4,
+   "end": 1.677
+  },
+  {
+   "text": "in her airplane window.",
+   "w0": 5,
+   "w1": 8,
+   "start": 1.677,
+   "end": 2.953
+  },
+  {
+   "text": "Her seatmate Otto is sure",
+   "w0": 9,
+   "w1": 13,
+   "start": 3.453,
+   "end": 4.943
+  },
+  {
+   "text": "it's a manufacturing mistake.",
+   "w0": 14,
+   "w1": 17,
+   "start": 4.943,
+   "end": 6.857
+  },
+  {
+   "text": "It isn't.",
+   "w0": 18,
+   "w1": 19,
+   "start": 7.357,
+   "end": 7.996
+  },
+  {
+   "text": "Up at cruising height,",
+   "w0": 20,
+   "w1": 23,
+   "start": 8.496,
+   "end": 9.56
+  },
+  {
+   "text": "the air outside is too thin to breathe,",
+   "w0": 24,
+   "w1": 31,
+   "start": 9.76,
+   "end": 11.674
+  },
+  {
+   "text": "so the cabin air is pressurized.",
+   "w0": 32,
+   "w1": 37,
+   "start": 11.874,
+   "end": 13.789
+  },
+  {
+   "text": "That pressure pushes outward",
+   "w0": 38,
+   "w1": 41,
+   "start": 14.289,
+   "end": 15.779
+  },
+  {
+   "text": "on every window,",
+   "w0": 42,
+   "w1": 44,
+   "start": 15.779,
+   "end": 17.055
+  },
+  {
+   "text": "the whole flight.",
+   "w0": 45,
+   "w1": 47,
+   "start": 17.255,
+   "end": 17.894
+  },
+  {
+   "text": "A window has several panes,",
+   "w0": 48,
+   "w1": 52,
+   "start": 18.394,
+   "end": 20.096
+  },
+  {
+   "text": "and the hole is drilled",
+   "w0": 53,
+   "w1": 57,
+   "start": 20.296,
+   "end": 21.36
+  },
+  {
+   "text": "in the middle one.",
+   "w0": 58,
+   "w1": 61,
+   "start": 21.36,
+   "end": 22.423
+  },
+  {
+   "text": "It lets cabin pressure",
+   "w0": 62,
+   "w1": 65,
+   "start": 22.923,
+   "end": 24.2
+  },
+  {
+   "text": "into the gap,",
+   "w0": 66,
+   "w1": 68,
+   "start": 24.2,
+   "end": 25.051
+  },
+  {
+   "text": "so the outer pane",
+   "w0": 69,
+   "w1": 72,
+   "start": 25.251,
+   "end": 26.315
+  },
+  {
+   "text": "carries the load.",
+   "w0": 73,
+   "w1": 75,
+   "start": 26.315,
+   "end": 27.166
+  },
+  {
+   "text": "It also lets moisture escape,",
+   "w0": 76,
+   "w1": 80,
+   "start": 27.666,
+   "end": 29.368
+  },
+  {
+   "text": "so the glass doesn't fog.",
+   "w0": 81,
+   "w1": 85,
+   "start": 29.568,
+   "end": 30.845
+  },
+  {
+   "text": "Otto leans in,",
+   "w0": 86,
+   "w1": 88,
+   "start": 31.345,
+   "end": 32.196
+  },
+  {
+   "text": "squints, and goes quiet.",
+   "w0": 89,
+   "w1": 92,
+   "start": 32.396,
+   "end": 33.66
+  },
+  {
+   "text": "Mia smiles.",
+   "w0": 93,
+   "w1": 94,
+   "start": 34.16,
+   "end": 34.798
+  },
+  {
+   "text": "Some mistakes are on purpose.",
+   "w0": 95,
+   "w1": 99,
+   "start": 35.298,
+   "end": 36.787
+  },
+  {
+   "text": "Subscribe so you never miss",
+   "w0": 100,
+   "w1": 104,
+   "start": 37.287,
+   "end": 38.777
+  },
+  {
+   "text": "the next strange fact.",
+   "w0": 105,
+   "w1": 108,
+   "start": 38.777,
+   "end": 39.628
+  }
+ ],
+ "sentences": [
+  {
+   "start": 0.4,
+   "end": 2.953,
+   "text": "Mia spots a tiny hole in her airplane window."
+  },
+  {
+   "start": 3.453,
+   "end": 6.857,
+   "text": "Her seatmate Otto is sure it's a manufacturing mistake."
+  },
+  {
+   "start": 7.357,
+   "end": 7.996,
+   "text": "It isn't."
+  },
+  {
+   "start": 8.496,
+   "end": 13.789,
+   "text": "Up at cruising height, the air outside is too thin to breathe, so the cabin air is pressurized."
+  },
+  {
+   "start": 14.289,
+   "end": 17.894,
+   "text": "That pressure pushes outward on every window, the whole flight."
+  },
+  {
+   "start": 18.394,
+   "end": 22.423,
+   "text": "A window has several panes, and the hole is drilled in the middle one."
+  },
+  {
+   "start": 22.923,
+   "end": 27.166,
+   "text": "It lets cabin pressure into the gap, so the outer pane carries the load."
+  },
+  {
+   "start": 27.666,
+   "end": 30.845,
+   "text": "It also lets moisture escape, so the glass doesn't fog."
+  },
+  {
+   "start": 31.345,
+   "end": 33.66,
+   "text": "Otto leans in, squints, and goes quiet."
+  },
+  {
+   "start": 34.16,
+   "end": 34.798,
+   "text": "Mia smiles."
+  },
+  {
+   "start": 35.298,
+   "end": 36.787,
+   "text": "Some mistakes are on purpose."
+  },
+  {
+   "start": 37.287,
+   "end": 39.628,
+   "text": "Subscribe so you never miss the next strange fact."
+  }
+ ],
+ "keys": {
+  "hole": 1.464,
+  "window": 2.528,
+  "sure": 4.73,
+  "mistake": 6.432,
+  "isnt": 7.57,
+  "cruising": 8.921,
+  "thin": 11.036,
+  "pressurized": 13.151,
+  "pushes": 14.928,
+  "every": 15.991,
+  "flight": 17.681,
+  "panes": 19.883,
+  "drilled": 21.147,
+  "middle": 21.785,
+  "lets": 23.136,
+  "gap": 24.838,
+  "outer": 25.677,
+  "load": 26.953,
+  "moisture": 28.517,
+  "fog": 30.632,
+  "leans": 31.77,
+  "quiet": 33.234,
+  "smiles": 34.372,
+  "purpose": 36.362,
+  "subscribe": 37.287,
+  "strange": 39.202,
+  "fact": 39.415
+ },
+ "keyEnd": {
+  "hole": 1.677,
+  "window": 2.953,
+  "sure": 4.943,
+  "mistake": 6.857,
+  "isnt": 7.996,
+  "cruising": 9.347,
+  "thin": 11.249,
+  "pressurized": 13.789,
+  "pushes": 15.353,
+  "every": 16.63,
+  "flight": 17.894,
+  "panes": 20.096,
+  "drilled": 21.36,
+  "middle": 22.211,
+  "lets": 23.349,
+  "gap": 25.051,
+  "outer": 26.102,
+  "load": 27.166,
+  "moisture": 28.943,
+  "fog": 30.845,
+  "leans": 31.983,
+  "quiet": 33.66,
+  "smiles": 34.798,
+  "purpose": 36.787,
+  "subscribe": 37.713,
+  "strange": 39.415,
+  "fact": 39.628
+ }
+}

@@ -1,0 +1,334 @@
+{
+ "short": "windowhole",
+ "title": "Why does an airplane window have a tiny hole?",
+ "spoken": {},
+ "chunks": [
+  "Mia spots a tiny hole",
+  "in her airplane window.",
+  "Her seatmate Otto is sure",
+  "it's a manufacturing mistake.",
+  "It isn't.",
+  "Up at cruising height,",
+  "the air outside is too thin to breathe,",
+  "so the cabin air is pressurized.",
+  "That pressure pushes outward",
+  "on every window,",
+  "the whole flight.",
+  "A window has several panes,",
+  "and the hole is drilled",
+  "in the middle one.",
+  "It lets cabin pressure",
+  "into the gap,",
+  "so the outer pane",
+  "carries the load.",
+  "It also lets moisture escape,",
+  "so the glass doesn't fog.",
+  "Otto leans in,",
+  "squints, and goes quiet.",
+  "Mia smiles.",
+  "Some mistakes are on purpose.",
+  "Subscribe so you never miss",
+  "the next strange fact."
+ ],
+ "syllables": {
+  "manufacturing": 5,
+  "pressurized": 3,
+  "airplane": 2,
+  "moisture": 2,
+  "cruising": 2,
+  "seatmate": 2,
+  "escape": 2,
+  "several": 3,
+  "outward": 2,
+  "squints": 1,
+  "whole": 1,
+  "drilled": 1,
+  "purpose": 2,
+  "mistakes": 2,
+  "mistake": 2,
+  "strange": 1,
+  "quiet": 2,
+  "doesn't": 2,
+  "isn't": 2,
+  "it's": 1,
+  "window": 2,
+  "cabin": 2,
+  "subscribe": 2,
+  "middle": 2,
+  "panes": 1,
+  "pane": 1,
+  "flight": 1,
+  "thin": 1,
+  "height": 1,
+  "breathe": 1,
+  "load": 1,
+  "carries": 2
+ },
+ "keys": {
+  "hole": [
+   0,
+   "hole"
+  ],
+  "window": [
+   0,
+   "window"
+  ],
+  "sure": [
+   1,
+   "sure"
+  ],
+  "mistake": [
+   1,
+   "mistake"
+  ],
+  "isnt": [
+   2,
+   "isn't"
+  ],
+  "cruising": [
+   3,
+   "cruising"
+  ],
+  "thin": [
+   3,
+   "thin"
+  ],
+  "pressurized": [
+   3,
+   "pressurized"
+  ],
+  "pushes": [
+   4,
+   "pushes"
+  ],
+  "every": [
+   4,
+   "every"
+  ],
+  "flight": [
+   4,
+   "flight"
+  ],
+  "panes": [
+   5,
+   "panes"
+  ],
+  "drilled": [
+   5,
+   "drilled"
+  ],
+  "middle": [
+   5,
+   "middle"
+  ],
+  "lets": [
+   6,
+   "lets"
+  ],
+  "gap": [
+   6,
+   "gap"
+  ],
+  "outer": [
+   6,
+   "outer"
+  ],
+  "load": [
+   6,
+   "load"
+  ],
+  "moisture": [
+   7,
+   "moisture"
+  ],
+  "fog": [
+   7,
+   "fog"
+  ],
+  "leans": [
+   8,
+   "leans"
+  ],
+  "quiet": [
+   8,
+   "quiet"
+  ],
+  "smiles": [
+   9,
+   "smiles"
+  ],
+  "purpose": [
+   10,
+   "purpose"
+  ],
+  "subscribe": [
+   11,
+   "subscribe"
+  ],
+  "strange": [
+   11,
+   "strange"
+  ],
+  "fact": [
+   11,
+   "fact"
+  ]
+ },
+ "beats": {
+  "hole": "Mia points at the tiny dot in the window",
+  "mistake": "Otto's face goes red and steams",
+  "isnt": "Mia raises a finger, smug",
+  "cruising": "the plane flies high above the clouds",
+  "thin": "Otto floats outside, gasping, face pale blue",
+  "pressurized": "dense air dots inside the wall, sparse outside",
+  "pushes": "yellow arrows push outward",
+  "panes": "three panes slide apart",
+  "drilled": "the drill bit enters the middle pane",
+  "gap": "air dots flow through the hole into the gap",
+  "load": "the outer pane glows orange under the load",
+  "moisture": "blue droplets drift out through the hole",
+  "fog": "fog layer fades off the glass",
+  "quiet": "Otto, blushing, goes quiet",
+  "smiles": "Mia's smug smile",
+  "subscribe": "CTA pops in above Mia"
+ },
+ "cast": {
+  "Mia": "flat yellow shirt #F2B134, black hair in a bun",
+  "Otto": "flat sage-green shirt #6B8E4E, brown hair at the sides, round glasses"
+ },
+ "shots": [
+  {
+   "from": "start",
+   "to": "airplane",
+   "size": "medium two-shot",
+   "camera": "slow dolly in, eye level",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Mia (flat yellow shirt #F2B134, black hair in a bun) in the window seat pointing at the window, Otto (flat sage-green shirt #6B8E4E, brown hair at the sides, round glasses) beside her in the middle seat, in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows"
+  },
+  {
+   "from": "airplane",
+   "to": "her",
+   "size": "macro",
+   "camera": "push-in on the tiny hole",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; close on the window pane in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows, a small black dot in the middle pane"
+  },
+  {
+   "from": "her",
+   "to": "mistake",
+   "size": "medium on Otto",
+   "camera": "gentle push-in; Otto's face goes red with steam on 'sure'",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Otto (flat sage-green shirt #6B8E4E, brown hair at the sides, round glasses) arms crossed, Mia (flat yellow shirt #F2B134, black hair in a bun) half in frame, in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows"
+  },
+  {
+   "from": "isnt",
+   "to": "cruising",
+   "size": "reaction close-up",
+   "camera": "slow push-in",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Mia (flat yellow shirt #F2B134, black hair in a bun) close-up, smug closed-eye smile, one finger raised, in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows"
+  },
+  {
+   "from": "cruising",
+   "to": "thin",
+   "size": "wide",
+   "camera": "lateral track, plane flies across",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; a deep blue high-altitude sky fading to pale cream at the horizon with soft white 3D cloud clusters, a white airliner with grey wings and a red tail, sun low from the upper left"
+  },
+  {
+   "from": "thin",
+   "to": "pressurized",
+   "size": "medium",
+   "camera": "slow dolly",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Otto (flat sage-green shirt #6B8E4E, brown hair at the sides, round glasses) floating outside in thin air, face pale blue, hands at his throat, in a deep blue high-altitude sky fading to pale cream at the horizon with soft white 3D cloud clusters, a white airliner with grey wings and a red tail, sun low from the upper left"
+  },
+  {
+   "from": "pressurized",
+   "to": "every",
+   "size": "cutaway",
+   "camera": "dolly past the cabin wall",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; a side cutaway of the fuselage wall: crowded white air dots inside, a few sparse dots outside, a dark navy cutaway stage with a floating 3D window cross-section: three glass panes (outer, middle, inner) in a grey frame, glowing yellow arrows, small blue and white 3D air dots, a soft key light from the upper left"
+  },
+  {
+   "from": "every",
+   "to": "flight",
+   "size": "cutaway",
+   "camera": "push-in on the arrows",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; a dark navy cutaway stage with a floating 3D window cross-section: three glass panes (outer, middle, inner) in a grey frame, glowing yellow arrows, small blue and white 3D air dots, a soft key light from the upper left, yellow arrows pushing outward from the dense side"
+  },
+  {
+   "from": "flight",
+   "to": "panes",
+   "size": "medium",
+   "camera": "lateral track along the wall",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; a row of five airliner windows each with a tiny dot, in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows"
+  },
+  {
+   "from": "panes",
+   "to": "drilled",
+   "size": "cutaway",
+   "camera": "gentle push-in",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; a dark navy cutaway stage with a floating 3D window cross-section: three glass panes (outer, middle, inner) in a grey frame, glowing yellow arrows, small blue and white 3D air dots, a soft key light from the upper left, the three panes sliding apart into an exploded view"
+  },
+  {
+   "from": "drilled",
+   "to": "lets",
+   "size": "cutaway",
+   "camera": "push-in on the middle pane",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; a dark navy cutaway stage with a floating 3D window cross-section: three glass panes (outer, middle, inner) in a grey frame, glowing yellow arrows, small blue and white 3D air dots, a soft key light from the upper left, a small drill bit lowering into the middle pane, the pane glowing yellow"
+  },
+  {
+   "from": "lets",
+   "to": "outer",
+   "size": "cutaway",
+   "camera": "slow dolly",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; a dark navy cutaway stage with a floating 3D window cross-section: three glass panes (outer, middle, inner) in a grey frame, glowing yellow arrows, small blue and white 3D air dots, a soft key light from the upper left, air dots travelling through the hole into the gap"
+  },
+  {
+   "from": "outer",
+   "to": "moisture",
+   "size": "cutaway",
+   "camera": "push-in",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; a dark navy cutaway stage with a floating 3D window cross-section: three glass panes (outer, middle, inner) in a grey frame, glowing yellow arrows, small blue and white 3D air dots, a soft key light from the upper left, the outer pane glowing orange under big arrows, middle and inner panes calm"
+  },
+  {
+   "from": "moisture",
+   "to": "fog",
+   "size": "cutaway",
+   "camera": "slow dolly",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; a dark navy cutaway stage with a floating 3D window cross-section: three glass panes (outer, middle, inner) in a grey frame, glowing yellow arrows, small blue and white 3D air dots, a soft key light from the upper left, blue droplets drifting out of the gap through the hole"
+  },
+  {
+   "from": "fog",
+   "to": "leans",
+   "size": "macro",
+   "camera": "slow push-in",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): no characters; the clear window pane with its tiny dot, a white fog layer fading away, in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows"
+  },
+  {
+   "from": "leans",
+   "to": "squints",
+   "size": "medium",
+   "camera": "push-in",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Otto (flat sage-green shirt #6B8E4E, brown hair at the sides, round glasses) leaning toward the window, in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows"
+  },
+  {
+   "from": "squints",
+   "to": "smiles",
+   "size": "reaction close-up",
+   "camera": "slow push-in",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Otto (flat sage-green shirt #6B8E4E, brown hair at the sides, round glasses) close-up, squinting, a blush-pink face, one sweat drop, in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows"
+  },
+  {
+   "from": "smiles",
+   "to": "purpose",
+   "size": "close-up",
+   "camera": "gentle push-in",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Mia (flat yellow shirt #F2B134, black hair in a bun) close-up, smug closed-eye smile, in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows"
+  },
+  {
+   "from": "purpose",
+   "to": "end",
+   "size": "medium two-shot",
+   "camera": "dolly back to the first frame",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, flat black oval eyes, separate graphic eyebrows, simple drawn mouths, thin black line arms and legs, small flat white hands, flat solid-colour clothes and hair, no shading, no gradients; face colour changes flat when the story calls for it) composited into a STYLIZED 3D set (real perspective, textured materials, gentle ambient shading, one directional light, cast and contact shadows): Mia (flat yellow shirt #F2B134, black hair in a bun) and Otto (flat sage-green shirt #6B8E4E, brown hair at the sides, round glasses) as in the opening, in an airliner cabin: cream curved wall panels with a speckle texture, a grey carpet floor, teal seats #1F8A8A, a plastic window frame with a three-layer glass window at the left, a white overhead bin, warm cabin light from the upper right with soft shadows"
+  }
+ ]
+}
