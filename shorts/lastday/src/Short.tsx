@@ -130,7 +130,7 @@ const MoneyShot: React.FC<{t: number}> = ({t}) => {
 // ---------------------------------------------------------------- 2. the thief robs the street (dusk): he grabs the loot at the shop and runs down the sidewalk
 const RobShot: React.FC<{t: number}> = ({t}) => {
   const u = smooth(prog(t, K.robs + 0.1, C.story)), z = lerp(SHOP_Z + 0.2, SHOP_Z - 3.2, u), x = FRONT_X - 1.0, running = u > 0.02 && u < 0.98;
-  const cam = cam3At(t, [[C.robs, {pos: [1.5, 1.45, 4.8], look: [x, 1.0, SHOP_Z - 0.3], fov: 38}], [C.story, {pos: [1.4, 1.5, 3.0], look: [x, 1.0, SHOP_Z - 2.8], fov: 38}]]);
+  const cam = cam3At(t, [[C.robs, {pos: [2.0, 1.45, 5.4], look: [x + 0.15, 1.0, SHOP_Z - 0.3], fov: 38}], [C.story, {pos: [1.9, 1.5, 3.4], look: [x + 0.15, 1.0, SHOP_Z - 2.8], fov: 38}]]);
   const ph = 2 * Math.PI * (SHOP_Z + 0.2 - z) / (4 * 58 * THIEF_H / 430);
   const body = running ? walk(ph, {run: true, view: 'right'}) : act(t, [[0, 'reach'], [K.robs - 0.05, 'holdFront']], [[0, 'grin']]);
   return (<World cam={cam} light={{...LT.dusk, focus: [x, 0, SHOP_Z - 1]}} sky={SKIES.dusk} scene={<><City t={t} mode="dusk" /><Coins at={[x + 0.25, 0.7, SHOP_Z + 0.1]} t={t} t0={K.robs} /></>}>
@@ -179,11 +179,11 @@ const TurnShot: React.FC<{t: number}> = ({t}) => {
 const STREAK_KEYS: Cam3Key[] = [[0, {pos: [0, 3, 34], look: [0, 0, 0], fov: 40}]];
 const StreakShot: React.FC<{t: number}> = ({t}) => {
   const KEYS: Cam3Key[] = [[C.falls, {pos: [0.5, 3, 30], look: [0, 0, 0], fov: 40}], [K.falls - 0.05, {pos: [0.5, 3, 29], look: [0, 0, 0], fov: 40}],
-    [K.falls + 0.4, {pos: [2.6, 1.1, 6.5], look: [0, 0, 0], fov: 34}, EASE.slam], [C.kmps, {pos: [2.5, 1.0, 5.6], look: [0, -0.2, -1], fov: 34}]];
+    [K.falls + 0.4, {pos: [3.6, 1.6, 9.5], look: [0, 0, -1], fov: 36}, EASE.slam], [C.kmps, {pos: [3.4, 1.5, 8.6], look: [0, -0.2, -1.5], fov: 36}]];
   const cam = cam3At(t, KEYS);
   return (<ShotBlur t={t} cam={KEYS}><World cam={cam} light={LT.space} sky={SKIES.space} scene={<>
       <Stars /><Earth pos={[-3, -4, -70]} R={10} spin={t * 0.05} />
-      <Rock pos={[0, 0, 0]} r={1.6} rot={[t * 0.6, t * 0.4, 0]} heat={0.15} trail={0.9} dir={[0.05, -0.05, -1]} />
+      <Rock pos={[0, 0, 0]} r={1.0} rot={[t * 0.6, t * 0.4, 0]} heat={0.15} trail={0.2} dir={[0.05, -0.05, -1]} />
     </>} /></ShotBlur>);
 };
 void STREAK_KEYS;
@@ -302,7 +302,7 @@ const DinoShot: React.FC<{t: number}> = ({t}) => {
 // ---------------------------------------------------------------- 14. but one scientist has a plan (observatory)
 const BLOB_OBS: V3 = [-0.75, 0, -1.0];
 const LabShot: React.FC<{t: number}> = ({t}) => {
-  const cam = cam3At(t, [[C.lab, {pos: [-0.3, 1.5, 3.9], look: [-0.2, 1.5, -3], fov: 40}], [K.plan - 0.2, {pos: [-0.45, 1.45, 3.0], look: [-0.35, 1.45, -3], fov: 38}], [K.plan + 0.35, {pos: [-0.5, 1.6, 2.4], look: [-0.4, 1.9, -3], fov: 38}, EASE.punch], [C.dart, {pos: [-0.5, 1.6, 2.3], look: [-0.4, 1.95, -3], fov: 38}]]);
+  const cam = cam3At(t, [[C.lab, {pos: [-0.3, 1.5, 3.9], look: [-0.2, 1.5, -3], fov: 40}], [K.plan - 0.2, {pos: [-0.45, 1.5, 3.6], look: [-0.35, 1.5, -3], fov: 40}], [K.plan + 0.35, {pos: [-0.5, 1.7, 3.3], look: [-0.4, 1.85, -3], fov: 40}, EASE.punch], [C.dart, {pos: [-0.5, 1.7, 3.2], look: [-0.4, 1.9, -3], fov: 40}]]);
   const open = smooth(prog(t, K.plan - 0.05, K.plan + 0.8));
   const sat = lerp(0.55, 1, smooth(prog(t, C.lab, C.lab + 0.5))), sep = lerp(0.45, 0, smooth(prog(t, C.lab, C.lab + 0.5)));
   const turned = t > K.scientist - 0.2;
@@ -382,7 +382,7 @@ const WhyShot: React.FC<{t: number}> = ({t}) => {
     {line(lStart, [L_EARTH[0], 0.55, L_EARTH[2]], '#FF5A4A', false, 'l1')}
     {curve(0, 'rgba(255,255,255,0.55)', 'r0')}
     {t > tap && curve(bend, '#FFD23F', 'r1')}
-    <Cel at={[0.72, 0, 1.6]} h={1.25}><Blob {...act(t, [[0, 'stand'], [K.push - 0.2, 'explain']], [[0, 'happy'], [K.enough2, 'smug']])} view="right" /></Cel>
+    <Cel at={[0.85, 0, 0.5]} h={1.25}><Blob {...act(t, [[0, 'stand'], [K.push - 0.2, 'explain']], [[0, 'happy'], [K.enough2, 'smug']])} view="right" /></Cel>
   </World></ShotBlur>);
 };
 
@@ -449,7 +449,7 @@ export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: bool
 
 // ---------------------------------------------------------------- thumbnails (each its own staged World; same cast, same sets)
 const ThumbA: React.FC = () => {      // the mystery: the thief's terrified face up close, the rock filling the sky, circled
-  const t = 10, cam: Cam3 = {pos: [0.4, 1.3, 3.0], look: [0.1, 3.0, -20], fov: 44};
+  const t = 10, cam: Cam3 = {pos: [0.5, 1.35, 4.4], look: [0.2, 4.6, -20], fov: 46};
   const ring = toScreen(cam, ROCK_SKY);
   return (<World cam={cam} light={LT.doom} sky={SKIES.doom} scene={<><City t={t} mode="doom" fires={1} /><Rock pos={ROCK_SKY} r={10} heat={1} trail={0.6} dir={[0.1, -0.4, 1]} /></>}>
     <Cel at={[0.25, 0, 0.6]} h={THIEF_H}><Thief {...act(0, [[0, 'handsOnHead']], [[0, 'scared']])} {...UP} sweat={1} /></Cel>
@@ -463,9 +463,9 @@ const ThumbB: React.FC = () => {      // the smug winner: Blob the scientist poi
   </World>);
 };
 const ThumbC: React.FC = () => {      // the stakes: the boss offers his cash to the falling rock
-  const t = 20, cam: Cam3 = {pos: [1.3, 1.5, 1.7], look: [-0.3, 1.55, -2.2], fov: 40};
-  return (<World cam={cam} light={mixLight(LT.office, LT.doom, 0.6, {span: 6})} sky={['#2A0A10', '#C8402A']} scene={<><Office t={t} /><Rock pos={[2.0, 1.6, -14]} r={3.4} heat={1} trail={0.5} dir={[0.2, -0.4, 1]} /></>}>
-    <Cel at={WIN_AT} h={BOSS_H}><Boss {...act(0, [[0, 'reach']], [[0, 'scared']])} view="left" handR={[-150, -300]} handL={[-90, -260]} sweat={1} /></Cel>
+  const t = 20, cam: Cam3 = {pos: [1.6, 1.5, 2.6], look: [-0.4, 1.7, -2.2], fov: 40};
+  return (<World cam={cam} light={mixLight(LT.office, LT.doom, 0.6, {span: 6})} sky={['#2A0A10', '#C8402A']} scene={<><Office t={t} /><Rock pos={[-0.9, 2.0, -14]} r={2.6} heat={1} trail={0.5} dir={[0.2, -0.4, 1]} /></>}>
+    <Cel at={WIN_AT} h={BOSS_H}><Boss {...act(0, [[0, 'reach']], [[0, 'scared']])} view="left" eyes="wide" mouth="o" browUp={1} handR={[-150, -230]} handL={[-100, -205]} sweat={1} /></Cel>
   </World>);
 };
 export const Thumb: React.FC<{variant: 'A' | 'B' | 'C'}> = ({variant}) => {
