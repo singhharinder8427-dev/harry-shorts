@@ -17,7 +17,8 @@ export type Outfit = {
   coat?: string; coatStyle?: 'lab' | 'suit' | 'trench';   // long open lab coat, suit jacket with a white V, or a belted trench coat
   headband?: string;                                     // sports headband with two ribbon tails
   sunglasses?: boolean; glassesColor?: string; cigarette?: boolean;
-  hold?: 'gun' | 'magnifier' | 'clipboard' | 'briefcase' | 'coffee' | 'phone' | 'wrench';   // prop held in the right hand
+  hold?: 'gun' | 'magnifier' | 'clipboard' | 'briefcase' | 'coffee' | 'phone' | 'wrench' | 'sack';   // prop held in the right hand
+  mask?: string;                                         // robber's eye mask (a band across the eyes with eye holes)
   tie?: string; apron?: string; badge?: string; belt?: string;   // flat extras: tie, front apron, small star badge on the chest, waist belt
 };
 export type PersonPose = {
@@ -178,6 +179,9 @@ export const Person: React.FC<PersonPose> = (p) => {
           {!back && o.hair && o.hairStyle !== 'sides' && noHat && <g clipPath={`url(#${id}-head)`}><path d={`M -120 ${HY - 16} L -120 ${HY - 130} L 120 ${HY - 130} L 120 ${HY - 16} L 100 ${HY - 16} C ${70 + dir * 10} ${HY - 70} ${10 + dir * 30} ${HY - 82} ${-30 + dir * 30} ${HY - 60} C ${-60 + dir * 20} ${HY - 72} -86 ${HY - 52} -100 ${HY - 16} Z`} fill={o.hair} stroke={INK} strokeWidth={ow} strokeLinejoin="round" /></g>}
           {!back && o.hair && o.hairStyle !== 'sides' && noHat && <circle cx={0} cy={HY} r={HR} fill="none" stroke={INK} strokeWidth={ow} />}
           {!back && <>
+            {o.mask && <g><g clipPath={`url(#${id}-head)`}><rect x={-110} y={fy - 40} width={220} height={58} rx={10} fill={o.mask} stroke={INK} strokeWidth={ow * 0.8} /></g>
+              {[-1, 1].map((s) => <ellipse key={'mh' + s} cx={fx + s * (dir ? 27 : 34) + lookX * 0.5} cy={fy - 10} rx={(dir !== 0 && s === dir ? 0.7 : 1) * 19} ry={22} fill="#FFFFFF" />)}
+              <circle cx={0} cy={HY} r={HR} fill="none" stroke={INK} strokeWidth={ow} /></g>}
             {!o.sunglasses && <>{eye(-1)}{eye(1)}</>}{browD(-1)}{browD(1)}
             {o.sunglasses && <g>{[-1, 1].map((s) => { const ex = fx + s * (dir ? 27 : 34), w = dir !== 0 && s === dir ? 0.72 : 1;
               return <rect key={'sg' + s} x={ex - 27 * w} y={fy - 30} width={54 * w} height={36} rx={12} fill={INK} stroke={INK} strokeWidth={ow * 0.6} />; })}
@@ -214,6 +218,8 @@ export const Person: React.FC<PersonPose> = (p) => {
           {k === 'coffee' && <><path d="M -10 -44 L 26 -44 L 22 8 L -6 8 Z" fill="#FFFFFF" {...st} /><rect x={-12} y={-50} width={40} height={10} rx={3} fill="#5B3A29" {...st} strokeWidth={ow * 0.5} />
             <rect x={-8} y={-26} width={32} height={14} fill="#C9A27A" stroke="none" /></>}
           {k === 'phone' && <rect x={-4} y={-44} width={24} height={44} rx={5} fill="#2B2B30" {...st} />}
+          {k === 'sack' && <><path d="M -10 -6 C -30 10 -46 60 -30 96 Q 16 118 62 96 C 78 60 60 10 36 -6 Z" fill="#B8865A" {...st} /><path d="M -12 -6 Q 12 6 38 -6" stroke={INK} strokeWidth={ow * 0.7} fill="none" />
+            <text x={16} y={70} textAnchor="middle" fontFamily="Inter, sans-serif" fontWeight={900} fontSize={44} fill={INK}>$</text></>}
           {k === 'wrench' && <path d="M -4 6 L 40 -38 M 34 -48 A 14 14 0 1 0 52 -30" stroke="#8C939B" strokeWidth={ow * 1.6} fill="none" strokeLinecap="round" />}
         </g>; })()}
       {!handsBack && [handL, handR].map(hand)}

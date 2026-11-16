@@ -35,7 +35,7 @@ const GREY = ['#8E8E8E', '#BDBDBD', '#E6E6E6'];
 const CASUAL = ['#E5484D', '#3F7FD9', '#8E5BD6', '#F2994A', '#E85D9E', '#4CAF50', '#F2C94C', '#56CCF2'];   // no teal
 const SPORT = ['#E5484D', '#2F5BEA', '#8E5BD6', '#F2994A', '#111827', '#4CAF50', '#FFFFFF'];
 
-export type RoleName = 'scientist' | 'boss' | 'guard' | 'police' | 'detective' | 'athlete' | 'friend' | 'kid' | 'worker';
+export type RoleName = 'scientist' | 'boss' | 'guard' | 'police' | 'detective' | 'athlete' | 'friend' | 'kid' | 'worker' | 'thief';
 export type RoleLook = {outfit: Outfit; size: number; signature: string};
 export const ROLES: Record<RoleName, (seed: string | number) => RoleLook> = {
   scientist: (seed) => { const c = chooser(seed, 'scientist'); const hs = c<HS>(['short', 'sides', 'long', 'ponytail', 'short']);
@@ -70,6 +70,9 @@ export const ROLES: Record<RoleName, (seed: string | number) => RoleLook> = {
   worker: (seed) => { const c = chooser(seed, 'worker');
     return {signature: 'hard hat + high-vis vest (+ wrench)', size: 1.02, outfit: {shirt: c(['#3F7FD9', '#6B6A3A', '#5B5B66', '#8C4A2F', '#2F5BEA']), vest: c(['#FF8A1F', '#D4E157']),
       hat: 'hardhat', hatColor: c(['#FFD23F', '#FF8A1F', '#F2F2F2', '#E5484D']), hair: c(HAIR), hairStyle: 'short', mustache: c([false, true]), hold: c(['wrench', 'wrench', 'coffee', undefined])}}; },
+  thief: (seed) => { const c = chooser(seed, 'thief');
+    return {signature: 'eye mask + beanie + dark shirt + loot sack', size: 0.98, outfit: {shirt: c(['#3A3F4A', '#2E2E36', '#4A3F55', '#3B4A3A']), hat: 'beanie', hatColor: c(['#151515', '#2B2B30', '#7A2E2E']),
+      mask: '#151515', hair: c(HAIR), hairStyle: 'short', scarf: c([undefined, '#E5484D', '#F2C94C']), hold: 'sack'}}; },
 };
 /** one supporting character for a video: role('scientist', 'pink-cell') */
 export const role = (name: RoleName, seed: string | number): RoleLook => ROLES[name](seed);
