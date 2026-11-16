@@ -31,10 +31,10 @@ done
 ls $DIR/c_*.mp4 | sed "s|.*/|file '|; s|\$|'|" > $DIR/list.txt
 ffmpeg -y -loglevel error -f concat -safe 0 -i $DIR/list.txt -c copy $DIR/video.mp4 || exit 1
 # sound: sfx 0.42 + bed 0.2 (+ the voice at its offset), as the composition would play it
-INP="-i public/$SHORT/sfx.wav -i public/$SHORT/bed.wav"; FIL="[0:a]volume=0.42[a0];[1:a]volume=0.2[a1]"; MIX="[a0][a1]"; CNT=2
+INP="-i public/$SHORT/sfx.wav -i public/$SHORT/bed.wav"; FIL="[1:a]volume=0.42[a0];[2:a]volume=0.2[a1]"; MIX="[a0][a1]"; CNT=2
 if [ "$VOICE" = "1" ]; then
   OFF=$(python3 -c "import json;print(max(0,json.load(open('src/timing.json'))['voiceOffset']))")
-  INP="$INP -i public/$SHORT/vo.wav"; FIL="$FIL;[2:a]adelay=$(python3 -c "print(int($OFF*1000))")|$(python3 -c "print(int($OFF*1000))")[a2]"; MIX="$MIX[a2]"; CNT=3
+  INP="$INP -i public/$SHORT/vo.wav"; FIL="$FIL;[3:a]adelay=$(python3 -c "print(int($OFF*1000))")|$(python3 -c "print(int($OFF*1000))")[a2]"; MIX="$MIX[a2]"; CNT=3
 fi
 ffmpeg -y -loglevel error -i $DIR/video.mp4 $INP -filter_complex "$FIL;${MIX}amix=inputs=$CNT:normalize=0[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -t $DUR "$OUT" || exit 1
 echo "DONE $OUT"
