@@ -12,7 +12,9 @@ import {BLOB, role} from './Roles';
 import {act, EXPR, Pose} from './Poses';
 import {Ball, Box, Cam3, Cam3Key, Cel, Cuts, Cyl, Ground, V3, World, cam3At, celPoint, tex} from './World3D';
 import {EASE, ShotBlur, Transition} from './Moves';
-import {BENCH, Basket, COINS, Door, DAWN, DAY, DOOR_Z, Egg, PLOT, SKY, Village, VState, loopS, mixLight, mixSky, timeOfDay} from './Village';
+import {BENCH, Basket, COINS, Door, DAWN, DAY, DOOR_Z, Egg, GREY, Instances, PILE, PILE_H, PLOT, SKY, SUNSET, Village, VState, loopS, mixLight, mixSky, timeOfDay} from './Village';
+import {Sparkle} from './Bits';
+import {INK} from './color';
 import {Puff} from './Bits';
 import {bump, clamp, kfs, lerp, pick, pop, prog, rnd, smooth, spring} from './math';
 import {ThumbFrame, Ring, Arrow} from './ThumbKit';
@@ -51,21 +53,52 @@ const C = {
   fills: K.fills - 0.3, keep: K.keep - 0.35, hires: K.hires - 0.3, pays: K.pays - 0.2, same: K.same1 - 0.2, poor: K.poor - 0.3, end: K.subscribe - 0.15,
 };
 
-// ---------------------------------------------------------------- shot 1: frame 0 = the premise (and the ending)
+// ---------------------------------------------------------------- mood: a colour filter for the grey poor days / the memory (costs a frame copy, so only where needed)
+const Mood: React.FC<{sat?: number; sepia?: number; children: React.ReactNode}> = ({sat = 1, sepia = 0, children}) =>
+  sat > 0.995 && sepia < 0.005 ? <>{children}</> : <AbsoluteFill style={{filter: `saturate(${sat.toFixed(3)}) sepia(${sepia.toFixed(3)})`}}>{children}</AbsoluteFill>;
+
+// ---------------------------------------------------------------- the rich ending (also frame 0: a flash-forward hook)
+const RICH_S: VState = {houses: 0, coins: 0, fields: 0, coop: 1, coopBig: 1, hut: 1, fence: 1, fire: 0, firePot: false, pile: 1, coops: 1};
+const NED_POOR: V3 = [PLOT.ned - 0.2, 0, 0.7], SARA_OK: V3 = [PLOT.sara - 0.55, 0, 0.7];
+const RICH_CLOSE: Cam3 = {pos: [PILE[0] + 0.3, 1.75, PILE[2] + 6.6], look: [PILE[0], 1.62, PILE[2]], fov: 36};
+const LOOP_N = (k: number) => Math.max(1, Math.round(DURATION * k));
+/** the three classes in their plots (sunset). up = Blob looks up at the subscribe button. */
+const RichWorld: React.FC<{t: number; cam: Cam3; fly?: number; lines?: number; up?: boolean; cheer?: number}> = ({t, cam, fly = 0, lines = 0, up = false, cheer = 0}) => {
+  const top: V3 = [PILE[0], 0, PILE[2]];
+  const sp = [[-150, -520, 0], [170, -470, 0.2], [-210, -300, 0.45], [230, -260, 0.65], [10, -640, 0.85]];
+  const bp = toScreen(cam, [PILE[0], PILE_H, PILE[2]]);
+  const ne = celPoint(cam, NED_POOR, 1.7, [44, -170]);
+  return (<World cam={cam} light={SUNSET} sky={SKY.sunset} scene={<><Village t={t} s={{...RICH_S, lines, pileFly: fly}} /><Basket pos={[SARA_OK[0] + 0.55, 0, 1.05]} eggs={6} /></>} front={<Egg pos={ne} s={1.1} />}>
+    <Cel at={NED_POOR}><Ned {...idle({...SITF, ...EXPR.sad, handL: [-40, -100], handR: [40, -150], headTilt: 8}, t, 0.2)} /></Cel>
+    <Cel at={SARA_OK}><Sara {...idle(act(t, [[0, 'relaxed']], [[0, 'happy']]), t, 0.4)} handR={[96, -180]} /></Cel>
+    <Cel at={[SARA_OK[0] + 0.85, 0, 0.95]} h={0.46} unitsTall={200}><Bird {...SARA_HEN} dir={-1} peck={Math.max(0, loopS(t, LOOP_N(0.6), 0.1))} /></Cel>
+    {fly < 0.3 && <Cel at={top} lift={PILE_H * (1 - fly * 3)} shadow={false}><Blob {...idle(cheer > 0 ? {...act(t, [[0, 'crossArms']], [[0, 'smug']]), ...blendRaw(cheer)} : act(t, [[0, 'crossArms']], [[0, 'smug']]), t)}
+      lookY={up ? -10 : 0} faceDy={up ? -14 : 0} browUp={up ? 0.9 : undefined} eyes={up ? 'dot' : undefined} mouth={up ? 'grin' : undefined} /></Cel>}
+    <Flock t={t} n={32} skipNear={top} front={0} ring />
+    {bp && fly < 0.1 && sp.map(([x, y, ph], i) => <Sparkle key={i} x={bp.x + x * bp.s / 260} y={bp.y + y * bp.s / 260} r={Math.max(0, loopS(t, LOOP_N(0.55), ph)) * 26} fill="#FFE27A" />)}
+  </World>);
+};
+const blendRaw = (k: number): Pose => k > 0.5 ? {handL: [-118, -410], handR: [118, -410], bounce: 10 * k, eyes: 'closed', mouth: 'grin'} : {};
+const Hook: React.FC<{t: number}> = ({t}) => {
+  const cam = cam3At(t, [[0, RICH_CLOSE], [0.35, RICH_CLOSE], [K.lose - 0.3, {pos: [8.6, 4.4, 9.4], look: [-1.3, 0.7, -0.6], fov: 42}]]);
+  return <RichWorld t={t} cam={cam} lines={1} fly={smooth(prog(t, K.lose - 0.55, K.lose - 0.1))} />;
+};
 const POS = {ned: [-1.25, 0, 0.8] as V3, blob: [0, 0, 1.0] as V3, sara: [1.25, 0, 0.8] as V3};
 const CAM0: Cam3 = {pos: [0, 1.9, 8.6], look: [0, 1.12, -0.4], fov: 36};
+/** the night it all goes: the three in front of their homes (a rewind to before the story) */
 const Intro: React.FC<{t: number}> = ({t}) => {
-  const cam = cam3At(t, [[0, CAM0], [C.wide, {pos: [0.1, 1.8, 7.6], look: [0.05, 1.1, -0.4], fov: 35}]]);
-  const night = kfs(t, [[K.lose - 0.15, 0], [K.lose + 0.6, 1]]);
+  const t0 = K.lose - 0.15;
+  const cam = cam3At(t, [[t0, CAM0], [C.wide, {pos: [0.1, 1.8, 7.4], look: [0.05, 1.1, -0.4], fov: 35}]]);
+  const night = kfs(t, [[t0, 0.1], [K.lose + 0.6, 1]]);
   const tod = timeOfDay(night);
   const scared = t > K.lose + 0.15;
-  const faceB = act(t, [[0, 'wave'], [K.lose - 0.2, 'handsOnHead']], [[0, 'happy'], [K.lose - 0.2, 'shocked'], [K.lose + 0.7, 'nervous']]);
-  const faceN = act(t, [[0, 'relaxed'], [K.lose - 0.1, 'scared']], [[0, 'happy'], [K.lose - 0.1, 'shocked']]);
-  const faceS = act(t, [[0, 'stand'], [K.lose, 'scared']], [[0, 'grin'], [K.lose, 'shocked']]);
+  const faceB = act(t, [[0, 'stand'], [t0 + 0.1, 'handsOnHead']], [[0, 'happy'], [t0 + 0.1, 'shocked'], [K.lose + 0.7, 'nervous']]);
+  const faceN = act(t, [[0, 'relaxed'], [t0 + 0.15, 'scared']], [[0, 'happy'], [t0 + 0.15, 'shocked']]);
+  const faceS = act(t, [[0, 'stand'], [t0 + 0.2, 'scared']], [[0, 'grin'], [t0 + 0.2, 'shocked']]);
   return (<World cam={cam} light={tod.light} sky={tod.sky} scene={<Village t={t} s={{night, dayPhase: night * 0.5}} />}>
-    <Cel at={POS.ned}><Ned {...idle(faceN, t, 0.1)} lookY={scared ? -10 : 0} faceDy={scared ? -10 : 0} blink={blink(t, 0.9)} /></Cel>
-    <Cel at={POS.blob}><Blob {...idle(faceB, t)} handR={t < K.lose - 0.2 ? [128, -340 + 14 * loopS(t, IDLE_N * 2)] : faceB.handR} blink={blink(t, 0.6)} /></Cel>
-    <Cel at={POS.sara}><Sara {...idle(faceS, t, 0.4)} lookY={scared ? -10 : 0} faceDy={scared ? -10 : 0} blink={blink(t, 1.2)} /></Cel>
+    <Cel at={POS.ned}><Ned {...idle(faceN, t, 0.1)} lookY={scared ? -10 : 0} faceDy={scared ? -10 : 0} /></Cel>
+    <Cel at={POS.blob}><Blob {...idle(faceB, t)} /></Cel>
+    <Cel at={POS.sara}><Sara {...idle(faceS, t, 0.4)} lookY={scared ? -10 : 0} faceDy={scared ? -10 : 0} /></Cel>
   </World>);
 };
 
@@ -75,8 +108,11 @@ const Dust: React.FC<{pos: V3; t: number; t0: number; s?: number}> = ({pos, t, t
   return (<group position={pos}>{[0, 1, 2, 3, 4, 5].map((i) => { const a = i * 1.05;
     return <Ball key={i} pos={[Math.cos(a) * (0.6 + u * 1.2) * s, 0.25 + u * 0.8 * s, Math.sin(a) * (0.4 + u * 0.7) * s]} r={(0.35 + u * 0.4) * s * Math.sin(Math.PI * u)} color="#E3D6C2" emissive="#7A6E5C" glow={0.5} rough={1} cast={false} />; })}</group>);
 };
+const CoinBurst: React.FC<{t: number; t0: number}> = ({t, t0}) => { const u = prog(t, t0, t0 + 1.4); if (u <= 0 || u >= 1) return null;
+  return <Instances k="burst" geo={() => new THREE.CylinderGeometry(0.1, 0.1, 0.04, 16)} color="#F2C230" rough={0.35} metal={0.6} items={Array.from({length: 26}, (_, i) => {
+    const a = rnd(i + 3) * Math.PI * 2, sp = 0.6 + rnd(i + 9) * 1.2; return {p: [COINS[0] + Math.cos(a) * sp * u, 0.2 + u * (2 + rnd(i) * 4) + 2.5 * u * u, COINS[2] + Math.sin(a) * sp * u] as V3, r: [u * 12 + i, u * 7, i] as V3}; })} />; };
 const Vanish: React.FC<{t: number}> = ({t}) => {
-  const cam = cam3At(t, [[C.wide, {pos: [8.2, 4.3, 7.8], look: [-1.2, 0.9, -3.4], fov: 40}], [C.gone, {pos: [7.4, 3.9, 7.0], look: [-1.2, 0.9, -3.6], fov: 40}]]);
+  const cam = cam3At(t, [[C.wide, {pos: [5.2, 2.6, 6.2], look: [0.3, 0.9, 0.2], fov: 40}], [K.houses - 0.2, {pos: [8.2, 4.3, 7.8], look: [-1.2, 0.9, -3.4], fov: 40}], [K.fields - 0.15, {pos: [7.6, 6.8, 6.0], look: [-1.5, 0.3, -8.0], fov: 42}], [C.gone, {pos: [7.0, 7.4, 5.0], look: [-1.5, 0.2, -9.0], fov: 42}]]);
   const coins = 1 - smooth(prog(t, K.money - 0.08, K.money + 0.3));
   const houses = 1 - smooth(prog(t, K.houses - 0.12, K.houses + 0.5));
   const fields = 1 - smooth(prog(t, K.fields - 0.12, K.fields + 0.45));
@@ -84,7 +120,8 @@ const Vanish: React.FC<{t: number}> = ({t}) => {
   return (<World cam={cam} light={tod.light} sky={tod.sky} scene={<>
       <Village t={t} s={{night: 1, dayPhase: 0.5, coins, houses, fields}} />
       <Dust pos={COINS} t={t} t0={K.money - 0.1} s={0.5} />
-      {[PLOT.ned, PLOT.sara, PLOT.blob].map((x) => <Dust key={x} pos={[x, 0, -3.6]} t={t} t0={K.houses - 0.15} s={1.05} />)}
+      <CoinBurst t={t} t0={K.money - 0.1} />
+      {[PLOT.ned, PLOT.sara, PLOT.blob].map((x) => <Dust key={x} pos={[x, 0, -3.6]} t={t} t0={K.houses - 0.15} s={0.7} />)}
       <Dust pos={[-4.5, 0, -10]} t={t} t0={K.fields - 0.1} s={2} /><Dust pos={[4.5, 0, -10]} t={t} t0={K.fields - 0.1} s={2} />
     </>}>
     <Cel at={POS.ned}><Ned {...act(t, [[0, 'scared']], [[0, 'shocked']])} view="left" blink={0} /></Cel>
@@ -103,14 +140,14 @@ const Tumble: React.FC<{t: number; t0: number; t1: number; z: number}> = ({t, t0
 };
 const AllGone: React.FC<{t: number}> = ({t}) => {
   const cam = cam3At(t, [[C.gone, {pos: [0, 1.45, 5.9], look: [0, 1.0, 0.2], fov: 34}], [C.days, {pos: [0, 1.75, 7.6], look: [0, 1.0, 0.2], fov: 35}]]);
-  const L = mixLight(DAWN, DAY, prog(t, C.gone, C.days) * 0.5);
+  const L = GREY;
   const sag = smooth(prog(t, K.gone - 0.1, K.gone + 0.35));
   const sadB = act(t, [[0, 'stand'], [K.gone - 0.1, 'sad']], [[0, 'shocked'], [K.gone - 0.1, 'sad']]);
-  return (<World cam={cam} light={L} sky={mixSky(SKY.dawn, SKY.day, 0.3)} scene={<><Village t={t} s={{...GONE_STATE, dayPhase: 0.25}} /><Tumble t={t} t0={K.gone + 0.1} t1={C.days + 0.3} z={1.8} /></>}>
+  return (<Mood sat={0.3}><World cam={cam} light={L} sky={SKY.grey} scene={<><Village t={t} s={{...GONE_STATE, dayPhase: 0.25}} /><Tumble t={t} t0={K.gone + 0.1} t1={C.days + 0.3} z={1.8} /></>}>
     <Cel at={POS.ned}><Ned {...idle(act(t, [[0, 'stand'], [K.gone, 'sad']], [[0, 'shocked'], [K.gone, 'sad']]), t, 0.2)} lookX={-6 * sag} /></Cel>
     <Cel at={POS.blob}><Blob {...idle(sadB, t)} blink={blink(t, K.gone + 0.6)} /></Cel>
     <Cel at={POS.sara}><Sara {...idle(act(t, [[0, 'stand'], [K.gone + 0.05, 'sad']], [[0, 'shocked'], [K.gone + 0.05, 'sad']]), t, 0.5)} /></Cel>
-  </World>);
+  </World></Mood>);
 };
 
 // ---------------------------------------------------------------- shot 4: three hungry days (time-lapse, sitting)
@@ -121,11 +158,11 @@ const Days: React.FC<{t: number}> = ({t}) => {
   const weak = prog(t, C.days, C.gets);
   const sit = (p: Pose, ph: number): Pose => ({...SITF, ...p, bounce: -104 - 6 * weak + 2 * loopS(t, IDLE_N, ph), handL: [-34, -120], handR: [34, -120], headTilt: 8 * weak * (ph > 0.3 ? -1 : 1)});
   const face: Pose = {eyes: weak > 0.6 ? 'closed' : 'dot', mouth: 'wavy', brow: -0.8, browUp: 0.4, sweat: weak > 0.5 ? 1 : 0, tint: '#E8E2A8', tintAmt: 0.5 * weak};
-  return (<World cam={cam} light={tod.light} sky={tod.sky} scene={<Village t={t} s={{...GONE_STATE, night, dayPhase: dp}} />}>
+  return (<Mood sat={0.3}><World cam={cam} light={tod.light} sky={tod.sky} scene={<Village t={t} s={{...GONE_STATE, night, dayPhase: dp}} />}>
     <Cel at={[-0.92, 0, 0.75]}><Ned {...sit(face, 0.1)} /></Cel>
     <Cel at={[0, 0, 0.95]}><Blob {...sit(face, 0.0)} /></Cel>
     <Cel at={[0.92, 0, 0.75]}><Sara {...sit(face, 0.4)} /></Cel>
-  </World>);
+  </World></Mood>);
 };
 
 // ---------------------------------------------------------------- shot 5: one chicken each (also the "same start" memory)
@@ -144,7 +181,8 @@ const Gets: React.FC<{t: number; memory?: boolean}> = ({t, memory = false}) => {
       : {...act(t, [[0, 'reach']], [[0, 'awe']]), view: 'front', handL: [-70, -300], handR: [70, -300]}, t, ph);
   };
   const L = memory ? DAY : mixLight(DAY, DAY, 0);
-  return (<World cam={cam} light={L} sky={SKY.day} scene={<Village t={t} s={GONE_STATE} />}>
+  const sat = memory ? 0.55 : lerp(0.3, 1, smooth(prog(t, K.chicken - 0.3, K.chicken + 0.6)));
+  return (<Mood sat={sat} sepia={memory ? 0.4 : 0}><World cam={cam} light={L} sky={SKY.day} scene={<Village t={t} s={GONE_STATE} />}>
     <Cel at={[-1.02, 0, 0.75]}><Ned {...pose(0, 0.1)} /><Held b={{...NED_HEN, dir: 1, flap: got(0) ? bump(t, K.chicken - 0.2, K.chicken + 0.3) : 1}} y={fallY(0)} /></Cel>
     <Cel at={[0, 0, 0.95]}><Blob {...pose(2, 0)} /><Held b={{...ROOSTER, dir: -1, flap: got(2) ? bump(t, K.chicken + 0.24, K.chicken + 0.7) : 1}} y={fallY(2)} /></Cel>
     <Cel at={[1.02, 0, 0.75]}><Sara {...pose(1, 0.4)} /><Held b={{...SARA_HEN, dir: -1, flap: got(1) ? bump(t, K.chicken + 0.02, K.chicken + 0.5) : 1}} y={fallY(1)} /></Cel>
@@ -152,7 +190,7 @@ const Gets: React.FC<{t: number; memory?: boolean}> = ({t, memory = false}) => {
       const x = [-1.02, 1.02, 0][i], p = toScreen(cam, [x, 0.62, [0.75, 0.75, 0.95][i]]); if (!p) return null;
       return <g key={i} transform={`translate(${p.x} ${p.y}) scale(${(p.s / 260) * Math.sin(Math.PI * u)})`}><Puff c={[[-60, -10, 22], [60, -20, 18], [0, -50, 20]]} ow={6} /></g>; })}
     {void t0}
-  </World>);
+  </World></Mood>);
 };
 
 // ---------------------------------------------------------------- shots 6-8: Ned cooks his chicken (night)
@@ -193,7 +231,8 @@ const Last: React.FC<{t: number}> = ({t}) => {
   return (<World cam={cam} light={mixLight(NIGHT_NED.light as any, {...NIGHT_NED.light, ambI: 0.75, sunI: 0.8} as any, 1 - fire)} sky={NIGHT_NED.sky}
     scene={<><Village t={t} s={{...GONE_STATE, night: 1, dayPhase: 0.5, fire, firePot: true}} />
       {smoke > 0 && smoke < 1 && [0, 1, 2].map((i) => <Ball key={i} pos={[PLOT.ned + 0.7 + i * 0.1, 0.3 + smoke * 1.6 + i * 0.3, 0.2]} r={0.12 + smoke * 0.3} color="#8C8F96" opacity={0.85 * (1 - smoke)} rough={1} cast={false} receive={false} />)}</>}
-    front={<Cyl pos={[bowl[0], bowl[1] - 0.05, bowl[2] + 0.06]} r={0.1} rTop={0.15} h={0.12} color="#D9A066" map={tex('planks', [6, 1], 3)} rough={0.6} />}>
+    front={<><Cyl pos={[bowl[0], bowl[1] - 0.05, bowl[2] + 0.06]} r={0.1} rTop={0.15} h={0.12} color="#D9A066" map={tex('planks', [6, 1], 3)} rough={0.6} />
+      {t > K.last - 0.15 && [[-0.03, 0.5], [0.04, -0.6]].map(([dx, rz], i) => <group key={i} position={[bowl[0] + dx, bowl[1] + 0.09, bowl[2] + 0.07]} rotation={[0.3, 0, rz]}><Cyl pos={[0, -0.06, 0]} r={0.012} h={0.12} color="#F4EFE4" rough={0.6} /><Ball pos={[0, 0.065, 0]} r={0.02} color="#F4EFE4" /><Ball pos={[0, -0.065, 0]} r={0.02} color="#F4EFE4" /></group>)}</>}>
     <Cel at={NED_AT}><Ned {...act(t, [[0, 'holdFront'], [K.last - 0.1, 'sad']], [[0, 'smug'], [K.last - 0.1, 'sad']])} handL={[-34, -150]} handR={[34, -150]} lookY={sad ? 10 : 0} faceDy={sad ? 10 : 0} /></Cel>
   </World>);
 };
@@ -294,24 +333,36 @@ const Share: React.FC<{t: number}> = ({t}) => {
     <Cel at={SHARE_B}><Blob {...idle(act(t, [[0, 'stand']], [[0, 'grin'], [K.share, 'joy']]), t)} view="right" handR={[lerp(66, bx, reach), lerp(-140, -170, reach) + shake]} /></Cel>
   </World>);
 };
-const Wanted: React.FC<{t: number}> = ({t}) => {
-  const cam = cam3At(t, [[C.wanted, {pos: [0.2, 1.4, DOOR_Z + 4.8], look: [0.2, 1.28, DOOR_Z + 0.5], fov: 28}], [C.chicks, {pos: [0.2, 1.38, DOOR_Z + 4.5], look: [0.2, 1.28, DOOR_Z + 0.5], fov: 28}]]);
-  const hand: [number, number] = [60, -250 + 8 * Math.sin((t - C.wanted) * 6)];
-  const e = celPoint(cam, SHARE_S, 1.7, [hand[0] + 2, hand[1] - 22]);
-  return (<World cam={cam} light={DAY} sky={SKY.day} scene={<Village t={t} s={{...GONE_STATE, doorOpen: 1}} />} front={<Egg pos={e} s={1.25} />}>
-    <Cel at={SHARE_S}><Sara {...act(t, [[0, 'stand']], [[0, 'happy'], [K.wanted - 0.1, 'joy']])} handR={hand} handL={[-66, -140]} headTilt={5 * Math.sin((t - C.wanted) * 4)} bounce={4 * Math.abs(Math.sin((t - C.wanted) * 6))} /></Cel>
-  </World>);
-};
-const EGG_HAND: [number, number] = [74, -400];
-const ChicksShot: React.FC<{t: number}> = ({t}) => {
-  const e = (c: Cam3) => celPoint(c, SHARE_B, 1.7, [EGG_HAND[0] + 2, EGG_HAND[1] - 22]);
-  const base: Cam3 = {pos: [-0.72, 1.45, DOOR_Z + 4.9], look: [-0.72, 1.36, DOOR_Z + 0.6], fov: 28};
-  const ep = e(base);
-  const KEYS: Cam3Key[] = [[C.chicks, base], [C.weeks - 0.42, {pos: [-0.7, 1.5, DOOR_Z + 4.4], look: [ep[0], ep[1] - 0.15, ep[2]], fov: 28}], [C.weeks, {pos: [ep[0], ep[1], ep[2] + 0.22], look: ep, fov: 22}, EASE.dive]];
+/** the picture that explains it: one hen = one egg a day, eaten (Sara) vs. a hen + rooster = a family tree of chickens (Blob) */
+const TREE: {p: V3; g: number; parent: number}[] = (() => { const out: {p: V3; g: number; parent: number}[] = [{p: [1.1, 0, 1.0], g: 0, parent: -1}];
+  let prev = [0];
+  for (let g = 1; g <= 4; g++) { const n = 2 ** g, row: number[] = [];
+    for (let i = 0; i < n; i++) { out.push({p: [1.1 + (i - (n - 1) / 2) * (2.6 / Math.max(n, 3)) * (g === 4 ? 1.25 : 1), 0, 1.0 - g * 0.55], g, parent: prev[Math.floor(i / 2)]}); row.push(out.length - 1); }
+    prev = row; }
+  return out; })();
+const Why: React.FC<{t: number}> = ({t}) => {
+  const KEYS: Cam3Key[] = [[C.wanted, {pos: [-1.05, 1.3, 4.6], look: [-1.05, 0.85, 0.2], fov: 34}], [K.chicks - 0.35, {pos: [-1.0, 1.3, 4.3], look: [-1.0, 0.85, 0.2], fov: 34}],
+    [K.chicks + 0.05, {pos: [1.5, 3.7, 5.4], look: [1.35, 0.15, -0.2], fov: 40}, EASE.whip], [C.weeks, {pos: [1.5, 3.6, 5.0], look: [1.35, 0.15, -0.3], fov: 40}]];
   const cam = cam3At(t, KEYS);
-  const glow = smooth(prog(t, K.chicks, K.chicks + 0.4));
-  return (<ShotBlur t={t} cam={KEYS}><World cam={cam} light={DAY} sky={SKY.day} scene={<Village t={t} s={{...GONE_STATE, doorOpen: 1}} />} front={<Egg pos={ep} s={1.3} glow={glow * 0.9} color="#FFF4DA" />}>
-    <Cel at={SHARE_B}><Blob {...act(t, [[0, 'stand']], [[0, 'happy'], [K.chicks - 0.1, 'smug']])} handR={EGG_HAND} handL={[-66, -140]} lookX={8} lookY={-8} faceDy={-4} /></Cel>
+  const per = 0.5, ph = ((t - C.wanted) % per) / per, egg = t > C.wanted + 0.15 ? (ph < 0.55 ? pop(ph * per, 0, 0.18) : Math.max(0, 1 - (ph - 0.55) / 0.2)) : 0;
+  const bite = ph > 0.55 && ph < 0.85;
+  const born = (g: number) => K.chicks - 0.05 + g * 0.1;
+  const lines = TREE.map((n, i) => { if (n.parent < 0 || t < born(n.g)) return null; const a = toScreen(cam, [TREE[n.parent].p[0], 0.25, TREE[n.parent].p[2]]), b = toScreen(cam, [n.p[0], 0.25, n.p[2]]);
+    if (!a || !b) return null; const u = clamp((t - born(n.g)) / 0.15); return <line key={'l' + i} x1={a.x} y1={a.y} x2={lerp(a.x, b.x, u)} y2={lerp(a.y, b.y, u)} stroke={INK} strokeWidth={4} strokeLinecap="round" opacity={0.55} />; });
+  return (<ShotBlur t={t} cam={KEYS}><World cam={cam} light={{...DAY, focus: [0, 0, 0], span: 6}} sky={['#FFE9A8', '#FFF4D6']} scene={<>
+      <Ground size={[40, 40]} at={[-20, 0]} color="#F2C94C" map={tex('speckle', [20, 20], 3)} />
+      <Ground size={[40, 40]} at={[20, 0]} y={0.002} color="#A8D86E" map={tex('grass', [20, 20], 4)} />
+      <Box pos={[-6, 0, -3.2]} size={[12, 3.2, 0.2]} r={0} color="#F7DC86" map={tex('planks', [8, 2], 5)} />
+      <Box pos={[6, 0, -3.2]} size={[12, 3.2, 0.2]} r={0} color="#CDEBB0" map={tex('planks', [8, 2], 6)} />
+      <Box pos={[0, 0, -0.9]} size={[0.16, 2.2, 4.8]} r={0.02} color="#FFFFFF" />
+      {egg > 0.01 && <Egg pos={[-0.62, 0.07, 1.0]} s={1.3 * egg} />}
+    </>}>
+    <Cel at={[-1.45, 0, 0.55]}><Sara {...act(t, [[0, 'stand']], [[0, 'happy']])} view="right" mouth={bite ? 'open' : 'smile'} eyes={bite ? 'closed' : 'dot'} handR={bite ? [60, -260] : [90, -150]} bounce={bite ? 4 : 0} /></Cel>
+    <Cel at={[-0.65, 0, 0.82]} h={0.46} unitsTall={200}><Bird {...SARA_HEN} dir={-1} flap={ph < 0.15 ? 1 : 0} /></Cel>
+    <Cel at={[2.85, 0, 1.3]}><Blob {...act(t, [[0, 'stand'], [K.chicks, 'explain']], [[0, 'happy'], [K.chicks, 'smug']])} view="left" /></Cel>
+    {lines}
+    {TREE.map((n, i) => { const s0 = i === 0 ? 1 : pop(t, born(n.g), 0.25); if (s0 <= 0) return null; const chick = n.g >= 3;
+      return <Cel key={i} at={n.p} h={(chick ? 0.2 : 0.42) * s0} unitsTall={chick ? 140 : 200}><Bird kind={chick ? 'chick' : i === 0 ? 'hen' : i % 2 ? 'hen' : 'rooster'} body={i === 0 ? undefined : i % 3 === 1 ? '#B8682F' : undefined} dir={i % 2 ? 1 : -1} /></Cel>; })}
   </World></ShotBlur>);
 };
 
@@ -385,16 +436,17 @@ const Laying: React.FC<{t: number}> = ({t}) => {
 // ---------------------------------------------------------------- shots 21-22: the yard fills up - he can't keep up
 const FLOCK: V3[] = Array.from({length: 32}, (_, i) => [PLOT.blob - 2.2 + rnd(i * 3 + 1) * 4.4, 0, -0.9 + rnd(i * 5 + 2) * 2.8]);
 const flockN = (t: number) => t < K.fills ? 4 : t < K.fills + 0.35 ? 8 : t < K.fills + 0.7 ? 16 : 32;
-const Flock: React.FC<{t: number; n: number; t0?: number; skipNear?: V3; front?: number}> = ({t, n, t0 = -1, skipNear, front = 0}) => <>{FLOCK.slice(0, n).map((p, i) => {
+const Flock: React.FC<{t: number; n: number; t0?: number; skipNear?: V3; front?: number; ring?: boolean}> = ({t, n, t0 = -1, skipNear, front = 0, ring = false}) => <>{FLOCK.slice(0, n).map((p0, i) => {
+  const p: V3 = ring && Math.hypot(p0[0] - PILE[0], p0[2] - PILE[2]) < 1.2 ? [PILE[0] + (p0[0] - PILE[0]) * 1.25 + (p0[0] > PILE[0] ? 0.9 : -0.9), 0, p0[2] + 0.4] : p0;
   if (skipNear && (Math.hypot(p[0] - skipNear[0], p[2] - skipNear[2]) < 0.45 || (front > 0 && Math.abs(p[0] - skipNear[0]) < 0.6 && p[2] - skipNear[2] > -1.6 && p[2] - skipNear[2] < front))) return null;
   const born = i < 4 ? -1 : i < 8 ? K.fills : i < 16 ? K.fills + 0.35 : K.fills + 0.7;
   const s = t0 >= 0 && born > 0 ? pop(t, born, 0.3) : 1; if (s <= 0) return null;
-  return <Cel key={i} at={p} h={0.46 * s} unitsTall={200}><Bird kind="hen" body={i % 3 === 1 ? '#B8682F' : i % 5 === 2 ? '#2B2B30' : undefined} wing={i % 5 === 2 ? '#46464E' : undefined} dir={rnd(i) > 0.5 ? 1 : -1} peck={Math.max(0, Math.sin(t * 4 + i * 1.3))} step={0} /></Cel>; })}</>;
+  return <Cel key={i} at={p} h={0.46 * s} unitsTall={200}><Bird kind="hen" body={i % 3 === 1 ? '#B8682F' : i % 5 === 2 ? '#2B2B30' : undefined} wing={i % 5 === 2 ? '#46464E' : undefined} dir={rnd(i) > 0.5 ? 1 : -1} peck={Math.max(0, loopS(t, LOOP_N(0.64), i * 0.21))} step={0} /></Cel>; })}</>;
 const Fills: React.FC<{t: number}> = ({t}) => {
   const KEYS: Cam3Key[] = [[C.fills, {pos: [PLOT.blob, 1.5, 4.4], look: [PLOT.blob, 0.65, 0.2], fov: 34}], [K.fills + 0.15, {pos: [PLOT.blob, 1.55, 4.5], look: [PLOT.blob, 0.65, 0.2], fov: 34}],
-    [K.fills + 0.6, {pos: [PLOT.blob + 0.4, 5.6, 8.0], look: [PLOT.blob, 0.2, -0.4], fov: 38}, EASE.slam], [C.keep, {pos: [PLOT.blob + 0.45, 5.7, 8.2], look: [PLOT.blob, 0.2, -0.4], fov: 38}]];
+    [K.fills + 0.6, {pos: [PLOT.blob + 1.5, 7.2, 9.0], look: [PLOT.blob + 1.3, 0, -1.3], fov: 42}, EASE.slam], [C.keep, {pos: [PLOT.blob + 1.55, 7.4, 9.3], look: [PLOT.blob + 1.3, 0, -1.3], fov: 42}]];
   const cam = cam3At(t, KEYS);
-  return (<ShotBlur t={t} cam={KEYS}><World cam={cam} light={{...DAY, focus: [PLOT.blob, 0, 0], span: 7}} sky={SKY.day} scene={<Village t={t} s={{...GONE_STATE, coop: pop(t, K.fills + 0.1, 0.45)}} />}>
+  return (<ShotBlur t={t} cam={KEYS}><World cam={cam} light={{...DAY, focus: [PLOT.blob, 0, 0], span: 7}} sky={SKY.day} scene={<Village t={t} s={{...GONE_STATE, coop: pop(t, K.fills + 0.1, 0.45), coops: prog(t, K.fills + 0.1, K.fills + 1.2)}} />}>
     <Cel at={[PLOT.blob - 0.1, 0, 1.2]}><Blob {...act(t, [[0, 'stand'], [K.fills + 0.3, 'handsOnHead']], [[0, 'happy'], [K.fills + 0.3, 'shocked']])} /></Cel>
     <Flock t={t} n={flockN(t)} t0={C.fills} skipNear={[PLOT.blob - 0.1, 0, 1.2]} front={2.5} />
   </World></ShotBlur>);
@@ -406,7 +458,7 @@ const Keep: React.FC<{t: number}> = ({t}) => {
   const x = PLOT.blob + 1.1 * Math.sin(u * Math.PI * 2.4), vx = Math.cos(u * Math.PI * 2.4);
   const run = act(t, [[0, 'stand']], [[0, 'scared']]);
   const ph = (t - C.keep) * 15, wf = walkFeet(ph, 1.2);
-  return (<World cam={cam} light={DAY} sky={SKY.day} scene={<><Village t={t} s={{...GONE_STATE, coop: 1}} />{EGGS_GROUND.map((p, i) => <Egg key={i} pos={p} s={1.1} />)}</>}>
+  return (<World cam={cam} light={DAY} sky={SKY.day} scene={<><Village t={t} s={{...GONE_STATE, coop: 1, coops: 1}} />{EGGS_GROUND.map((p, i) => <Egg key={i} pos={p} s={1.1} />)}</>}>
     <Cel at={[x, 0, 0.9]}><Blob {...run} view={vx > 0 ? 'right' : 'left'} lean={vx > 0 ? 9 : -9} {...wf} handL={[-50, -380 + 20 * Math.sin(ph)]} handR={[50, -380 - 20 * Math.sin(ph)]} /></Cel>
     <Flock t={t} n={32} skipNear={[x, 0, 0.9]} />
   </World>);
@@ -418,7 +470,7 @@ const Hires: React.FC<{t: number}> = ({t}) => {
   const cam = cam3At(t, [[C.hires, {pos: [PLOT.blob - 1.0, 1.45, 7.0], look: [PLOT.blob - 1.0, 1.05, 0.3], fov: 34}], [C.pays, {pos: [PLOT.blob - 1.0, 1.42, 6.5], look: [PLOT.blob - 1.0, 1.05, 0.3], fov: 34}]]);
   const wu = smooth(prog(t, C.hires, K.hires + 0.35)), x = lerp(PLOT.blob - 3.3, HIRE_N[0], wu), walking = wu > 0 && wu < 1;
   const wf = walkFeet(2 * Math.PI * (x - PLOT.blob + 3.3) / (4 * 50 * 1.7 / 430), walking ? 1 : 0);
-  return (<World cam={cam} light={DAY} sky={SKY.day} scene={<Village t={t} s={{...GONE_STATE, coop: 1}} />}>
+  return (<World cam={cam} light={DAY} sky={SKY.day} scene={<Village t={t} s={{...GONE_STATE, coop: 1, coops: 1}} />}>
     <Cel at={[x, 0, HIRE_N[2]]}><Ned {...act(t, [[0, 'sad'], [K.hires + 0.45, 'stand']], [[0, 'sad'], [K.hires + 0.5, 'confused'], [K.hires + 0.9, 'happy']])} view={walking ? 'right' : 'right'} bounce={wf.bounce} footL={wf.footL} footR={wf.footR} tint="#D9D3F0" tintAmt={0.4 * (1 - prog(t, K.hires + 0.5, K.hires + 1))} /></Cel>
     <Cel at={HIRE_B}><Blob {...idle(act(t, [[0, 'stand'], [K.hires - 0.2, 'wave'], [K.hires + 0.5, 'point']], [[0, 'happy'], [K.hires, 'grin']]), t)} view={t > K.hires + 0.45 ? 'right' : 'left'} /></Cel>
     <Flock t={t} n={20} skipNear={HIRE_B} />
@@ -429,7 +481,7 @@ const Pays: React.FC<{t: number}> = ({t}) => {
   const bk = celPoint(cam, HIRE_N, 1.7, [70, -150]);
   const drops = [0, 1, 2].map((i) => prog(t, K.pays - 0.1 + i * 0.3, K.pays + 0.2 + i * 0.3));
   const give = celPoint(cam, HIRE_B, 1.7, [-90, -190]);
-  return (<World cam={cam} light={DAY} sky={SKY.day} scene={<Village t={t} s={{...GONE_STATE, coop: 1}} />}
+  return (<World cam={cam} light={DAY} sky={SKY.day} scene={<Village t={t} s={{...GONE_STATE, coop: 1, coops: 1}} />}
     front={<><Basket pos={[bk[0], bk[1] - 0.12, bk[2] + 0.1]} eggs={drops.filter((d) => d >= 1).length} s={0.75} />
       {drops.map((d, i) => d > 0 && d < 1 ? <Egg key={i} pos={[lerp(give[0], bk[0], d), lerp(give[1], bk[1], d) + 0.15 * Math.sin(Math.PI * d), lerp(give[2], bk[2] + 0.1, d)]} s={1.1} /> : null)}</>}>
     <Cel at={HIRE_N}><Ned {...act(t, [[0, 'holdFront']], [[0, 'neutral'], [K.pays + 0.5, 'happy']])} view="right" handL={[30, -150]} handR={[96, -150]} lookX={6} lookY={6} /></Cel>
@@ -437,48 +489,33 @@ const Pays: React.FC<{t: number}> = ({t}) => {
   </World>);
 };
 
-// ---------------------------------------------------------------- shot 26: poor, comfortable, rich (track across the plots)
-const NED_POOR: V3 = [PLOT.ned - 0.2, 0, 0.7], SARA_OK: V3 = [PLOT.sara - 0.55, 0, 0.7], BLOB_RICH: V3 = [PLOT.blob - 0.1, 0, 1.1];
-const Split: React.FC<{t: number}> = ({t}) => {
-  const KEYS: Cam3Key[] = [[C.poor, {pos: [PLOT.ned + 0.1, 1.35, 6.0], look: [PLOT.ned + 0.05, 0.85, 0.3], fov: 34}], [K.comfortable - 0.75, {pos: [PLOT.ned + 0.1, 1.35, 5.7], look: [PLOT.ned + 0.05, 0.85, 0.3], fov: 34}],
-    [K.comfortable + 0.25, {pos: [PLOT.sara - 0.15, 1.4, 6.2], look: [PLOT.sara - 0.2, 0.9, 0.0], fov: 34}], [K.rich - 0.32, {pos: [PLOT.sara - 0.15, 1.4, 5.9], look: [PLOT.sara - 0.2, 0.9, 0.0], fov: 34}],
-    [K.rich + 0.08, {pos: [PLOT.blob + 0.2, 1.8, 7.4], look: [PLOT.blob + 0.1, 1.0, -0.2], fov: 36}, EASE.whip], [C.end, {pos: [PLOT.blob + 0.2, 1.7, 6.7], look: [PLOT.blob + 0.1, 1.0, -0.2], fov: 36}]];
+// ---------------------------------------------------------------- finale: the village splits in three - poor, comfortable, rich (ends on frame 0)
+const Finale: React.FC<{t: number}> = ({t}) => {
+  const KEYS: Cam3Key[] = [[C.poor, {pos: [9.5, 9.5, 10.0], look: [-0.6, 0, -0.9], fov: 42}], [K.poor + 0.12, {pos: [9.0, 9.0, 9.5], look: [-0.6, 0, -0.9], fov: 42}],
+    [K.poor + 0.5, {pos: [PLOT.ned + 0.1, 1.3, 5.4], look: [PLOT.ned + 0.05, 0.8, 0.3], fov: 34}, EASE.slam], [K.comfortable - 0.3, {pos: [PLOT.ned + 0.1, 1.3, 5.1], look: [PLOT.ned + 0.05, 0.8, 0.3], fov: 34}],
+    [K.comfortable + 0.1, {pos: [PLOT.sara - 0.15, 1.4, 5.9], look: [PLOT.sara - 0.2, 0.9, 0.0], fov: 34}, EASE.whip], [K.rich - 0.3, {pos: [PLOT.sara - 0.15, 1.4, 5.6], look: [PLOT.sara - 0.2, 0.9, 0.0], fov: 34}],
+    [K.rich + 0.12, {pos: [PILE[0] + 0.6, 2.6, PILE[2] + 6.6], look: [PILE[0], 1.6, PILE[2]], fov: 36}, EASE.slam], [END - 0.95, RICH_CLOSE]];
   const cam = cam3At(t, KEYS);
-  return (<ShotBlur t={t} cam={KEYS}><World cam={cam} light={{...DAY, span: 14}} sky={SKY.day} scene={<><Village t={t} s={{...GONE_STATE, coop: 1, coopBig: 1, hut: 1, fire: 0, firePot: false}} />
-      <Basket pos={[SARA_OK[0] + 0.55, 0, 1.05]} eggs={6} />{EGGS_GROUND.slice(0, 8).map((p, i) => <Egg key={i} pos={[p[0], p[1], p[2] + 0.2]} s={1.1} />)}</>}>
-    <Cel at={NED_POOR}><Ned {...idle({...SITF, ...EXPR.sad, handL: [-40, -100], handR: [40, -100], headTilt: 8}, t, 0.2)} /></Cel>
-    <Cel at={SARA_OK}><Sara {...idle(act(t, [[0, 'relaxed']], [[0, 'happy']]), t, 0.4)} handR={[96, -180]} /></Cel>
-    <Cel at={[SARA_OK[0] + 0.85, 0, 0.95]} h={0.46} unitsTall={200}><Bird {...SARA_HEN} dir={-1} peck={Math.max(0, Math.sin(t * 4))} /></Cel>
-    <Cel at={BLOB_RICH}><Blob {...idle(act(t, [[0, 'crossArms']], [[0, 'smug']]), t)} /></Cel>
-    <Flock t={t} n={32} skipNear={BLOB_RICH} />
-  </World></ShotBlur>);
-};
-
-// ---------------------------------------------------------------- ending: back to frame 0 for the next lesson (CTA)
-const Ending: React.FC<{t: number}> = ({t}) => {
-  const cam = cam3At(t, [[C.end, {pos: [0.15, 2.0, 9.4], look: [0.05, 1.15, -0.4], fov: 36}], [END - 0.95, CAM0]]);
-  const look = t > K.subscribe + 0.1 && t < END - 0.85;
-  return (<World cam={cam} light={DAY} sky={SKY.day} scene={<Village t={t} s={{}} />}>
-    <Cel at={POS.ned}><Ned {...idle(act(t, [[0, 'relaxed']], [[0, 'happy']]), t, 0.1)} lookY={look ? -10 : 0} faceDy={look ? -10 : 0} /></Cel>
-    <Cel at={POS.blob}><Blob {...idle(act(t, [[0, 'wave']], [[0, 'happy']]), t)} handR={[128, -340 + 14 * loopS(t, IDLE_N * 2)]} lookY={look ? -10 : 0} faceDy={look ? -14 : 0} browUp={look ? 0.8 : 0.2} /></Cel>
-    <Cel at={POS.sara}><Sara {...idle(act(t, [[0, 'stand']], [[0, 'grin']]), t, 0.4)} lookY={look ? -10 : 0} faceDy={look ? -10 : 0} /></Cel>
-  </World>);
+  const up = t > K.subscribe + 0.1 && t < END - 0.85;
+  const cheer = bump(t, K.rich + 0.05, K.subscribe - 0.05) > 0.2 ? 1 : 0;
+  return <ShotBlur t={t} cam={KEYS}><RichWorld t={t} cam={cam} lines={smooth(prog(t, C.poor + 0.05, K.poor + 0.1))} up={up} cheer={cheer} /></ShotBlur>;
 };
 
 // ---------------------------------------------------------------- composition
 const Scenes: React.FC<{t: number}> = ({t}) => {
   const tr = (at: number, kind: 'fly' | 'smear' | 'flash', a: React.ReactNode, b: React.ReactNode, color?: string) => <Transition t={t} at={at} kind={kind} a={a} b={b} color={color} />;
+  const T0 = K.lose - 0.15;
   return (<Cuts t={t} shots={[
-    [0, <Intro t={t} />], [C.wide, <Vanish t={t} />], [C.gone, <AllGone t={t} />], [C.days, <Days t={t} />], [C.gets, <Gets t={t} />],
+    [0, <Hook t={t} />], [T0 - 0.2, tr(T0, 'flash', <Hook t={t} />, <Intro t={t} />)], [T0 + 0.2, <Intro t={t} />],
+    [C.wide, <Vanish t={t} />], [C.gone, <AllGone t={t} />], [C.days, <Days t={t} />], [C.gets, <Gets t={t} />],
     [C.cook - 0.2, tr(C.cook, 'smear', <Gets t={t} />, <Cook t={t} />)], [C.cook + 0.2, <Cook t={t} />],
     [C.best, <Best t={t} />], [C.last, <Last t={t} />], [C.second, <Second t={t} />], [C.egg, <EggShot t={t} />], [C.rooster, <RoosterShot t={t} />],
-    [C.noeggs, <NoEggs t={t} />], [C.knock, <Knock t={t} />], [C.meet, <Meet t={t} />], [C.share, <Share t={t} />], [C.wanted, <Wanted t={t} />],
-    [C.chicks, <ChicksShot t={t} />], [C.weeks - 0.2, tr(C.weeks, 'fly', <ChicksShot t={t} />, <Inside t={t} />)], [C.weeks + 0.2, <Inside t={t} />],
+    [C.noeggs, <NoEggs t={t} />], [C.knock, <Knock t={t} />], [C.meet, <Meet t={t} />], [C.share, <Share t={t} />], [C.wanted, <Why t={t} />],
+    [C.weeks - 0.2, tr(C.weeks, 'fly', <Why t={t} />, <Inside t={t} />)], [C.weeks + 0.2, <Inside t={t} />],
     [C.hatch - 0.2, tr(C.hatch, 'flash', <Inside t={t} />, <Hatch t={t} />)], [C.hatch + 0.2, <Hatch t={t} />],
     [C.months, <Months t={t} />], [C.laying, <Laying t={t} />], [C.fills, <Fills t={t} />], [C.keep, <Keep t={t} />], [C.hires, <Hires t={t} />], [C.pays, <Pays t={t} />],
     [C.same - 0.2, tr(C.same, 'flash', <Pays t={t} />, <Gets t={t} memory />, '#FFF2C4')], [C.same + 0.2, <Gets t={t} memory />],
-    [C.poor, <Split t={t} />],
-    [C.end - 0.2, tr(C.end, 'flash', <Split t={t} />, <Ending t={t} />)], [C.end + 0.2, <Ending t={t} />],
+    [C.poor - 0.2, tr(C.poor, 'flash', <Gets t={t} memory />, <Finale t={t} />)], [C.poor + 0.2, <Finale t={t} />],
   ]} />);
 };
 export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: boolean; bench?: string}> = ({voice = false, captions = true, guides = false, bench = 'full'}) => {

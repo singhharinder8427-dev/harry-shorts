@@ -14,12 +14,17 @@ export const PLOT = {ned: -3.6, sara: 0, blob: 3.6};
 export const BENCH = {v: 'full'};
 export const HOUSE_Z = -3.6;
 export const COINS: V3 = [0.75, 0, 1.45];
+/** Blob's mountain of eggs and coins (the rich ending, and the flash-forward hook) */
+export const PILE: V3 = [3.45, 0, 1.0];
+export const PILE_H = 1.2;
 
 // ------------------------------------------------------------------------------------------------ light by time of day
 export const DAY: Required<Light> = {sun: [-5, 6.5, 4.5], sunColor: '#FFEBC8', sunI: 2.6, sky: '#D8ECFF', bounce: '#D9B27A', ambI: 1.3, fog: ['#F7E6C9', 26, 120], focus: [0, 0, -1], span: 12};
 export const NIGHT: Required<Light> = {sun: [4, 6, 3], sunColor: '#8FA6E0', sunI: 1.0, sky: '#4E5E96', bounce: '#3A3044', ambI: 0.95, fog: ['#161D38', 18, 80], focus: [0, 0, -1], span: 12};
 export const DAWN: Required<Light> = {sun: [6, 3, 4], sunColor: '#FFC99A', sunI: 2.2, sky: '#F3D6E6', bounce: '#C99A7A', ambI: 1.15, fog: ['#F6CDB8', 22, 110], focus: [0, 0, -1], span: 12};
-export const SKY = {day: ['#5BAEEA', '#FBEBD0'], night: ['#0A1030', '#27306A'], dawn: ['#8DA7E0', '#FFD2B0']} as Record<string, [string, string]>;
+export const SUNSET: Required<Light> = {sun: [5, 2.6, 5], sunColor: '#FFB46A', sunI: 2.7, sky: '#FFD9B8', bounce: '#D9905A', ambI: 1.2, fog: ['#F7B98A', 24, 110], focus: [2, 0, -0.5], span: 13};
+export const GREY: Required<Light> = {sun: [-4, 7, 3], sunColor: '#E4E6EA', sunI: 1.6, sky: '#C9CDD6', bounce: '#9A9590', ambI: 1.35, fog: ['#C9CCD2', 18, 90], focus: [0, 0, -1], span: 12};
+export const SKY = {day: ['#5BAEEA', '#FBEBD0'], night: ['#0A1030', '#27306A'], dawn: ['#8DA7E0', '#FFD2B0'], sunset: ['#6E7FD0', '#FFB27A'], grey: ['#9DA6B5', '#D9DCE2']} as Record<string, [string, string]>;
 const mixV = (a: V3, b: V3, u: number): V3 => [lerp(a[0], b[0], u), lerp(a[1], b[1], u), lerp(a[2], b[2], u)];
 /** blend two lights (time-lapse) */
 export const mixLight = (a: Required<Light>, b: Required<Light>, u: number, focus?: V3, span?: number): Light => ({
@@ -197,11 +202,36 @@ export const Campfire: React.FC<{pos: V3; t: number; on: number; pot?: boolean}>
   </group>}
 </group>);
 
+
+// ------------------------------------------------------------------------------------------------ the rich ending props
+const PILE_ITEMS: {p: V3; coin: boolean; r: V3}[] = Array.from({length: 260}, (_, i) => {
+  const h = Math.pow(rnd(i * 3 + 1), 0.75), a = rnd(i * 7 + 2) * Math.PI * 2, rad = (1 - h) * 1.35 + 0.06;
+  return {p: [Math.cos(a) * rad, h * PILE_H + 0.04, Math.sin(a) * rad] as V3, coin: i % 3 === 0, r: [rnd(i) * 3, rnd(i + 1) * 3, rnd(i + 2) * 3] as V3};
+});
+/** a mountain of eggs with coins mixed in. fly 0..1 = everything blows up into the sky (the reset). */
+export const EggPile: React.FC<{amt?: number; fly?: number}> = ({amt = 1, fly = 0}) => amt <= 0.01 ? null : (<group position={PILE} scale={[1, amt, 1]}>
+  {fly < 0.35 && <Cyl r={1.38} rTop={0.1} h={PILE_H * (1 - fly * 2)} color="#EBD9B4" map={tex('speckle', [4, 2], 21)} rough={0.7} />}
+  {[false, true].map((coin) => <Instances key={String(coin)} k={'pile' + coin} geo={coin ? () => new THREE.CylinderGeometry(0.075, 0.075, 0.03, 16) : SPH} rough={coin ? 0.35 : 0.45} metal={coin ? 0.6 : 0}
+    color={coin ? '#F2C230' : '#F6EBD9'} items={PILE_ITEMS.filter((it) => it.coin === coin).map((it, i) => { const f = clamp(fly * 1.6 - rnd(i + 40) * 0.6);
+      return {p: [it.p[0] * (1 + f * 3), it.p[1] + f * f * 14, it.p[2] * (1 + f * 3)] as V3, r: [it.r[0] + f * 9, it.r[1], it.r[2] + f * 7] as V3, s: coin ? 1.3 : [0.07, 0.09, 0.07] as V3}; })} />)}
+</group>);
+const COOPS: [number, number, number][] = [[5.6, -1.4, 0.15], [5.9, -3.6, 0.3], [3.0, -3.9, 0.45], [7.4, -2.5, 0.6], [1.9, -2.6, 0.75], [7.3, 0.2, 0.9]];
+/** the farm grows: extra coops pop in as n goes 0..1 */
+export const MoreCoops: React.FC<{n: number}> = ({n}) => <>{COOPS.map(([x, z, at], i) => n > at ? <Coop key={i} pos={[x, 0, z]} grow={Math.min(1, (n - at) * 8)} /> : null)}</>;
+/** the white lines that split the village into three plots (grow 0..1) */
+export const PlotLines: React.FC<{grow: number}> = ({grow}) => grow <= 0.01 ? null : <>{[-1.8, 1.8].map((x) =>
+  <Box key={x} pos={[x, 0.012, 3 - 4.5 * grow]} size={[0.07, 0.02, 9 * grow]} r={0} color="#FFFFFF" emissive="#FFFFFF" glow={0.5} cast={false} />)}</>;
+/** Sara's small picket fence (comfortable) */
+export const Fence: React.FC<{grow: number}> = ({grow}) => grow <= 0.01 ? null : (<group position={[PLOT.sara - 0.4, 0, 1.75]} scale={[1, grow, 1]}>
+  {Array.from({length: 9}, (_, i) => <Box key={i} pos={[-1.6 + i * 0.4, 0, 0]} size={[0.07, 0.5, 0.05]} r={0.01} color="#FFFFFF" />)}
+  <Box pos={[0, 0.32, 0]} size={[3.3, 0.06, 0.04]} r={0} color="#FFFFFF" />
+</group>);
+
 // ------------------------------------------------------------------------------------------------ the whole village
 export type VState = {houses?: number; saraHouse?: number; coins?: number; fields?: number; night?: number; dayPhase?: number; autumn?: number;
-  coop?: number; coopBig?: number; hut?: number; doorOpen?: number; fire?: number; firePot?: boolean};
+  coop?: number; coopBig?: number; hut?: number; doorOpen?: number; fire?: number; firePot?: boolean; pile?: number; pileFly?: number; coops?: number; lines?: number; fence?: number};
 export const Village: React.FC<{t: number; s?: VState}> = ({t, s = {}}) => {
-  const {houses = 1, saraHouse, coins = 1, fields = 1, night = 0, dayPhase, autumn = 0, coop = 0, coopBig = 0, hut = 0, doorOpen = 0, fire = -1, firePot = true} = s;
+  const {houses = 1, saraHouse, coins = 1, fields = 1, night = 0, dayPhase, autumn = 0, coop = 0, coopBig = 0, hut = 0, doorOpen = 0, fire = -1, firePot = true, pile = 0, pileFly = 0, coops = 0, lines = 0, fence = 0} = s;
   if (BENCH.v === 'empty') return <Ground size={[260, 260]} color="#86B94F" />;
   return (<>
     <Ground size={[260, 260]} color="#86B94F" map={tex('grass', [90, 90], 2)} />
@@ -223,5 +253,9 @@ export const Village: React.FC<{t: number; s?: VState}> = ({t, s = {}}) => {
     {fire >= 0 && <Campfire pos={[PLOT.ned + 0.7, 0, 0.2]} t={t} on={fire} pot={firePot} />}
     <Coop pos={[PLOT.blob + 0.2, 0, -1.6]} grow={coop} big={coopBig} />
     <Hut pos={[PLOT.sara - 1.5, 0, -1.9]} grow={hut} />
+    <EggPile amt={pile} fly={pileFly} />
+    <MoreCoops n={coops} />
+    <PlotLines grow={lines} />
+    <Fence grow={fence} />
   </>);
 };

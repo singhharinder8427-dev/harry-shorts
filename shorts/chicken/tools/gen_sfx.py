@@ -99,6 +99,17 @@ add(thud(90, 0.3), K['poor'] + 0.1, -16)
 add(whoosh(0.4, 300, 3000, 0.5), K['comfortable'] - 0.3, -12); add(ding(1318, 0.5), K['comfortable'] + 0.1, -20)
 add(whoosh(0.4, 300, 3000, 0.5), K['rich'] - 0.3, -12)
 for i in range(4): add(ding(1568 * 2 ** (i * 4 / 12), 0.6), K['rich'] + 0.1 + i * 0.08, -18)
+# ---- v2 storytelling: flash-forward hook, explanation picture, finale
+for i in range(4): add(ding(1568 * 2 ** (i * 4 / 12), 0.5), 0.15 + i * 0.07, -22)
+add(whoosh(0.6, 300, 4000, 0.7), K['lose'] - 0.55, -10)
+for i in range(10): add(plip(1600 + i * 120), K['lose'] - 0.5 + i * 0.04, -18)
+add(shimmer(0.5), K['lose'] - 0.2, -18)
+for i in range(4): add(pop_(1000, 0.07), C['wanted'] + 0.15 + i * 0.5, -14); add(slurp(0.25), C['wanted'] + 0.45 + i * 0.5, -20)
+add(whoosh(0.35, 500, 4000, 0.6), K['chicks'] - 0.15, -14)
+for g in range(5):
+    for j in range(min(2 ** g, 4)): add(pop_(900 + g * 150 + j * 40, 0.06), K['chicks'] - 0.05 + g * 0.1 + j * 0.02, -15)
+add(whoosh(0.5, 2000, 6000, 0.5) * 0.6, C['poor'] + 0.05, -16)
+add(whoosh(0.35, 400, 3500, 0.7), K['poor'] + 0.15, -12); add(thud(90, 0.25), K['poor'] + 0.5, -14)
 # ---- subscribe CTA
 add(whoosh(0.35, 600, 4000, 0.6), C['end'] - 0.2, -16)
 add(pop_(700, 0.12), K['subscribe'] - 0.1, -9)
