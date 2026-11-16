@@ -1,0 +1,389 @@
+{
+ "short": "lastday",
+ "title": "What if today was Earth's last day?",
+ "spoken": {
+  "2022": "twenty twenty two",
+  "dart": "dart",
+  "kilometres": "kilometers",
+  "vapour": "vapor",
+  "what-ifs": "what ifs",
+  "thirty-two": "thirty two"
+ },
+ "chunks": [
+  "A corrupt boss",
+  "counts stolen money.",
+  "A thief robs the street.",
+  "And in this story,",
+  "God has seen enough.",
+  "A rock ten kilometres wide",
+  "turns toward Earth.",
+  "It falls more than",
+  "ten kilometres every second,",
+  "about ten times faster",
+  "than a bullet.",
+  "From the Moon's distance,",
+  "under nine hours to impact.",
+  "The boss tries",
+  "to buy his way out.",
+  "The thief tries to run.",
+  "Neither helps.",
+  "A rock this size once",
+  "turned the ground to vapour",
+  "at around five thousand degrees,",
+  "wrapped the planet in dust",
+  "within hours,",
+  "and sent giant waves",
+  "to most coastlines",
+  "in two days.",
+  "It ended the dinosaurs.",
+  "But one scientist",
+  "has a plan.",
+  "In 2022, NASA crashed",
+  "a spacecraft called DART",
+  "into an asteroid,",
+  "and shifted its orbit",
+  "by thirty-two minutes.",
+  "Find the rock early,",
+  "and a small push",
+  "is enough.",
+  "Subscribe for more what-ifs."
+ ],
+ "syllables": {
+  "kilometres": 4,
+  "2022": 5,
+  "vapour": 2,
+  "thirtytwo": 3,
+  "coastlines": 2,
+  "whatifs": 2,
+  "dinosaurs": 3,
+  "asteroid": 3,
+  "spacecraft": 2,
+  "every": 2,
+  "neither": 2,
+  "scientist": 3,
+  "subscribe": 2,
+  "degrees": 2,
+  "distance": 2,
+  "moon's": 1,
+  "giant": 2,
+  "nasa": 2,
+  "orbit": 2,
+  "minutes": 2,
+  "early": 2,
+  "enough": 2
+ },
+ "keys": {
+  "boss": [
+   0,
+   "boss"
+  ],
+  "counts": [
+   0,
+   "counts"
+  ],
+  "money": [
+   0,
+   "money"
+  ],
+  "thief": [
+   1,
+   "thief"
+  ],
+  "robs": [
+   1,
+   "robs"
+  ],
+  "story": [
+   2,
+   "story"
+  ],
+  "god": [
+   2,
+   "god"
+  ],
+  "enough": [
+   2,
+   "enough"
+  ],
+  "rock": [
+   3,
+   "rock"
+  ],
+  "wide": [
+   3,
+   "wide"
+  ],
+  "turns": [
+   3,
+   "turns"
+  ],
+  "falls": [
+   4,
+   "falls"
+  ],
+  "second": [
+   4,
+   "second"
+  ],
+  "faster": [
+   4,
+   "faster"
+  ],
+  "bullet": [
+   4,
+   "bullet"
+  ],
+  "moon": [
+   5,
+   "moon's"
+  ],
+  "nine": [
+   5,
+   "nine"
+  ],
+  "impact": [
+   5,
+   "impact"
+  ],
+  "tries": [
+   6,
+   "tries"
+  ],
+  "buy": [
+   6,
+   "buy"
+  ],
+  "out": [
+   6,
+   "out"
+  ],
+  "run": [
+   7,
+   "run"
+  ],
+  "neither": [
+   8,
+   "neither"
+  ],
+  "helps": [
+   8,
+   "helps"
+  ],
+  "size": [
+   9,
+   "size"
+  ],
+  "vapour": [
+   9,
+   "vapour"
+  ],
+  "degrees": [
+   9,
+   "degrees"
+  ],
+  "dust": [
+   9,
+   "dust"
+  ],
+  "hours": [
+   9,
+   "hours"
+  ],
+  "waves": [
+   9,
+   "waves"
+  ],
+  "coastlines": [
+   9,
+   "coastlines"
+  ],
+  "days": [
+   9,
+   "days"
+  ],
+  "dinosaurs": [
+   10,
+   "dinosaurs"
+  ],
+  "scientist": [
+   11,
+   "scientist"
+  ],
+  "plan": [
+   11,
+   "plan"
+  ],
+  "crashed": [
+   12,
+   "crashed"
+  ],
+  "dart": [
+   12,
+   "dart"
+  ],
+  "asteroid": [
+   12,
+   "asteroid"
+  ],
+  "shifted": [
+   12,
+   "shifted"
+  ],
+  "minutes": [
+   12,
+   "minutes"
+  ],
+  "early": [
+   13,
+   "early"
+  ],
+  "push": [
+   13,
+   "push"
+  ],
+  "enough2": [
+   13,
+   "enough"
+  ],
+  "subscribe": [
+   14,
+   "subscribe"
+  ],
+  "whatifs": [
+   14,
+   "whatifs"
+  ]
+ },
+ "cast": {
+  "Blob": "the scientist hero: Blob's own head (white round face, black short hair), teal shirt #1FA6A0 under an off-white lab coat, round glasses, clipboard",
+  "Boss": "the corrupt boss: role('boss','lastday') - suit jacket, white shirt, tie, briefcase of cash",
+  "Thief": "the thief: new role template - charcoal shirt, black beanie, black eye mask, brown loot sack"
+ },
+ "shots": [
+  {
+   "from": "start",
+   "to": "counts",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: flash-forward hook: night city under a huge glowing meteor, red sky, Boss and Thief in the street staring up in terror, telemetry 'DISTANCE TO IMPACT' almost at zero; slow pull-back; flash rewind on 'counts'"
+  },
+  {
+   "from": "counts",
+   "to": "thief",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: Boss in his top-floor office at night, city lights through the window, desk stacked with cash; bundles slide in from the briefcase on 'stolen', he fans bills on 'money', smug; slow push-in"
+  },
+  {
+   "from": "thief",
+   "to": "story",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: dusk street of shops, warm lamps: Thief snatches a sack of loot from a shop door and runs; coins spill on 'robs'; lateral track"
+  },
+  {
+   "from": "story",
+   "to": "rock",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: camera cranes up from the street to the sky: storm clouds swirl, gold light breaks through, then a lightning flash on 'enough' and a far red star ignites (no depiction of God)"
+  },
+  {
+   "from": "rock",
+   "to": "falls",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: deep space: Earth globe (blue sea, green land, white cloud clusters), the lumpy dark rock in the foreground swings round toward Earth on 'turns'; telemetry pops in"
+  },
+  {
+   "from": "falls",
+   "to": "faster",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: the rock streaks past the lens with speed lines (slam), telemetry numbers spinning down"
+  },
+  {
+   "from": "faster",
+   "to": "moon",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: comparison cutaway: a long 3D ruler track with posts; a bullet moves one post while the rock covers ten (one layer deep)"
+  },
+  {
+   "from": "moon",
+   "to": "tries",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: diagonal: Moon (grey, cratered) near, Earth far; a dotted path draws itself Moon -> Earth; telemetry reads 384,400 km, time 8:54:00, counting"
+  },
+  {
+   "from": "tries",
+   "to": "run",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: Boss at his window, face pale blue, holds the open briefcase out to the sky; bills flutter away"
+  },
+  {
+   "from": "run",
+   "to": "neither",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: Thief runs down the street, the glowing rock bigger in the red sky behind him"
+  },
+  {
+   "from": "neither",
+   "to": "size",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: high diagonal aerial over the city, both tiny, the rock enormous overhead; its shadow darkens the city on 'helps'"
+  },
+  {
+   "from": "size",
+   "to": "dust",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: impact cutaway: cross-section of the ground, a white-orange vapour dome on 'vapour'; a 3D heat bar rises to the top on 'degrees' (flash transition)"
+  },
+  {
+   "from": "dust",
+   "to": "waves",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: globe: a dark dust shell spreads from the impact point around the planet on 'dust'"
+  },
+  {
+   "from": "waves",
+   "to": "dinosaurs",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: coast: beach, palm trees, small houses; a giant 3D wave rolls in on 'waves'"
+  },
+  {
+   "from": "dinosaurs",
+   "to": "scientist",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: sepia flashback: prehistoric ferns and a volcano; a flat green dinosaur looks up at a fireball, jaw drops"
+  },
+  {
+   "from": "scientist",
+   "to": "crashed",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: colour returns: observatory at night, big 3D telescope; Blob in lab coat turns from the eyepiece, determined; on 'plan' the dome slit opens"
+  },
+  {
+   "from": "crashed",
+   "to": "shifted",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: space: a small boxy spacecraft with solar wings flies into a small moonlet orbiting a bigger asteroid; flash + debris plume on 'crashed'"
+  },
+  {
+   "from": "shifted",
+   "to": "early",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: the orbit ring: old orbit dashed, new tighter orbit draws itself on 'shifted'; BigNumber '32 MINUTES' pops"
+  },
+  {
+   "from": "early",
+   "to": "subscribe",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: the WHY split stage: left = rock found late, its arrow line hits Earth; right = found early, a tiny craft taps it, the line bends and misses; whip left -> right on 'early'"
+  },
+  {
+   "from": "subscribe",
+   "to": "end",
+   "look": "FLAT 2D cel characters (solid white round faces unless the moment tints them, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) in a STYLIZED 3D set: finale: sunrise over the city, the rock streaks away past Earth; Boss slumps on an empty briefcase, Thief sits on his empty sack, then slam to Blob on the observatory roof crowned in golden backlight with sparkles, arms raised; CTA; last 0.75 s returns to frame 0"
+  }
+ ],
+ "limit": 55,
+ "beats": {
+  "counts": "the boss counts stacks of cash",
+  "robs": "the thief grabs a sack of loot, coins spill",
+  "enough": "lightning, a red star ignites in the sky",
+  "turns": "the rock swings toward Earth, telemetry starts",
+  "falls": "the rock streaks past the camera",
+  "bullet": "bullet vs rock race on a ruler",
+  "moon": "the rock passes the Moon, 384,400 km",
+  "impact": "time to impact under nine hours",
+  "buy": "the boss offers his cash to the sky",
+  "run": "the thief runs",
+  "helps": "the rock's shadow covers the city",
+  "vapour": "impact flash, ground turns to vapour",
+  "degrees": "heat bar shoots up",
+  "dust": "a dust shell wraps the globe",
+  "waves": "a giant wave hits the coast",
+  "dinosaurs": "a dinosaur looks up at a fireball",
+  "plan": "Blob the scientist opens the observatory dome",
+  "crashed": "the DART craft hits the moonlet",
+  "shifted": "the orbit tightens, 32 minutes",
+  "early": "split stage: late vs early",
+  "push": "a tiny tap bends the path",
+  "subscribe": "subscribe button over Blob, crowned"
+ }
+}
