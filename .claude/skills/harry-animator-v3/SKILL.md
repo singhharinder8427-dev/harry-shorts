@@ -1,6 +1,6 @@
 ---
 name: "harry-animator-v3"
-description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical 1440x2560, 60 fps, at the length the user asks for) end to end - topic (the user's own, a researched viral-potential topic, or a pasted script to fact-check and make original), five source-checked voiceover script variants with a subscribe line, then an animation made entirely in code with Remotion in one permanent look - flat 2D cel characters (round heads, thin line limbs, flat clothes, face colour that follows the situation) acting in a stylized shaded 3D world (three.js), a new picture for every caption phrase with one-layer-deep cutaways, one-word captions, code-made sound and music bed, subscribe ending, seamless loop - re-timed to the user's voice take, plus thumbnails, captions file and YouTube metadata."
+description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical 1440x2560, 60 fps, at the length the user asks for) end to end - topic (the user's own, a researched viral-potential topic, or a pasted script to fact-check and make original), five source-checked voiceover script variants with a subscribe line, then an animation made entirely in code with Remotion in one permanent look - flat 2D cel characters (round heads, thin line limbs, flat clothes, face colour that follows the situation) acting in a stylized shaded 3D world (three.js), visual storytelling (a flash-forward hook, an event on every caption phrase, one side-by-side explanation shot, mood colours, a finale that splits the world and crowns the winner) with one-layer-deep cutaways, one-word captions, code-made sound and music bed, subscribe ending, seamless loop - re-timed to the user's voice take, plus thumbnails, captions file and YouTube metadata."
 ---
 
 # harry-animator v3: researched script -> flat 2D cast acting in a stylized 3D world
@@ -88,6 +88,39 @@ where they differ:**
   the old speed (measured: no change); only frames that are actually blurred cost more (measured ~1.6x per blurred
   frame at full size, i.e. about +2-4 % on a whole video with 4-6 accents). Cards cost nothing measurable.
 
+**Owner's amendments (16 Nov 2026, after the chicken Short and studying the video it was inspired by) - VISUAL
+STORYTELLING. These override every "calm / one smooth move per shot" line in this file where they differ. The owner's
+words: the first cut "had the characters, chickens, trees, day and night - but it lacked the visual story". A picture
+that only changes camera angle is not a new picture. Rules (apply to every video):**
+- **Flash-forward hook (frame 0).** Open on the END of the story at its most striking: the winner on top of a mountain
+  of what he earned, the disaster at its worst, the final state - with the losers / the contrast visible in the same
+  frame (pull the camera back over the first 1-1.5 s to reveal them). On the first story word the picture rewinds (a
+  flash transition, the pile blowing away, everything resetting) and the story starts from zero. This also makes the
+  loop perfect: the last shot returns to exactly this frame.
+- **An EVENT on every caption phrase, not just a cut.** Each phrase gets something that physically happens on its key
+  word: coins fly up and vanish, houses sink into the ground, fields roll flat, a bowl empties down to bones, eggs pop,
+  coops multiply, a line draws itself. Cuts and camera moves alone don't count. Write the event in the phrase table
+  (section 3.4) in the column "what HAPPENS", separate from "camera".
+- **One picture that explains the idea (the "why" shot).** Every video gets one cutaway that shows the core mechanism
+  side by side, without text: a split stage (left = the ordinary way, right = the clever way), the same input on both
+  sides, a different result. Chicken example: one hen = one egg a day, eaten, over and over (left) vs. one hen + rooster
+  = a family tree of chickens growing generation by generation, with thin lines joining parents to children (right).
+  Place it where the script states the difference; the camera whips from the left half to the right half on the word.
+- **Big emotional props make the stakes physical.** A mountain of gold / eggs, a single coin or egg in a hand, an empty
+  bowl with bones, a crowd of animals up to the knees, a lone door standing where a house was. Bigger than real is
+  fine (cartoon exaggeration in what we see, never in the facts).
+- **Colour carries the mood** (`Mood` in `Moves.tsx`): grey for the lost / poor / waiting days (`sat` 0.3, with a grey
+  light preset), colour flooding back on the turn of the story (ramp `sat` 0.3 -> 1 on the key word), sepia for a
+  flashback (`sat` 0.55, `sepia` 0.4), deep blue night with firelight, a warm golden sunset for the finale.
+- **The camera keeps travelling.** Fly-overs of the place, a crane up as a crowd fills the frame, a sweep from the houses
+  to the fields, a high diagonal aerial for "the whole world" (a vertical frame is narrow: line places up along a
+  diagonal, never side by side). Fast accents are allowed more densely in the finale (slam - whip - slam within ~3 s).
+- **The finale: split, compare, crown the winner.** (1) A high diagonal aerial where the world visibly divides (white
+  lines draw themselves between the plots; each plot shows its fate: bare patch / modest hut / big farm). (2) Slam down
+  to the loser holding his one small thing. (3) Whip to the middle one. (4) Slam to the winner, highlighted: the
+  biggest prop, golden backlight, sparkles, arms raised - and the subscribe CTA plays over this shot, which glides back
+  to frame 0 so the video loops.
+
 **Restate the look concretely for every shot.** In `story.json` every shot gets a `look` line written out in full -
 who is in it (name, clothes colours, hair), the place, its materials and palette, the light direction, the camera move.
 Never write "same style as before". **Never drift into**: rounded 3D characters, anime faces, photoreal people,
@@ -102,6 +135,9 @@ and the video is re-timed to it word by word.
 Worked example: `examples/v3-demo/Short.tsx` (8 s: a market street with a dolly and push-in, a clean cut on the
 action, a kitchen with a high-angle insert that moves into a reaction close-up, a table edge passing in front of the
 character, a 3D mug in a flat hand, real cast shadows). Copy its patterns, never its content.
+Storytelling worked example: `shorts/chicken/` in the harry-shorts repo ("One chicken explains why the rich get
+richer", 54.4 s): flash-forward hook on an egg mountain, coins flying away, grey hungry days, colour returning with
+the chickens, the split "why" stage with a chicken family tree, multiplying coops, the three-way finale ending on Blob.
 `examples/v3-moves/MoveTest.tsx` (5 s) shows the fast-move accents and pop-up cards: a slam zoom, a fly-through, a
 smear cut, a post card, a counting number and a newspaper (`moves-sheet.jpg` = its contact sheet). `examples/water/` holds
 only pipeline files from an older video (`story.json`, `timing.json`, `gen_sfx.py`, `youtube.md`) - use them for file
@@ -113,13 +149,13 @@ recommend a specific image-generation or voice service in anything you write for
 Folder map (`<SKILL>` = this skill's base directory):
 - `scripts/` - `new_project.sh` (makes a project), `gen_timing.py`, `align_take.py`, `sfxlib.py` (incl. `bed()` /
   `write_bed()`), `gen_sheet.py`, `make_captions.py`, `stills.mjs`, `sheet.py`, `thumbs.mjs`, `qa_video.py`,
-  `retime.sh`, `master_audio.py`
+  `retime.sh`, `master_audio.py`, `render_chunk.sh` + `join_chunks.sh` (2K in chunks), `bench.mjs` (real speed)
 - `templates/remotion/` - package.json (pinned versions, incl. three + @react-three/fiber + @remotion/three),
   remotion.config.ts, tsconfig, `src/`: **`World3D.tsx`** = the 3D world (`World`, `Cel`, `cam3At`, `toScreen`,
   `celPoint`, `Box` / `Cyl` / `Ball` / `Ground`, `tex`, `Light`, `Cuts`, `Dissolve`), **`Cast.tsx`** = the flat
   `Person`, `Captions.tsx` = one-word safe-area captions + `SafeGuides`, `Cta.tsx` = `Cta` subscribe button,
   `ThumbText`, `Tag`, **`Moves.tsx`** = fast-move accents (`EASE`, `camBlur`, `MotionBlur`, `ShotBlur`, `Transition`,
-  `SpeedLines`), **`Cards.tsx`** = pop-up cards (`PostCard`, `Headline`, `BigNumber`, `cardIn`, `flyX`),
+  `SpeedLines`) and `Mood` (grey / sepia colour moods), **`Cards.tsx`** = pop-up cards (`PostCard`, `Headline`, `BigNumber`, `cardIn`, `flyX`),
   **`ThumbKit.tsx`** = `ThumbFrame`, `POP`, `Ring`, `Arrow` (section 12), `Bits.tsx` = `Puff` / `Pill` / `Bracket` / `Sparkle` (flat screen-space effects), `Layer.tsx` =
   outline scale, `math.ts`, `color.ts`, `Root.tsx`
 - **Cast library - Appendix A at the end of this file**: the current `Cast.tsx` (elbows + knees, outfit pieces, held
@@ -259,9 +295,11 @@ The demo is copied to `reference/v3-demo-Short.tsx` in every project.
 the video is built from them (Blob from `BLOB` / `costume()`, everyone else from `role()`).
 Cloud sandbox notes: Remotion uses the pre-installed headless Chromium when present (config auto-detects). The 3D
 world needs WebGL: with no GPU only the software renderer works (`swangle`, the default in `remotion.config.ts`,
-`stills.mjs` and `thumbs.mjs`; set env `GL=angle` on a machine with a GPU). Measured on 4 cores without a GPU: about
-0.2 s per frame for a half-size preview, about 0.65 s per frame at 2K with `--concurrency=4` (a 45 s Short = about 30
-min). Run renders in the background; Hugging Face is usually blocked, so word times come from
+`stills.mjs` and `thumbs.mjs`; set env `GL=angle` on a machine with a GPU). Measured on 4 cores without a GPU: a simple
+set ~0.2 s per half-size frame; the chicken Short's rich village ~0.35-0.7 s per half-size frame and ~1.8-3.3 s per 2K
+frame (a 54 s Short = ~3 h at 2K). **More tabs don't help**: SwiftShader already uses every core (conc 1 / 2 / 4 measured
+0.31 / 0.32 / 0.34 s per frame) - use `--concurrency=2`. Measure with `tools/bench.mjs` (a real 40-frame render), never
+with stills (each still reloads the page and re-uploads every texture: ~7x too slow). Run renders in the background; Hugging Face is usually blocked, so word times come from
 forced alignment with pocketsphinx (its wheel ships the English model), installed in a venv by `retime.sh`.
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -278,8 +316,10 @@ forced alignment with pocketsphinx (its wheel ships the English model), installe
    video therefore has roughly 20-30 pictures (not 9). Write them as a table: phrase -> what we see -> shot size.
    Sizes, varied: wide establishing (rare, 1-3 per video), medium waist-up (the default - the character fills
    40-60 % of the frame height), reaction close-up (a face fills most of the width), high-angle insert, and cutaways.
-   **The hook shows the consequence**: within the first 3 s the picture already shows what goes wrong (the character
-   does the thing and suffers), then the story rewinds into the explanation.
+   Columns: phrase -> what HAPPENS (the physical event on the key word, 16 Nov storytelling amendment) -> camera ->
+   size -> mood colour -> sound. A row whose only change is the camera angle is not finished.
+   **The hook shows the consequence**: frame 0 is the flash-forward (the end state at its most striking, the contrast
+   in the same frame), then the story rewinds into the explanation on the first story word.
    **Clean cuts** between pictures (cut on the word); one smooth camera move inside each; at most 1-2 short
    dissolves. Mark 4-6 **accent beats** in the table (the hook, a reveal, a place change, the payoff): each gets one
    fast move from `Moves.tsx` (slam zoom, fly-through, smear cut, punch-in, flash cut). Never shake. A video has 1-3
@@ -447,6 +487,11 @@ Units are metres, Y is up, the floor is y = 0. A shot is one `<World>`:
   `'fly'` (push + zoom blur + white flash: pair with an `EASE.dive` camera into an object in shot a), `'smear'` (a
   whip into horizontal blur, the next shot arrives from the other side; `dir` = -1 / 1), `'flash'` (a clean cut under a
   quick white or coloured flash: big reveals and impacts). 0.35-0.45 s, on the word. Use 2-4 per video, not every cut.
+- **Render cost (measured on the chicken Short)**: software WebGL pays per separate TEXTURED mesh (~5 ms each per
+  frame), not per triangle and hardly per pixel (0.5x and 1x size differ by ~12 %). Put every repeated thing into one
+  `Instances` (World3D.tsx) - coins, eggs, clouds, tree crowns, fruit, hills, pebbles, leaves - place static instances
+  once (useMemo) and only update what moves; small cels (< 0.8 m: animals) get only a contact blob. Sphere tessellation
+  doesn't matter. A rich village with a flock of 32 birds: ~0.35 s per half-size frame, ~1.8-3.3 s per 2K frame.
 - **Richness** (the set must feel lush, not like a few primitives): a sky with 3D cloud clusters (soft white `Ball`
   groups, slowly drifting whole cycles) and a low sun disc with a glow; sea with 2-3 animated foam lines and a
   darker far band; ground with a second texture layer and scattered small things (fallen leaves, fruit, shells,
@@ -586,8 +631,11 @@ real pauses (`ffmpeg -af silencedetect=noise=-35dB:d=0.1`), pick the one after e
 over the length limit, shorten only its sentence pauses to about 0.4 s (keep the original take, tell the user).
 Before rendering: read the aligned words (sentence pauses should match `ffmpeg silencedetect`), check the duration is
 <= `LIMIT` (if not: ask for a faster take or cut a sentence), re-render contact sheets on the real timing.
-Render in the background (about 30 min for 45 s on 4 cores without a GPU, `CONC=4`) and wait for it. If a tab
-times out creating its 3D canvas, lower `CONC`.
+Render in the background and wait for it. A cloud background job stops after 2 h, so for anything over ~1500 frames
+run `RENDER=0 tools/retime.sh take.mp3`, then render 2K in chunks of ~1100 frames, ONE JOB AFTER THE OTHER:
+`tools/render_chunk.sh 0 1099`, `tools/render_chunk.sh 1100 2199`, ... (silent, `out/chunk_<first>.mp4`; check each
+chunk's frame count), then `tools/join_chunks.sh` joins them, mixes voice + sfx + bed exactly as `Short.tsx` does and
+masters to -14 LUFS. If a tab times out creating its 3D canvas, lower `CONC`.
 **Verify the file**: 1440x2560, 60 fps, frame count = duration x 60, audio present and as long as the picture, `qa_video.py`
 on the final: flags all intended, loop diff < 0.2, loudness about -14 LUFS (mastered), true peak below -1 dBTP, no audio silences (continuous bed). Say sync was verified by measurement and stills, not by ear.
 
@@ -669,6 +717,9 @@ Append the topic to `topics_log.md`.
 - One-word captions in the safe box; the sound never drops out; every visual on its word; the payoff on the last
   explanation word; the CTA follows; the last frame loops to the first.
 - One picture per caption phrase; one layer deep on every fact; no text in cutaways; the hook shows the consequence.
+- Visual storytelling (16 Nov): flash-forward hook on frame 0; an EVENT on every phrase; one side-by-side "why" shot;
+  big emotional props; mood colour (grey / colour returns / sepia / golden finale); a travelling camera; the finale
+  splits the world and crowns the winner, then loops to frame 0.
 - The length is whatever the user answered in section 0.
 - Real facts only in the voice; cartoon exaggeration only in what characters do.
 - Every shot's `look` line in `story.json` restates the style in concrete words.
@@ -697,6 +748,16 @@ Pitfalls met building the fast-move kit (16 Nov 2026): any CSS / SVG filter over
 a 30 px blur; rendering the blur at 1/4 resolution saved nothing), so `MotionBlur` renders NO filter element at all
 below its threshold; a first version blurred normal glides (4-8 px/frame) and made a whole test render 2x slower;
 the screen-speed formula must let turning and sliding cancel on an orbit, or every orbit shot blurs.
+Pitfalls met on the chicken Short (16 Nov 2026): one picture per phrase is not enough if the pictures are a
+character standing still from a new angle - give every phrase an event (storytelling amendment); a vertical frame
+can't show three plots side by side (5-6 m wide at 15 m) - stage them along a diagonal for the aerial; a flock drawn in
+front of the hero covers his face from a high camera - keep a bird-free lane in front of and behind him; every
+animation that must loop (pecking, sparkles, breathing) uses whole cycles over the video (`loopS`), never sin(t * k);
+`new_project.sh`'s template already contains the cast library; render 2K in chunks (one 2-hour job is not enough for
+a rich 50 s Short); `ffmpeg -shortest` while muxing the mixed audio dropped the last 2 frames (removed from
+`join_chunks.sh`); `retime.sh` fails if the take path is already `voiceover/take/take.mp3` (cp onto itself) - pass a
+copy from elsewhere; `shimmer()` in sfxlib needs >= 0.85 s and crackle-style loops need a margin larger than the
+sound they paste.
 Pitfalls kept from v1/v2: a closing quote after the full stop used to hide the sentence end (handled in
 `gen_timing.py` / `align_take.py`); when a component switches between differently shaped drawings (eye styles, mouth
 shapes), give each style its own React `key` - with `--concurrency` > 1 each tab renders non-contiguous frames and

@@ -11,9 +11,13 @@ and knees, lab coat / suit / trench coat, hats, sunglasses, headband, held props
 18 expressions, blending, walk / run cycles) and `Roles.ts` (Blob, fixed in teal `#1FA6A0`, his story costumes, and 9
 role templates whose look changes per video). The same three files are in Appendix A of the skill's `SKILL.md`.
 
+**Visual storytelling** (v3, 16 Nov 2026, after the chicken Short): a flash-forward hook on frame 0, an event on every
+caption phrase, one side-by-side "why" shot, mood colours (`Mood`), a finale that splits the world and crowns the winner.
+Render speed: `Instances` for repeated meshes, 2K rendered in chunks (`render_chunk.sh`, `join_chunks.sh`).
+
 Older versions, kept for reference (used only when called by name):
 - `.claude/skills/harry-animator/` (v1): flat cut-out cartoon on a 2.5D multiplane camera. `/harry-animator`
 - `.claude/skills/harry-animator-v2/` (v2): fake-3D flat world, whip transitions, colour-emotion cast. `/harry-animator-v2`
 
 `shorts/<name>/`: one folder per finished Short (source, script, timing, captions, thumbnails, YouTube text, final video).
-Latest: `shorts/manchineel/` - "The beach tree you should never sit under" (v3, 2K, 52.8 s).
+Latest: `shorts/chicken/` - "One chicken explains why the rich get richer" (v3 storytelling, 2K, 54.4 s).

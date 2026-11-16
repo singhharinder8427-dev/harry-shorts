@@ -112,3 +112,11 @@ export const Transition: React.FC<{t: number; at: number; kind: 'fly' | 'smear' 
 /** camera blur for a shot (helper): <ShotBlur t={t} cam={KEYS}>...</ShotBlur> = MotionBlur driven by that camera. */
 export const ShotBlur: React.FC<{t: number; cam: Cam3Key[] | ((t: number) => Cam3); extra?: Blur; children?: React.ReactNode}> = ({t, cam, extra = NO_BLUR, children}) =>
   <MotionBlur blur={addBlur(camBlur(t, cam), extra)}>{children}</MotionBlur>;
+
+// ------------------------------------------------------------------------------------------------ mood colour (storytelling)
+/** Colour mood for a whole shot: grey "poor / lost" days (sat 0.3), colour flooding back on the turn (ramp sat to 1),
+ *  sepia for a flashback / memory (sat 0.55, sepia 0.4). Wrap the SCENE only (never captions or the CTA).
+ *  Cost: a CSS filter forces a copy of the 3D frame, so use it only on the shots that need it; at sat 1 / sepia 0 it
+ *  renders nothing extra. */
+export const Mood: React.FC<{sat?: number; sepia?: number; children: React.ReactNode}> = ({sat = 1, sepia = 0, children}) =>
+  sat > 0.995 && sepia < 0.005 ? <>{children}</> : <AbsoluteFill style={{filter: `saturate(${sat.toFixed(3)}) sepia(${sepia.toFixed(3)})`}}>{children}</AbsoluteFill>;

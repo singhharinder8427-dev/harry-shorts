@@ -93,6 +93,23 @@ export const Cyl: React.FC<Place & Mat & {r: number; h: number; rTop?: number; s
 /** sphere centred on pos (squash with scale) */
 export const Ball: React.FC<Place & Mat & {r: number}> = ({pos = [0, 0, 0], rot = [0, 0, 0], scale = 1, r, cast = true, receive = true, ...m}) =>
   <mesh position={pos} rotation={rot} scale={scale} castShadow={cast} receiveShadow={receive}><sphereGeometry args={[r, 48, 32]} /><M {...m} /></mesh>;
+/** many copies of one shape as ONE draw call. Use it for anything repeated (coins, eggs, clouds, tree crowns, fruit,
+ *  hills, pebbles, rain): on software WebGL the cost is per separate (textured) mesh, NOT per triangle or per pixel.
+ *  items: [{p: position, s: scale (number or [x,y,z]), r: rotation, c: colour}]. k = a key that changes when the
+ *  instance count or material must be rebuilt. geo is called once. */
+export type Inst = {p: V3; s?: V3 | number; r?: V3; c?: string};
+const _D = new THREE.Object3D(), _C = new THREE.Color();
+export const Instances: React.FC<{geo: () => THREE.BufferGeometry; items: Inst[]; color?: string; map?: THREE.Texture; rough?: number; metal?: number; emissive?: string; glow?: number; cast?: boolean; receive?: boolean; k?: string}> =
+  ({geo, items, color = '#FFFFFF', map, rough = 0.85, metal = 0, emissive = '#000000', glow = 0, cast = true, receive = true, k = ''}) => {
+  const n = Math.max(1, items.length);
+  const mesh = useMemo(() => { const m = new THREE.InstancedMesh(geo(), new THREE.MeshStandardMaterial({color: '#FFFFFF', map: map ?? null, roughness: rough, metalness: metal, emissive: new THREE.Color(emissive), emissiveIntensity: glow}), n);
+    m.frustumCulled = false; return m; }, [n, k]);
+  mesh.castShadow = cast; mesh.receiveShadow = receive; mesh.count = items.length;
+  items.forEach((it, i) => { const sc = it.s ?? 1; _D.position.set(...it.p); _D.rotation.set(...(it.r ?? [0, 0, 0] as V3)); if (typeof sc === 'number') _D.scale.setScalar(sc); else _D.scale.set(...sc);
+    _D.updateMatrix(); mesh.setMatrixAt(i, _D.matrix); _C.set(it.c ?? color); mesh.setColorAt(i, _C); });
+  mesh.instanceMatrix.needsUpdate = true; if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
+  return <primitive object={mesh} />;
+};
 /** flat floor / ground / road / water sheet at height y, centred on (x, z) */
 export const Ground: React.FC<Mat & {size?: [number, number]; at?: [number, number]; y?: number}> = ({size = [120, 120], at = [0, 0], y = 0, receive = true, ...m}) =>
   <mesh position={[at[0], y, at[1]]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow={receive}><planeGeometry args={size} /><M {...m} /></mesh>;
@@ -105,6 +122,8 @@ export type Light = {
   fog?: [string, number, number];                        // aerial perspective: [colour, near, far]
   focus?: V3; span?: number;                             // shadow-map area: centre and half-width in metres (keep it tight for crisp shadows)
 };
+/** shadow-map size (the depth pass is drawn every frame; 1024 keeps it cheap on software WebGL and still crisp at span 12) */
+export const SHADOW_MAP = 1024;
 const LIGHT: Required<Light> = {sun: [-4, 7, 4], sunColor: '#FFF3DC', sunI: 2.4, sky: '#DCEBFF', bounce: '#B9A894', ambI: 1.25, fog: ['#DDE8F5', 30, 140], focus: [0, 0, 0], span: 14};
 type Sync = {done: number; pending: number | null};
 const Rig: React.FC<{cam: Cam3; light: Required<Light>; shadows: boolean; frame: number; sync: React.MutableRefObject<Sync>}> = ({cam, light, shadows, frame, sync}) => {
@@ -118,7 +137,7 @@ const Rig: React.FC<{cam: Cam3; light: Required<Light>; shadows: boolean; frame:
   const d = new THREE.Vector3(...light.sun).normalize().multiplyScalar(50);
   sun.color.set(light.sunColor); sun.intensity = light.sunI; sun.position.set(light.focus[0] + d.x, light.focus[1] + d.y, light.focus[2] + d.z); sun.target.position.set(...light.focus);
   sun.castShadow = shadows; const sc = sun.shadow.camera; sc.left = sc.bottom = -light.span; sc.right = sc.top = light.span; sc.near = 1; sc.far = 120; sc.updateProjectionMatrix();
-  sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.03; sun.shadow.radius = 5;
+  sun.shadow.mapSize.set(SHADOW_MAP, SHADOW_MAP); sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.03; sun.shadow.radius = 5;
   return (<>
     <primitive object={sun} /><primitive object={sun.target} />
     <hemisphereLight args={[light.sky, light.bounce, light.ambI]} />
@@ -140,7 +159,9 @@ export const Cel: React.FC<CelProps> = ({at, h = 1.7, unitsTall = 430, flip = fa
   const sc = p.s * h / unitsTall;
   return <g transform={`translate(${p.x} ${p.y}) scale(${flip ? -sc : sc} ${sc})`}><KScale k={Math.max(sc, 0.5)}>{children}</KScale></g>;
 };
-/** invisible stand-in that makes a cel cast a real ground shadow (head disc + body + legs) plus a soft contact blob */
+/** (cels under 0.8 m - animals, small props - get only the soft contact blob: one draw call instead of five; a flock
+ *  of 30 birds with full stand-ins was 150 extra meshes)
+ *  invisible stand-in that makes a cel cast a real ground shadow (head disc + body + legs) plus a soft contact blob */
 const CelShadow: React.FC<{at: V3; h: number; lift: number; sun: V3}> = ({at, h, lift, sun}) => {
   const yaw = Math.atan2(sun[0], sun[2]);                       // face the flat stand-in toward the sun
   const hide = <meshBasicMaterial colorWrite={false} depthWrite={false} />;
@@ -148,11 +169,11 @@ const CelShadow: React.FC<{at: V3; h: number; lift: number; sun: V3}> = ({at, h,
     <mesh position={[at[0], at[1] + 0.012, at[2]]} rotation={[-Math.PI / 2, 0, 0]} scale={[1, 0.62, 1]} renderOrder={2}>
       <circleGeometry args={[0.36 * h * clamp(1 - lift / (1.2 * h), 0.35, 1), 32]} /><meshBasicMaterial map={blob()} transparent opacity={0.42 * clamp(1 - lift / (1.5 * h), 0.3, 1)} depthWrite={false} color="#1A1420" />
     </mesh>
-    <group position={[at[0], at[1] + lift, at[2]]} rotation={[0, yaw, 0]}>
+    {h >= 0.8 && <group position={[at[0], at[1] + lift, at[2]]} rotation={[0, yaw, 0]}>
       <mesh position={[0, 0.767 * h, 0]} scale={[1, 1, 0.08]} castShadow>{hide}<sphereGeometry args={[0.235 * h, 24, 16]} /></mesh>
       <mesh position={[0, 0.41 * h, 0]} castShadow>{hide}<boxGeometry args={[0.2 * h, 0.27 * h, 0.02]} /></mesh>
       {[-1, 1].map((s) => <mesh key={s} position={[s * 0.06 * h, 0.135 * h, 0]} castShadow>{hide}<boxGeometry args={[0.022 * h, 0.27 * h, 0.02]} /></mesh>)}
-    </group>
+    </group>}
   </group>);
 };
 
