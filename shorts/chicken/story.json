@@ -1,0 +1,366 @@
+{
+ "short": "chicken",
+ "title": "One chicken explains why the rich get richer",
+ "spoken": {},
+ "chunks": [
+  "Blob and his two neighbours",
+  "lose everything overnight.",
+  "Money, houses, fields.",
+  "All gone.",
+  "Three hungry days later,",
+  "each of them gets one chicken.",
+  "The first neighbour cooks his",
+  "right away.",
+  "Best dinner in days.",
+  "Also his last.",
+  "The second neighbour gets a hen",
+  "and eats one egg every morning.",
+  "Blob gets a rooster.",
+  "No eggs at all.",
+  "So he knocks on her door",
+  "with a deal.",
+  "Let my rooster meet your hen,",
+  "and I'll share the eggs.",
+  "She wanted eggs.",
+  "Blob wanted chicks.",
+  "Three weeks later,",
+  "the first chicks hatch.",
+  "About five months after that,",
+  "they're laying eggs too.",
+  "Blob's yard fills up so fast",
+  "he can't keep up,",
+  "so he hires the first neighbour",
+  "and pays him in eggs.",
+  "Same start.",
+  "Same chicken.",
+  "Now one is poor,",
+  "one is comfortable,",
+  "and one is rich.",
+  "Subscribe so you don't miss",
+  "Blob's next lesson."
+ ],
+ "syllables": {
+  "overnight": 3,
+  "houses": 2,
+  "neighbour": 2,
+  "neighbours": 2,
+  "comfortable": 4,
+  "they're": 1,
+  "i'll": 1,
+  "every": 2,
+  "everything": 3,
+  "laying": 2,
+  "money": 2,
+  "chicken": 2,
+  "subscribe": 2,
+  "blob's": 1,
+  "can't": 1,
+  "don't": 1
+ },
+ "keys": {
+  "lose": [
+   0,
+   "lose"
+  ],
+  "money": [
+   1,
+   "money"
+  ],
+  "houses": [
+   1,
+   "houses"
+  ],
+  "fields": [
+   1,
+   "fields"
+  ],
+  "gone": [
+   2,
+   "gone"
+  ],
+  "hungry": [
+   3,
+   "hungry"
+  ],
+  "chicken": [
+   3,
+   "chicken"
+  ],
+  "first": [
+   4,
+   "first"
+  ],
+  "cooks": [
+   4,
+   "cooks"
+  ],
+  "best": [
+   5,
+   "best"
+  ],
+  "last": [
+   6,
+   "last"
+  ],
+  "second": [
+   7,
+   "second"
+  ],
+  "hen": [
+   7,
+   "hen"
+  ],
+  "egg": [
+   7,
+   "egg"
+  ],
+  "rooster": [
+   8,
+   "rooster"
+  ],
+  "noeggs": [
+   9,
+   "no"
+  ],
+  "knocks": [
+   10,
+   "knocks"
+  ],
+  "deal": [
+   10,
+   "deal"
+  ],
+  "meet": [
+   11,
+   "meet"
+  ],
+  "share": [
+   11,
+   "share"
+  ],
+  "wanted": [
+   12,
+   "eggs"
+  ],
+  "chicks": [
+   13,
+   "chicks"
+  ],
+  "weeks": [
+   14,
+   "weeks"
+  ],
+  "hatch": [
+   14,
+   "hatch"
+  ],
+  "months": [
+   15,
+   "months"
+  ],
+  "laying": [
+   15,
+   "laying"
+  ],
+  "fills": [
+   16,
+   "fills"
+  ],
+  "keep": [
+   16,
+   "keep"
+  ],
+  "hires": [
+   16,
+   "hires"
+  ],
+  "pays": [
+   16,
+   "pays"
+  ],
+  "same1": [
+   17,
+   "same"
+  ],
+  "same2": [
+   18,
+   "chicken"
+  ],
+  "poor": [
+   19,
+   "poor"
+  ],
+  "comfortable": [
+   19,
+   "comfortable"
+  ],
+  "rich": [
+   19,
+   "rich"
+  ],
+  "subscribe": [
+   20,
+   "subscribe"
+  ],
+  "miss": [
+   20,
+   "miss"
+  ],
+  "lesson": [
+   20,
+   "lesson"
+  ]
+ },
+ "limit": 55,
+ "cast": {
+  "Blob": "brand character: white round face, black short hair, teal shirt #1FA6A0, thin black line limbs, white round hands",
+  "Ned (first neighbour)": "red shirt #E5484D, dark brown short hair, round blue glasses (friend template, seed chicken-a)",
+  "Sara (second neighbour)": "pink shirt #E85D9E, brown ponytail, yellow beanie (friend template, seed chicken)",
+  "Ned's hen": "flat brown hen #B8682F, red comb, orange beak",
+  "Sara's hen": "flat white hen, red comb",
+  "Blob's rooster": "flat orange rooster #D9762B, golden neck, dark green tail",
+  "chicks": "flat yellow chicks #FFD84A"
+ },
+ "beats": {
+  "lose": "the sky snaps from golden morning to night, all three look up in shock",
+  "money": "Blob's gold coin pile sinks into the ground in a puff of dust",
+  "houses": "the three cottages sink into the ground - only Sara's front door is left standing",
+  "fields": "the wheat fields flatten to bare soil",
+  "gone": "dawn on bare land, all three slump, a tumbleweed rolls by",
+  "hungry": "they sit on the ground while three days and nights flash past, faces pale",
+  "chicken": "one chicken drops into each pair of arms, feathers puff",
+  "cooks": "night: Ned stirs a pot over a campfire, a brown feather drifts down",
+  "best": "close-up: Ned slurps from a bowl, eyes closed, blissful",
+  "last": "the fire goes out, Ned alone in the dark with an empty bowl",
+  "hen": "morning: Sara beside her lone door, her white hen pecking",
+  "egg": "the hen stands up, an egg pops out under her, Sara picks it up",
+  "rooster": "Blob proudly holds his rooster, it crows",
+  "noeggs": "the rooster gets up - nothing; punch-in on Blob's confused face, the rooster shrugs",
+  "knocks": "Blob walks to Sara's free-standing door and knocks; it swings open",
+  "meet": "rooster and hen side by side, a red heart pops above them",
+  "share": "Blob and Sara shake hands, a basket of eggs pops in",
+  "wanted": "Sara admires an egg, delighted",
+  "chicks": "Blob smugly holds an egg up to the light; it glows; the camera dives into it",
+  "weeks": "inside the egg (cross-section): a chick grows as days and nights flash",
+  "hatch": "flash: four eggs crack in the nest, chicks pop out, Blob overjoyed",
+  "months": "time-lapse: chicks grow into hens, the trees turn autumn orange",
+  "laying": "each hen pops an egg in turn, Blob cheers",
+  "fills": "a coop appears and the flock doubles 4 - 8 - 16 - 32 as the camera rushes up",
+  "keep": "Blob runs back and forth among the chickens, sweating",
+  "hires": "Ned walks in, thin and pale; Blob waves him over and points at the coop",
+  "pays": "Blob drops eggs into Ned's basket one by one",
+  "same1": "flash back: the three holding their single chickens",
+  "same2": "punch-in on the three chickens",
+  "poor": "Ned sits by a cold fire pit",
+  "comfortable": "whip to Sara: small hut, hen, basket of eggs, content",
+  "rich": "whip to Blob: big coop, huge flock, arms crossed, smug",
+  "subscribe": "flash back to frame 0 (houses, coins, fields), subscribe button + click, last frame = frame 0"
+ },
+ "shots": [
+  {
+   "from": "start",
+   "to": "money",
+   "size": "medium-wide",
+   "camera": "slow dolly in, eye level",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: Ned (red shirt, glasses), Blob (teal shirt) waving, Sara (pink shirt, yellow beanie) on a sandy ochre yard in front of three cottages (cream walls, terracotta / plum / blue gable roofs, brick chimneys), a gold coin pile, wheat fields and leafy trees behind, green hills, golden morning sun from the upper left; light ramps to deep blue night on 'lose'"
+  },
+  {
+   "from": "money",
+   "to": "gone",
+   "size": "wide establishing (diagonal)",
+   "camera": "high three-quarter view along the row, slow drift",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: the village at night under a moon: coin pile, cottages and wheat fields sink into the ground in turn with pale dust clouds; Sara's door stays standing; the three small in the middle"
+  },
+  {
+   "from": "gone",
+   "to": "hungry",
+   "size": "medium three-shot",
+   "camera": "slow pull-out",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: bare sandy land at pink dawn, Sara's lone door behind Blob, a 3D tumbleweed rolls across, all three slump"
+  },
+  {
+   "from": "hungry",
+   "to": "chicken",
+   "size": "medium",
+   "camera": "slow push-in",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: the three sitting cross-legged on bare ground while sun and moon arc overhead three times, faces turning pale yellow"
+  },
+  {
+   "from": "chicken",
+   "to": "first",
+   "size": "medium three-shot (repeated later)",
+   "camera": "slow push-in",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: daylight, bare land, a brown hen, a white hen and an orange rooster drop into their arms"
+  },
+  {
+   "from": "first",
+   "to": "second",
+   "size": "medium -> close-up -> wide",
+   "camera": "smear transition in, push to close-up, dolly out on 'last'",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: night, Ned (red shirt) at a 3D campfire with logs, stones and an iron pot, orange firelight; close-up with a wooden bowl and steam; fire goes out, cool blue moonlight"
+  },
+  {
+   "from": "second",
+   "to": "rooster",
+   "size": "medium -> low insert",
+   "camera": "slow track; low insert by the hen",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: morning, Sara (pink shirt, beanie) by her free-standing wooden door, white hen pecking, an egg (3D) appears under the hen"
+  },
+  {
+   "from": "rooster",
+   "to": "knocks",
+   "size": "medium -> high insert -> punch-in",
+   "camera": "push-in; high angle then EASE.punch into Blob's confused face",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: Blob holds his orange rooster, it crows; rooster sits and stands - nothing beneath"
+  },
+  {
+   "from": "knocks",
+   "to": "chicks",
+   "size": "medium two-shot, low close-up, close-ups",
+   "camera": "slow push-ins",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: Sara's door in its frame on bare land; Blob walks in, knocks, door swings open on Sara; rooster and hen with a flat red heart; handshake with a straw basket of eggs; Sara holds an egg"
+  },
+  {
+   "from": "chicks",
+   "to": "hatch",
+   "size": "close-up -> macro cutaway",
+   "camera": "EASE.dive into the glowing egg, fly-through into a cross-section of the egg on a straw nest against wooden planks, days flashing",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: half 3D eggshell, yolk shrinking, flat yellow chick growing inside"
+  },
+  {
+   "from": "hatch",
+   "to": "fills",
+   "size": "medium, low",
+   "camera": "flash cut; slow push-ins",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: Blob crouched behind a straw nest, eggs crack into half shells, chicks pop up; time-lapse as chicks grow into hens and trees turn orange; hens pop eggs"
+  },
+  {
+   "from": "fills",
+   "to": "same1",
+   "size": "medium -> high wide -> mediums",
+   "camera": "EASE.slam crane up and back; tracking",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: red plank coop with a striped roof grows in, flock of brown, white and black hens doubles; Blob runs among them; Ned (pale) walks in; eggs drop into his basket"
+  },
+  {
+   "from": "same1",
+   "to": "poor",
+   "size": "medium three-shot",
+   "camera": "warm flash; EASE.punch on 'chicken'",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: the repeated framing from 'chicken': three neighbours each holding one bird"
+  },
+  {
+   "from": "poor",
+   "to": "subscribe",
+   "size": "mediums",
+   "camera": "holds joined by two EASE.whip pans with motion blur",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: daylight across the three plots: Ned sitting by a cold fire pit; Sara by her small plank hut with a straw roof, hen and egg basket; Blob before a big coop with a huge flock"
+  },
+  {
+   "from": "subscribe",
+   "to": "end",
+   "size": "medium-wide",
+   "camera": "flash; glide back to the frame-0 camera",
+   "look": "FLAT 2D cel characters (solid white round faces, thick dark outline, black oval eyes, graphic brows, thin black line limbs, flat solid-colour clothes, no shading) and flat chickens in a STYLIZED 3D village: exactly frame 0: three cottages, coin pile, fields, golden morning; subscribe button above"
+  }
+ ]
+}
