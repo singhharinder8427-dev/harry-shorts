@@ -25,8 +25,8 @@ const DANA: Outfit = {shirt: '#F2B705', hair: '#3B2A20', hairStyle: 'bun'};
 const D = (at: V3, p: Partial<PersonPose>, h = 1.7) => <Cel at={at} h={h}><Person id="dana" outfit={DANA} {...p} /></Cel>;
 
 // ---- falling rain: one InstancedMesh, deterministic, whole cycles over the video (loops exactly)
-const Rain: React.FC<{t: number; n?: number; c?: V3; w?: number; d?: number; top?: number; h?: number; cycles?: number; color?: string; op?: number}> =
-  ({t, n = 700, c = [0, 0, 0], w = 14, d = 14, top = 9, h = 9, cycles = 84, color = '#D5E6F7', op = 0.75}) => {
+const Rain: React.FC<{t: number; n?: number; c?: V3; wd?: number; w?: number; d?: number; top?: number; h?: number; cycles?: number; color?: string; op?: number}> =
+  ({t, n = 700, c = [0, 0, 0], w = 14, d = 14, top = 9, h = 9, cycles = 84, color = '#D5E6F7', op = 0.75, wd = 0.014}) => {
     const ref = useRef<THREE.InstancedMesh>(null); const o = useMemo(() => new THREE.Object3D(), []);
     useLayoutEffect(() => {
       const m = ref.current; if (!m) return;
@@ -37,7 +37,7 @@ const Rain: React.FC<{t: number; n?: number; c?: V3; w?: number; d?: number; top
       m.instanceMatrix.needsUpdate = true;
     });
     return <instancedMesh ref={ref} args={[undefined, undefined, n]} frustumCulled={false}>
-      <boxGeometry args={[0.014, 0.55, 0.014]} /><meshBasicMaterial color={color} transparent opacity={op} /></instancedMesh>;
+      <boxGeometry args={[wd, 0.55, wd]} /><meshBasicMaterial color={color} transparent opacity={op} /></instancedMesh>;
   };
 
 // =============================================================================================== place 1: main street
@@ -65,14 +65,16 @@ const Town: React.FC<{t: number}> = ({t}) => (<>
     {[[-0.95, 1.3], [0.95, 1.3], [-0.95, -1.3], [0.95, -1.3]].map(([x, z], i) => <Cyl key={i} pos={[x, 0.32, z]} rot={[0, 0, Math.PI / 2]} r={0.32} h={0.22} color="#222" />)}</group>
   <Rain t={t} n={800} c={[0, 0, -2]} w={16} d={22} top={10} h={10} />
 </>);
-const FloodFront: React.FC<{lvl: number}> = ({lvl}) => lvl < 0.01 ? null : <Box pos={[0, 0, -4]} size={[40, lvl, 40]} color="#3F8FC9" opacity={0.5} rough={0.15} cast={false} receive={false} r={0} />;
-const FloodSheet: React.FC<{lvl: number}> = ({lvl}) => lvl < 0.01 ? null : <Ground size={[120, 120]} y={lvl} color="#4E9AD0" opacity={0.85} rough={0.1} />;
-const START_CAM: Cam3 = {pos: [3, 2.3, 11], look: [0, 1.1, 0], fov: 36};
+const FloodFront: React.FC<{lvl: number}> = ({lvl}) => lvl < 0.2 ? null : <Box pos={[0, 0, -0.4]} size={[30, lvl, 3.2]} color="#3F8FC9" opacity={0.45} rough={0.15} cast={false} receive={false} r={0} />;
+const FloodSheet: React.FC<{lvl: number}> = ({lvl}) => lvl < 0.01 ? null : lvl <= 0.12
+  ? <><Ground size={[8, 90]} at={[0, -25]} y={lvl} color="#6FA9D2" opacity={0.55} rough={0.1} /></>
+  : <Ground size={[120, 120]} y={lvl} color="#4E9AD0" opacity={0.85} rough={0.1} />;
+const START_CAM: Cam3 = {pos: [1.4, 1.8, 7.4], look: [0, 1.1, 0], fov: 34};
 const IDLE = (t: number): Partial<PersonPose> => ({bounce: breathe(t), blink: bump(t % 3.3, 3.0, 3.16)});
 const WET = 0.1;                                                  // ankle-deep water on the street from the first frame
 
 const S1: React.FC<{t: number}> = ({t}) => {
-  const cam = cam3At(t, [[0, START_CAM], [cs(1), {pos: [0.7, 1.7, 7], look: [0, 1.1, 0], fov: 34}]]);
+  const cam = cam3At(t, [[0, START_CAM], [cs(1), {pos: [0.7, 1.7, 6.2], look: [0, 1.1, 0], fov: 33}]]);
   const up = kfs(t, [[K.rained - 0.1, 0], [K.rained + 0.4, 1]]);
   return (<World cam={cam} light={STREET} sky={STREET_SKY} scene={<><Town t={t} /><FloodSheet lvl={WET} /></>} front={<FloodFront lvl={WET} />}>
     {D([0, 0, 0.4], {...IDLE(t), view: 'front', handL: [-84, -230 + 20 * up], handR: [84, -230 + 20 * up], eyes: 'dot', mouth: 'smile', faceDy: -10 * up, lookY: -10 * up, browUp: 0.3 * up})}
@@ -87,11 +89,11 @@ const S2: React.FC<{t: number}> = ({t}) => {                      // c1: medium,
 };
 const S3: React.FC<{t: number}> = ({t}) => {                      // c2: low angle, the cloud bulges - "the sky couldn't hold it"
   const u = t - cs(2), sq = 1 + 0.07 * bump(u, 0.6, 1.8) + 0.02 * Math.sin(u * 9);
-  const cam = cam3At(u, [[0, {pos: [0, 0.7, 6.2], look: [0, 4.2, -1], fov: 48}], [2.2, {pos: [0, 0.8, 5.4], look: [0, 4.6, -1], fov: 46}]]);
+  const cam = cam3At(u, [[0, {pos: [0, 1.3, 7.2], look: [0, 3.4, -1], fov: 46}], [2.2, {pos: [0, 1.4, 6.4], look: [0, 3.7, -1], fov: 44}]]);
   const cl = (x: number, y: number, r: number, c: string) => <Ball key={x + '_' + y} pos={[x, y, -1]} r={r} color={c} scale={[sq, sq * 0.9, sq]} map={tex('speckle', [3, 2], 5)} rough={1} />;
   return (<World cam={cam} light={STREET} sky={STREET_SKY} scene={<><Town t={t} /><FloodSheet lvl={WET} />
-    <group position={[0, 8.2, 0]}>{[cl(-2.2, 0, 1.5, '#6C7886'), cl(-0.8, 0.5, 1.9, '#7A8694'), cl(1, 0.4, 2, '#68737F'), cl(2.5, -0.1, 1.4, '#7A8694'), cl(0, -0.5, 1.6, '#5C6672')]}</group>
-    <Rain t={t} n={500} c={[0, 0, -1]} w={7} d={4} top={7.5} h={7.5} />
+    <group position={[0, 6.4, 0]}>{[cl(-2.2, 0, 1.5, '#6C7886'), cl(-0.8, 0.5, 1.9, '#7A8694'), cl(1, 0.4, 2, '#68737F'), cl(2.5, -0.1, 1.4, '#7A8694'), cl(0, -0.5, 1.6, '#5C6672')]}</group>
+    <Rain t={t} n={500} c={[0, 0, -1]} w={7} d={4} top={6} h={6} />
   </>} front={<FloodFront lvl={WET} />}>
     {D([0, 0, 1.2], {bounce: breathe(t), view: 'front', handL: [-70, -150], handR: [70, -150], eyes: 'wide', mouth: 'o', browUp: 1, faceDy: -14, lookY: -14, headTilt: -5})}
   </World>);
@@ -117,9 +119,9 @@ const S4: React.FC<{t: number}> = ({t}) => {                      // c3-c5: "the
   const u = t - cs(3), s = pop(t, CH[3] + 0.1, 0.5);
   const lvl = kfs(t, [[CH[5] - 0.1, 0], [CH[5] + 0.7, 0.09]]);
   const push = kfs(t, [[CH[5] - 0.2, 0], [CH[5] + 1.0, 1]]);
-  const cam = cam3At(u, [[0, {pos: [0.3, 2.3, 7.4], look: [0.4, 1.9, -0.8], fov: 34}], [CH[5] - cs(3) - 0.2, {pos: [0.3, 2.0, 6.0], look: [0.4, 1.9, -0.8], fov: 32}], [CH[5] - cs(3) + 1.0, {pos: [0.7, 1.15, 3.6], look: [0.55, 1.15, -0.8], fov: 26}]]);
-  return (<World cam={cam} light={ROOM} sky={['#A9D8CE', '#CDE7E1']} scene={<><Room /><Jar x={0.7} level={lvl} s={Math.max(0.001, s)} vap={s > 0.5 ? 1 : 0} t={t} /></>}>
-    {D([-0.7, 0.95, -0.2], {bounce: breathe(t), view: 'right', handL: [-60, -150], handR: [70 + 20 * push, -230 + 30 * push], eyes: 'dot', mouth: pick(t, [[0, 'smile'], [CH[5], 'o']]), browUp: 0.8 * push, faceDx: 18, lookX: 8})}
+  const cam = cam3At(u, [[0, {pos: [0.2, 2.3, 8.6], look: [0.3, 1.9, -0.8], fov: 34}], [CH[5] - cs(3) - 0.2, {pos: [0.3, 2.0, 6.0], look: [0.4, 1.9, -0.8], fov: 32}], [CH[5] - cs(3) + 1.0, {pos: [0.7, 1.15, 3.6], look: [0.55, 1.15, -0.8], fov: 26}]]);
+  return (<World cam={cam} light={ROOM} sky={['#A9D8CE', '#CDE7E1']} scene={<><Room /><Jar x={0.75} level={lvl} s={Math.max(0.001, s)} vap={s > 0.5 ? 1 : 0} t={t} /></>}>
+    {D([-0.15, 0.95, -0.2], {bounce: breathe(t), view: 'right', handL: [-60, -150], handR: [70 + 20 * push, -230 + 30 * push], eyes: 'dot', mouth: pick(t, [[0, 'smile'], [CH[5], 'o']]), browUp: 0.8 * push, faceDx: 18, lookX: 8})}
     <Tag text="not to scale" show={pop(t, CH[5] + 0.6, 0.3)} />
   </World>);
 };
@@ -127,14 +129,14 @@ const S6: React.FC<{t: number}> = ({t}) => {                      // c6-c7: it f
   const u = t - cs(6), end = CH[7] + 1.6;
   const lvl = 0.09 * (1 - kfs(t, [[cs(6), 0], [K.nine - 0.3, 1]]));
   const tray = 0.06 * kfs(t, [[cs(6) + 0.2, 0], [K.nine + 0.6, 1]]);
-  const cam = cam3At(u, [[0, {pos: [0.5, 1.5, 4.4], look: [0.1, 1.3, -0.6], fov: 32}], [end - cs(6), {pos: [0.3, 1.9, 5.6], look: [0.1, 1.5, -0.6], fov: 34}]]);
+  const cam = cam3At(u, [[0, {pos: [0.4, 1.6, 6.0], look: [0.1, 1.4, -0.6], fov: 33}], [end - cs(6), {pos: [0.3, 2.0, 7.0], look: [0.1, 1.5, -0.6], fov: 35}]]);
   const nine = Array.from({length: 9}, (_, i) => pop(t, cs(6) + 0.5 + i * ((K.nine + 0.7 - cs(6) - 0.5) / 9), 0.3));
   return (<World cam={cam} light={ROOM} sky={['#A9D8CE', '#CDE7E1']} scene={<><Room /><Jar x={0.5} level={lvl} t={t} vap={0.6} />
     <Cyl pos={[0.5, 0.95, 0.15]} r={0.9} h={0.05 + tray} color="#3FA7F5" opacity={0.85} rough={0.2} cast={false} />
     {nine.map((p, i) => p > 0.01 && <group key={i} position={[-1.6 + i * 0.4, 2.7, -2.5]}><Ball r={0.15 * p} color="#FFD23F" emissive="#FFC400" glow={0.9} cast={false} /></group>)}
     <Rain t={t} n={120} c={[0.5, 0.95, 0.15]} w={0.6} d={0.6} top={1.9} h={1.9} cycles={42} color="#8FD0FF" />
   </>}>
-    {D([-0.9, 0.95, 0.3], {bounce: breathe(t), view: 'right', handR: [60, -170], handL: [-64, -140], eyes: 'dot', mouth: 'o', browUp: 0.6, faceDx: 16, headTilt: 3 * Math.sin(u * 2)})}
+    {D([-0.5, 0.95, 0.3], {bounce: breathe(t), view: 'right', handR: [60, -170], handL: [-64, -140], eyes: 'dot', mouth: 'o', browUp: 0.6, faceDx: 16, headTilt: 3 * Math.sin(u * 2)})}
   </World>);
 };
 
@@ -157,12 +159,12 @@ const Coast: React.FC<{t: number; cam: Cam3; sunGlow?: number; dana?: Partial<Pe
 };
 const S7: React.FC<{t: number}> = ({t}) => {                      // c8-c10: sea and rain
   const u = t - cs(8);
-  const cam = cam3At(u, [[0, {pos: [2.2, 2.4, 8.6], look: [0, 3.0, -4], fov: 38}], [cs(11) - cs(8), {pos: [1.2, 2.0, 7.2], look: [0, 3.2, -4], fov: 36}]]);
+  const cam = cam3At(u, [[0, {pos: [1.6, 2.2, 8.4], look: [0, 2.4, -4], fov: 40}], [cs(11) - cs(8), {pos: [1.0, 2.0, 7.2], look: [0, 2.6, -4], fov: 38}]]);
   return <Coast t={t} cam={cam} dana={{view: 'front', eyes: 'dot', mouth: 'smile', handR: [90, -300], handL: [-70, -140], faceDy: -10, lookY: -10}} />;
 };
 const S8: React.FC<{t: number}> = ({t}) => {                      // c11: high angle on the loop
   const u = t - cs(11);
-  const cam = cam3At(u, [[0, {pos: [4, 9, 6], look: [0, 3, -5], fov: 42}], [CH[12] - cs(11), {pos: [-2, 10, 5], look: [0, 3, -5], fov: 44}]]);
+  const cam = cam3At(u, [[0, {pos: [3, 7, 7.5], look: [0, 1.6, -1.5], fov: 46}], [CH[12] - cs(11), {pos: [-2, 7.5, 7], look: [0, 1.6, -1.5], fov: 46}]]);
   return <Coast t={t} cam={cam} dana={{view: 'front', eyes: 'wide', mouth: 'grin', handR: [80, -250], handL: [-80, -250], browUp: 0.5}} />;
 };
 
@@ -202,18 +204,18 @@ const Tower: React.FC<{t: number; t0: number}> = ({t, t0}) => (<>{Array.from({le
   return s > 0.01 ? <Box key={i} pos={[0, i * 0.17, 0]} size={[1.3, 0.16, 1.3]} scale={[1, s, 1]} color={i % 2 ? '#3F8FC9' : '#5AA6DD'} map={tex('stripes', [4, 1])} r={0.02} /> : null; })}</>);
 const S11a: React.FC<{t: number}> = ({t}) => {                   // c16: a century of year-blocks
   const u = t - cs(16), t0 = cs(16) + 0.15;
-  const cam = cam3At(u, [[0, {pos: [3.2, 1.2, 8.5], look: [0, 1.5, 0], fov: 38}], [CH[17] - cs(16), {pos: [3.0, 7.5, 13], look: [0, 7.5, 0], fov: 40}]]);
+  const cam = cam3At(u, [[0, {pos: [2.6, 1.4, 9.0], look: [0, 1.7, 0], fov: 38}], [CH[17] - cs(16), {pos: [3.0, 7.5, 13], look: [0, 7.5, 0], fov: 40}]]);
   return (<World cam={cam} light={STREET} sky={STREET_SKY} scene={<><Town t={t} /><FloodSheet lvl={WET} /><group position={[0, 0, -1]}><Tower t={t} t0={t0} /></group></>} front={<FloodFront lvl={WET} />}>
-    {D([-1.6, 0, 1.2], {bounce: breathe(t), view: 'right', handR: [70, -290], handL: [-60, -140], eyes: 'wide', mouth: 'o', browUp: 0.9, faceDy: -8, lookY: -10})}
+    {D([-1.0, 0, 2.2], {bounce: breathe(t), view: 'right', handR: [70, -290], handL: [-60, -140], eyes: 'wide', mouth: 'o', browUp: 0.9, faceDy: -8, lookY: -10})}
   </World>);
 };
 const S11b: React.FC<{t: number}> = ({t}) => {                   // c17-c18: the same water, falling again and again
   const u = t - cs(17), lvl = 0.1 + 2.6 * kfs(t, [[cs(17), 0], [CH[19] - 0.05, 1]]);
-  const cam = cam3At(u, [[0, {pos: [0.4, 2.0, 7.4], look: [0, 1.7, 0], fov: 38}], [CH[19] - cs(17), {pos: [0.2, 2.0, 6.2], look: [0, 1.7, 0], fov: 36}]]);
+  const cam = cam3At(u, [[0, {pos: [0.3, 2.1, 9.0], look: [0, 1.8, 0], fov: 38}], [CH[19] - cs(17), {pos: [0.2, 2.1, 7.8], look: [0, 1.8, 0], fov: 36}]]);
   return (<World cam={cam} light={ROOM} sky={['#A9D8CE', '#CDE7E1']} scene={<><Room />
     <group position={[0, 0.95, -0.8]}><Box size={[2.6, 3.0, 1.3]} color="#CFEFFF" opacity={0.2} rough={0.08} cast={false} r={0.02} /><Box pos={[0, 0.02, 0]} size={[2.5, lvl, 1.2]} color="#3FA7F5" opacity={0.9} rough={0.2} cast={false} r={0} /></group>
-    <Rain t={t} n={900} c={[0, 0.95, -0.8]} w={2.4} d={1.1} top={3.2} h={3.2} cycles={126} color="#9AD7FF" op={0.9} /></>}>
-    {D([-1.9, 0.95, 0.4], {bounce: breathe(t), view: 'right', handR: [66, -230 + 20 * Math.sin(u * 4)], handL: [-60, -140], eyes: 'wide', mouth: 'open', browUp: 0.9, faceDx: 14})}
+    <Rain t={t} n={900} c={[0, 0.95, -0.8]} w={2.4} d={1.1} top={3.2} h={3.2} cycles={126} color="#9AD7FF" op={0.9} wd={0.04} /></>}>
+    {D([-0.5, 0.95, 0.9], {bounce: breathe(t), view: 'right', handR: [66, -230 + 20 * Math.sin(u * 4)], handL: [-60, -140], eyes: 'wide', mouth: 'open', browUp: 0.9, faceDx: 14})}
   </World>);
 };
 const POLE_H = 112;
@@ -233,14 +235,14 @@ const S12: React.FC<{t: number}> = ({t}) => {                    // c19-c21: thr
 };
 const S13: React.FC<{t: number}> = ({t}) => {                    // c22: "Rain isn't a supply" - reaction close-up
   const u = t - cs(22), L = 104;
-  const cam = cam3At(u, [[0, {pos: [0.3, L + 1.6, 3.6], look: [0, L + 1.3, 0], fov: 24}], [CH[23] - cs(22), {pos: [0.1, L + 1.55, 3.2], look: [0, L + 1.3, 0], fov: 23}]]);
+  const cam = cam3At(u, [[0, {pos: [0.3, L + 1.5, 5.4], look: [0, L + 1.25, 0], fov: 27}], [CH[23] - cs(22), {pos: [0.1, L + 1.5, 5.0], look: [0, L + 1.25, 0], fov: 26}]]);
   return (<World cam={cam} light={STREET} sky={['#7FB0DB', '#C9DFEE']} scene={<><FloodSheet lvl={L} /><Cyl pos={[0, L, 0.4]} r={1.0} h={0.3} color="#F28C28" rough={0.5} /></>}>
     {D([0, L + 0.3, 0.4], {bounce: breathe(t), view: 'front', handL: [-110 - 10 * spring(t, K.supply, 3, 4), -210 + 10 * spring(t, K.supply, 3, 4)], handR: [110 + 10 * spring(t, K.supply, 3, 4), -210], eyes: 'closed', mouth: 'smirk', browUp: 0.7, headTilt: 7 * kfs(t, [[K.supply - 0.2, 0], [K.supply + 0.4, 1]]), blink: 0})}
   </World>);
 };
 const S14: React.FC<{t: number}> = ({t}) => {                    // c23-c24: a loop, run by the Sun
   const u = t - cs(23), glow = 1 + 0.8 * bump(t, K.sun - 0.1, K.sun + 0.9);
-  const cam = cam3At(u, [[0, {pos: [5, 4.5, 9], look: [-1, 4.5, -8], fov: 44}], [CH[25] - cs(23), {pos: [-3.5, 3.8, 8.5], look: [-3, 5, -10], fov: 44}]]);
+  const cam = cam3At(u, [[0, {pos: [3.5, 2.6, 9.5], look: [-1, 2.6, -8], fov: 46}], [CH[25] - cs(23), {pos: [-2.5, 2.6, 8.8], look: [-2.5, 3.2, -10], fov: 46}]]);
   return <Coast t={t} cam={cam} sunGlow={glow} dana={{view: 'front', eyes: 'dot', mouth: 'smile', handR: [92, -300], handL: [-70, -140], faceDy: -8, lookY: -8, browUp: 0.3}} />;
 };
 const S15: React.FC<{t: number}> = ({t}) => {                    // c25-c26: back on the street - the last frame equals frame 0
