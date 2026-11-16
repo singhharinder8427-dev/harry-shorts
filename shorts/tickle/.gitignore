@@ -1,3 +1,4 @@
 out/preview*.mp4
 out/chunk_*.mp4
 out/chunks.txt
+thumbnails/*.png
