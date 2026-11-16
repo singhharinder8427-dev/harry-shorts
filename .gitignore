@@ -4,5 +4,5 @@ qa/
 out/preview*.mp4
 *.pyc
 __pycache__/
-out/parts/
-out/chunks_*/
+**/out/parts/
+**/out/chunks_*/
