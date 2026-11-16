@@ -301,8 +301,26 @@ export const Short: React.FC<{voice?: boolean; captions?: boolean; guides?: bool
   </AbsoluteFill>);
 };
 
-// ---------------------------------------------------------------- thumbnails (frames of the video + text)
+// ---------------------------------------------------------------- thumbnails (same flat cast + 3D sets, built for the feed: a BIG mosquito and the furious bitten friend)
+const TH = 0.3;
+const ThumbA: React.FC = () => (
+  <World cam={{pos: [-0.3, 1.45, 3.9], look: [-0.35, 0.95, -1.2], fov: 31}} light={{...LAB, focus: [-0.5, 1, -1], span: 6}} sky={SKY_LAB} scene={<Lab />}>
+    <Cel at={[-0.7, 0, -1.2]}><Mia id="mia" spots={1} tint="#E5484D" tintAmt={1} steam={1} t={0.4} eyes="squeeze" mouth="teeth" brow={1} handL={[-84, -250]} handR={[84, -250]} /></Cel>
+    <Fly at={[-0.2, 0.7, 1.2]} t={TH} color={SK.red} h={1.0} dir={-1} tilt={14} sniff={0.8} />
+  </World>);
+const ThumbB: React.FC = () => (
+  <World cam={{pos: [0.0, 1.7, 5.8], look: [0, 0.85, -1.0], fov: 38}} light={LAB} sky={SKY_LAB} scene={<Lab />}>
+    <Cel at={[-0.7, 0, -1.2]}><Mia id="mia" spots={1} tint="#E5484D" tintAmt={1} steam={1} t={0.4} eyes="squeeze" mouth="teeth" brow={1} handL={[-84, -250]} handR={[84, -250]} /></Cel>
+    <Cel at={[0.75, 0, -1.2]}><Otto id="otto" eyes="closed" mouth="smirk" handL={[-74, -128]} handR={[74, -128]} /></Cel>
+    <Fly at={[0.0, 0.7, 2.7]} t={TH} color={SK.red} h={1.1} dir={1} tilt={-6} sniff={0.8} />
+  </World>);
+const ThumbC: React.FC = () => (
+  <World cam={{pos: [0.0, 1.7, 5.8], look: [0, 0.85, -1.0], fov: 38}} light={LAB} sky={SKY_LAB} scene={<><Lab /><Swarm t={9.2} c={[-0.7, 1.1, -1.0]} R={0.75} n={80} /></>}>
+    <Cel at={[-0.7, 0, -1.2]}><Mia id="mia" spots={1} tint="#E5484D" tintAmt={1} steam={1} t={0.4} eyes="squeeze" mouth="wavy" brow={1} handL={[-84, -250]} handR={[84, -250]} sweat={1} /></Cel>
+    <Cel at={[0.75, 0, -1.2]}><Otto id="otto" eyes="closed" mouth="smirk" handL={[-74, -128]} handR={[74, -128]} /></Cel>
+    <Fly at={[0.1, 0.7, 2.7]} t={TH} color={SK.grey} h={1.1} dir={-1} tilt={6} sniff={0.8} />
+  </World>);
 export const Thumb: React.FC<{variant: 'A' | 'B' | 'C'}> = ({variant}) => {
-  const cfg = {A: {t: 0.2, l1: 'WHY ME?', l2: 'PICKED ON', top: 285}, B: {t: K.ignore + 0.5, l1: 'THEY SKIP', l2: 'YOUR FRIEND', top: 285}, C: {t: K.hundred + 0.9, l1: '100X MORE', l2: 'ATTRACTIVE', top: 285}}[variant];
-  return (<AbsoluteFill><Scenes t={cfg.t} /><ThumbText l1={cfg.l1} l2={cfg.l2} top={cfg.top} /></AbsoluteFill>);
+  const cfg = {A: {l1: 'MOSQUITO', l2: 'MAGNET?', top: 285}, B: {l1: 'WHY ME,', l2: 'NOT YOU?', top: 285}, C: {l1: '100X MORE', l2: 'ATTRACTIVE', top: 285}}[variant];
+  return (<AbsoluteFill>{variant === 'A' ? <ThumbA /> : variant === 'B' ? <ThumbB /> : <ThumbC />}<ThumbText l1={cfg.l1} l2={cfg.l2} top={cfg.top} /></AbsoluteFill>);
 };
