@@ -14,14 +14,16 @@ import {clamp, eio, lerp, smooth} from './math';
 export const W = 1080, H = 1920;
 export type V3 = [number, number, number];
 export type Cam3 = {pos: V3; look: V3; fov: number};          // fov = vertical field of view in degrees
-export type Cam3Key = [number, Cam3];
+/** [time, camera] or [time, camera, ease]: the optional ease shapes the move INTO this key (EASE.slam / dive / whip /
+ *  punch from Moves.tsx for fast accents); keys without one use cam3At's default smooth glide. */
+export type Cam3Key = [number, Cam3] | [number, Cam3, (u: number) => number];
 const l3 = (a: V3, b: V3, u: number): V3 => [lerp(a[0], b[0], u), lerp(a[1], b[1], u), lerp(a[2], b[2], u)];
 /** camera from keys [[time, {pos, look, fov}], ...]; eased glides. Two keys at the same time = a clean cut. */
 export const cam3At = (t: number, ks: Cam3Key[], ease = eio): Cam3 => {
   if (t <= ks[0][0]) return ks[0][1];
   for (let i = ks.length - 1; i >= 0; i--) if (t >= ks[i][0]) {
     const a = ks[i], b = ks[i + 1]; if (!b) return a[1];
-    const u = ease((t - a[0]) / Math.max(1e-6, b[0] - a[0]));
+    const u = (b[2] ?? ease)((t - a[0]) / Math.max(1e-6, b[0] - a[0]));
     return {pos: l3(a[1].pos, b[1].pos, u), look: l3(a[1].look, b[1].look, u), fov: lerp(a[1].fov, b[1].fov, u)};
   }
   return ks[0][1];
