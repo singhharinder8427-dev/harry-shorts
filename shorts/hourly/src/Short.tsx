@@ -12,7 +12,7 @@ import {BLOB, costume, role} from './Roles';
 import {act, EXPR, Pose, walk, POSES, mirrorPose} from './Poses';
 import {Cam3, Cam3Key, Cel, Cuts, Light, V3, World, cam3At, celPoint, toScreen} from './World3D';
 import {EASE, Mood, ShotBlur, Transition} from './Moves';
-import {BigNumber, HookText} from './Cards';
+import {BigNumber} from './Cards';
 import {EquationCard, PriceTag, SourceTag, YearsCard, cardPop} from './Charts';
 import {BARS, Bill, Bulb, Coin, CoinHeap, CoinRain, GroceryBag, JAR, Jar, LIGHT_DAY, LIGHT_GOLD, LIGHT_GREY, LIGHT_YOGA, PAL, Pie, SKY_GOLD, SKY_STAGE, SKY_YOGA,
   StageSet, TREAD, TimeRateBars, Treadmill, VIEWERS, WallClock, YOGA, YogaSet, BarChart, mixLight, mixSky} from './Money';
@@ -296,10 +296,8 @@ const Scenes: React.FC<{t: number}> = ({t}) => {
     [C.loop - 0.2, <Transition t={t} at={C.loop} kind="flash" a={<Finale t={t} />} b={<Hook t={tau} />} dur={0.3} />], [C.loop + 0.16, <Hook t={tau} />],
   ]} />);
 };
-/** screen overlays that must stay sharp (outside any blur): hook text, the equation cards, honesty tag */
+/** screen overlays that must stay sharp (outside any blur): the equation cards, honesty tag. No on-screen hook text (owner, 17 Nov). */
 const Overlays: React.FC<{t: number}> = ({t}) => (<AbsoluteFill><svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{position: 'absolute'}}>
-  {t < 2.6 && <HookText t={t} text="$20 AN HOUR, $1 MILLION TAKES 24 YEARS" tOut={Math.min(2.2, K.million + 0.2)} keys={['$20', '$1', 'MILLION', '24']} />}
-  {t >= C.loop && <HookText t={t - END} text="$20 AN HOUR, $1 MILLION TAKES 24 YEARS" tOut={2.2} keys={['$20', '$1', 'MILLION', '24']} />}
   {t >= C.wrong && t < C.salary && <WrongCard t={t} />}
   {t >= C.other && t < C.noceil && <OtherCard t={t} />}
 </svg>

@@ -208,7 +208,6 @@
    "half"
   ]
  },
- "hook_text": "$20 AN HOUR, $1 MILLION TAKES 24 YEARS",
  "cast": {
   "Blob": "brand character: white round face, short black hair, teal shirt #1FA6A0, thin black line limbs; athlete headband (red) only in the yoga shots",
   "Tax man (boss role)": "navy suit #24324F, red tie, grey short hair, holds a clipboard - takes the tax cut from the jar",
@@ -241,5 +240,5 @@
   "half": "slam to Blob, smug, pointing at the second half of the equation card lighting up",
   "subscribe": "CTA over the golden shot; the light ramps back to the bright frame-0 look and the shot returns to the treadmill frame 0 (loop)"
  },
- "frame0": "Blob mid-sprint on a treadmill under a giant wall clock whose hands race; gold coins plink into the jar one by one; the 24-year gold bar already rising behind; hook text up"
+ "frame0": "Blob mid-sprint on a treadmill under a giant wall clock whose hands race; gold coins plink into the jar one by one; the 24-year gold bar already rising behind"
 }
