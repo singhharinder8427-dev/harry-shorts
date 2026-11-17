@@ -1,5 +1,5 @@
 ---
-name: "harry-animator-v3"
+name: harry-animator-v3
 description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical, 60 fps, the length the user asks for) end to end - topic (theirs, a researched viral topic, or a pasted script to fact-check), five source-checked script variants, then an animation made in code with Remotion in one look - flat 2D cel characters in a shaded 3D world (three.js) - with a bright, already-moving first frame and 6-8 word hook text, a flash-forward hook, an event on every caption phrase, a side-by-side why shot, mood colours, a crown-the-winner finale, one-word captions, code-made sound and music, subscribe ending, seamless loop, re-timed to the user's voice take, rendered in the cloud or on the user's own computer (asked every time), plus thumbnails, captions file and YouTube metadata."
 ---
 
