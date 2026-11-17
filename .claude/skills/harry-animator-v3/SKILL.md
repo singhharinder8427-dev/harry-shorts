@@ -709,7 +709,7 @@ the user exactly these steps (each command in its own code block), with the bran
    **Easiest on Windows (tell non-technical users this first):** no Git, no typing - download the branch as a ZIP
    from GitHub (branch page -> green Code button -> Download ZIP), unzip it, open `shorts/<short>/` and double-click
    `render.bat` (it checks Node.js, then offers 1 = 5 s test in 2K, 2 = 5 s preview, 3 = full 2K, 4 = full preview,
-   and opens the `out` folder when done).
+   and opens the folder the video went to: `D:\HarryShorts\renders\previews` or `...\final` on a PC with a D: drive, else `out/`; `RENDER_DIR` overrides).
 4. Watch it once with sound, then upload the MP4 back (or commit it to `out/` and push) so Claude runs `qa_video.py`
    and the verify list below on it.
 If the session can reach a folder on the user's own computer (`list_computer_folders` shows it online), offer to run

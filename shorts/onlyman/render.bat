@@ -24,7 +24,10 @@ if "%choice%"=="2" node tools\render_local.mjs --preview --frames=0-299
 if "%choice%"=="3" node tools\render_local.mjs
 if "%choice%"=="4" node tools\render_local.mjs --preview
 echo.
-echo Finished. The video is in the "out" folder, which opens now.
+set "RDIR=out"
+if exist out\last_render_dir.txt set /p RDIR=<out\last_render_dir.txt
+echo Finished. The video is in: %RDIR%
+echo (previews go to the "previews" folder, full videos to "final"; on a PC with a D: drive that is D:\HarryShorts\renders)
 echo If you see an error above, take a screenshot and send it to Claude.
-if exist out start "" out
+if exist "%RDIR%" start "" "%RDIR%"
 pause

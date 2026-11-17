@@ -4,12 +4,15 @@
 //   node tools/render_local.mjs              -> out/<short>-2K.mp4  (1440x2560, 60 fps, mastered to -14 LUFS)
 //   node tools/render_local.mjs --preview    -> out/preview.mp4     (half size, quick look)
 //   node tools/render_local.mjs --frames=0-299   (first 5 s only, to time your machine -> out/<short>-2K-test-0-299.mp4)
+// Videos are saved to D:\HarryShorts\renders\previews and ...\final on a Windows PC with a D: drive (else out/);
+// set RENDER_DIR=<folder> to choose another place.
 // Options (env): CONC=<n> parallel frames (default: half your CPU threads), GL=angle|swangle|egl|vulkan
 // (default: angle on Windows/macOS = uses your GPU; swangle on Linux), BROWSER=<path to Chrome> if the download fails.
 // One render with audio, no chunks: the 2 h limit that forced chunks only exists in the cloud.
 import {spawnSync} from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
+import path from 'node:path';
 
 const arg = (k) => process.argv.find((a) => a === `--${k}` || a.startsWith(`--${k}=`));
 const preview = !!arg('preview'), frames = arg('frames')?.split('=')[1];
@@ -37,9 +40,15 @@ fs.mkdirSync('out', {recursive: true});
 
 const threads = os.cpus().length, conc = process.env.CONC ?? String(Math.max(1, Math.floor(threads / 2)));
 const gl = process.env.GL ?? (process.platform === 'linux' ? 'swangle' : 'angle');
-// a partial render (--frames) gets its own name so it never overwrites a finished video
+// Where videos go: RENDER_DIR if set; on Windows with a D: drive, D:\HarryShorts\renders (previews\ and final\);
+// otherwise the short's out/ folder. A partial render (--frames) gets its own name so it never overwrites a finished video.
 const tag = frames ? `-test-${frames}` : '';
-const raw = preview ? `out/preview${tag}.mp4` : `out/${S}-2K${tag}.raw.mp4`, dst = preview ? raw : `out/${S}-2K${tag}.mp4`;
+const root = process.env.RENDER_DIR ?? (win && fs.existsSync('D:\\') ? 'D:\\HarryShorts\\renders' : null);
+const dir = root ? path.join(root, preview ? 'previews' : 'final') : 'out';
+fs.mkdirSync(dir, {recursive: true});
+const raw = preview ? path.join(dir, `${S}-preview${tag}.mp4`) : `out/${S}-2K${tag}.raw.mp4`;
+const dst = preview ? raw : path.join(dir, `${S}-2K${tag}.mp4`);
+fs.writeFileSync('out/last_render_dir.txt', path.resolve(dir));
 const nFrames = Math.round(T.duration * 60);
 console.log(`Rendering ${preview ? 'preview (540x960)' : '2K (1440x2560)'} - ${frames ?? `${nFrames} frames`} - ${threads} CPU threads, concurrency ${conc}, gl ${gl}`);
 const t0 = Date.now();
@@ -67,4 +76,4 @@ try {
   console.log(`\nDONE: ${dst}\n  ${v.width}x${v.height}, ${v.r_frame_rate} fps, ${v.nb_read_packets} frames (expected ${frames ? done : nFrames}), ` +
     `${(+v.duration).toFixed(2)} s, audio ${a ? `${(+a.duration).toFixed(2)} s` : 'MISSING'}`);
 } catch { console.log(`\nDONE: ${dst}`); }
-console.log('Watch it once with sound. Then send the file back to Claude (upload it, or commit it to out/ and push) for the final check.');
+console.log('Watch it once with sound. Then send the file back to Claude (upload it) for the final check.');
