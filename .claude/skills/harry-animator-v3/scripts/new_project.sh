@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-# new_project.sh <project-dir> <short-name> [--example]   (run from anywhere; SKILL = this skill folder)
+# [DETAIL=pc|cloud] new_project.sh <project-dir> <short-name> [--example]   (run from anywhere; SKILL = this skill folder)
 set -euo pipefail
 PY=python3; "$PY" -c 1 2>/dev/null || PY=python   # Windows: python3 is often only a Store alias
 SKILL="$(cd "$(dirname "$0")/.." && pwd)"; P="$1"; NAME="$2"
 mkdir -p "$P"/{tools,voiceover,src,"public/$NAME",qa,out,thumbnails}
 cp -r "$SKILL/templates/remotion/." "$P/"
+# detail level from the render question: DETAIL=pc (This PC - richer scenes) or DETAIL=cloud (default)
+[ "${DETAIL:-cloud}" = "pc" ] && sed -i.bak "s/'cloud' as Detail/'pc' as Detail/" "$P/src/detail.ts" && rm -f "$P/src/detail.ts.bak"
 cp "$SKILL"/scripts/{gen_timing.py,align_take.py,sfxlib.py,gen_sheet.py,make_captions.py,stills.mjs,sheet.py,thumbs.mjs,qa_video.py,retime.sh,master_audio.py,render_chunk.sh,join_chunks.sh,bench.mjs,render_local.mjs} "$P/tools/"
 cp "$SKILL/scripts/render.bat" "$P/render.bat"   # double-click on Windows to render locally
 chmod +x "$P/tools/retime.sh" "$P/tools/render_chunk.sh" "$P/tools/join_chunks.sh"

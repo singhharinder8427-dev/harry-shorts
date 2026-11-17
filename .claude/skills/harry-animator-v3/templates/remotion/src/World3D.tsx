@@ -5,6 +5,7 @@ import {useThree} from '@react-three/fiber';
 import * as THREE from 'three';
 import {RoundedBoxGeometry} from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 import {KScale} from './Layer';
+import {lvl} from './detail';
 import {clamp, eio, lerp, smooth} from './math';
 
 /* v3 world: a REAL stylized 3D environment (three.js: perspective, textures, ambient + directional light, cast and
@@ -122,8 +123,9 @@ export type Light = {
   fog?: [string, number, number];                        // aerial perspective: [colour, near, far]
   focus?: V3; span?: number;                             // shadow-map area: centre and half-width in metres (keep it tight for crisp shadows)
 };
-/** shadow-map size (the depth pass is drawn every frame; 1024 keeps it cheap on software WebGL and still crisp at span 12) */
-export const SHADOW_MAP = 1024;
+/** shadow-map size (the depth pass is drawn every frame; 1024 keeps it cheap on software WebGL and still crisp at span 12;
+ *  2048 on the PC detail level for sharper shadows on a GPU) */
+export const SHADOW_MAP = lvl(1024, 2048);
 const LIGHT: Required<Light> = {sun: [-4, 7, 4], sunColor: '#FFF3DC', sunI: 2.4, sky: '#DCEBFF', bounce: '#B9A894', ambI: 1.25, fog: ['#DDE8F5', 30, 140], focus: [0, 0, 0], span: 14};
 type Sync = {done: number; pending: number | null};
 const Rig: React.FC<{cam: Cam3; light: Required<Light>; shadows: boolean; frame: number; sync: React.MutableRefObject<Sync>}> = ({cam, light, shadows, frame, sync}) => {
