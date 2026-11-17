@@ -31,7 +31,8 @@ const [maj] = process.versions.node.split('.').map(Number);
 if (maj < 18) { console.error(`Node ${process.versions.node} is too old - install Node 18 or newer (nodejs.org).`); process.exit(1); }
 const S = JSON.parse(fs.readFileSync('story.json', 'utf8')).short;
 const T = JSON.parse(fs.readFileSync('src/timing.json', 'utf8'));
-const missing = ['vo.wav', 'sfx.wav'].map((f) => `public/${S}/${f}`).filter((f) => !fs.existsSync(f));
+const hasVo = fs.existsSync(`public/${S}/vo.wav`);   // a preview may run before the voice take exists (picture + sound effects only)
+const missing = [...(preview ? [] : ['vo.wav']), 'sfx.wav', 'bed.wav'].map((f) => `public/${S}/${f}`).filter((f) => !fs.existsSync(f));
 if (missing.length) {
   console.error(`Missing ${missing.join(', ')} - pull the latest version of the branch (git pull), or ask Claude to push the voice / sound files.`);
   process.exit(1);
@@ -58,7 +59,7 @@ const nFrames = Math.round(T.duration * FPS);
 console.log(`Rendering ${preview ? 'preview (540x960)' : 'Full HD (1080x1920, 30 fps, 24 Mbps)'} - ${frames ?? `${nFrames} frames`} - ${threads} CPU threads, concurrency ${conc}, gl ${gl}`);
 // props go through a file: on Windows (shell: true) inline JSON loses its quotes and Remotion rejects it
 const propsFile = path.join('out', 'render_props.json');
-fs.writeFileSync(propsFile, JSON.stringify({voice: true, captions: true}));
+fs.writeFileSync(propsFile, JSON.stringify({voice: hasVo, captions: true}));
 const t0 = Date.now();
 run(npx, ['remotion', 'render', 'src/index.ts', 'Short', raw,
   `--props=${propsFile}`, ...(preview ? ['--scale=0.5', '--crf=20'] : [`--video-bitrate=${BITRATE}`, '--image-format=jpeg', '--jpeg-quality=95']),

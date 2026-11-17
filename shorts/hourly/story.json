@@ -1,0 +1,245 @@
+{
+ "short": "hourly",
+ "title": "$20 an hour to $1 million: why the math never works",
+ "limit": 45,
+ "audience": "United States only: US dollars, US federal tax (IRS 2026 brackets + FICA), BLS inflation, US spelling, American settings",
+ "spoken": {
+  "twenty-four": "twenty four",
+  "twenty-eight": "twenty eight"
+ },
+ "chunks": [
+  "At twenty dollars an hour,",
+  "a million dollars takes you",
+  "twenty-four years of work.",
+  "That's full time,",
+  "saving every cent.",
+  "Pay your taxes:",
+  "twenty-eight years.",
+  "Pay rent and save",
+  "a normal twenty percent:",
+  "a hundred and forty.",
+  "Meanwhile, prices roughly double.",
+  "Feels like a rigged game, right?",
+  "It isn't.",
+  "You're using the wrong equation.",
+  "Salary is time times rate,",
+  "and both have a ceiling.",
+  "The other equation is",
+  "problems solved times people reached,",
+  "and it has no ceiling.",
+  "A yoga teacher at",
+  "a hundred dollars an hour",
+  "still sells hours.",
+  "Film the class once,",
+  "and thousands can buy it.",
+  "The game isn't rigged.",
+  "You were just taught half the rules.",
+  "Subscribe for the other half."
+ ],
+ "syllables": {
+  "twenty-eight": 3,
+  "twentyeight": 3,
+  "people": 2,
+  "rigged": 1,
+  "reached": 1,
+  "solved": 1,
+  "isn't": 2,
+  "every": 2,
+  "double": 2,
+  "times": 1,
+  "that's": 1,
+  "you're": 1
+ },
+ "keys": {
+  "hour": [
+   0,
+   "hour"
+  ],
+  "million": [
+   0,
+   "million"
+  ],
+  "twentyfour": [
+   0,
+   "twentyfour"
+  ],
+  "work": [
+   0,
+   "work"
+  ],
+  "full": [
+   1,
+   "full"
+  ],
+  "cent": [
+   1,
+   "cent"
+  ],
+  "taxes": [
+   2,
+   "taxes"
+  ],
+  "twentyeight": [
+   2,
+   "twentyeight"
+  ],
+  "rent": [
+   3,
+   "rent"
+  ],
+  "save": [
+   3,
+   "save"
+  ],
+  "percent": [
+   3,
+   "percent"
+  ],
+  "hundred": [
+   3,
+   "hundred"
+  ],
+  "forty": [
+   3,
+   "forty"
+  ],
+  "prices": [
+   4,
+   "prices"
+  ],
+  "double": [
+   4,
+   "double"
+  ],
+  "rigged": [
+   5,
+   "rigged"
+  ],
+  "right": [
+   5,
+   "right"
+  ],
+  "isnt": [
+   6,
+   "isn't"
+  ],
+  "wrong": [
+   7,
+   "wrong"
+  ],
+  "equation": [
+   7,
+   "equation"
+  ],
+  "salary": [
+   8,
+   "salary"
+  ],
+  "times": [
+   8,
+   "times"
+  ],
+  "rate": [
+   8,
+   "rate"
+  ],
+  "ceiling": [
+   8,
+   "ceiling"
+  ],
+  "other": [
+   9,
+   "other"
+  ],
+  "problems": [
+   9,
+   "problems"
+  ],
+  "people": [
+   9,
+   "people"
+  ],
+  "noceiling": [
+   9,
+   "no"
+  ],
+  "yoga": [
+   10,
+   "yoga"
+  ],
+  "hundred2": [
+   10,
+   "hundred"
+  ],
+  "sells": [
+   10,
+   "sells"
+  ],
+  "film": [
+   11,
+   "film"
+  ],
+  "once": [
+   11,
+   "once"
+  ],
+  "thousands": [
+   11,
+   "thousands"
+  ],
+  "game": [
+   12,
+   "game"
+  ],
+  "half": [
+   13,
+   "half"
+  ],
+  "rules": [
+   13,
+   "rules"
+  ],
+  "subscribe": [
+   14,
+   "subscribe"
+  ],
+  "otherhalf": [
+   14,
+   "half"
+  ]
+ },
+ "hook_text": "$20 AN HOUR, $1 MILLION TAKES 24 YEARS",
+ "cast": {
+  "Blob": "brand character: white round face, short black hair, teal shirt #1FA6A0, thin black line limbs; athlete headband (red) only in the yoga shots",
+  "Tax man (boss role)": "navy suit #24324F, red tie, grey short hair, holds a clipboard - takes the tax cut from the jar",
+  "Yoga student / crowd (friend role)": "bright casual shirts, varied hair; one student live, then a crowd of small viewers on mats"
+ },
+ "places": {
+  "money stage": "a bright American game-show-like studio: cream tile floor, navy back wall panels with gold trim, a treadmill under a giant wall clock on the left, a huge glass money jar in the middle, a giant 3D bar chart on the right (gold bars), green dollar bills and gold coins with a $ mark",
+  "yoga studio": "warm wood plank floor, sage-green walls, big window with afternoon sun, potted plants, rolled mats; a camera on a tripod; then thousands of tiny viewers on mats stretching away"
+ },
+ "beats": {
+  "million": "push to the huge empty jar - one $20 bill flutters in and lies alone at the bottom",
+  "twentyfour": "the first gold bar shoots up, card 24 YEARS counts up",
+  "full": "the time clock punches a card, the wall-clock hands blur through 40 hours",
+  "cent": "Blob turns his empty pockets out, every coin goes in the jar",
+  "taxes": "the tax man scoops a chunk of coins out of the jar with a clipboard; source card (IRS 2026 brackets + FICA)",
+  "twentyeight": "bar 2 rises above bar 1, card 28 YEARS",
+  "rent": "a 3D pie chart flips in: a big 80% slice (rent, food) slides away, a thin 20% slice stays",
+  "forty": "bar 3 rockets up through the top of the frame, crane up, card 140 YEARS, Blob jaw drop",
+  "double": "a price tag on a grocery bag flips from $5 to $10 while the coin pile in the jar shrinks to half; source card (BLS CPI, about 3% a year)",
+  "rigged": "grey mood; the treadmill speeds up, Blob sweats and slides backward",
+  "isnt": "flash: the treadmill stops dead, colour floods back, Blob blinks",
+  "wrong": "equation card MONEY = HOURS x RATE slams in, a red X stamps on it",
+  "ceiling": "two bars (a clock bar and a dollar bar) rise and bonk into a glass ceiling slab that drops on them",
+  "problems": "equation card MONEY = PROBLEMS SOLVED x PEOPLE REACHED; a lightbulb lights, little people multiply",
+  "noceiling": "the glass ceiling shatters, the bar shoots through, Blob cheers",
+  "yoga": "WHY shot, left: Blob (red headband) teaches one student live; $100/HR card; a clock above him ticks one coin per hour",
+  "film": "camera on a tripod blinks red; whip to the right half",
+  "thousands": "right: a crowd of tiny viewers on mats stretches away along a diagonal, coins rain into a jar that overflows",
+  "game": "finale aerial on a diagonal: near = the treadmill lane with one small jar, far = the studio with an overflowing pile; golden light",
+  "half": "slam to Blob, smug, pointing at the second half of the equation card lighting up",
+  "subscribe": "CTA over the golden shot; the light ramps back to the bright frame-0 look and the shot returns to the treadmill frame 0 (loop)"
+ },
+ "frame0": "Blob mid-sprint on a treadmill under a giant wall clock whose hands race; gold coins plink into the jar one by one; the 24-year gold bar already rising behind; hook text up"
+}

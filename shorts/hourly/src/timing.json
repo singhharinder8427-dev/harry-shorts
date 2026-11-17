@@ -1,0 +1,934 @@
+{
+ "short": "hourly",
+ "title": "$20 an hour to $1 million: why the math never works",
+ "duration": 44.02,
+ "voiceOffset": 0.0,
+ "estimated": true,
+ "words": [
+  {
+   "w": "At",
+   "start": 0.4,
+   "end": 0.613
+  },
+  {
+   "w": "twenty",
+   "start": 0.613,
+   "end": 1.038
+  },
+  {
+   "w": "dollars",
+   "start": 1.038,
+   "end": 1.464
+  },
+  {
+   "w": "an",
+   "start": 1.464,
+   "end": 1.677
+  },
+  {
+   "w": "hour,",
+   "start": 1.677,
+   "end": 1.889
+  },
+  {
+   "w": "a",
+   "start": 2.089,
+   "end": 2.302
+  },
+  {
+   "w": "million",
+   "start": 2.302,
+   "end": 2.728
+  },
+  {
+   "w": "dollars",
+   "start": 2.728,
+   "end": 3.153
+  },
+  {
+   "w": "takes",
+   "start": 3.153,
+   "end": 3.579
+  },
+  {
+   "w": "you",
+   "start": 3.579,
+   "end": 3.791
+  },
+  {
+   "w": "twenty-four",
+   "start": 3.791,
+   "end": 4.43
+  },
+  {
+   "w": "years",
+   "start": 4.43,
+   "end": 4.643
+  },
+  {
+   "w": "of",
+   "start": 4.643,
+   "end": 4.855
+  },
+  {
+   "w": "work.",
+   "start": 4.855,
+   "end": 5.068
+  },
+  {
+   "w": "That's",
+   "start": 5.568,
+   "end": 5.781
+  },
+  {
+   "w": "full",
+   "start": 5.781,
+   "end": 5.994
+  },
+  {
+   "w": "time,",
+   "start": 5.994,
+   "end": 6.206
+  },
+  {
+   "w": "saving",
+   "start": 6.406,
+   "end": 6.832
+  },
+  {
+   "w": "every",
+   "start": 6.832,
+   "end": 7.257
+  },
+  {
+   "w": "cent.",
+   "start": 7.257,
+   "end": 7.47
+  },
+  {
+   "w": "Pay",
+   "start": 7.97,
+   "end": 8.183
+  },
+  {
+   "w": "your",
+   "start": 8.183,
+   "end": 8.396
+  },
+  {
+   "w": "taxes:",
+   "start": 8.396,
+   "end": 8.821
+  },
+  {
+   "w": "twenty-eight",
+   "start": 8.821,
+   "end": 9.46
+  },
+  {
+   "w": "years.",
+   "start": 9.46,
+   "end": 9.672
+  },
+  {
+   "w": "Pay",
+   "start": 10.172,
+   "end": 10.385
+  },
+  {
+   "w": "rent",
+   "start": 10.385,
+   "end": 10.598
+  },
+  {
+   "w": "and",
+   "start": 10.598,
+   "end": 10.811
+  },
+  {
+   "w": "save",
+   "start": 10.811,
+   "end": 11.023
+  },
+  {
+   "w": "a",
+   "start": 11.023,
+   "end": 11.236
+  },
+  {
+   "w": "normal",
+   "start": 11.236,
+   "end": 11.662
+  },
+  {
+   "w": "twenty",
+   "start": 11.662,
+   "end": 12.087
+  },
+  {
+   "w": "percent:",
+   "start": 12.087,
+   "end": 12.513
+  },
+  {
+   "w": "a",
+   "start": 12.513,
+   "end": 12.726
+  },
+  {
+   "w": "hundred",
+   "start": 12.726,
+   "end": 13.151
+  },
+  {
+   "w": "and",
+   "start": 13.151,
+   "end": 13.364
+  },
+  {
+   "w": "forty.",
+   "start": 13.364,
+   "end": 13.789
+  },
+  {
+   "w": "Meanwhile,",
+   "start": 14.289,
+   "end": 14.715
+  },
+  {
+   "w": "prices",
+   "start": 14.915,
+   "end": 15.34
+  },
+  {
+   "w": "roughly",
+   "start": 15.34,
+   "end": 15.766
+  },
+  {
+   "w": "double.",
+   "start": 15.766,
+   "end": 16.191
+  },
+  {
+   "w": "Feels",
+   "start": 16.691,
+   "end": 16.904
+  },
+  {
+   "w": "like",
+   "start": 16.904,
+   "end": 17.117
+  },
+  {
+   "w": "a",
+   "start": 17.117,
+   "end": 17.33
+  },
+  {
+   "w": "rigged",
+   "start": 17.33,
+   "end": 17.543
+  },
+  {
+   "w": "game,",
+   "start": 17.543,
+   "end": 17.755
+  },
+  {
+   "w": "right?",
+   "start": 17.955,
+   "end": 18.168
+  },
+  {
+   "w": "It",
+   "start": 18.668,
+   "end": 18.881
+  },
+  {
+   "w": "isn't.",
+   "start": 18.881,
+   "end": 19.306
+  },
+  {
+   "w": "You're",
+   "start": 19.806,
+   "end": 20.019
+  },
+  {
+   "w": "using",
+   "start": 20.019,
+   "end": 20.445
+  },
+  {
+   "w": "the",
+   "start": 20.445,
+   "end": 20.657
+  },
+  {
+   "w": "wrong",
+   "start": 20.657,
+   "end": 20.87
+  },
+  {
+   "w": "equation.",
+   "start": 20.87,
+   "end": 21.509
+  },
+  {
+   "w": "Salary",
+   "start": 22.009,
+   "end": 22.647
+  },
+  {
+   "w": "is",
+   "start": 22.647,
+   "end": 22.86
+  },
+  {
+   "w": "time",
+   "start": 22.86,
+   "end": 23.072
+  },
+  {
+   "w": "times",
+   "start": 23.072,
+   "end": 23.285
+  },
+  {
+   "w": "rate,",
+   "start": 23.285,
+   "end": 23.498
+  },
+  {
+   "w": "and",
+   "start": 23.698,
+   "end": 23.911
+  },
+  {
+   "w": "both",
+   "start": 23.911,
+   "end": 24.123
+  },
+  {
+   "w": "have",
+   "start": 24.123,
+   "end": 24.336
+  },
+  {
+   "w": "a",
+   "start": 24.336,
+   "end": 24.549
+  },
+  {
+   "w": "ceiling.",
+   "start": 24.549,
+   "end": 24.974
+  },
+  {
+   "w": "The",
+   "start": 25.474,
+   "end": 25.687
+  },
+  {
+   "w": "other",
+   "start": 25.687,
+   "end": 26.113
+  },
+  {
+   "w": "equation",
+   "start": 26.113,
+   "end": 26.751
+  },
+  {
+   "w": "is",
+   "start": 26.751,
+   "end": 26.964
+  },
+  {
+   "w": "problems",
+   "start": 26.964,
+   "end": 27.389
+  },
+  {
+   "w": "solved",
+   "start": 27.389,
+   "end": 27.602
+  },
+  {
+   "w": "times",
+   "start": 27.602,
+   "end": 27.815
+  },
+  {
+   "w": "people",
+   "start": 27.815,
+   "end": 28.24
+  },
+  {
+   "w": "reached,",
+   "start": 28.24,
+   "end": 28.453
+  },
+  {
+   "w": "and",
+   "start": 28.653,
+   "end": 28.866
+  },
+  {
+   "w": "it",
+   "start": 28.866,
+   "end": 29.079
+  },
+  {
+   "w": "has",
+   "start": 29.079,
+   "end": 29.291
+  },
+  {
+   "w": "no",
+   "start": 29.291,
+   "end": 29.504
+  },
+  {
+   "w": "ceiling.",
+   "start": 29.504,
+   "end": 29.93
+  },
+  {
+   "w": "A",
+   "start": 30.43,
+   "end": 30.643
+  },
+  {
+   "w": "yoga",
+   "start": 30.643,
+   "end": 31.068
+  },
+  {
+   "w": "teacher",
+   "start": 31.068,
+   "end": 31.494
+  },
+  {
+   "w": "at",
+   "start": 31.494,
+   "end": 31.706
+  },
+  {
+   "w": "a",
+   "start": 31.706,
+   "end": 31.919
+  },
+  {
+   "w": "hundred",
+   "start": 31.919,
+   "end": 32.345
+  },
+  {
+   "w": "dollars",
+   "start": 32.345,
+   "end": 32.77
+  },
+  {
+   "w": "an",
+   "start": 32.77,
+   "end": 32.983
+  },
+  {
+   "w": "hour",
+   "start": 32.983,
+   "end": 33.196
+  },
+  {
+   "w": "still",
+   "start": 33.196,
+   "end": 33.409
+  },
+  {
+   "w": "sells",
+   "start": 33.409,
+   "end": 33.621
+  },
+  {
+   "w": "hours.",
+   "start": 33.621,
+   "end": 33.834
+  },
+  {
+   "w": "Film",
+   "start": 34.334,
+   "end": 34.547
+  },
+  {
+   "w": "the",
+   "start": 34.547,
+   "end": 34.76
+  },
+  {
+   "w": "class",
+   "start": 34.76,
+   "end": 34.972
+  },
+  {
+   "w": "once,",
+   "start": 34.972,
+   "end": 35.185
+  },
+  {
+   "w": "and",
+   "start": 35.385,
+   "end": 35.598
+  },
+  {
+   "w": "thousands",
+   "start": 35.598,
+   "end": 36.023
+  },
+  {
+   "w": "can",
+   "start": 36.023,
+   "end": 36.236
+  },
+  {
+   "w": "buy",
+   "start": 36.236,
+   "end": 36.449
+  },
+  {
+   "w": "it.",
+   "start": 36.449,
+   "end": 36.662
+  },
+  {
+   "w": "The",
+   "start": 37.162,
+   "end": 37.374
+  },
+  {
+   "w": "game",
+   "start": 37.374,
+   "end": 37.587
+  },
+  {
+   "w": "isn't",
+   "start": 37.587,
+   "end": 38.013
+  },
+  {
+   "w": "rigged.",
+   "start": 38.013,
+   "end": 38.226
+  },
+  {
+   "w": "You",
+   "start": 38.726,
+   "end": 38.938
+  },
+  {
+   "w": "were",
+   "start": 38.938,
+   "end": 39.151
+  },
+  {
+   "w": "just",
+   "start": 39.151,
+   "end": 39.364
+  },
+  {
+   "w": "taught",
+   "start": 39.364,
+   "end": 39.577
+  },
+  {
+   "w": "half",
+   "start": 39.577,
+   "end": 39.789
+  },
+  {
+   "w": "the",
+   "start": 39.789,
+   "end": 40.002
+  },
+  {
+   "w": "rules.",
+   "start": 40.002,
+   "end": 40.428
+  },
+  {
+   "w": "Subscribe",
+   "start": 40.928,
+   "end": 41.353
+  },
+  {
+   "w": "for",
+   "start": 41.353,
+   "end": 41.566
+  },
+  {
+   "w": "the",
+   "start": 41.566,
+   "end": 41.779
+  },
+  {
+   "w": "other",
+   "start": 41.779,
+   "end": 42.204
+  },
+  {
+   "w": "half.",
+   "start": 42.204,
+   "end": 42.417
+  }
+ ],
+ "chunks": [
+  {
+   "text": "At twenty dollars an hour,",
+   "w0": 0,
+   "w1": 4,
+   "start": 0.4,
+   "end": 1.889
+  },
+  {
+   "text": "a million dollars takes you",
+   "w0": 5,
+   "w1": 9,
+   "start": 2.089,
+   "end": 3.791
+  },
+  {
+   "text": "twenty-four years of work.",
+   "w0": 10,
+   "w1": 13,
+   "start": 3.791,
+   "end": 5.068
+  },
+  {
+   "text": "That's full time,",
+   "w0": 14,
+   "w1": 16,
+   "start": 5.568,
+   "end": 6.206
+  },
+  {
+   "text": "saving every cent.",
+   "w0": 17,
+   "w1": 19,
+   "start": 6.406,
+   "end": 7.47
+  },
+  {
+   "text": "Pay your taxes:",
+   "w0": 20,
+   "w1": 22,
+   "start": 7.97,
+   "end": 8.821
+  },
+  {
+   "text": "twenty-eight years.",
+   "w0": 23,
+   "w1": 24,
+   "start": 8.821,
+   "end": 9.672
+  },
+  {
+   "text": "Pay rent and save",
+   "w0": 25,
+   "w1": 28,
+   "start": 10.172,
+   "end": 11.023
+  },
+  {
+   "text": "a normal twenty percent:",
+   "w0": 29,
+   "w1": 32,
+   "start": 11.023,
+   "end": 12.513
+  },
+  {
+   "text": "a hundred and forty.",
+   "w0": 33,
+   "w1": 36,
+   "start": 12.513,
+   "end": 13.789
+  },
+  {
+   "text": "Meanwhile, prices roughly double.",
+   "w0": 37,
+   "w1": 40,
+   "start": 14.289,
+   "end": 16.191
+  },
+  {
+   "text": "Feels like a rigged game, right?",
+   "w0": 41,
+   "w1": 46,
+   "start": 16.691,
+   "end": 18.168
+  },
+  {
+   "text": "It isn't.",
+   "w0": 47,
+   "w1": 48,
+   "start": 18.668,
+   "end": 19.306
+  },
+  {
+   "text": "You're using the wrong equation.",
+   "w0": 49,
+   "w1": 53,
+   "start": 19.806,
+   "end": 21.509
+  },
+  {
+   "text": "Salary is time times rate,",
+   "w0": 54,
+   "w1": 58,
+   "start": 22.009,
+   "end": 23.498
+  },
+  {
+   "text": "and both have a ceiling.",
+   "w0": 59,
+   "w1": 63,
+   "start": 23.698,
+   "end": 24.974
+  },
+  {
+   "text": "The other equation is",
+   "w0": 64,
+   "w1": 67,
+   "start": 25.474,
+   "end": 26.964
+  },
+  {
+   "text": "problems solved times people reached,",
+   "w0": 68,
+   "w1": 72,
+   "start": 26.964,
+   "end": 28.453
+  },
+  {
+   "text": "and it has no ceiling.",
+   "w0": 73,
+   "w1": 77,
+   "start": 28.653,
+   "end": 29.93
+  },
+  {
+   "text": "A yoga teacher at",
+   "w0": 78,
+   "w1": 81,
+   "start": 30.43,
+   "end": 31.706
+  },
+  {
+   "text": "a hundred dollars an hour",
+   "w0": 82,
+   "w1": 86,
+   "start": 31.706,
+   "end": 33.196
+  },
+  {
+   "text": "still sells hours.",
+   "w0": 87,
+   "w1": 89,
+   "start": 33.196,
+   "end": 33.834
+  },
+  {
+   "text": "Film the class once,",
+   "w0": 90,
+   "w1": 93,
+   "start": 34.334,
+   "end": 35.185
+  },
+  {
+   "text": "and thousands can buy it.",
+   "w0": 94,
+   "w1": 98,
+   "start": 35.385,
+   "end": 36.662
+  },
+  {
+   "text": "The game isn't rigged.",
+   "w0": 99,
+   "w1": 102,
+   "start": 37.162,
+   "end": 38.226
+  },
+  {
+   "text": "You were just taught half the rules.",
+   "w0": 103,
+   "w1": 109,
+   "start": 38.726,
+   "end": 40.428
+  },
+  {
+   "text": "Subscribe for the other half.",
+   "w0": 110,
+   "w1": 114,
+   "start": 40.928,
+   "end": 42.417
+  }
+ ],
+ "sentences": [
+  {
+   "start": 0.4,
+   "end": 5.068,
+   "text": "At twenty dollars an hour, a million dollars takes you twenty-four years of work."
+  },
+  {
+   "start": 5.568,
+   "end": 7.47,
+   "text": "That's full time, saving every cent."
+  },
+  {
+   "start": 7.97,
+   "end": 9.672,
+   "text": "Pay your taxes: twenty-eight years."
+  },
+  {
+   "start": 10.172,
+   "end": 13.789,
+   "text": "Pay rent and save a normal twenty percent: a hundred and forty."
+  },
+  {
+   "start": 14.289,
+   "end": 16.191,
+   "text": "Meanwhile, prices roughly double."
+  },
+  {
+   "start": 16.691,
+   "end": 18.168,
+   "text": "Feels like a rigged game, right?"
+  },
+  {
+   "start": 18.668,
+   "end": 19.306,
+   "text": "It isn't."
+  },
+  {
+   "start": 19.806,
+   "end": 21.509,
+   "text": "You're using the wrong equation."
+  },
+  {
+   "start": 22.009,
+   "end": 24.974,
+   "text": "Salary is time times rate, and both have a ceiling."
+  },
+  {
+   "start": 25.474,
+   "end": 29.93,
+   "text": "The other equation is problems solved times people reached, and it has no ceiling."
+  },
+  {
+   "start": 30.43,
+   "end": 33.834,
+   "text": "A yoga teacher at a hundred dollars an hour still sells hours."
+  },
+  {
+   "start": 34.334,
+   "end": 36.662,
+   "text": "Film the class once, and thousands can buy it."
+  },
+  {
+   "start": 37.162,
+   "end": 38.226,
+   "text": "The game isn't rigged."
+  },
+  {
+   "start": 38.726,
+   "end": 40.428,
+   "text": "You were just taught half the rules."
+  },
+  {
+   "start": 40.928,
+   "end": 42.417,
+   "text": "Subscribe for the other half."
+  }
+ ],
+ "keys": {
+  "hour": 1.677,
+  "million": 2.302,
+  "twentyfour": 3.791,
+  "work": 4.855,
+  "full": 5.781,
+  "cent": 7.257,
+  "taxes": 8.396,
+  "twentyeight": 8.821,
+  "rent": 10.385,
+  "save": 10.811,
+  "percent": 12.087,
+  "hundred": 12.726,
+  "forty": 13.364,
+  "prices": 14.915,
+  "double": 15.766,
+  "rigged": 17.33,
+  "right": 17.955,
+  "isnt": 18.881,
+  "wrong": 20.657,
+  "equation": 20.87,
+  "salary": 22.009,
+  "times": 23.072,
+  "rate": 23.285,
+  "ceiling": 24.549,
+  "other": 25.687,
+  "problems": 26.964,
+  "people": 27.815,
+  "noceiling": 29.291,
+  "yoga": 30.643,
+  "hundred2": 31.919,
+  "sells": 33.409,
+  "film": 34.334,
+  "once": 34.972,
+  "thousands": 35.598,
+  "game": 37.374,
+  "half": 39.577,
+  "rules": 40.002,
+  "subscribe": 40.928,
+  "otherhalf": 42.204
+ },
+ "keyEnd": {
+  "hour": 1.889,
+  "million": 2.728,
+  "twentyfour": 4.43,
+  "work": 5.068,
+  "full": 5.994,
+  "cent": 7.47,
+  "taxes": 8.821,
+  "twentyeight": 9.46,
+  "rent": 10.598,
+  "save": 11.023,
+  "percent": 12.513,
+  "hundred": 13.151,
+  "forty": 13.789,
+  "prices": 15.34,
+  "double": 16.191,
+  "rigged": 17.543,
+  "right": 18.168,
+  "isnt": 19.306,
+  "wrong": 20.87,
+  "equation": 21.509,
+  "salary": 22.647,
+  "times": 23.285,
+  "rate": 23.498,
+  "ceiling": 24.974,
+  "other": 26.113,
+  "problems": 27.389,
+  "people": 28.24,
+  "noceiling": 29.504,
+  "yoga": 31.068,
+  "hundred2": 32.345,
+  "sells": 33.621,
+  "film": 34.547,
+  "once": 35.185,
+  "thousands": 36.023,
+  "game": 37.587,
+  "half": 39.789,
+  "rules": 40.428,
+  "subscribe": 41.353,
+  "otherhalf": 42.417
+ }
+}
