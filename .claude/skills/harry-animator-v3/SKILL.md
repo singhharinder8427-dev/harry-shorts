@@ -217,7 +217,7 @@ the subscribe line must not exceed it. Words to write = about 2.7 x the seconds 
 and 1.6 s tail): 30 s = ~75 words, 45 s = ~115, 55 s = ~145. Every "45 s" in this file means `LIMIT`.
 
 **Then ask where to render, every time** (a third question, never assumed; owner's rule 17 Nov 2026 - cloud renders
-take too long) - unless this session already runs on the owner's PC (see "Running on the owner's own PC" below): "Where should the video be rendered?"
+take too long) - ALSO when this session runs on the owner's PC (owner's rule: always ask, never decide for them): "Where should the video be rendered?"
 1. **My computer (local)** - "Render on my own hardware." Claude does everything up to the render in the cloud
    (script, animation, contact-sheet stills, re-timing, sound, thumbnails, metadata), pushes the project, and the user
    runs ONE command on their computer (section 11, "Local render"). Much faster: the owner's PC measured 0.14 s per 2K frame (0.04 s preview) vs ~1-3 s in the cloud.
@@ -229,10 +229,16 @@ possible. The user can switch later ("render it in the cloud after all") - then 
 **Running on the owner's own PC** (Claude Code started on their computer, e.g. in `D:\HarryShorts\harry-shorts` from
 Git Bash - check: the platform is Windows / macOS, or the working directory is on a drive like `D:`, not a cloud
 container under `/home/user`): this is the short route the owner prefers. Then:
-- Do NOT ask the render question: `RENDER_AT` = local, and you render yourself with `node tools/render_local.mjs`
-  (previews with `--preview`); no git push / pull hand-off, no "send the file back" - run `qa_video.py` on the result
-  yourself. Videos land in `D:\HarryShorts\renders\previews` and `...\final` (the script does this on a PC with a
-  D: drive). Commit and push the finished project as usual so the cloud copy stays in sync.
+- STILL ask the render question every time (options: "This PC" / "Cloud").
+  - **This PC**: render yourself with `node tools/render_local.mjs` (previews with `--preview`); no git push / pull
+    hand-off, no "send the file back" - run `qa_video.py` on the result yourself. Videos land in
+    `D:\HarryShorts\renders\previews` and `...\final` (the script does this on a PC with a D: drive).
+  - **Cloud**: do everything up to the render here (`RENDER=0` re-time, stills), commit the whole short folder
+    (incl. `public/<short>/vo.wav`, `sfx.wav`, `bed.wav`) and push the branch, then give the owner a ready-to-paste
+    message for a new cloud session at claude.ai/code on this repo and branch: "Render shorts/<short> in 2K with the
+    chunked cloud route of harry-animator-v3 section 11 (render_chunk.sh + join_chunks.sh), run qa_video.py, commit
+    out/<short>-2K.mp4 and push." Previews in that case also render in the cloud session.
+  - Either way, commit and push the finished project so the GitHub copy stays in sync.
 - Create each new Short in `shorts/<short>/` of this repo (`bash .claude/skills/harry-animator-v3/scripts/new_project.sh
   shorts/<short> <short>`); it also gets `render.bat` for a double-click re-render.
 - **First run on a PC - check the tools once** and install what is missing (ask before installing): Node 18+
