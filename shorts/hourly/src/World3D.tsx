@@ -1,4 +1,5 @@
 import React, {createContext, useContext, useLayoutEffect, useMemo, useRef} from 'react';
+import {FPS} from './fps';
 import {AbsoluteFill, continueRender, delayRender, useCurrentFrame} from 'remotion';
 import {ThreeCanvas} from '@remotion/three';
 import {useThree} from '@react-three/fiber';
@@ -132,7 +133,7 @@ const Rig: React.FC<{cam: Cam3; light: Required<Light>; shadows: boolean; frame:
   const camera = useThree((s) => s.camera) as THREE.PerspectiveCamera; const advance = useThree((s) => s.advance);
   // exactly ONE synchronous 3D draw per video frame, after this frame's scene is committed; then release the frame.
   // (A free-running render loop fights the frame capture: ~10x slower on software WebGL, and not deterministic.)
-  useLayoutEffect(() => { advance(frame / 60); sync.current.done = frame; if (sync.current.pending !== null) { continueRender(sync.current.pending); sync.current.pending = null; } });
+  useLayoutEffect(() => { advance(frame / FPS); sync.current.done = frame; if (sync.current.pending !== null) { continueRender(sync.current.pending); sync.current.pending = null; } });
   camera.fov = cam.fov; camera.aspect = W / H; camera.near = 0.1; camera.far = 400;
   camera.position.set(...cam.pos); camera.lookAt(...cam.look); camera.updateProjectionMatrix(); camera.updateMatrixWorld();
   const sun = useMemo(() => new THREE.DirectionalLight(), []);

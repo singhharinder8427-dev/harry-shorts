@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # tools/retime.sh path/to/take.mp3
-# aligns the take to the script, re-times every beat, rebuilds sfx / timing sheet / captions, renders the 2K Short.
+# aligns the take to the script, re-times every beat, rebuilds sfx / timing sheet / captions, renders the Full HD Short.
 # For videos over ~1500 frames in a cloud job, use RENDER=0 and then tools/render_chunk.sh + tools/join_chunks.sh.
 # (cp of the take onto itself fails: pass a path outside voiceover/take/.)
 set -euo pipefail
@@ -17,7 +17,7 @@ ext="${TAKE##*.}"; cp "$TAKE" "voiceover/take/take.$ext"
 ffmpeg -loglevel error -y -i "voiceover/take/take.$ext" -af loudnorm=I=-16:TP=-1.5:LRA=7 -ar 48000 -ac 1 "public/$SHORT/vo.wav"
 "$PY" tools/gen_sfx.py && "$PY" tools/gen_sheet.py && "$PY" tools/make_captions.py
 if [ "${RENDER:-1}" = "1" ]; then
-  npx remotion render src/index.ts Short2K "out/$SHORT-2K.mp4" --props='{"voice":true,"captions":true}' \
-    --image-format=jpeg --jpeg-quality=95 --crf=17 --pixel-format=yuv420p --concurrency="${CONC:-2}"
-  mv "out/$SHORT-2K.mp4" "out/$SHORT-2K.raw.mp4" && "$PY" tools/master_audio.py "out/$SHORT-2K.raw.mp4" "out/$SHORT-2K.mp4" && rm "out/$SHORT-2K.raw.mp4"
+  npx remotion render src/index.ts Short "out/$SHORT-1080p.mp4" --props='{"voice":true,"captions":true}' \
+    --image-format=jpeg --jpeg-quality=95 --video-bitrate=24M --pixel-format=yuv420p --concurrency="${CONC:-2}"
+  mv "out/$SHORT-1080p.mp4" "out/$SHORT-1080p.raw.mp4" && "$PY" tools/master_audio.py "out/$SHORT-1080p.raw.mp4" "out/$SHORT-1080p.mp4" && rm "out/$SHORT-1080p.raw.mp4"
 fi

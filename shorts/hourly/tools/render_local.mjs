@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // tools/render_local.mjs : render the Short on YOUR computer (Windows / macOS / Linux) instead of the cloud.
 // Needs only Node 18+ (ffmpeg comes with Remotion). Run from the short's folder (the one with story.json):
-//   node tools/render_local.mjs              -> out/<short>-2K.mp4  (1440x2560, 60 fps, mastered to -14 LUFS)
+//   node tools/render_local.mjs              -> out/<short>-1080p.mp4  (1080x1920, 30 fps, 24 Mbps, mastered to -14 LUFS)
 //   node tools/render_local.mjs --preview    -> out/preview.mp4     (half size, quick look)
-//   node tools/render_local.mjs --frames=0-299   (first 5 s only, to time your machine -> out/<short>-2K-test-0-299.mp4)
+//   node tools/render_local.mjs --frames=0-149   (first 5 s only, to time your machine -> out/<short>-1080p-test-0-149.mp4)
 // Videos are saved to D:\HarryShorts\renders\previews and ...\final on a Windows PC with a D: drive (else out/);
 // set RENDER_DIR=<folder> to choose another place.
 // Options (env): CONC=<n> parallel frames (default: 2 for 2K - more can run out of WebGL contexts; half your CPU
@@ -50,17 +50,18 @@ const tag = frames ? `-test-${frames}` : '';
 const root = process.env.RENDER_DIR ?? (win && fs.existsSync('D:\\') ? 'D:\\HarryShorts\\renders' : null);
 const dir = root ? path.join(root, preview ? 'previews' : 'final') : 'out';
 fs.mkdirSync(dir, {recursive: true});
-const raw = preview ? path.join(dir, `${S}-preview${tag}.mp4`) : `out/${S}-2K${tag}.raw.mp4`;
-const dst = preview ? raw : path.join(dir, `${S}-2K${tag}.mp4`);
+const raw = preview ? path.join(dir, `${S}-preview${tag}.mp4`) : `out/${S}-1080p${tag}.raw.mp4`;
+const dst = preview ? raw : path.join(dir, `${S}-1080p${tag}.mp4`);
 fs.writeFileSync('out/last_render_dir.txt', path.resolve(dir));
-const nFrames = Math.round(T.duration * 60);
-console.log(`Rendering ${preview ? 'preview (540x960)' : '2K (1440x2560)'} - ${frames ?? `${nFrames} frames`} - ${threads} CPU threads, concurrency ${conc}, gl ${gl}`);
+const FPS = 30, BITRATE = '24M';   // = src/fps.ts
+const nFrames = Math.round(T.duration * FPS);
+console.log(`Rendering ${preview ? 'preview (540x960)' : 'Full HD (1080x1920, 30 fps, 24 Mbps)'} - ${frames ?? `${nFrames} frames`} - ${threads} CPU threads, concurrency ${conc}, gl ${gl}`);
 // props go through a file: on Windows (shell: true) inline JSON loses its quotes and Remotion rejects it
 const propsFile = path.join('out', 'render_props.json');
 fs.writeFileSync(propsFile, JSON.stringify({voice: true, captions: true}));
 const t0 = Date.now();
-run(npx, ['remotion', 'render', 'src/index.ts', preview ? 'Short' : 'Short2K', raw,
-  `--props=${propsFile}`, ...(preview ? ['--scale=0.5', '--crf=20'] : ['--crf=17', '--image-format=jpeg', '--jpeg-quality=95']),
+run(npx, ['remotion', 'render', 'src/index.ts', 'Short', raw,
+  `--props=${propsFile}`, ...(preview ? ['--scale=0.5', '--crf=20'] : [`--video-bitrate=${BITRATE}`, '--image-format=jpeg', '--jpeg-quality=95']),
   '--pixel-format=yuv420p', `--concurrency=${conc}`, `--gl=${gl}`, ...(frames ? [`--frames=${frames}`] : []),
   ...(process.env.BROWSER ? [`--browser-executable=${process.env.BROWSER}`] : [])]);
 const secs = (Date.now() - t0) / 1000, done = frames ? frames.split('-').reduce((a, b) => +b - +a + 1) : nFrames;
