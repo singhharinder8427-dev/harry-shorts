@@ -6,7 +6,8 @@
 //   node tools/render_local.mjs --frames=0-299   (first 5 s only, to time your machine -> out/<short>-2K-test-0-299.mp4)
 // Videos are saved to D:\HarryShorts\renders\previews and ...\final on a Windows PC with a D: drive (else out/);
 // set RENDER_DIR=<folder> to choose another place.
-// Options (env): CONC=<n> parallel frames (default: half your CPU threads), GL=angle|swangle|egl|vulkan
+// Options (env): CONC=<n> parallel frames (default: 2 for 2K - more can run out of WebGL contexts; half your CPU
+// threads for --preview), GL=angle|swangle|egl|vulkan
 // (default: angle on Windows/macOS = uses your GPU; swangle on Linux), BROWSER=<path to Chrome> if the download fails.
 // One render with audio, no chunks: the 2 h limit that forced chunks only exists in the cloud.
 import {spawnSync} from 'node:child_process';
@@ -38,7 +39,10 @@ if (missing.length) {
 if (!fs.existsSync('node_modules')) { console.log('Installing (first run only)...'); run(npm, ['install', '--no-audit', '--no-fund', '--loglevel=error']); }
 fs.mkdirSync('out', {recursive: true});
 
-const threads = os.cpus().length, conc = process.env.CONC ?? String(Math.max(1, Math.floor(threads / 2)));
+// 2K: default 2 parallel frames - at 6 a Windows PC ran out of WebGL contexts ("Error creating WebGL context" at frame
+// 265, 17 Nov test); 2 rendered at 0.14 s/frame. Preview (half size) is fine at half the CPU threads.
+const threads = os.cpus().length;
+const conc = process.env.CONC ?? (preview ? String(Math.max(1, Math.floor(threads / 2))) : '2');
 const gl = process.env.GL ?? (process.platform === 'linux' ? 'swangle' : 'angle');
 // Where videos go: RENDER_DIR if set; on Windows with a D: drive, D:\HarryShorts\renders (previews\ and final\);
 // otherwise the short's out/ folder. A partial render (--frames) gets its own name so it never overwrites a finished video.
@@ -51,9 +55,12 @@ const dst = preview ? raw : path.join(dir, `${S}-2K${tag}.mp4`);
 fs.writeFileSync('out/last_render_dir.txt', path.resolve(dir));
 const nFrames = Math.round(T.duration * 60);
 console.log(`Rendering ${preview ? 'preview (540x960)' : '2K (1440x2560)'} - ${frames ?? `${nFrames} frames`} - ${threads} CPU threads, concurrency ${conc}, gl ${gl}`);
+// props go through a file: on Windows (shell: true) inline JSON loses its quotes and Remotion rejects it
+const propsFile = path.join('out', 'render_props.json');
+fs.writeFileSync(propsFile, JSON.stringify({voice: true, captions: true}));
 const t0 = Date.now();
 run(npx, ['remotion', 'render', 'src/index.ts', preview ? 'Short' : 'Short2K', raw,
-  `--props=${JSON.stringify({voice: true, captions: true})}`, ...(preview ? ['--scale=0.5', '--crf=20'] : ['--crf=17', '--image-format=jpeg', '--jpeg-quality=95']),
+  `--props=${propsFile}`, ...(preview ? ['--scale=0.5', '--crf=20'] : ['--crf=17', '--image-format=jpeg', '--jpeg-quality=95']),
   '--pixel-format=yuv420p', `--concurrency=${conc}`, `--gl=${gl}`, ...(frames ? [`--frames=${frames}`] : []),
   ...(process.env.BROWSER ? [`--browser-executable=${process.env.BROWSER}`] : [])]);
 const secs = (Date.now() - t0) / 1000, done = frames ? frames.split('-').reduce((a, b) => +b - +a + 1) : nFrames;

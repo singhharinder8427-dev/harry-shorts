@@ -220,7 +220,7 @@ and 1.6 s tail): 30 s = ~75 words, 45 s = ~115, 55 s = ~145. Every "45 s" in thi
 take too long): "Where should the video be rendered?"
 1. **My computer (local)** - "Render on my own hardware." Claude does everything up to the render in the cloud
    (script, animation, contact-sheet stills, re-timing, sound, thumbnails, metadata), pushes the project, and the user
-   runs ONE command on their computer (section 11, "Local render"). Usually much faster (their GPU and all CPU cores).
+   runs ONE command on their computer (section 11, "Local render"). Much faster: the owner's PC measured 0.14 s per 2K frame (0.04 s preview) vs ~1-3 s in the cloud.
 2. **Cloud** - "Render here in the cloud." Claude renders everything (slow: ~1-3 s per 2K frame, a 50 s Short takes
    1.5-3 hours, in chunks).
 Remember the answer as `RENDER_AT` for the whole job. Ask all three questions in one AskUserQuestion call when
@@ -703,7 +703,8 @@ the user exactly these steps (each command in its own code block), with the bran
    Chrome download Remotion needs). Output: `out/<short>-2K.mp4`, 1440x2560, 60 fps, audio mastered to -14 LUFS; it
    prints seconds per frame and the frame count check.
    Options: `--preview` (half size, fast), `--frames=0-299` (time a short part first), env `CONC=<n>` (parallel frames,
-   default half the CPU threads; lower it if the computer runs out of memory or a 3D canvas times out), `GL=angle`
+   default 2 for 2K and half the CPU threads for previews; at 6 the owner's Windows PC failed with "Error creating
+   WebGL context" - lower it on that error, a memory error or a 3D canvas timeout), `GL=angle`
    (GPU, the default on Windows / macOS) or `GL=swangle` (CPU fallback if the picture is black or the GPU fails).
    On Windows PowerShell, set env as `$env:CONC=4; node tools/render_local.mjs`.
    **Easiest on Windows (tell non-technical users this first):** no Git, no typing - download the branch as a ZIP
