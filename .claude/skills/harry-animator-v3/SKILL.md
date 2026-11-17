@@ -155,6 +155,37 @@ in the first half second; a still, dark or busy first frame gets swiped. Rules (
   0.2 s) and saves `qa/frame0_phone.png` at phone-feed size; look at it next to the thumbnails. Fix until all three
   read OK and the strange thing + hook text are readable at 216x384.
 
+**Owner's amendment (17 Nov 2026) - PC DETAIL LEVEL. Applies only when the render question was answered "This PC"
+(`RENDER_AT` = local); with "Cloud" everything stays at the standard level. The owner's PC renders 6-20x faster than
+the cloud, so spend that speed on a richer picture, not only on a shorter wait. Rules:**
+1. **Set the level in code.** Create the project with `DETAIL=pc bash .../new_project.sh shorts/<short> <short>`
+   (writes `'pc'` into `src/detail.ts`; default `'cloud'`). Scenes branch with `lvl(cloudValue, pcValue)` or
+   `DETAIL === 'pc'`, so ONE `Short.tsx` serves both levels and a later switch to the cloud only flips that line.
+   `World3D.tsx` already reads it: 2048 shadow maps on PC (sharper, softer-edged shadows), 1024 in the cloud.
+2. **Plan the shots richer** (write it into the phrase table, section 3.4):
+   - fuller places: about 2x the set dressing - more buildings, trees, props, scattered small things (60-150
+     instanced pieces instead of 30-80), a second texture layer on more surfaces;
+   - living backgrounds: birds, cars, people walking past, smoke from chimneys, leaves drifting - always whole cycles
+     so the loop still closes;
+   - bigger moments in the hook, the payoff and the finale: more flying coins / eggs / sparks / splashes (instanced),
+     a crowd that fills the frame;
+   - more characters acting in the same shot (still one focal action at a time).
+3. **Build the world with the effects the cloud rules limit** (they stay limited at the cloud level):
+   - glow on lamps, fire, lava, sunsets (`glow` / emissive meshes plus a soft screen-space halo);
+   - a soft blur on the far background in close-ups (a separate far `World` is allowed on PC);
+   - denser particles: rain, dust, smoke, snow (`InstancedMesh`, 2-3x the cloud count);
+   - a second `World` in one shot where the story needs it (the side-by-side "why" shot, a split screen);
+   - motion blur on fast moves may be stronger, but `MotionBlur`'s threshold stays (normal glides stay sharp).
+4. **Time it before the full render.** Render 5 s of the BUSIEST scene on the PC (`node tools/render_local.mjs
+   --frames=<first>-<first+299>`) and read the seconds per frame. Budget: about **0.5 s per 2K frame** (a 50 s Short
+   in about 25 min). Over budget: cut the heaviest additions in that scene first (biggest instance counts, the second
+   `World`, far blur), test again, then render everything. Report the measured time per frame to the owner.
+5. **The look does not change.** Characters stay flat cels (no shading, same Blob); all extra detail goes into the
+   world, the effects and the background motion. The first-frame rules still win: frame 0 stays bright with one big
+   subject on a simple background - the busier detail starts after the opening shot.
+6. **Switching to the cloud later**: set `src/detail.ts` back to `'cloud'` before a cloud render, so it is not many
+   hours; say so to the owner.
+
 **Restate the look concretely for every shot.** In `story.json` every shot gets a `look` line written out in full -
 who is in it (name, clothes colours, hair), the place, its materials and palette, the light direction, the camera move.
 Never write "same style as before". **Never drift into**: rounded 3D characters, anime faces, photoreal people,
@@ -221,8 +252,9 @@ take too long) - ALSO when this session runs on the owner's PC (owner's rule: al
 1. **My computer (local)** - "Render on my own hardware." Claude does everything up to the render in the cloud
    (script, animation, contact-sheet stills, re-timing, sound, thumbnails, metadata), pushes the project, and the user
    runs ONE command on their computer (section 11, "Local render"). Much faster: the owner's PC measured 0.14 s per 2K frame (0.04 s preview) vs ~1-3 s in the cloud.
+   **This choice also sets the PC detail level** (richer scenes - "PC DETAIL LEVEL" amendment near the top of this file).
 2. **Cloud** - "Render here in the cloud." Claude renders everything (slow: ~1-3 s per 2K frame, a 50 s Short takes
-   1.5-3 hours, in chunks).
+   1.5-3 hours, in chunks). Standard detail level.
 Remember the answer as `RENDER_AT` for the whole job. Ask all three questions in one AskUserQuestion call when
 possible. The user can switch later ("render it in the cloud after all") - then follow the other route.
 
@@ -239,8 +271,8 @@ container under `/home/user`): this is the short route the owner prefers. Then:
     chunked cloud route of harry-animator-v3 section 11 (render_chunk.sh + join_chunks.sh), run qa_video.py, commit
     out/<short>-2K.mp4 and push." Previews in that case also render in the cloud session.
   - Either way, commit and push the finished project so the GitHub copy stays in sync.
-- Create each new Short in `shorts/<short>/` of this repo (`bash .claude/skills/harry-animator-v3/scripts/new_project.sh
-  shorts/<short> <short>`); it also gets `render.bat` for a double-click re-render.
+- Create each new Short in `shorts/<short>/` of this repo (`DETAIL=pc bash .claude/skills/harry-animator-v3/scripts/new_project.sh
+  shorts/<short> <short>` when the answer was "This PC", without `DETAIL=pc` for "Cloud"); it also gets `render.bat` for a double-click re-render.
 - **First run on a PC - check the tools once** and install what is missing (ask before installing): Node 18+
   (`node -v`), Python 3 (`python --version`; on Windows `python3` is often only a Store alias - use `python`, or
   `py -3`, wherever this file says `python3`), ffmpeg on PATH (`ffmpeg -version`; Windows: `winget install
@@ -830,6 +862,8 @@ Append the topic to `topics_log.md`.
 - Visual storytelling (16 Nov): flash-forward hook on frame 0; an EVENT on every phrase; one side-by-side "why" shot;
   big emotional props; mood colour (grey / colour returns / sepia / golden finale); a travelling camera; the finale
   splits the world and crowns the winner, then loops to frame 0.
+- PC detail level (17 Nov): "This PC" = `DETAIL=pc` - richer sets, effects and background life within ~0.5 s per 2K
+  frame (5 s test of the busiest scene first); "Cloud" = the standard level; characters stay flat either way.
 - The length is whatever the user answered in section 0, and the render happens where they answered (`RENDER_AT`).
 - Real facts only in the voice; cartoon exaggeration only in what characters do.
 - Every shot's `look` line in `story.json` restates the style in concrete words.
