@@ -230,6 +230,9 @@ researched, and never write facts from memory as if checked.
 - Cartoon exaggeration is fine in what the characters *do*; the voice states only real facts.
 
 ### 1.2 Writing (all routes)
+- **Structure: read `references/script-formula.md` before writing.** It gives the beat skeleton (hook, setting,
+  escalation, mystery, pivot + analogy, payoff / callback ending, subscribe line) and how many words each beat gets
+  at the length the user chose (30 / 45 / 55 / 60 / 90 s, and a rule for any other length).
 - Length: **the finished Short is at most `LIMIT`** (the length the user chose in section 0) including the subscribe
   line (~8-10 words, 2-3 s); word budget as given there.
 - Start immediately with a specific question or a surprising statement. No greeting, no intro, no "In this video".
@@ -261,8 +264,9 @@ same 5 angles. The five angles (one script each):
 5. **Stakes / scale**: leads with the most striking number, size comparison or "what could go wrong", keeps raising
    the stakes, pays off with the reason.
 Every variant follows 1.2 (`LIMIT` max incl. its own subscribe line, the word budget from section 0, no hype words, no "!", verified facts
-only - the same fact sheet for all five, no new claims) and has a different first line. Show for each: the angle,
-its hook line, the full script, word count + estimated length, and one line on how it would look (cast, shots, the
+only - the same fact sheet for all five, no new claims) and has a different first line. Every variant uses the beat
+skeleton and word budget of `references/script-formula.md` (section 5 there maps each angle to its hook pattern).
+Show for each: the angle, its hook line, the full script with beat labels and words per beat, word count + estimated length, and one line on how it would look (cast, shots, the
 payoff visual). Then a short comparison (score 1-5 on hook, clarity, emotion, visual potential, fit for a silent acting cast)
 and **your recommendation with the reason**. Ask the user to choose: they reply with a number, a mix ("hook of 4 with
 the body of 2"), or changes; if AskUserQuestion is available use it with your top pick first marked "(Recommended)"
