@@ -43,7 +43,8 @@ fs.mkdirSync('out', {recursive: true});
 // 2K: default 2 parallel frames - at 6 a Windows PC ran out of WebGL contexts ("Error creating WebGL context" at frame
 // 265, 17 Nov test); 2 rendered at 0.14 s/frame. Preview (half size) is fine at half the CPU threads.
 const threads = os.cpus().length;
-const conc = process.env.CONC ?? (preview ? String(Math.max(1, Math.floor(threads / 2))) : '2');
+// previews: at most 3 parallel frames - 6 ran out of graphics memory on the owner's Windows PC (17 Nov, 'Chrome ran out of memory')
+const conc = process.env.CONC ?? (preview ? String(Math.min(3, Math.max(1, Math.floor(threads / 2)))) : '2');
 const gl = process.env.GL ?? (process.platform === 'linux' ? 'swangle' : 'angle');
 // Where videos go: RENDER_DIR if set; on Windows with a D: drive, D:\HarryShorts\renders (previews\ and final\);
 // otherwise the short's out/ folder. A partial render (--frames) gets its own name so it never overwrites a finished video.

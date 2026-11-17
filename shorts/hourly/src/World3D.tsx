@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useLayoutEffect, useMemo, useRef} from 'react';
+import React, {createContext, useContext, useEffect, useLayoutEffect, useMemo, useRef} from 'react';
 import {FPS} from './fps';
 import {AbsoluteFill, continueRender, delayRender, useCurrentFrame} from 'remotion';
 import {ThreeCanvas} from '@remotion/three';
@@ -87,6 +87,7 @@ type Place = {pos?: V3; rot?: V3; scale?: number | V3};
 /** box standing ON pos (pos = centre of its bottom face). r = edge rounding in metres (soft, modelled look). */
 export const Box: React.FC<Place & Mat & {size: V3; r?: number}> = ({pos = [0, 0, 0], rot = [0, 0, 0], scale = 1, size, r = 0.03, cast = true, receive = true, ...m}) => {
   const geo = useMemo(() => { const rr = Math.min(r, Math.min(...size) / 2 - 1e-3); return rr > 0.004 ? new RoundedBoxGeometry(size[0], size[1], size[2], 3, rr) : new THREE.BoxGeometry(...size); }, [size[0], size[1], size[2], r]);
+  useEffect(() => () => geo.dispose(), [geo]);   // free the GPU copy when the size changes (animated bars) - else memory fills up
   return <group position={pos} rotation={rot} scale={scale}><mesh geometry={geo} position={[0, size[1] / 2, 0]} castShadow={cast} receiveShadow={receive}><M {...m} /></mesh></group>;
 };
 /** cylinder / cone / tapered post standing on pos. rTop = 0 makes a cone. */
@@ -106,6 +107,7 @@ export const Instances: React.FC<{geo: () => THREE.BufferGeometry; items: Inst[]
   const n = Math.max(1, items.length);
   const mesh = useMemo(() => { const m = new THREE.InstancedMesh(geo(), new THREE.MeshStandardMaterial({color: '#FFFFFF', map: map ?? null, roughness: rough, metalness: metal, emissive: new THREE.Color(emissive), emissiveIntensity: glow}), n);
     m.frustumCulled = false; return m; }, [n, k]);
+  useEffect(() => () => { mesh.geometry.dispose(); (mesh.material as THREE.Material).dispose(); mesh.dispose(); }, [mesh]);   // free old instance buffers
   mesh.castShadow = cast; mesh.receiveShadow = receive; mesh.count = items.length;
   items.forEach((it, i) => { const sc = it.s ?? 1; _D.position.set(...it.p); _D.rotation.set(...(it.r ?? [0, 0, 0] as V3)); if (typeof sc === 'number') _D.scale.setScalar(sc); else _D.scale.set(...sc);
     _D.updateMatrix(); mesh.setMatrixAt(i, _D.matrix); _C.set(it.c ?? color); mesh.setColorAt(i, _C); });
