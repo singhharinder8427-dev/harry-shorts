@@ -5,6 +5,7 @@ SKILL="$(cd "$(dirname "$0")/.." && pwd)"; P="$1"; NAME="$2"
 mkdir -p "$P"/{tools,voiceover,src,"public/$NAME",qa,out,thumbnails}
 cp -r "$SKILL/templates/remotion/." "$P/"
 cp "$SKILL"/scripts/{gen_timing.py,align_take.py,sfxlib.py,gen_sheet.py,make_captions.py,stills.mjs,sheet.py,thumbs.mjs,qa_video.py,retime.sh,master_audio.py,render_chunk.sh,join_chunks.sh,bench.mjs,render_local.mjs} "$P/tools/"
+cp "$SKILL/scripts/render.bat" "$P/render.bat"   # double-click on Windows to render locally
 chmod +x "$P/tools/retime.sh" "$P/tools/render_chunk.sh" "$P/tools/join_chunks.sh"
 if [ "${3:-}" = "--example" ]; then   # the v3 demo: flat cel cast in a 3D street + kitchen (runs as is)
   cp "$SKILL"/examples/v3-demo/{Short.tsx,timing.json} "$P/src/"

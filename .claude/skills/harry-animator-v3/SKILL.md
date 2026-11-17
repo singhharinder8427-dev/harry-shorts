@@ -706,6 +706,10 @@ the user exactly these steps (each command in its own code block), with the bran
    default half the CPU threads; lower it if the computer runs out of memory or a 3D canvas times out), `GL=angle`
    (GPU, the default on Windows / macOS) or `GL=swangle` (CPU fallback if the picture is black or the GPU fails).
    On Windows PowerShell, set env as `$env:CONC=4; node tools/render_local.mjs`.
+   **Easiest on Windows (tell non-technical users this first):** no Git, no typing - download the branch as a ZIP
+   from GitHub (branch page -> green Code button -> Download ZIP), unzip it, open `shorts/<short>/` and double-click
+   `render.bat` (it checks Node.js, then offers 1 = 5 s test in 2K, 2 = 5 s preview, 3 = full 2K, 4 = full preview,
+   and opens the `out` folder when done).
 4. Watch it once with sound, then upload the MP4 back (or commit it to `out/` and push) so Claude runs `qa_video.py`
    and the verify list below on it.
 If the session can reach a folder on the user's own computer (`list_computer_folders` shows it online), offer to run
