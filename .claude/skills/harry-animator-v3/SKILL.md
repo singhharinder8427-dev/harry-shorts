@@ -217,7 +217,7 @@ the subscribe line must not exceed it. Words to write = about 2.7 x the seconds 
 and 1.6 s tail): 30 s = ~75 words, 45 s = ~115, 55 s = ~145. Every "45 s" in this file means `LIMIT`.
 
 **Then ask where to render, every time** (a third question, never assumed; owner's rule 17 Nov 2026 - cloud renders
-take too long): "Where should the video be rendered?"
+take too long) - unless this session already runs on the owner's PC (see "Running on the owner's own PC" below): "Where should the video be rendered?"
 1. **My computer (local)** - "Render on my own hardware." Claude does everything up to the render in the cloud
    (script, animation, contact-sheet stills, re-timing, sound, thumbnails, metadata), pushes the project, and the user
    runs ONE command on their computer (section 11, "Local render"). Much faster: the owner's PC measured 0.14 s per 2K frame (0.04 s preview) vs ~1-3 s in the cloud.
@@ -225,6 +225,25 @@ take too long): "Where should the video be rendered?"
    1.5-3 hours, in chunks).
 Remember the answer as `RENDER_AT` for the whole job. Ask all three questions in one AskUserQuestion call when
 possible. The user can switch later ("render it in the cloud after all") - then follow the other route.
+
+**Running on the owner's own PC** (Claude Code started on their computer, e.g. in `D:\HarryShorts\harry-shorts` from
+Git Bash - check: the platform is Windows / macOS, or the working directory is on a drive like `D:`, not a cloud
+container under `/home/user`): this is the short route the owner prefers. Then:
+- Do NOT ask the render question: `RENDER_AT` = local, and you render yourself with `node tools/render_local.mjs`
+  (previews with `--preview`); no git push / pull hand-off, no "send the file back" - run `qa_video.py` on the result
+  yourself. Videos land in `D:\HarryShorts\renders\previews` and `...\final` (the script does this on a PC with a
+  D: drive). Commit and push the finished project as usual so the cloud copy stays in sync.
+- Create each new Short in `shorts/<short>/` of this repo (`bash .claude/skills/harry-animator-v3/scripts/new_project.sh
+  shorts/<short> <short>`); it also gets `render.bat` for a double-click re-render.
+- **First run on a PC - check the tools once** and install what is missing (ask before installing): Node 18+
+  (`node -v`), Python 3 (`python --version`; on Windows `python3` is often only a Store alias - use `python`, or
+  `py -3`, wherever this file says `python3`), ffmpeg on PATH (`ffmpeg -version`; Windows: `winget install
+  Gyan.FFmpeg`, then open a new terminal), and the Python packages `pip install numpy pillow opencv-python-headless
+  pocketsphinx`. Run the `.sh` tools in Git Bash; they fall back from `python3` to `python` by themselves, and `retime.sh` uses
+  the system Python when it already has pocketsphinx (no Linux venv needed). On the PC re-time with
+  `RENDER=0 bash tools/retime.sh take.mp3`, then render with `node tools/render_local.mjs` (2 parallel 2K frames,
+  measured 0.14 s/frame - a 50 s Short in about 7-15 min, one go, no chunks).
+- Web search / fetch must work for the research step; if it doesn't, say so and stop (section 1).
 
 Whatever is chosen, research and fact-check first, then write **five script variants** (section 1.4) and let the user
 pick before any animation. The rest of the pipeline is identical. The user may be making the video for someone else; it changes
