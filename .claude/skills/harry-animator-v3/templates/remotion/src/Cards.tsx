@@ -67,3 +67,38 @@ export const BigNumber: React.FC<Place & {text?: string; to?: number; from?: num
     {sub && <text y={size * 0.36 + size * 0.55} fontSize={size * 0.32} fill="#FFFFFF" {...st} strokeWidth={size * 0.07}>{sub.toUpperCase()}</text>}
   </g>);
 };
+
+/* Hook text (owner's amendment, 17 Nov 2026): the ONE on-screen hook line on frame 0. 6-8 words, up to 3 lines, huge
+ * (>= 96 px in design space - cut words rather than shrink), top zone x 90-990, y 250-700, never over Blob's face,
+ * the strange thing or the caption box. Visible at full size ON FRAME 0 (no pop-in from nothing - the first frame must
+ * already read), a small breathing scale so it isn't static, pops out at `tOut` (about 2-2.5 s, or the first story
+ * word). `keys` words (upper-case match) are drawn in brand yellow. Render it in a full-frame overlay outside ShotBlur. */
+export const HookText: React.FC<{t: number; text: string; tOut?: number; keys?: string[]; y?: number; size?: number}> =
+  ({t, text, tOut = 2.2, keys = [], y = 330, size = 124}) => {
+  const words = text.trim().split(/\s+/);
+  if (words.length < 6 || words.length > 8) console.warn(`HookText: ${words.length} words - keep it to 6-8`);
+  const s = popOut(t, tOut, 0.28) * (1 + 0.02 * Math.sin(t * 5)); // full size at t=0, gentle pulse, pop out
+  if (s <= 0.001) return null;
+  // 1-3 balanced lines; pick the split that gives the biggest type inside x 90-990 (900 px). Widths in em of Inter 900
+  // caps (measured), + 0.17 em for the stroke.
+  const EM: Record<string, number> = {A: .81, B: .67, C: .75, D: .72, E: .61, F: .58, G: .75, H: .75, I: .29, J: .6, K: .76, L: .57, M: .96,
+    N: .77, O: .78, P: .66, Q: .79, R: .67, S: .67, T: .69, U: .72, V: .81, W: 1.1, X: .79, Y: .78, Z: .69, ' ': .25, "'": .37, '1': .45};
+  const em = (l: string[]) => [...l.join(' ').toUpperCase()].reduce((a, c) => a + (EM[c] ?? .68), 0.17);
+  const splits: string[][][] = [[words]];
+  for (let i = 1; i < words.length; i++) {
+    splits.push([words.slice(0, i), words.slice(i)]);
+    for (let j = i + 1; j < words.length; j++) splits.push([words.slice(0, i), words.slice(i, j), words.slice(j)]);
+  }
+  const fit = (ls: string[][]) => Math.min(size, 900 / Math.max(...ls.map(em)));
+  const lines = splits.reduce((best, ls) => (fit(ls) > fit(best) + 0.5 ? ls : best));
+  const fs = Math.max(96, fit(lines));
+  if (fit(lines) < 96) console.warn(`HookText: "${text}" only fits at ${Math.round(fit(lines))} px - cut words`);
+  const isKey = (w: string) => keys.map((k) => k.toUpperCase()).includes(w.toUpperCase().replace(/[^A-Z0-9']/g, ''));
+  const st = {fontFamily: FONT, fontWeight: 900, textAnchor: 'middle' as const, paintOrder: 'stroke' as const, stroke: INK, strokeLinejoin: 'round' as const, strokeWidth: fs * 0.17};
+  return (<g transform={`translate(520 ${y}) scale(${s})`}>
+    {lines.map((l, i) => (<g key={i} transform={`translate(0 ${i * fs * 1.08})`}>
+      <text y={10} fontSize={fs} fill="#000" opacity={0.28} {...st}>{l.join(' ').toUpperCase()}</text>
+      <text fontSize={fs} {...st}>{l.map((w, j) => <tspan key={j} fill={isKey(w) ? '#FFC83D' : '#FFFFFF'}>{(j ? ' ' : '') + w.toUpperCase()}</tspan>)}</text>
+    </g>))}
+  </g>);
+};

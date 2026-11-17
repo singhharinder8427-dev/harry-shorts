@@ -1,6 +1,6 @@
 ---
 name: "harry-animator-v3"
-description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical 1440x2560, 60 fps, at the length the user asks for) end to end - topic (the user's own, a researched viral-potential topic, or a pasted script to fact-check and make original), five source-checked voiceover script variants with a subscribe line, then an animation made entirely in code with Remotion in one permanent look - flat 2D cel characters (round heads, thin line limbs, flat clothes, face colour that follows the situation) acting in a stylized shaded 3D world (three.js), visual storytelling (a flash-forward hook, an event on every caption phrase, one side-by-side explanation shot, mood colours, a finale that splits the world and crowns the winner) with one-layer-deep cutaways, one-word captions, code-made sound and music bed, subscribe ending, seamless loop - re-timed to the user's voice take, plus thumbnails, captions file and YouTube metadata."
+description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical, 60 fps, the length the user asks for) end to end - topic (theirs, a researched viral topic, or a pasted script to fact-check), five source-checked script variants, then an animation made in code with Remotion in one look - flat 2D cel characters in a shaded 3D world (three.js) - with a bright, already-moving first frame and 6-8 word hook text, a flash-forward hook, an event on every caption phrase, a side-by-side why shot, mood colours, a crown-the-winner finale, one-word captions, code-made sound and music, subscribe ending, seamless loop, re-timed to the user's voice take, rendered in the cloud or on the user's own computer (asked every time), plus thumbnails, captions file and YouTube metadata."
 ---
 
 # harry-animator v3: researched script -> flat 2D cast acting in a stylized 3D world
@@ -121,6 +121,40 @@ that only changes camera angle is not a new picture. Rules (apply to every video
   biggest prop, golden backlight, sparkles, arms raised - and the subscribe CTA plays over this shot, which glides back
   to frame 0 so the video loops.
 
+**Owner's amendments (17 Nov 2026) - THE FIRST FRAME DECIDES THE SWIPE. These override every frame-0 / hook line in
+this file where they differ (including "pull the camera back over the first 1-1.5 s to reveal" above). Viewers decide
+in the first half second; a still, dark or busy first frame gets swiped. Rules (apply to every video):**
+1. **Movement from frame one.** Blob is already in the middle of an action at frame 0 - running, ducking, pushing,
+   pointing, flinching, grabbing - in a mid-motion pose (`Poses.ts`), never the rest / idle pose, never a slow walk-in
+   from off screen. Something in the world moves too (the strange thing itself, debris, a prop flying). No still title
+   card, no fade-in from black or white, no slow establishing push before the action, no logo sting. The camera may
+   move from frame 0, but the subject is already fully in frame and acting.
+2. **The strange thing is already happening in frame 0.** The premise is visible before a single word of explanation:
+   for "What if the Eiffel Tower bent?" the tower is ALREADY bending in the first frame (mid-bend, rivets popping) with
+   Blob reacting under it - not a straight tower that starts to bend at second 3. The flash-forward hook stays (frame 0
+   = the end state / the event at its most striking), but it must be readable without any reveal move: no
+   "wait for it" build-up, no zoom-out needed to understand it. The contrast / losers may slide in during the first
+   second, they are a bonus, not the point.
+3. **Hook text: 6-8 words, huge, readable at a glance.** One on-screen hook line (`HookText` in `Cards.tsx`) from
+   frame 0 to about 2-2.5 s (or the first story word, whichever is first), then it pops out. 6-8 words, up to three lines,
+   Inter 900, white with a thick dark stroke (or brand yellow `#FFC83D` on the key word), at least 110 px in design
+   space (auto-shrinks only down to 96 px; if it doesn't fit at 96, cut words - never shrink further). Placed in the
+   top zone (x 90-990, y 250-700 - clear of the search bar above and the like / share buttons, which start at y ~860) above the subject, never over Blob's face or the strange thing, never in the
+   caption box. It names the strange thing in plain words ("EIFFEL TOWER IS BENDING RIGHT NOW", "ONE CHICKEN MADE THIS MAN
+   VERY RICH"); no question-bait ("YOU WON'T BELIEVE..."), no "!" pile-ups, every word true. It is a separate line from
+   the spoken hook (which stays 12-16 words, `references/script-formula.md`). The one-word captions play underneath
+   as usual; no pop-up card is shown while the hook text is up.
+4. **Bright, clear, one big subject.** Frame 0 is high-key daylight (a bright light preset, `Mood` `sat` 1, clear sky
+   or a light set) - never night, grey mood, sepia, heavy fog or a dark interior, even if the story is grey later. One
+   big subject fills 40-70 % of the frame (the strange thing with Blob, or Blob's reacting face with the strange thing
+   behind him), centred above the caption box, against a simple uncluttered background with clear contrast. At most
+   2-3 readable shapes; no crowd, no small props scattered around, no busy texture behind the subject. Because the
+   video loops, the last frame returns to this bright frame: the golden finale's light ramps back to the frame-0
+   preset during the CTA glide.
+- **Check it** (section 10): `qa_video.py` prints a first-frame report (brightness, clutter, motion in the first
+  0.2 s) and saves `qa/frame0_phone.png` at phone-feed size; look at it next to the thumbnails. Fix until all three
+  read OK and the strange thing + hook text are readable at 216x384.
+
 **Restate the look concretely for every shot.** In `story.json` every shot gets a `look` line written out in full -
 who is in it (name, clothes colours, hair), the place, its materials and palette, the light direction, the camera move.
 Never write "same style as before". **Never drift into**: rounded 3D characters, anime faces, photoreal people,
@@ -181,6 +215,41 @@ Ask with a multiple-choice question (AskUserQuestion when available), these thre
 45 s, 55 s and let them type any other number. That number is `LIMIT` for the whole job: the finished video including
 the subscribe line must not exceed it. Words to write = about 2.7 x the seconds of speech (LIMIT minus 0.4 s lead-in
 and 1.6 s tail): 30 s = ~75 words, 45 s = ~115, 55 s = ~145. Every "45 s" in this file means `LIMIT`.
+
+**Then ask where to render, every time** (a third question, never assumed; owner's rule 17 Nov 2026 - cloud renders
+take too long) - ALSO when this session runs on the owner's PC (owner's rule: always ask, never decide for them): "Where should the video be rendered?"
+1. **My computer (local)** - "Render on my own hardware." Claude does everything up to the render in the cloud
+   (script, animation, contact-sheet stills, re-timing, sound, thumbnails, metadata), pushes the project, and the user
+   runs ONE command on their computer (section 11, "Local render"). Much faster: the owner's PC measured 0.14 s per 2K frame (0.04 s preview) vs ~1-3 s in the cloud.
+2. **Cloud** - "Render here in the cloud." Claude renders everything (slow: ~1-3 s per 2K frame, a 50 s Short takes
+   1.5-3 hours, in chunks).
+Remember the answer as `RENDER_AT` for the whole job. Ask all three questions in one AskUserQuestion call when
+possible. The user can switch later ("render it in the cloud after all") - then follow the other route.
+
+**Running on the owner's own PC** (Claude Code started on their computer, e.g. in `D:\HarryShorts\harry-shorts` from
+Git Bash - check: the platform is Windows / macOS, or the working directory is on a drive like `D:`, not a cloud
+container under `/home/user`): this is the short route the owner prefers. Then:
+- STILL ask the render question every time (options: "This PC" / "Cloud").
+  - **This PC**: render yourself with `node tools/render_local.mjs` (previews with `--preview`); no git push / pull
+    hand-off, no "send the file back" - run `qa_video.py` on the result yourself. Videos land in
+    `D:\HarryShorts\renders\previews` and `...\final` (the script does this on a PC with a D: drive).
+  - **Cloud**: do everything up to the render here (`RENDER=0` re-time, stills), commit the whole short folder
+    (incl. `public/<short>/vo.wav`, `sfx.wav`, `bed.wav`) and push the branch, then give the owner a ready-to-paste
+    message for a new cloud session at claude.ai/code on this repo and branch: "Render shorts/<short> in 2K with the
+    chunked cloud route of harry-animator-v3 section 11 (render_chunk.sh + join_chunks.sh), run qa_video.py, commit
+    out/<short>-2K.mp4 and push." Previews in that case also render in the cloud session.
+  - Either way, commit and push the finished project so the GitHub copy stays in sync.
+- Create each new Short in `shorts/<short>/` of this repo (`bash .claude/skills/harry-animator-v3/scripts/new_project.sh
+  shorts/<short> <short>`); it also gets `render.bat` for a double-click re-render.
+- **First run on a PC - check the tools once** and install what is missing (ask before installing): Node 18+
+  (`node -v`), Python 3 (`python --version`; on Windows `python3` is often only a Store alias - use `python`, or
+  `py -3`, wherever this file says `python3`), ffmpeg on PATH (`ffmpeg -version`; Windows: `winget install
+  Gyan.FFmpeg`, then open a new terminal), and the Python packages `pip install numpy pillow opencv-python-headless
+  pocketsphinx`. Run the `.sh` tools in Git Bash; they fall back from `python3` to `python` by themselves, and `retime.sh` uses
+  the system Python when it already has pocketsphinx (no Linux venv needed). On the PC re-time with
+  `RENDER=0 bash tools/retime.sh take.mp3`, then render with `node tools/render_local.mjs` (2 parallel 2K frames,
+  measured 0.14 s/frame - a 50 s Short in about 7-15 min, one go, no chunks).
+- Web search / fetch must work for the research step; if it doesn't, say so and stop (section 1).
 
 Whatever is chosen, research and fact-check first, then write **five script variants** (section 1.4) and let the user
 pick before any animation. The rest of the pipeline is identical. The user may be making the video for someone else; it changes
@@ -323,7 +392,10 @@ forced alignment with pocketsphinx (its wheel ships the English model), installe
    Columns: phrase -> what HAPPENS (the physical event on the key word, 16 Nov storytelling amendment) -> camera ->
    size -> mood colour -> sound. A row whose only change is the camera angle is not finished.
    **The hook shows the consequence**: frame 0 is the flash-forward (the end state at its most striking, the contrast
-   in the same frame), then the story rewinds into the explanation on the first story word.
+   in the same frame), then the story rewinds into the explanation on the first story word. The first row of the
+   table is the **frame-0 row** (17 Nov amendment): what Blob is already doing (mid-action pose), the strange thing
+   already happening, the 6-8 word hook text, the bright light preset, and the one big subject - all from frame 0,
+   nothing that builds up.
    **Clean cuts** between pictures (cut on the word); one smooth camera move inside each; at most 1-2 short
    dissolves. Mark 4-6 **accent beats** in the table (the hook, a reveal, a place change, the payoff): each gets one
    fast move from `Moves.tsx` (slam zoom, fly-through, smear cut, punch-in, flash cut). Never shake. A video has 1-3
@@ -537,6 +609,8 @@ consistent within a place, the cast separates from the background.
       it...", "headlines everywhere...";
     - `BigNumber` (`text`, or `to` + `count` 0..1 to count up, optional `sub`) - for the one striking number of the
       video, exactly as spoken.
+    - `HookText` (`t`, `text`, `tOut`, `keys`) - the 6-8 word hook line on frame 0 only (17 Nov amendment): full size
+      from the very first frame, pops out at ~2-2.5 s; nothing else pops up while it is on screen.
     Place them with `cardIn(t, tIn, tOut)` (pop + tilt spring, pop out) or `flyX` (fly in from a side), as children of
     `<World>` (its SVG layer) or anchored to a 3D object with `toScreen`. Rules: invented names only, never a real
     logo, platform mark or real account presented as a real post; a real person's words only if they really said them
@@ -596,7 +670,9 @@ consistent within a place, the cast separates from the background.
   `python3 tools/sheet.py qa/sheet.png qa/still_*.png`. Look at frame 0, every beat (key + 0.3-0.8 s), every cut, every
   label, the CTA, the last frame. Fix framing (labels cut by the frame edge, things in the caption band, crowding) and
   re-check.
-- **Preview**: render 0.5x (`npx remotion render src/index.ts Short out/preview.mp4 --scale=0.5 --crf=20 --concurrency=4`), then
+- **Preview** (`RENDER_AT` = local: skip the cloud preview MP4 - check with contact sheets only, and push so the user
+  can run `node tools/render_local.mjs --preview` if they want to see motion; ask them to upload `out/preview.mp4` if
+  you need `qa_video.py` on it): render 0.5x (`npx remotion render src/index.ts Short out/preview.mp4 --scale=0.5 --crf=20 --concurrency=4`), then
   `python3 tools/qa_video.py out/preview.mp4`:
   - pop scan (caption + tag bands masked): every flag must be an intended cut, pop-in, fast move / transition accent or
     fast action - list them against the beat table; an unexplained isolated spike is a bug; accents: 4-6 per video,
@@ -605,6 +681,8 @@ consistent within a place, the cast separates from the background.
     3D cloud, swaying foliage or breathing that doesn't complete whole cycles over the duration, a state that isn't reset;
   - loudness and audio silences (v2: no silences expected - the bed is continuous; loudness about -14 LUFS after
     mastering);
+  - first frame (17 Nov amendment): brightness, clutter and early-motion all OK in the report; open
+    `qa/frame0_phone.png` and confirm Blob is mid-action, the strange thing is visible and the hook text reads;
   - v3 style checks on the sheets, shot by shot: characters flat (no shading or gradients; face colour only where the story calls for it), the set is
     shaded 3D with visible texture, light and cast shadows; every character has a ground shadow; the cast reads
     against the background; a smooth camera move in every shot (pop scan's median motion > 0 on holds); a new
@@ -640,6 +718,31 @@ run `RENDER=0 tools/retime.sh take.mp3`, then render 2K in chunks of ~1100 frame
 `tools/render_chunk.sh 0 1099`, `tools/render_chunk.sh 1100 2199`, ... (silent, `out/chunk_<first>.mp4`; check each
 chunk's frame count), then `tools/join_chunks.sh` joins them, mixes voice + sfx + bed exactly as `Short.tsx` does and
 masters to -14 LUFS. If a tab times out creating its 3D canvas, lower `CONC`.
+**Local render (`RENDER_AT` = local).** Run `RENDER=0 tools/retime.sh take.mp3` (everything except the render), check
+the stills, then commit the WHOLE short folder - `src/`, `public/<short>/vo.wav` + `sfx.wav` + `bed.wav`,
+`src/timing.json`, `story.json`, `tools/` (`out/` and `node_modules/` are not needed) - and push the branch. Then give
+the user exactly these steps (each command in its own code block), with the branch name and folder filled in:
+1. One-time setup: install Node 18+ (nodejs.org) and git; clone the repo, or `git pull` if they already have it.
+2. `git fetch origin <branch>` then `git checkout <branch>` (or `git pull` when already on it).
+3. `cd shorts/<short>` then `node tools/render_local.mjs` - the first run installs packages (~1 min, plus the
+   Chrome download Remotion needs). Output: `out/<short>-2K.mp4`, 1440x2560, 60 fps, audio mastered to -14 LUFS; it
+   prints seconds per frame and the frame count check.
+   Options: `--preview` (half size, fast), `--frames=0-299` (time a short part first), env `CONC=<n>` (parallel frames,
+   default 2 for 2K and half the CPU threads for previews; at 6 the owner's Windows PC failed with "Error creating
+   WebGL context" - lower it on that error, a memory error or a 3D canvas timeout), `GL=angle`
+   (GPU, the default on Windows / macOS) or `GL=swangle` (CPU fallback if the picture is black or the GPU fails).
+   On Windows PowerShell, set env as `$env:CONC=4; node tools/render_local.mjs`.
+   **Easiest on Windows (tell non-technical users this first):** no Git, no typing - download the branch as a ZIP
+   from GitHub (branch page -> green Code button -> Download ZIP), unzip it, open `shorts/<short>/` and double-click
+   `render.bat` (it checks Node.js, then offers 1 = 5 s test in 2K, 2 = 5 s preview, 3 = full 2K, 4 = full preview,
+   and opens the folder the video went to: `D:\HarryShorts\renders\previews` or `...\final` on a PC with a D: drive, else `out/`; `RENDER_DIR` overrides).
+4. Watch it once with sound, then upload the MP4 back (or commit it to `out/` and push) so Claude runs `qa_video.py`
+   and the verify list below on it.
+If the session can reach a folder on the user's own computer (`list_computer_folders` shows it online), offer to run
+the same command there directly (`request_computer_folder`, then Bash with `_host`) instead of the hand-off. If a local
+render fails, read the error they paste: missing `vo.wav` = the files were not pushed; "Timed out ... canvas" = lower
+`CONC`; a black 3D picture = `GL=swangle`. Do not switch to a cloud render unless the user asks.
+
 **Verify the file**: 1440x2560, 60 fps, frame count = duration x 60, audio present and as long as the picture, `qa_video.py`
 on the final: flags all intended, loop diff < 0.2, loudness about -14 LUFS (mastered), true peak below -1 dBTP, no audio silences (continuous bed). Say sync was verified by measurement and stills, not by ear.
 
@@ -689,7 +792,8 @@ no bait, no other creators' names. Save as `youtube.md`.
 ---------------------------------------------------------------------------------------------------------------------
 ## 14. Hand-off and honesty
 
-Deliver (send the files; put them in the user's working folder): `out/<short>-2K.mp4`, `voiceover/captions.srt`,
+With `RENDER_AT` = local, the video is delivered by the user's own render (section 11); hand off everything else as
+below and run the checks on the MP4 they send back. Deliver (send the files; put them in the user's working folder): `out/<short>-2K.mp4`, `voiceover/captions.srt`,
 `voiceover/word_times.csv`, `thumbnails/thumb_A/B/C.jpg` (+ recommendation), `youtube.md`, the timing sheet, a README
 (script, sources, how to re-run: `tools/retime.sh new_take.mp3`). Report plainly, in short:
 - the check results (size, fps, frames, length, loudness, loop, pop flags = intended);
@@ -717,6 +821,8 @@ Append the topic to `topics_log.md`.
 - Scenes carry no dialogue, lip-sync, speech bubbles, logos, watermarks or unnecessary labels; honesty tags stay;
   pop-up cards (`PostCard`, `Headline`, `BigNumber`) only on the beat the voice says it, invented names, no real logos.
 - Frame 0 = the premise, centred, big, readable; the first spoken line names what you see.
+- First frame (17 Nov): Blob already mid-action, the strange thing already happening, a 6-8 word hook text (>= 96 px,
+  top zone), bright high-key light, one big subject on a simple background; no title card, fade-in or build-up.
 - Feet planted, hands reach props before they move, one focal action at a time.
 - One-word captions in the safe box; the sound never drops out; every visual on its word; the payoff on the last
   explanation word; the CTA follows; the last frame loops to the first.
@@ -724,7 +830,7 @@ Append the topic to `topics_log.md`.
 - Visual storytelling (16 Nov): flash-forward hook on frame 0; an EVENT on every phrase; one side-by-side "why" shot;
   big emotional props; mood colour (grey / colour returns / sepia / golden finale); a travelling camera; the finale
   splits the world and crowns the winner, then loops to frame 0.
-- The length is whatever the user answered in section 0.
+- The length is whatever the user answered in section 0, and the render happens where they answered (`RENDER_AT`).
 - Real facts only in the voice; cartoon exaggeration only in what characters do.
 - Every shot's `look` line in `story.json` restates the style in concrete words.
 
