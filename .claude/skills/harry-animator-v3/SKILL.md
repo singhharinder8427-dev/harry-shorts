@@ -1,6 +1,6 @@
 ---
 name: "harry-animator-v3"
-description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical 1440x2560, 60 fps, at the length the user asks for) end to end - topic (the user's own, a researched viral-potential topic, or a pasted script to fact-check and make original), five source-checked voiceover script variants with a subscribe line, then an animation made entirely in code with Remotion in one permanent look - flat 2D cel characters (round heads, thin line limbs, flat clothes, face colour that follows the situation) acting in a stylized shaded 3D world (three.js), visual storytelling (a first frame that is bright, already moving and already showing the strange thing with a 6-8 word hook text, a flash-forward hook, an event on every caption phrase, one side-by-side explanation shot, mood colours, a finale that splits the world and crowns the winner) with one-layer-deep cutaways, one-word captions, code-made sound and music bed, subscribe ending, seamless loop - re-timed to the user's voice take, plus thumbnails, captions file and YouTube metadata."
+description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical, 60 fps, the length the user asks for) end to end - topic (theirs, a researched viral topic, or a pasted script to fact-check), five source-checked script variants, then an animation made in code with Remotion in one look - flat 2D cel characters in a shaded 3D world (three.js) - with a bright, already-moving first frame and 6-8 word hook text, a flash-forward hook, an event on every caption phrase, a side-by-side why shot, mood colours, a crown-the-winner finale, one-word captions, code-made sound and music, subscribe ending, seamless loop, re-timed to the user's voice take, rendered in the cloud or on the user's own computer (asked every time), plus thumbnails, captions file and YouTube metadata."
 ---
 
 # harry-animator v3: researched script -> flat 2D cast acting in a stylized 3D world
@@ -215,6 +215,16 @@ Ask with a multiple-choice question (AskUserQuestion when available), these thre
 45 s, 55 s and let them type any other number. That number is `LIMIT` for the whole job: the finished video including
 the subscribe line must not exceed it. Words to write = about 2.7 x the seconds of speech (LIMIT minus 0.4 s lead-in
 and 1.6 s tail): 30 s = ~75 words, 45 s = ~115, 55 s = ~145. Every "45 s" in this file means `LIMIT`.
+
+**Then ask where to render, every time** (a third question, never assumed; owner's rule 17 Nov 2026 - cloud renders
+take too long): "Where should the video be rendered?"
+1. **My computer (local)** - "Render on my own hardware." Claude does everything up to the render in the cloud
+   (script, animation, contact-sheet stills, re-timing, sound, thumbnails, metadata), pushes the project, and the user
+   runs ONE command on their computer (section 11, "Local render"). Usually much faster (their GPU and all CPU cores).
+2. **Cloud** - "Render here in the cloud." Claude renders everything (slow: ~1-3 s per 2K frame, a 50 s Short takes
+   1.5-3 hours, in chunks).
+Remember the answer as `RENDER_AT` for the whole job. Ask all three questions in one AskUserQuestion call when
+possible. The user can switch later ("render it in the cloud after all") - then follow the other route.
 
 Whatever is chosen, research and fact-check first, then write **five script variants** (section 1.4) and let the user
 pick before any animation. The rest of the pipeline is identical. The user may be making the video for someone else; it changes
@@ -635,7 +645,9 @@ consistent within a place, the cast separates from the background.
   `python3 tools/sheet.py qa/sheet.png qa/still_*.png`. Look at frame 0, every beat (key + 0.3-0.8 s), every cut, every
   label, the CTA, the last frame. Fix framing (labels cut by the frame edge, things in the caption band, crowding) and
   re-check.
-- **Preview**: render 0.5x (`npx remotion render src/index.ts Short out/preview.mp4 --scale=0.5 --crf=20 --concurrency=4`), then
+- **Preview** (`RENDER_AT` = local: skip the cloud preview MP4 - check with contact sheets only, and push so the user
+  can run `node tools/render_local.mjs --preview` if they want to see motion; ask them to upload `out/preview.mp4` if
+  you need `qa_video.py` on it): render 0.5x (`npx remotion render src/index.ts Short out/preview.mp4 --scale=0.5 --crf=20 --concurrency=4`), then
   `python3 tools/qa_video.py out/preview.mp4`:
   - pop scan (caption + tag bands masked): every flag must be an intended cut, pop-in, fast move / transition accent or
     fast action - list them against the beat table; an unexplained isolated spike is a bug; accents: 4-6 per video,
@@ -681,6 +693,26 @@ run `RENDER=0 tools/retime.sh take.mp3`, then render 2K in chunks of ~1100 frame
 `tools/render_chunk.sh 0 1099`, `tools/render_chunk.sh 1100 2199`, ... (silent, `out/chunk_<first>.mp4`; check each
 chunk's frame count), then `tools/join_chunks.sh` joins them, mixes voice + sfx + bed exactly as `Short.tsx` does and
 masters to -14 LUFS. If a tab times out creating its 3D canvas, lower `CONC`.
+**Local render (`RENDER_AT` = local).** Run `RENDER=0 tools/retime.sh take.mp3` (everything except the render), check
+the stills, then commit the WHOLE short folder - `src/`, `public/<short>/vo.wav` + `sfx.wav` + `bed.wav`,
+`src/timing.json`, `story.json`, `tools/` (`out/` and `node_modules/` are not needed) - and push the branch. Then give
+the user exactly these steps (each command in its own code block), with the branch name and folder filled in:
+1. One-time setup: install Node 18+ (nodejs.org) and git; clone the repo, or `git pull` if they already have it.
+2. `git fetch origin <branch>` then `git checkout <branch>` (or `git pull` when already on it).
+3. `cd shorts/<short>` then `node tools/render_local.mjs` - the first run installs packages (~1 min, plus the
+   Chrome download Remotion needs). Output: `out/<short>-2K.mp4`, 1440x2560, 60 fps, audio mastered to -14 LUFS; it
+   prints seconds per frame and the frame count check.
+   Options: `--preview` (half size, fast), `--frames=0-299` (time a short part first), env `CONC=<n>` (parallel frames,
+   default half the CPU threads; lower it if the computer runs out of memory or a 3D canvas times out), `GL=angle`
+   (GPU, the default on Windows / macOS) or `GL=swangle` (CPU fallback if the picture is black or the GPU fails).
+   On Windows PowerShell, set env as `$env:CONC=4; node tools/render_local.mjs`.
+4. Watch it once with sound, then upload the MP4 back (or commit it to `out/` and push) so Claude runs `qa_video.py`
+   and the verify list below on it.
+If the session can reach a folder on the user's own computer (`list_computer_folders` shows it online), offer to run
+the same command there directly (`request_computer_folder`, then Bash with `_host`) instead of the hand-off. If a local
+render fails, read the error they paste: missing `vo.wav` = the files were not pushed; "Timed out ... canvas" = lower
+`CONC`; a black 3D picture = `GL=swangle`. Do not switch to a cloud render unless the user asks.
+
 **Verify the file**: 1440x2560, 60 fps, frame count = duration x 60, audio present and as long as the picture, `qa_video.py`
 on the final: flags all intended, loop diff < 0.2, loudness about -14 LUFS (mastered), true peak below -1 dBTP, no audio silences (continuous bed). Say sync was verified by measurement and stills, not by ear.
 
@@ -730,7 +762,8 @@ no bait, no other creators' names. Save as `youtube.md`.
 ---------------------------------------------------------------------------------------------------------------------
 ## 14. Hand-off and honesty
 
-Deliver (send the files; put them in the user's working folder): `out/<short>-2K.mp4`, `voiceover/captions.srt`,
+With `RENDER_AT` = local, the video is delivered by the user's own render (section 11); hand off everything else as
+below and run the checks on the MP4 they send back. Deliver (send the files; put them in the user's working folder): `out/<short>-2K.mp4`, `voiceover/captions.srt`,
 `voiceover/word_times.csv`, `thumbnails/thumb_A/B/C.jpg` (+ recommendation), `youtube.md`, the timing sheet, a README
 (script, sources, how to re-run: `tools/retime.sh new_take.mp3`). Report plainly, in short:
 - the check results (size, fps, frames, length, loudness, loop, pop flags = intended);
@@ -767,7 +800,7 @@ Append the topic to `topics_log.md`.
 - Visual storytelling (16 Nov): flash-forward hook on frame 0; an EVENT on every phrase; one side-by-side "why" shot;
   big emotional props; mood colour (grey / colour returns / sepia / golden finale); a travelling camera; the finale
   splits the world and crowns the winner, then loops to frame 0.
-- The length is whatever the user answered in section 0.
+- The length is whatever the user answered in section 0, and the render happens where they answered (`RENDER_AT`).
 - Real facts only in the voice; cartoon exaggeration only in what characters do.
 - Every shot's `look` line in `story.json` restates the style in concrete words.
 
