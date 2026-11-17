@@ -1,6 +1,6 @@
 ---
 name: harry-animator-v2
-description: OLD VERSION (v2), kept for reference - use ONLY when the user explicitly asks for "harry-animator v2" / "/harry-animator-v2" or the v2 look (fake-3D flat world, whip transitions, colour-emotion cast). For any other what-if / surprising-fact Short request use harry-animator-v3 (the default). v2 makes a faceless YouTube Short (max 45 s, 2K vertical, 60 fps): five script variants, a code-drawn cartoon in Remotion, one-word captions, music bed, re-timed to the user's voice take, thumbnails and YouTube metadata.
+description: "OLD VERSION (v2), kept for reference - use ONLY when the user explicitly asks for \"harry-animator v2\" / \"/harry-animator-v2\" or the v2 look (fake-3D flat world, whip transitions, colour-emotion cast). For any other what-if / surprising-fact Short request use harry-animator-v3 (the default). v2 makes a faceless YouTube Short (max 45 s, 2K vertical, 60 fps): five script variants, a code-drawn cartoon in Remotion, one-word captions, music bed, re-timed to the user's voice take, thumbnails and YouTube metadata."
 ---
 
 # harry-animator v2: researched script -> code-drawn cartoon Short that feels alive

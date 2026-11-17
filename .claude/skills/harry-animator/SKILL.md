@@ -1,6 +1,6 @@
 ---
 name: harry-animator
-description: OLD VERSION (v1), kept for reference - use ONLY when the user explicitly asks for "harry-animator v1", "/harry-animator" by that exact name, or the old v1 flat cut-out look. For any other what-if / surprising-fact Short request use harry-animator-v3 (the default). v1 makes a faceless YouTube Short (max 45 s, 2K vertical, 60 fps): researched script, flat 2D cut-out cartoon drawn in code with Remotion on a 2.5D multiplane camera, captions, code-made sound, subscribe ending, re-timed to the user's voice take, thumbnails and YouTube metadata.
+description: "OLD VERSION (v1), kept for reference - use ONLY when the user explicitly asks for \"harry-animator v1\", \"/harry-animator\" by that exact name, or the old v1 flat cut-out look. For any other what-if / surprising-fact Short request use harry-animator-v3 (the default). v1 makes a faceless YouTube Short (max 45 s, 2K vertical, 60 fps): researched script, flat 2D cut-out cartoon drawn in code with Remotion on a 2.5D multiplane camera, captions, code-made sound, subscribe ending, re-timed to the user's voice take, thumbnails and YouTube metadata."
 ---
 
 # harry-animator: researched script -> code-drawn cartoon Short
