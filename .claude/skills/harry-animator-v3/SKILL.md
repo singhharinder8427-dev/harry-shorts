@@ -1,6 +1,6 @@
 ---
 name: harry-animator-v3
-description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical, 60 fps, the length the user asks for) end to end - topic (theirs, a researched viral topic, or a pasted script to fact-check), five source-checked script variants, then an animation made in code with Remotion in one look - flat 2D cel characters in a shaded 3D world (three.js) - with a bright, already-moving first frame and 6-8 word hook text, a flash-forward hook, an event on every caption phrase, a side-by-side why shot, mood colours, a crown-the-winner finale, one-word captions, code-made sound and music, subscribe ending, seamless loop, re-timed to the user's voice take, rendered in the cloud or on the user's own computer (asked every time), plus thumbnails, captions file and YouTube metadata."
+description: "THE DEFAULT harry-animator. Use for ANY request to make a faceless YouTube Short, a what-if / surprising-fact Short, a script plus animation, or when the user says \"harry-animator\", \"/harry-animator-v3\" or \"make a Short\" without naming an older version. Makes the complete Short (2K vertical, 60 fps, the length the user asks for) end to end - topic (theirs, a researched viral topic, or a pasted script to fact-check), five source-checked script variants, then an animation made in code with Remotion in one look - flat 2D cel characters in a shaded 3D world (three.js) - with a bright, already-moving first frame (no on-screen hook text), a flash-forward hook, an event on every caption phrase, a side-by-side why shot, mood colours, a crown-the-winner finale, one-word captions, code-made sound and music, subscribe ending, seamless loop, re-timed to the user's voice take, rendered in the cloud or on the user's own computer (asked every time), plus thumbnails, captions file and YouTube metadata."
 ---
 
 # harry-animator v3: researched script -> flat 2D cast acting in a stylized 3D world
@@ -135,15 +135,9 @@ in the first half second; a still, dark or busy first frame gets swiped. Rules (
    = the end state / the event at its most striking), but it must be readable without any reveal move: no
    "wait for it" build-up, no zoom-out needed to understand it. The contrast / losers may slide in during the first
    second, they are a bonus, not the point.
-3. **Hook text: 6-8 words, huge, readable at a glance.** One on-screen hook line (`HookText` in `Cards.tsx`) from
-   frame 0 to about 2-2.5 s (or the first story word, whichever is first), then it pops out. 6-8 words, up to three lines,
-   Inter 900, white with a thick dark stroke (or brand yellow `#FFC83D` on the key word), at least 110 px in design
-   space (auto-shrinks only down to 96 px; if it doesn't fit at 96, cut words - never shrink further). Placed in the
-   top zone (x 90-990, y 250-700 - clear of the search bar above and the like / share buttons, which start at y ~860) above the subject, never over Blob's face or the strange thing, never in the
-   caption box. It names the strange thing in plain words ("EIFFEL TOWER IS BENDING RIGHT NOW", "ONE CHICKEN MADE THIS MAN
-   VERY RICH"); no question-bait ("YOU WON'T BELIEVE..."), no "!" pile-ups, every word true. It is a separate line from
-   the spoken hook (which stays 12-16 words, `references/script-formula.md`). The one-word captions play underneath
-   as usual; no pop-up card is shown while the hook text is up.
+3. **No on-screen hook text** (owner's decision, 17 Nov 2026, after the hourly Short): frame 0 carries NO title or
+   hook line over the picture. The picture and the spoken hook do the work; the one-word captions are the only text
+   at the start. (`HookText` stays in `Cards.tsx` but is not used.)
 4. **Bright, clear, one big subject.** Frame 0 is high-key daylight (a bright light preset, `Mood` `sat` 1, clear sky
    or a light set) - never night, grey mood, sepia, heavy fog or a dark interior, even if the story is grey later. One
    big subject fills 40-70 % of the frame (the strange thing with Blob, or Blob's reacting face with the strange thing
@@ -153,7 +147,7 @@ in the first half second; a still, dark or busy first frame gets swiped. Rules (
    preset during the CTA glide.
 - **Check it** (section 10): `qa_video.py` prints a first-frame report (brightness, clutter, motion in the first
   0.2 s) and saves `qa/frame0_phone.png` at phone-feed size; look at it next to the thumbnails. Fix until all three
-  read OK and the strange thing + hook text are readable at 216x384.
+  read OK and the strange thing is readable at 216x384.
 
 **Owner's amendment (17 Nov 2026) - PC DETAIL LEVEL. Applies only when the render question was answered "This PC"
 (`RENDER_AT` = local); with "Cloud" everything stays at the standard level. The owner's PC renders 6-20x faster than
@@ -426,7 +420,7 @@ forced alignment with pocketsphinx (its wheel ships the English model), installe
    **The hook shows the consequence**: frame 0 is the flash-forward (the end state at its most striking, the contrast
    in the same frame), then the story rewinds into the explanation on the first story word. The first row of the
    table is the **frame-0 row** (17 Nov amendment): what Blob is already doing (mid-action pose), the strange thing
-   already happening, the 6-8 word hook text, the bright light preset, and the one big subject - all from frame 0,
+   already happening, the bright light preset, and the one big subject (no on-screen hook text) - all from frame 0,
    nothing that builds up.
    **Clean cuts** between pictures (cut on the word); one smooth camera move inside each; at most 1-2 short
    dissolves. Mark 4-6 **accent beats** in the table (the hook, a reveal, a place change, the payoff): each gets one
@@ -641,8 +635,6 @@ consistent within a place, the cast separates from the background.
       it...", "headlines everywhere...";
     - `BigNumber` (`text`, or `to` + `count` 0..1 to count up, optional `sub`) - for the one striking number of the
       video, exactly as spoken.
-    - `HookText` (`t`, `text`, `tOut`, `keys`) - the 6-8 word hook line on frame 0 only (17 Nov amendment): full size
-      from the very first frame, pops out at ~2-2.5 s; nothing else pops up while it is on screen.
     Place them with `cardIn(t, tIn, tOut)` (pop + tilt spring, pop out) or `flyX` (fly in from a side), as children of
     `<World>` (its SVG layer) or anchored to a 3D object with `toScreen`. Rules: invented names only, never a real
     logo, platform mark or real account presented as a real post; a real person's words only if they really said them
@@ -714,7 +706,7 @@ consistent within a place, the cast separates from the background.
   - loudness and audio silences (v2: no silences expected - the bed is continuous; loudness about -14 LUFS after
     mastering);
   - first frame (17 Nov amendment): brightness, clutter and early-motion all OK in the report; open
-    `qa/frame0_phone.png` and confirm Blob is mid-action, the strange thing is visible and the hook text reads;
+    `qa/frame0_phone.png` and confirm Blob is mid-action and the strange thing is visible (no hook text over it);
   - v3 style checks on the sheets, shot by shot: characters flat (no shading or gradients; face colour only where the story calls for it), the set is
     shaded 3D with visible texture, light and cast shadows; every character has a ground shadow; the cast reads
     against the background; a smooth camera move in every shot (pop scan's median motion > 0 on holds); a new
@@ -853,8 +845,8 @@ Append the topic to `topics_log.md`.
 - Scenes carry no dialogue, lip-sync, speech bubbles, logos, watermarks or unnecessary labels; honesty tags stay;
   pop-up cards (`PostCard`, `Headline`, `BigNumber`) only on the beat the voice says it, invented names, no real logos.
 - Frame 0 = the premise, centred, big, readable; the first spoken line names what you see.
-- First frame (17 Nov): Blob already mid-action, the strange thing already happening, a 6-8 word hook text (>= 96 px,
-  top zone), bright high-key light, one big subject on a simple background; no title card, fade-in or build-up.
+- First frame (17 Nov): Blob already mid-action, the strange thing already happening, NO on-screen hook text,
+  bright high-key light, one big subject on a simple background; no title card, fade-in or build-up.
 - Feet planted, hands reach props before they move, one focal action at a time.
 - One-word captions in the safe box; the sound never drops out; every visual on its word; the payoff on the last
   explanation word; the CTA follows; the last frame loops to the first.

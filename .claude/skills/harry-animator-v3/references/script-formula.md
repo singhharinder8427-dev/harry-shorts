@@ -64,11 +64,8 @@ State the strange part as a plain fact. The viewer must need the answer. Pick on
 The hook line and the frame-0 flash-forward (section 3 of SKILL.md) show the same thing: the end state at its most
 striking. Write the hook so that picture is obvious.
 
-**Hook text (on screen, 6-8 words).** Next to the spoken hook, write the on-screen hook line shown on frame 0
-(SKILL.md 17 Nov amendment): 6-8 words, plain, true, names the strange thing that is already happening in the first
-frame. For a "What if the Eiffel Tower bent?" video, frame 0 shows the tower mid-bend and the hook text reads
-"EIFFEL TOWER IS BENDING RIGHT NOW" (6 words), while the spoken hook carries the sourced fact. Show it with every
-variant.
+**No on-screen hook text.** The first frame carries no title or hook line (owner's decision, 17 Nov 2026); the
+spoken hook and the picture do the work.
 
 ### 2. Setting (1-2 short lines)
 Present tense, concrete: a year or a time of day, a place, one named everyday person or a role (Ray, Blob, "a
@@ -132,7 +129,6 @@ One warm sentence with a reason, as in 1.2. It comes after the payoff, never in 
 ## 6. Check before showing a variant
 - [ ] Word count within ±5 % of the total for `LIMIT` (table 1); estimated length = words / 2.7 + 2.0 s ≤ `LIMIT`.
 - [ ] Hook is sentence 1, 12-16 words, a fact, no question-bait like "Did you know?".
-- [ ] Hook text for frame 0 is 6-8 words, true, and names something visible in the first frame.
 - [ ] Escalation beats counted as in table 1, each bigger than the last, each one showable event.
 - [ ] Exactly one analogy in the answer; the answer comes near the end, not in the first half.
 - [ ] Payoff is 1-2 short sentences and ties back to the hook or an earlier line.
