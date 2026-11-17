@@ -3,7 +3,7 @@
 // Needs only Node 18+ (ffmpeg comes with Remotion). Run from the short's folder (the one with story.json):
 //   node tools/render_local.mjs              -> out/<short>-2K.mp4  (1440x2560, 60 fps, mastered to -14 LUFS)
 //   node tools/render_local.mjs --preview    -> out/preview.mp4     (half size, quick look)
-//   node tools/render_local.mjs --frames=0-299   (render only part, to time your machine)
+//   node tools/render_local.mjs --frames=0-299   (first 5 s only, to time your machine -> out/<short>-2K-test-0-299.mp4)
 // Options (env): CONC=<n> parallel frames (default: half your CPU threads), GL=angle|swangle|egl|vulkan
 // (default: angle on Windows/macOS = uses your GPU; swangle on Linux), BROWSER=<path to Chrome> if the download fails.
 // One render with audio, no chunks: the 2 h limit that forced chunks only exists in the cloud.
@@ -37,7 +37,9 @@ fs.mkdirSync('out', {recursive: true});
 
 const threads = os.cpus().length, conc = process.env.CONC ?? String(Math.max(1, Math.floor(threads / 2)));
 const gl = process.env.GL ?? (process.platform === 'linux' ? 'swangle' : 'angle');
-const raw = preview ? 'out/preview.mp4' : `out/${S}-2K.raw.mp4`, dst = preview ? raw : `out/${S}-2K.mp4`;
+// a partial render (--frames) gets its own name so it never overwrites a finished video
+const tag = frames ? `-test-${frames}` : '';
+const raw = preview ? `out/preview${tag}.mp4` : `out/${S}-2K${tag}.raw.mp4`, dst = preview ? raw : `out/${S}-2K${tag}.mp4`;
 const nFrames = Math.round(T.duration * 60);
 console.log(`Rendering ${preview ? 'preview (540x960)' : '2K (1440x2560)'} - ${frames ?? `${nFrames} frames`} - ${threads} CPU threads, concurrency ${conc}, gl ${gl}`);
 const t0 = Date.now();
